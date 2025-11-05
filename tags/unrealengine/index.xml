@@ -19,7 +19,7 @@
 &lt;li>&lt;a class="link" href="https://dev.epicgames.com/community/learning/tutorials/qpZ3/unreal-engine-ca0ed0#%E9%87%8D%E5%AE%9A%E5%90%91%E5%99%A8%E6%8E%A2%E7%A9%B6" target="_blank" rel="noopener"
 >关于虚幻引擎“最佳做法”的真相&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>虚幻引擎中各种类型的废弃（Deprecate）标记语法</title><link>https://boiltask.com/knowledge/ue/ue-deprecate/</link><pubDate>Tue, 04 Nov 2025 13:20:22 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-deprecate/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
-&lt;/h2>&lt;p>随着项目的发展，可能会发现需要重构一些逻辑。对于C++相对还是比较容易的，目前主流的IDE都提供了一定的重构能力，可以比较方便地进行重命名、查找引用能操作。&lt;/p>
+&lt;/h2>&lt;p>随着项目的发展，可能会发现需要重构一些逻辑。对于C++相对还是比较容易的，目前主流的IDE都提供了一定的重构能力，可以比较方便地进行重命名、查找引用等操作。&lt;/p>
 &lt;p>然后对于蓝图来说，可能就不太好直接一键操作了，直接改变老的逻辑有可能产生很多问题。尤其是对于已经有了大量引用地逻辑，如果直接改动可能产生预期之外的工作量。这个时候一个选择是做一个新版的实现，然后逐步废弃老的实现。为了优雅地实现这一目的，虚幻引擎提供了一些用于标记废弃的语法。&lt;/p>
 &lt;blockquote>
 &lt;p>如果项目中应用了额外的脚本语言，需要参考对应实现来选择一个重构方式。&lt;/p>
