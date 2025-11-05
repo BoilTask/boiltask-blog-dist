@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>欧拉函数 on BoilTask's Blog</title><link>https://boiltask.com/tags/eulers-totient-function/</link><description>Recent content in 欧拉函数 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 26 Mar 2016 09:07:04 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/eulers-totient-function/index.xml" rel="self" type="application/rss+xml"/><item><title>【杭电】[1787]GCD Again</title><link>https://boiltask.com/oj/hdu-1787/</link><pubDate>Sat, 26 Mar 2016 09:07:04 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1787/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-hdu-1787 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-hdu-1787 .dida-content-iframe-title-left');
+if (leftElements.length > 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-hdu-1787 .dida-content-iframe-title-right-desc');
+if (rightElements.length > 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b>Time:&lt;/b> " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length > 0){
+text += " | "
+}
+text += " &lt;b>Memory:&lt;/b> " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card boiltask-oj-hdu-1787">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;div>
+&lt;span class="dida-content-iframe-title-right-desc">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'hdu-1787')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200">
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153">&lt;/path>
+&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/hdu-1787')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://oj.boiltask.com/widget/hdu-1787?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>欧拉函数的运用&lt;br>
+只不过欧拉函数是求&lt;br>
+1~N中与N互质的个数&lt;br>
+这个是求不互质的个数&lt;/p>
+&lt;p>其实只要做个减法就好了&lt;/p>
+&lt;p>需要注意的是因为数据范围和内存限制&lt;br>
+这一题不能用筛法做&lt;br>
+直接用公式法好了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">res&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">res&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">res&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">/=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">res&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">res&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%lld&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1787" target="_blank" rel="noopener"
+>【杭电】[1787]GCD Again&lt;/a>&lt;/p></description></item><item><title>欧拉函数——小于n的数中与n互质数的数目</title><link>https://boiltask.com/knowledge/eulers-totient-function/</link><pubDate>Sat, 26 Mar 2016 08:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/eulers-totient-function/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;blockquote>
+&lt;p>在数论，对正整数n，欧拉函数是小于n的数中与n互质的数的数目。此函数以其首名研究者欧拉命名(Ruler&amp;rsquo;so totient function)，它又称为Euler&amp;rsquo;s totient function、φ函数、欧拉商数等。 例如φ(8)=4，因为1,3,5,7均和8互质。 从欧拉函数引伸出来在环论方面的事实和拉格朗日定理构成了欧拉定理的证明。&lt;/p>&lt;/blockquote>
+&lt;h2 id="性质">&lt;a href="#%e6%80%a7%e8%b4%a8" class="header-anchor">&lt;/a>性质
+&lt;/h2>&lt;p>$\varphi \left( x\right) =x\left( 1-\dfrac{1}{p_{1}}\right) \left( 1-\dfrac{1}{p_{2}}\right) \ldots \left( 1-\dfrac{1}{p_{n}}\right)$&lt;/p>
+&lt;p>若n是质数p的k次幂&lt;/p>
+&lt;p>$\varphi \left( n\right) =p^{k}-p^{k-1}$&lt;/p>
+&lt;p>(因为除了p的倍数外，其他数都跟n互质)&lt;br>
+若n为质数则&lt;/p>
+&lt;p>$\varphi \left( n\right) = n-1$&lt;/p>
+&lt;p>这些定理是筛法求欧拉函数的基础&lt;/p>
+&lt;h2 id="算法写法">&lt;a href="#%e7%ae%97%e6%b3%95%e5%86%99%e6%b3%95" class="header-anchor">&lt;/a>算法写法
+&lt;/h2>&lt;h3 id="直接求解">&lt;a href="#%e7%9b%b4%e6%8e%a5%e6%b1%82%e8%a7%a3" class="header-anchor">&lt;/a>直接求解
+&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int euler(int n){ //返回euler(n)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int res=n,a=n;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for(int i=2;i*i&amp;lt;=a;i++){
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(a%i==0){
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> res=res/i*(i-1);//先进行除法是为了防止中间数据的溢出
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> while(a%i==0)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> a/=i;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(a&amp;gt;1) res=res/a*(a-1);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return res;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">} &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="筛法">&lt;a href="#%e7%ad%9b%e6%b3%95" class="header-anchor">&lt;/a>筛法
+&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> long long a[1000020];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> memset(a,0,sizeof(a));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> a[1]=1;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for(int i=2; i&amp;lt;1000020; i++)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(!a[i])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for(int j=i; j&amp;lt;1000020; j+=i) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(!a[j])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> a[j]=j;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> a[j]=a[j]/i*(i-1);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>参考资料:&lt;br>
+&lt;a class="link" href="http://baike.baidu.com/link?url=Mxfd5P91VH6uydQ3pkR9XoTojeNGlLonX9YVfuEZUgvfBjrBf9f3qwAwb4zPVLYLjws2wWPcTrA1PIpjF4XR0q" target="_blank" rel="noopener"
+>欧拉函数_百度百科&lt;/a>&lt;br>
+&lt;a class="link" href="http://www.tuicool.com/articles/Enmeyya" target="_blank" rel="noopener"
+>欧拉函数线性筛法&lt;/a>&lt;br>
+&lt;a class="link" href="http://blog.csdn.net/once_hnu/article/details/6302868" target="_blank" rel="noopener"
+>欧拉函数_Lur &amp;rsquo;s acm blog&lt;/a>&lt;/p></description></item></channel></rss>

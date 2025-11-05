@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>待办 on BoilTask's Blog</title><link>https://boiltask.com/tags/todo/</link><description>Recent content in 待办 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 07 Sep 2025 08:01:00 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/todo/index.xml" rel="self" type="application/rss+xml"/><item><title>虚幻引擎中CommonUI插件</title><link>https://boiltask.com/knowledge/ue/plugin-common-ui/</link><pubDate>Sun, 07 Sep 2025 08:01:00 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/plugin-common-ui/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>CommonUI插件是UE5提供的一个方便丰富的、多层级的并且支持跨平台的用户界面的插件。&lt;/p>
+&lt;h2 id="参考文档">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor">&lt;/a>参考文档
+&lt;/h2>&lt;p>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine" target="_blank" rel="noopener"
+>适用于虚幻引擎高级用户界面的Common UI插件 | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a>&lt;/p></description></item><item><title>Lyra设置页面相关设计</title><link>https://boiltask.com/knowledge/ue/lyra-setting-widget/</link><pubDate>Fri, 05 Sep 2025 12:59:55 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-setting-widget/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>在Lyra中，通过&lt;code>ESC&lt;/code>键选择&lt;code>OPTIONS&lt;/code>可以呼出设置页面&lt;code>W_LyraSettingScreen&lt;/code>。&lt;/p>
+&lt;h2 id="页面分析">&lt;a href="#%e9%a1%b5%e9%9d%a2%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>页面分析
+&lt;/h2>&lt;p>&lt;code>W_LyraSettingScreen&lt;/code>继承于C++类&lt;code>ULyraSettingScreen&lt;/code>，其基于&lt;code>GameSettings&lt;/code>插件提供的&lt;code>UGameSettingScreen&lt;/code>。&lt;/p>
+&lt;pre class="mermaid">
+classDiagram
+class W_LyraSettingScreen {
++TopSettingsTabs
++Settings_Panel
++W_BottomActionBar
+}
+UCommonUserWidget &amp;lt;|-- UCommonActivatableWidget
+UCommonActivatableWidget &amp;lt;|-- UGameSettingScreen
+UGameSettingScreen &amp;lt;|-- ULyraSettingScreen
+ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
+&lt;/pre>
+&lt;p>其中，&lt;code>GameSettings&lt;/code>插件基于&lt;code>CommonUI&lt;/code>插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/ue/plugin-common-ui" >虚幻引擎中CommonUI插件&lt;/a>&lt;/p>
+&lt;h3 id="页头页签">&lt;a href="#%e9%a1%b5%e5%a4%b4%e9%a1%b5%e7%ad%be" class="header-anchor">&lt;/a>页头页签
+&lt;/h3>&lt;p>标签控件使用一个&lt;code>ULyraTabListWidgetBase&lt;/code>制作，通过在C++中定义&lt;code>BindWidget&lt;/code>，可以创建一个在C++中可以访问的蓝图控件。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">UPROPERTY&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BlueprintReadOnly&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Category&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Input&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">meta&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">BindWidget&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">OptionalWidget&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">AllowPrivateAccess&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">TObjectPtr&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">ULyraTabListWidgetBase&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">TopSettingsTabs&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这个控件在蓝图中被设为一个&lt;code>W_HorizontalTabList&lt;/code>，可以方便调整具体样式。&lt;/p>
+&lt;blockquote>
+&lt;p>可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"
+>结合蓝图与C++&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>在页面的&lt;code>Construct&lt;/code>时，会调用&lt;code>RegisterTopLevelTab&lt;/code>来依次注册各个Tab。&lt;/p>
+&lt;ul>
+&lt;li>GameplayCollection&lt;/li>
+&lt;li>VideoCollection&lt;/li>
+&lt;li>AudioCollection&lt;/li>
+&lt;li>MouseAndKeyboardCollection&lt;/li>
+&lt;li>GamepadCollection&lt;/li>
+&lt;/ul>
+&lt;p>对于每个Tab，通过&lt;code>UGameSettingScreen::GetSettingCollection&lt;/code>读取具体的设置。&lt;/p>
+&lt;p>具体的设置项依赖于&lt;code>GameSetting&lt;/code>提供的&lt;code>UGameSettingCollection&lt;/code>类。&lt;/p>
+&lt;p>注册之后，只需要监听&lt;code>TopSettingsTabs&lt;/code>的&lt;code>OnTabSelected&lt;/code>即可在玩家选择对应页签时切换至所选&lt;code>Collection&lt;/code>。&lt;/p>
+&lt;h3 id="页面内容">&lt;a href="#%e9%a1%b5%e9%9d%a2%e5%86%85%e5%ae%b9" class="header-anchor">&lt;/a>页面内容
+&lt;/h3>&lt;p>这部分主要靠&lt;code>GameSettings&lt;/code>插件调度，在&lt;code>UGameSettingScreen&lt;/code>中定义了变量&lt;code>Settings_Panel&lt;/code>用于标记设置内容控件。&lt;/p>
+&lt;p>&lt;code>Settings_Panel&lt;/code>是蓝图&lt;code>W_SettingsPanel&lt;/code>，其基于&lt;code>GameSettings&lt;/code>插件提供的&lt;code>UGameSettingPanel&lt;/code>。&lt;/p>
+&lt;p>界面提供了设置项&lt;code>ListView_Settings&lt;/code>列表，以及设置项详情&lt;code>Details_Settings&lt;/code>。&lt;/p>
+&lt;h3 id="页尾按钮">&lt;a href="#%e9%a1%b5%e5%b0%be%e6%8c%89%e9%92%ae" class="header-anchor">&lt;/a>页尾按钮
+&lt;/h3>&lt;p>TODO&lt;/p></description></item><item><title>UnrealEngine中的在线异步任务管理器</title><link>https://boiltask.com/knowledge/ue/online-async-task-manage/</link><pubDate>Wed, 03 Sep 2025 13:22:36 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/online-async-task-manage/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>&lt;code>FOnlineAsyncTaskManager&lt;/code>是每个在线子系统中异步操作的基础。&lt;/p>
+&lt;p>任务管理器在其自己的线程上运行，同时管理FOnlineAsyncTasks的串行队列和并行队列。&lt;/p>
+&lt;p>对于串行队列，通过以下方式执行：&lt;/p>
+&lt;ul>
+&lt;li>游戏主线程&lt;code>GameThread&lt;/code>
+&lt;ul>
+&lt;li>初始化&lt;code>Initialize()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>网络线程&lt;code>OnlineThread&lt;/code>
+&lt;ul>
+&lt;li>执行&lt;code>Tick()&lt;/code>直到&lt;code>IsDone()&lt;/code>&lt;/li>
+&lt;li>将任务添加到出队列&lt;code>OutQueue&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>游戏主线程&lt;code>GameThread&lt;/code>
+&lt;ul>
+&lt;li>完成&lt;code>Finalize()&lt;/code>&lt;/li>
+&lt;li>触发回调&lt;code>TriggerDelegates()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>对于并行队列，流程与上述类似，不过其中的任务并不会等待先前的任务完成。&lt;/p></description></item><item><title>UnrealEngine中的在线子系统</title><link>https://boiltask.com/knowledge/ue/online-subsystem/</link><pubDate>Wed, 03 Sep 2025 12:45:19 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/online-subsystem/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>在线子系统（Online Subsystem）及其接口提供一种可访问Steam、Xbox Live、Facebook等在线服务功能的常用方法。开发一款在多平台上发行或支持多在线服务的游戏时，在线子系统可确保开发者唯一需要做的变更就是对所有支持的服务进行配置调整。&lt;/p>
+&lt;h2 id="参考文档">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor">&lt;/a>参考文档
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/online-subsystem-in-unreal-engine" target="_blank" rel="noopener"
+>Online Subsystem in Unreal Engine | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中打包Cook相关机制</title><link>https://boiltask.com/knowledge/ue/ue-why-to-cook/</link><pubDate>Wed, 13 Aug 2025 13:17:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-why-to-cook/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>在&lt;code>UE&lt;/code>的打包中，可以看到一个用时较长的步骤是&lt;code>Cook&lt;/code>，下面具体分析一下这一步是做了哪些操作以及为什么。&lt;/p></description></item><item><title>UnrealEngine中的ShaderPipelineCache</title><link>https://boiltask.com/knowledge/ue/pso-cache/</link><pubDate>Fri, 01 Aug 2025 21:01:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/pso-cache/</guid><description>&lt;p>虚幻引擎中通过ShaderPipelineCache管理PSO缓存。&lt;/p></description></item><item><title>记录一下TODO列表</title><link>https://boiltask.com/record/boiltask-todo/</link><pubDate>Thu, 05 Jun 2025 12:23:23 +0800</pubDate><guid>https://boiltask.com/record/boiltask-todo/</guid><description>&lt;blockquote>
+&lt;p>本文用于记录一些TODO，不定期更新，过期内容有可能随时删除&lt;/p>&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Lyra中的传送门&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 工单系统 - Pangu&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 表格系统
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 多个文件合并成一个来读取&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 动态增加删除替换行&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 支持ref&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 也许应该自己做个编辑器？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中角色移动相关机制</title><link>https://boiltask.com/knowledge/ue/character-movement/</link><pubDate>Wed, 02 Apr 2025 12:54:31 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/character-movement/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>本文主要用于整理虚幻引擎中移动相关的机制。&lt;/p>
+&lt;p>内容可能摘录自各个文章、论坛、文档等，仅用作记录。&lt;/p>
+&lt;h2 id="基础简介">&lt;a href="#%e5%9f%ba%e7%a1%80%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>基础简介
+&lt;/h2>&lt;p>移动是一个非常重要并且较为复杂的模块，&lt;code>UnrealEngine&lt;/code>对于移动的实现使用了组合模式，在描述&lt;code>Actor&lt;/code>的移动时，含义是具有移动组件的&lt;code>Actor&lt;/code>可以移动。&lt;/p>
+&lt;p>移动组件的基类为&lt;code>UMovementComponent&lt;/code>，提供基本的移动功能，有多个不同功能的子类，一些子类移动组件专门用于服务一种特殊的&lt;code>Actor&lt;/code>，比如通常代表玩家的&lt;code>ACharacter&lt;/code>，对应的移动组件&lt;code>UCharacterMovementComponent&lt;/code>。&lt;/p>
+&lt;p>&lt;code>Actor&lt;/code>虽然代表在&lt;code>World&lt;/code>中的一个实体，但是本身是没有位置概念的。&lt;code>Actor&lt;/code>的位置由其具有的&lt;code>USceneComponent&lt;/code>赋予。因此移动的本质，就是改变&lt;code>Actor&lt;/code>上的某个&lt;code>USceneComponent&lt;/code>的位置，通常指的是&lt;code>Actor&lt;/code>的&lt;code>RootComponent&lt;/code>。&lt;/p>
+&lt;p>&lt;code>UMovementComponent&lt;/code>上有个属性&lt;code>UpdatedComponent&lt;/code>，就是用于设置移动组件所修改的&lt;code>USceneComponent&lt;/code>。暴露给蓝图有个参数&lt;code>bAutoRegisterUpdatedComponent&lt;/code>，如果设置为&lt;code>true&lt;/code>，则会在组件初始化时，读取&lt;code>Owner&lt;/code>的&lt;code>RootComponent&lt;/code>，调用&lt;code>SetUpdatedComponent&lt;/code>设置&lt;code>UpdatedComponent&lt;/code>。&lt;/p>
+&lt;h2 id="移动流程">&lt;a href="#%e7%a7%bb%e5%8a%a8%e6%b5%81%e7%a8%8b" class="header-anchor">&lt;/a>移动流程
+&lt;/h2>&lt;p>网络同步下的角色移动至少需要考虑以下几个方面：&lt;/p>
+&lt;ul>
+&lt;li>玩家客户端操作无延迟
+&lt;ul>
+&lt;li>需要直接响应移动输入并上报给服务器&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>位置以服务器为准
+&lt;ul>
+&lt;li>防止外挂&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>同步到的移动需要表现丝滑
+&lt;ul>
+&lt;li>不可能每帧都收到位置更新，需要适当进行插值&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="自主实现">&lt;a href="#%e8%87%aa%e4%b8%bb%e5%ae%9e%e7%8e%b0" class="header-anchor">&lt;/a>自主实现
+&lt;/h3>&lt;p>先思考如果自己实现的情况下可能会怎么做。&lt;/p>
+&lt;ul>
+&lt;li>本地接收到输入之后，在本地先操作移动，同时把移动的操作发送给服务器
+&lt;ul>
+&lt;li>可能包含的信息是：当前位置、目标位置等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>服务器接收到移动的操作，在服务器上执行移动，并把玩家位移的信息同步给所有客户端
+&lt;ul>
+&lt;li>信息同样包含：当前位置、目标位置、速度等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>其他客户端收到了移动的信息后，修改角色的移动目标，根据插值调整角色位置&lt;/li>
+&lt;/ul>
+&lt;h3 id="引擎实现">&lt;a href="#%e5%bc%95%e6%93%8e%e5%ae%9e%e7%8e%b0" class="header-anchor">&lt;/a>引擎实现
+&lt;/h3>&lt;p>虚幻引擎网络同步情况下的移动流程与此类似，大概为：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>每一帧执行TickComponent时，计算这一帧的加速度和转向，之后对于主控的Character，调用ReplicateMoveToServer把移动同步给服务器&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ReplicateMoveToServer会把移动保存到列表，然后执行PerformMovement在本地预执行移动操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>然后会调用ServerMove把移动同步给服务器，告知移动的参数、客户端自己移动的位置，以及时间戳&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ServerMove在服务器上执行，根据客户端声明的位置，与服务器的位置做对比，如果差异过大，则调用ClientAdjustPosition在主控端校正位置&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>客户端如果收到ClientAdjustPosition，会把客户端角色位置设置为服务器上的位置，并把bUpdatePosition标记为true，这将会影响到后续的移动更新&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>当客户端再次调用TickComponent时，如果存在bUpdatePosition，则会调用ClientUpdatePositionAfterServerUpdate来重演在服务器上调整移动之后发生的所有移动。&lt;/p>
+&lt;blockquote>
+&lt;p>在引擎源码CharacterMovementComponent.h中可以找到对移动同步流程的描述：&lt;/p>
+&lt;p>Here&amp;rsquo;s how player movement prediction, replication and correction works in network games:&lt;/p>
+&lt;p>Every tick, the TickComponent() function is called. It figures out the acceleration and rotation change for the frame,
+and then calls PerformMovement() (for locally controlled Characters), or ReplicateMoveToServer() (if it&amp;rsquo;s a network client).&lt;/p>
+&lt;p>ReplicateMoveToServer() saves the move (in the PendingMove list), calls PerformMovement(), and then replicates the move
+to the server by calling the replicated function ServerMove() - passing the movement parameters, the client&amp;rsquo;s
+resultant position, and a timestamp.&lt;/p>
+&lt;p>ServerMove() is executed on the server. It decodes the movement parameters and causes the appropriate movement
+to occur. It then looks at the resulting position and if enough time has passed since the last response, or the
+position error is significant enough, the server calls ClientAdjustPosition(), a replicated function.&lt;/p>
+&lt;p>ClientAdjustPosition() is executed on the client. The client sets its position to the servers version of position,
+and sets the bUpdatePosition flag to true.&lt;/p>
+&lt;p>When TickComponent() is called on the client again, if bUpdatePosition is true, the client will call
+ClientUpdatePosition() before calling PerformMovement(). ClientUpdatePosition() replays all the moves in the pending
+move list which occurred after the timestamp of the move the server was adjusting.&lt;/p>&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="玩家输入">&lt;a href="#%e7%8e%a9%e5%ae%b6%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>玩家输入
+&lt;/h3>&lt;p>管理玩家输入的也是一个组件&lt;code>UInputComponent&lt;/code>，通常可以调用&lt;code>BindAxis&lt;/code>来注册事件响应。&lt;/p>
+&lt;p>一般最终会调用到&lt;code>UPawnMovementComponent::AddInputVector&lt;/code>来处理移动。&lt;/p>
+&lt;h3 id="主控角色移动">&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor">&lt;/a>主控角色移动
+&lt;/h3>&lt;p>在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p>
+&lt;blockquote>
+&lt;p>详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/" >虚幻引擎中网络角色Role相关概念&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p>
+&lt;p>本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code>TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code>的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p>
+&lt;p>如果服务器认可了一些移动，就可以把这些移动删掉，如果检查不通过，就可以据此执行异常处理。&lt;/p>
+&lt;h3 id="协议选择">&lt;a href="#%e5%8d%8f%e8%ae%ae%e9%80%89%e6%8b%a9" class="header-anchor">&lt;/a>协议选择
+&lt;/h3>&lt;p>在UE中，默认使用UDP作为传输协议，这可以使得数据包尽快送达。&lt;/p>
+&lt;p>UDP不保证可达和有序，但是应用层面可以通过设计来在需要的地方避免这些问题。&lt;/p>
+&lt;h2 id="server同步移动给客户端">&lt;a href="#server%e5%90%8c%e6%ad%a5%e7%a7%bb%e5%8a%a8%e7%bb%99%e5%ae%a2%e6%88%b7%e7%ab%af" class="header-anchor">&lt;/a>Server同步移动给客户端
+&lt;/h2>&lt;h3 id="actor基本同步方案">&lt;a href="#actor%e5%9f%ba%e6%9c%ac%e5%90%8c%e6%ad%a5%e6%96%b9%e6%a1%88" class="header-anchor">&lt;/a>Actor基本同步方案
+&lt;/h3>&lt;p>Actor自身就支持移动同步，打开ReplicateMovement开关后，当Actor的RootComponent位置、朝向等数据发生变化时，就会把数据同步给Simulate客户端。&lt;/p>
+&lt;p>当Simulate的客户端收到同步之后，会简单的设置自己的位置和朝向。移动数据的同步有间隔，因此这种实现会导致Actor发生闪现。&lt;/p>
+&lt;h3 id="character移动同步">&lt;a href="#character%e7%a7%bb%e5%8a%a8%e5%90%8c%e6%ad%a5" class="header-anchor">&lt;/a>Character移动同步
+&lt;/h3>&lt;p>针对Actor基本同步模式的不足，CharacterMovementComponent针对性的做了表现平滑处理，让Simulate角色移动尽可能平滑自然。&lt;/p>
+&lt;p>Character主要有两个组件，Capsule和Mesh，Capsule是Chara&lt;/p>
+&lt;h2 id="关键概念">&lt;a href="#%e5%85%b3%e9%94%ae%e6%a6%82%e5%bf%b5" class="header-anchor">&lt;/a>关键概念
+&lt;/h2>&lt;h3 id="ucharactermovement">&lt;a href="#ucharactermovement" class="header-anchor">&lt;/a>UCharacterMovement
+&lt;/h3>&lt;p>角色移动组件是最为复杂的一个子类，需要重点进行分析。&lt;/p>
+&lt;pre class="mermaid">
+classDiagram
+class UCharacterMovementComponent {
++IRVOAvoidanceInterface
++INetworkPredictionInterface
+}
+UActorComponent &amp;lt;|-- UMovementComponent
+UMovementComponent &amp;lt;|-- UNavMovementComponent
+UNavMovementComponent &amp;lt;|-- UPawnMovementComponent
+UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
+&lt;/pre>
+&lt;h3 id="fsavedmove_character">&lt;a href="#fsavedmove_character" class="header-anchor">&lt;/a>FSavedMove_Character
+&lt;/h3>&lt;p>用于描述玩家的一次移动，可以认为是一次移动的快照。&lt;/p>
+&lt;p>主要属性有：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>TimeStamp&lt;/td>
+&lt;td>这次移动发生的时间&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DeltaTime&lt;/td>
+&lt;td>这次移动使用的时间&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CustomTimeDilation&lt;/td>
+&lt;td>时间膨胀系数，可以用于快进和慢放&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>StartPackedMovementMode&lt;/td>
+&lt;td>移动发生前的MovementMode&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>StartLocation&lt;/td>
+&lt;td>移动发生前的位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>StartVelocity&lt;/td>
+&lt;td>移动发生前的速度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>EndPackedMovementMode&lt;/td>
+&lt;td>移动发生后的MovementMode&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SavedLocation&lt;/td>
+&lt;td>移动发生后的位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SavedVelocity&lt;/td>
+&lt;td>移动发生后的速度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Acceleration&lt;/td>
+&lt;td>移动所用加速度&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>理论上只要有这些数据，就能复盘整个移动过程，也可用作回放功能。&lt;/p>
+&lt;h3 id="replicatemovetoserver">&lt;a href="#replicatemovetoserver" class="header-anchor">&lt;/a>ReplicateMoveToServer
+&lt;/h3>&lt;p>首先会从SavedMoves里找到最早发生的一个ImportantMove（通过IsImportantMove判断），也就是最新被服务器确认的有显著差异的Move。&lt;/p>
+&lt;p>之后创建一个FSavedMove_Character并初始化。然后执行PerformMovement，对角色计算操作后的属性，设置上相关信息。&lt;/p>
+&lt;p>根据能否被合并，进行处理。&lt;/p>
+&lt;h3 id="延迟发送move">&lt;a href="#%e5%bb%b6%e8%bf%9f%e5%8f%91%e9%80%81move" class="header-anchor">&lt;/a>延迟发送Move
+&lt;/h3>&lt;p>一个Move有可能可以被延迟一会，与后面的Move合并后再发给服务器。因此一个新建的Move被发往服务器前会先判断是否可以延迟发送。&lt;/p>
+&lt;p>首先判断是否开启了NetEnableMoveCombining，如果没开也不会延迟发送。&lt;/p>
+&lt;p>同时还会判断当前的Move是否能被延迟发送，会检查该Move前后MovementMode是否改变，如果改变也需要即使变化。也就是说，如果此次Move没有显著改变，那么则可以延后发送，理论上服务器根据之前的信息推算，结果应该是一样的。&lt;/p>
+&lt;p>然后会计算当前预期的移动更新时间间隔，根据当前网速、玩家数量等信息，在基准值ClientNetSendMoveDeltaTime上做调整，得到最终间隔，如果Tick时还没达到更新间隔，就会延迟发送Move，把它储存在PendingMove中，留着以后处理。&lt;/p>
+&lt;h3 id="callservermove">&lt;a href="#callservermove" class="header-anchor">&lt;/a>CallServerMove
+&lt;/h3>&lt;p>函数接受两个参数，一个是刚创建的Move，另一个是之前获取的ImportantMove（ImportantMove可能为空）。不需要把整个Move都发往服务器，只需要位置、旋转、加速度等关键信息，并且这些信息会经过压缩。&lt;/p>
+&lt;p>压缩的过程简单来说，会尝试牺牲精度，把一些字段合并在一个数据结构中。&lt;/p>
+&lt;p>之后还会调用ServerMoveOld，把ImportantMove中的一些信息发送到服务器，可以简单理解为一种冗余的保险。&lt;/p>
+&lt;p>如果存在PendingMove，说明存在未合并的Move，需要调用ServerMoveDual一次发送两个连续的Move。否则，说明发送间隔较大，或者PendingMove已经被合并，就调用ServerMode发送这个Move。&lt;/p>
+&lt;h3 id="servermoveold">&lt;a href="#servermoveold" class="header-anchor">&lt;/a>ServerMoveOld
+&lt;/h3>&lt;p>ServerMoveOld主要作为一种冗余措施，防止服务器新收到一个移动数据时，因为网络丢包而落后太多，导致移动判断不通过，进而纠正客户端位置。ServerMoveOld可以让服务器使用传递的加速度，粗略的从旧位置快速移动到新位置，不校验移动结果。&lt;/p>
+&lt;blockquote>
+&lt;p>TODO：安全性如何保证？&lt;/p>&lt;/blockquote>
+&lt;h2 id="todo">&lt;a href="#todo" class="header-anchor">&lt;/a>TODO
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>具有物理模拟下的移动&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>移动如何通过RPC发送的&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/114341957" target="_blank" rel="noopener"
+>UE4移动的网络同步 - 知乎&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/664568047" target="_blank" rel="noopener"
+>UE4/UE5 Character Movement Component移动组件网络同步详解 - 知乎&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/650314172" target="_blank" rel="noopener"
+>「Grow by UE」图解角色移动组件 - 知乎&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"
+>UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中编辑器下Python的使用</title><link>https://boiltask.com/knowledge/ue/editor-python/</link><pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/editor-python/</guid><description>&lt;h2 id="功能简介">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>功能简介
+&lt;/h2>&lt;p>参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"
+>使用Python脚本化运行虚幻编辑器&lt;/a>&lt;/p></description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介">&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>DataAsset简介
+&lt;/h2>&lt;p>一般用于表示一个数据块，功能与DataTable类似，某种程度上可以理解成一个仅有一行的DataTable。&lt;/p>
+&lt;p>参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"
+>数据资产&lt;/a>&lt;/p></description></item><item><title>【POJ】[1006]Biorhythms</title><link>https://boiltask.com/oj/poj-1006/</link><pubDate>Fri, 22 Jul 2016 09:23:52 +0800</pubDate><guid>https://boiltask.com/oj/poj-1006/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-poj-1006 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-poj-1006 .dida-content-iframe-title-left');
+if (leftElements.length > 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-poj-1006 .dida-content-iframe-title-right-desc');
+if (rightElements.length > 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b>Time:&lt;/b> " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length > 0){
+text += " | "
+}
+text += " &lt;b>Memory:&lt;/b> " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card boiltask-oj-poj-1006">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;div>
+&lt;span class="dida-content-iframe-title-right-desc">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'poj-1006')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200">
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153">&lt;/path>
+&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/poj-1006')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://oj.boiltask.com/widget/poj-1006?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>TODO&lt;/p></description></item><item><title>
+【POJ】[1679]The Unique MST</title><link>https://boiltask.com/oj/poj-1679/</link><pubDate>Sun, 21 Feb 2016 02:45:55 +0800</pubDate><guid>https://boiltask.com/oj/poj-1679/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-poj-1679 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-poj-1679 .dida-content-iframe-title-left');
+if (leftElements.length > 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-poj-1679 .dida-content-iframe-title-right-desc');
+if (rightElements.length > 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b>Time:&lt;/b> " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length > 0){
+text += " | "
+}
+text += " &lt;b>Memory:&lt;/b> " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card boiltask-oj-poj-1679">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;div>
+&lt;span class="dida-content-iframe-title-right-desc">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'poj-1679')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200">
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153">&lt;/path>
+&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/poj-1679')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://oj.boiltask.com/widget/poj-1679?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>据说叫作……&lt;br>
+次小生成树&lt;br>
+最早见到这个概念应该是在宇神博客里&lt;/p>
+&lt;p>这一个要求最小生成树是不是唯一的&lt;br>
+所以求次小生成树进行比较&lt;br>
+如果相等就是不唯一的&lt;/p>
+&lt;p>题目地址:&lt;a class="link" href="http://poj.org/problem?id=1679" target="_blank" rel="noopener"
+>【POJ】[1679]The Unique MST&lt;/a>&lt;/p></description></item><item><title>【POJ】[3026]Borg Maze</title><link>https://boiltask.com/oj/poj-3026/</link><pubDate>Sun, 21 Feb 2016 02:40:39 +0800</pubDate><guid>https://boiltask.com/oj/poj-3026/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-poj-3026 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-poj-3026 .dida-content-iframe-title-left');
+if (leftElements.length > 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-poj-3026 .dida-content-iframe-title-right-desc');
+if (rightElements.length > 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b>Time:&lt;/b> " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length > 0){
+text += " | "
+}
+text += " &lt;b>Memory:&lt;/b> " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card boiltask-oj-poj-3026">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;div>
+&lt;span class="dida-content-iframe-title-right-desc">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'poj-3026')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200">
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153">&lt;/path>
+&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/poj-3026')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://oj.boiltask.com/widget/poj-3026?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>好歹题意看懂了&lt;br>
+bfs找寻各个点互相之间的距离，然后求最小生成树&lt;/p>
+&lt;p>然而BFS尝试之后感觉并不会写……&lt;br>
+先占个位置吧&lt;/p>
+&lt;p>题目地址:&lt;a class="link" href="http://poj.org/problem?id=3026" target="_blank" rel="noopener"
+>【POJ】[3026]Borg Maze&lt;/a>&lt;/p></description></item><item><title>【UVa】[210]Concurrency Simulator</title><link>https://boiltask.com/oj/uva-210/</link><pubDate>Fri, 12 Feb 2016 23:39:57 +0800</pubDate><guid>https://boiltask.com/oj/uva-210/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-uva-210 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-uva-210 .dida-content-iframe-title-left');
+if (leftElements.length > 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-uva-210 .dida-content-iframe-title-right-desc');
+if (rightElements.length > 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b>Time:&lt;/b> " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length > 0){
+text += " | "
+}
+text += " &lt;b>Memory:&lt;/b> " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card boiltask-oj-uva-210">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;div>
+&lt;span class="dida-content-iframe-title-right-desc">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'uva-210')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200">
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153">&lt;/path>
+&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/uva-210')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://oj.boiltask.com/widget/uva-210?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>紫书的一题&lt;br>
+先写个模板存档&lt;/p>
+&lt;p>题目地址:&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=838&amp;amp;page=show_problem&amp;amp;problem=146" target="_blank" rel="noopener"
+>【UVa】[210]Concurrency Simulator&lt;/a>&lt;/p></description></item><item><title>【POJ】[1417]True Liars</title><link>https://boiltask.com/oj/poj-1417/</link><pubDate>Wed, 10 Feb 2016 00:29:02 +0800</pubDate><guid>https://boiltask.com/oj/poj-1417/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-poj-1417 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-poj-1417 .dida-content-iframe-title-left');
+if (leftElements.length > 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-poj-1417 .dida-content-iframe-title-right-desc');
+if (rightElements.length > 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b>Time:&lt;/b> " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length > 0){
+text += " | "
+}
+text += " &lt;b>Memory:&lt;/b> " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card boiltask-oj-poj-1417">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;div>
+&lt;span class="dida-content-iframe-title-right-desc">&lt;/span>
+&lt;/div>
+&lt;div>
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'poj-1417')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200">
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153">&lt;/path>
+&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/poj-1417')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://oj.boiltask.com/widget/poj-1417?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>大过年的也是被这一题搞得崩溃&lt;br>
+然后也没网络没法搜题解&lt;br>
+所以当时也是挺崩溃的&lt;/p>
+&lt;p>不过貌似卡住的地方似乎也不是并查集的范畴&lt;br>
+这一题也是挺好联系并查集的&lt;/p>
+&lt;blockquote>
+&lt;p>告诉n句话并指明有 x个巫师 y个恶魔&lt;br>
+给出xi yi YES/NO&lt;br>
+来代表 xi说yi是否是巫师&lt;br>
+最后如果能肯定哪些是巫师&lt;br>
+则输出这些人并加end作为输出结束&lt;br>
+否则输出no&lt;/p>&lt;/blockquote>
+&lt;p>可以根据示例输入列个表&lt;/p>
+&lt;blockquote>
+&lt;p>1Y2Y 1N2N——&lt;br>
+1Y3N 1N3Y——1Y-2Y-3N 1N-2N-3Y&lt;br>
+4Y5Y 4N5N——1Y-2Y-3N 1N-2N-3Y&lt;br>
+5Y6Y 5N6N——1Y-2Y-3N 1N-2N-3Y 4Y-5Y-6Y 4N-5N-6N&lt;br>
+6Y7N 6N7Y——1Y-2Y-3N 1N-2N-3Y 4Y-5Y-6Y-7N 4N-5N-6N-7Y&lt;/p>&lt;/blockquote>
+&lt;p>根据食物链那一题然后很容易想到,把所有题目相对应的可能合并在一起最后来从中查找就好了&lt;/p>
+&lt;p>然而……涉及到怎么找出具体是那个是满足条件的Y的人却有点费劲，然后还有一个对自己英语不自信加上题意的逻辑，可以自己问自己&lt;br>
+所以当时想……&lt;/p>
+&lt;p>如果一个人说自己不是好人，那么他到底是不是好人？&lt;br>
+如果他说自己不是好人，那么他的话是对的情况下他是坏人，那么他的话就应该是假的，如果是假的，那么他就应该是好人，他的话又是真话。&lt;/p>
+&lt;p>所以也是在题目中没找到具体的这方面的描述，所以并没有想到具体这一题应该怎么写。&lt;/p>
+&lt;p>然后搜了一下题解，感觉就先把这一题放一放吧&lt;br>
+过几天再来补，也是纪念一下大过年的做题经历吧&lt;/p>
+&lt;p>题目地址:&lt;a class="link" href="http://poj.org/problem?id=1417" target="_blank" rel="noopener"
+>【POJ】[1417]True Liars&lt;/a>&lt;/p></description></item></channel></rss>

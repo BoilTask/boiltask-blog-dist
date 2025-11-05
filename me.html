@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欧阳天 - 个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        body {
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 22px;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .resume-container {
+            min-width: 700px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .personal-info {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .contact-inline {
+            display: flex;
+            margin-bottom: 8px;
+            justify-content: flex-start;
+        }
+
+        .contact-item {
+            flex: 0 0 165px;
+            text-align: left;
+            position: relative;
+        }
+
+        .contact-item:not(:last-child) {
+            border-right: 1px solid #999;
+            /* 自定义分隔线 */
+            padding-right: 16px;
+            /* 分隔线间距 */
+            margin-right: 8px;
+        }
+
+        .skills {
+            margin-top: 15px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .profile-photo {
+            width: 120px;
+            text-align: center;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        .profile-photo img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .section {
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+        }
+
+        .experience-item,
+        .project-item,
+        .education-item {
+            margin-bottom: 8px;
+        }
+
+        .company-info,
+        .project-info,
+        .school-info {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .company-info-department,
+        .school-subject,
+        .project-info-link {
+            font-weight: normal;
+            font-size: 12px;
+            margin-left: 6px;
+            margin-right: 6px;
+            border-left: 1px solid #ccc;
+            padding-left: 6px;
+            border-right: 1px solid #ccc;
+            padding-right: 6px;
+        }
+
+        .project-info-empty {
+            border-right: 1px solid #ccc;
+            padding-right: 6px;
+            margin-right: 6px;
+        }
+
+        .company-period,
+        .project-period,
+        .education-period {
+            font-weight: normal;
+            color: #666;
+            float: right;
+            font-size: 14px;
+        }
+
+        .advantages-list {
+            padding-left: 20px;
+        }
+
+
+        .awards-list {
+            padding-left: 0px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .awards-column {
+            flex: 1;
+        }
+
+        .award-item {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .award-name {
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .award-date {
+            color: #666;
+            font-size: 14px;
+            margin-top: 2px;
+            float: right;
+        }
+
+        .export-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 4px;
+            z-index: 100;
+        }
+
+        .export-btn {
+            padding: 4px 4px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .export-btn:hover {
+            background: #1a252f;
+        }
+
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 10px;
+            }
+
+            .export-buttons {
+                position: static;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media print {
+            .resume-container {
+                box-shadow: none !important;
+                /* 去掉阴影 */
+                border: none !important;
+                /* 去掉边框 */
+                padding: 20px !important;
+                /* 缩小内边距 */
+            }
+
+            .export-buttons {
+                display: none !important;
+                /* 打印时隐藏导出按钮 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="export-buttons">
+        <button class="export-btn" id="show-contact">CALL</button>
+        <button class="export-btn" id="open-link">HTML</button>
+        <button class="export-btn" id="export-pdf">PDF</button>
+        <button class="export-btn" id="export-image">PNG</button>
+    </div>
+
+    <div class="resume-container" id="resume-content">
+
+        <div class="profile-header">
+            <div class="personal-info">
+                <div class="name">欧阳天</div>
+
+                <div class="contact-inline">
+                    <div class="contact-item">性别：男</div>
+                    <div class="contact-item">生日：1997-12</div>
+                    <div class="contact-item">地区：北京</div>
+                </div>
+                <div class="contact-inline">
+                    <div class="contact-item">电话：<span id="boiltask-phone">***CLICK CALL***</span></div>
+                    <div class="contact-item">微信：<span id="boiltask-wechat">***CLICK CALL***</span></div>
+                    <div class="contact-item">邮箱：<a href="mailto:i@oyt.ink">i@oyt.ink</a></div>
+                </div>
+                <div class="boiltask-website">
+                    <div>个人网站：<a href="https://boiltask.com" target="_blank">https://boiltask.com</a></div>
+                </div>
+
+                <div class="skills">
+                    <span>GamePlay</span><span>UnrealEngine</span><span>C++</span><span>Golang</span>
+                </div>
+            </div>
+
+            <div class="profile-photo">
+                <img src="/boiltask.jpeg" alt="个人照片">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">工作经历</div>
+            <div class="experience-item">
+                <div class="company-info">
+                    英雄游戏（北京）<span class="company-info-department">大鱼工作室</span>UE4开发工程师
+                    <span class="company-period">2022年01月 - 至今</span>
+                </div>
+                <ul>
+                    <li>负责《创造吧！我们的星球》UE4客户端与DS服务器Gameplay开发，每次绩效皆为项目组前列。</li>
+                    <li>参与保密期UE5项目，负责客户端与DS服务器Gameplay开发。</li>
+                    <li>推进项目支撑工具、开发效率、性能优化、崩溃分析等工作。</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="company-info">
+                    河北精英动漫文化传播股份有限公司<span class="company-info-department">游戏部（北京）</span>游戏主程序
+                    <span class="company-period">2021年09月 - 2022年01月</span>
+                </div>
+                <ul>
+                    <li>参与公司游戏部门的组建、《叶罗丽时辰砂》项目技术研发，负责UE4客户端与Golang服务器的开发工作。</li>
+                    <li>负责SVN、Jenkins、Jira等系统部署与维护。</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="company-info">
+                    北京悠米互动娱乐科技有限公司<span class="company-info-department">研发中心</span>游戏开发工程师
+                    <span class="company-period">2019年07月 - 2021年06月</span>
+                </div>
+                <ul>
+                    <li>参与基于UE4的沙盒竞技手游《救赎之地》，负责UE4客户端与原生C++服务器的GamePlay程序开发。</li>
+                    <li>协助主程完成项目核心玩法相关程序工作的分配与追踪。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">教育经历</div>
+            <div class="education-item">
+                <div class="school-info">
+                    河南理工大学<span class="school-subject">本科</span>计算机科学与技术
+                    <span class="education-period">2015年01月 - 2019年07月</span>
+                </div>
+                <div>在校积极参与各项学术活动，任河南理工大学算法协会副会长。</div>
+                <ul>
+                    <li>主导协会相关网站与工具的开发与维护工作，负责协会新生训练与考核。</li>
+                    <li>作为本校算法竞赛主力队员参赛。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">个人优势</div>
+            <ul class="advantages-list">
+                <li>多次参加线上线下算法竞赛，获得省级国家级众多奖项。</li>
+                <li>熟悉C/C++、Golang，能灵活运用Lua、Python、TypeScript等脚本并积极学习新知识，掌握常用数据结构与算法。</li>
+                <li>熟悉图形学知识，对游戏引擎有一定心得，具有一定的手绘与鼠绘等美术能力。</li>
+                <li>有良好的英语阅读能力，能熟练检索英文资料，积极参与国内外相关论坛，为UnLua、PuerTS等开源项目提交过修复。</li>
+                <li>具有团队意识，拥有较好的沟通与协作能力，受到团队成员认可。</li>
+                <li>对技术有探索欲望，对游戏各个模块都有实践，能主动学习业内解决方案，会积极沉淀一些文档与模板工程。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">工作项目</div>
+            <div class="project-item">
+                <div class="project-info">
+                    Project:Air<span class="project-info-empty"></span>UE5开发工程师
+                    <span class="project-period">2025年09月 - 至今</span>
+                </div>
+                <ul>
+                    <li>预研期UE5大世界项目，正在进行初期的开发工作。</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    创造吧！我们的星球<span class="project-info-link">wmdxq.qq.com</span>UE4开发工程师
+                    <span class="project-period">2022年01月 - 至今</span>
+                </div>
+                <div>英雄游戏开发腾讯发行的UE4沙盒生存游戏，负责玩法相关逻辑的开发工作。</div>
+                <ul>
+                    <li>负责道具、角色、捏脸、枪械、科技树、新手引导等玩法机制的开发与维护。</li>
+                    <li>负责脚本、网络、场景、事件、Framework、鸿蒙、本地化等系统机制的开发与维护。</li>
+                    <li>主导CI/CD、服务器更新、项目助手、日志分析、版本控制等支撑工具的设计与开发。</li>
+                    <li>协助完成新人培养，处理项目紧急问题，推进流程等工程规范化。</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    叶罗丽时辰砂<span class="project-info-link">scs.jydmgame.com</span>游戏主程序
+                    <span class="project-period">2021年08月 - 2022年01月</span>
+                </div>
+                <div>少女向动漫IP叶罗丽衍生游戏项目，负责服务器与部分UE4客户端开发工作。</div>
+                <ul>
+                    <li>负责游戏服务器架构设计与实现。</li>
+                    <li>负责UE4客户端基础架构实现。</li>
+                    <li>负责手机、成就、福利系统等功能开发。</li>
+                    <li>负责数值配置系统、监控机器人等相关工具设计与实现。</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    救赎之地<span class="project-info-link">hero.umi-game.cn</span>游戏开发工程师
+                    <span class="project-period">2019年07月 - 2021年06月</span>
+                </div>
+                <div>参与游戏多个核心功能的制作，重点负责游戏战斗场景相关机制的开发与维护。</div>
+                <ul>
+                    <li>优化与重构NPC的刷新、战斗、管理等机制，增强了NPC机制的AI稳定性与可玩性。</li>
+                    <li>完成新手关的开发与维护，极大提高了游戏首局率与留存率。</li>
+                    <li>负责手机、成就、福利系统等功能开发。</li>
+                    <li>参与了游戏内英雄、装备、交互物等核心玩法的制作，为游戏性提供技术支持。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">业余项目</div>
+            <div class="project-item">
+                <div class="project-info">
+                    DidaOJ在线评测<span class="project-info-link">oj.didapipa.com</span>产品经理&全栈开发工程师
+                    <span class="project-period">2016年08月 - 至今</span>
+                </div>
+                <div>
+                    <p>起初用于河南理工大学程序算法在线评测，主导进行了数次大型重构与迁移，可用于多种编程语言的评测。</p>
+                    <p>最新版本前端采用Vue3框架，后端采用Gin框架，由Cloudflare与aliyun提供计算支持。</p>
+                    <ul>
+                        <li>实现了前后端分离的OJ平台，使得前端界面可以独立运行于静态托管平台，便于部署在官方校内网。</li>
+                        <li>提供了可自定义规则的评测机制，为出题人提供了良好的评测支持。</li>
+                        <li>提供了代码托管、题目推荐等功能，为用户带来了更多的便捷。</li>
+                        <li>平台极大提高了校内学习积极性，在维护期间，队员多次取得省级、国家级奖项。</li>
+                        <li>为多次校赛与省级练习赛提供了技术支持，扩展了团队声誉。</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        HPU小助手<span class="project-info-empty"></span>产品经理&全栈开发工程师
+                        <span class="project-period">2015年10月 - 2019年08月</span>
+                    </div>
+                    <ul>
+                        <li>借助QQ平台API，完成对QQ群的管理。</li>
+                        <li>定时发送课表及计划任务。</li>
+                        <li>支持指定关键词回复。</li>
+                        <li>提供课表与成绩查询等功能。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">荣誉奖项</div>
+                <div class="awards-list">
+                    <div class="awards-column">
+                        <div class="award-item">
+                            <div class="award-name">第三届中国大学生程序设计竞赛(秦皇岛)铜奖</div>
+                            <div class="award-date">2017.10</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">河南理工大学高级语言程序设计竞赛二等奖</div>
+                            <div class="award-date">2017.06</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">2017ACM-ICPC亚洲区陕西站铜奖</div>
+                            <div class="award-date">2017.05</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">河南省第十届ACM大学生程序设计竞赛金奖</div>
+                            <div class="award-date">2017.05</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">第八届蓝桥杯全国总决赛优秀奖</div>
+                            <div class="award-date">2017.05</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">第八届蓝桥杯河南赛区一等奖</div>
+                            <div class="award-date">2017.04</div>
+                        </div>
+                    </div>
+                    <div class="awards-column">
+                        <div class="award-item">
+                            <div class="award-name">2016年度大学生科技创新优秀奖</div>
+                            <div class="award-date">2017.04</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">2017CCCC团队一等奖</div>
+                            <div class="award-date">2017.03</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">河南理工大学第七届程序设计大赛金奖</div>
+                            <div class="award-date">2016.12</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">2016ACM-ICPC亚洲区中国总决赛铜奖</div>
+                            <div class="award-date">2016.12</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">2016ACM-ICPC亚洲区北京站铜奖</div>
+                            <div class="award-date">2016.11</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-name">河南理工大学第六届程序设计大赛三等奖</div>
+                            <div class="award-date">2015.11</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/pxmu@1.1.0/dist/web/pxmu.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+        <script type="module">
+            let contactRevealed = false;
+            document.getElementById('show-contact').addEventListener('click', function () {
+                if (contactRevealed) {
+                    document.getElementById('boiltask-phone').innerText = '***CLICK CALL***';
+                    document.getElementById('boiltask-wechat').innerText = '***CLICK CALL***';
+                    document.getElementById('show-contact').innerText = 'CALL';
+                    pxmu.toast({
+                        msg: '联系方式已隐藏',
+                        location: 'top',
+                    });
+                    contactRevealed = false;
+                } else {
+                    const testDecrypted = "U2FsdGVkX1/QUJmpkUY4JK7k6dOAsZLX4piPmhMYQgexJCmazEOMKgvsVdCTkv+Q"
+                    let inputPwd = prompt("请输入密码查看联系方式：");
+                    try {
+                        if (CryptoJS.AES.decrypt(testDecrypted, inputPwd).toString(CryptoJS.enc.Utf8) === "CHECK|pB7qdhnZzHJSHgqJ") {
+                            const encryptedPhone = "U2FsdGVkX19ExpRi/f1YlcXoTTiOadbjh9L9yQIA2lY=";
+                            const encryptedWechat = "U2FsdGVkX1+MITopmQnCsdCLEyfsoT6IYjbQ++gwtCQ=";
+                            try {
+                                const phone = CryptoJS.AES.decrypt(encryptedPhone, inputPwd).toString(CryptoJS.enc.Utf8);
+                                const wechat = CryptoJS.AES.decrypt(encryptedWechat, inputPwd).toString(CryptoJS.enc.Utf8);
+                                document.getElementById('boiltask-phone').innerText = phone;
+                                document.getElementById('boiltask-wechat').innerText = wechat;
+                                document.getElementById('show-contact').innerText = 'HIDE';
+                                pxmu.toast({
+                                    msg: '联系方式已显示',
+                                    location: 'top',
+                                });
+                                contactRevealed = true;
+                            } catch (e) {
+                                pxmu.toast({
+                                    msg: '解码错误，可在页面留言来联系作者',
+                                    location: 'top',
+                                });
+                            }
+                        } else {
+                            pxmu.toast({
+                                msg: '密码错误，可在页面留言来联系作者',
+                                location: 'top',
+                            });
+                        }
+                    } catch (e) {
+                        pxmu.toast({
+                            msg: '密码验证错误，可在页面留言来联系作者',
+                            location: 'top',
+                        });
+                    }
+
+                }
+            });
+
+            document.getElementById('open-link').addEventListener('click', function () {
+                window.open(window.location.href, '_blank');
+            });
+            document.getElementById('export-pdf').addEventListener('click', function () {
+                const start = Date.now();
+                window.print();
+                const elapsed = Date.now() - start;
+                if (elapsed < 100) {
+                    pxmu.toast({
+                        msg: '您的浏览器有可能不支持打印，请尝试使用电脑端最新浏览器',
+                        location: 'top',
+                    });
+                }
+            });
+
+            document.getElementById('export-image').addEventListener('click', function () {
+                const element = document.getElementById('resume-content');
+                html2canvas(element, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false
+                }).then(function (canvas) {
+                    const link = document.createElement('a');
+                    link.download = '欧阳天_个人简历.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                });
+            });
+        </script>
+        <script src="https://unpkg.com/pangu@6.1.3/dist/browser/pangu.umd.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                isShouldLoad = false;
+                pangu.spacingPage();
+                const elements = document.getElementsByClassName("main-container");
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].style.display = "flex";
+                }
+                const loadingOverlay = document.getElementById("loadingOverlay");
+                if (loadingOverlay) {
+                    loadingOverlay.style.display = "none";
+                }
+            });
+        </script>
+</body>
+
+</html>
