@@ -5,20 +5,20 @@ if (!event.data) {
 return;
 }
 if (event.data.type === 'boiltask-oj-set-height') {
-const iframes = document.querySelectorAll('.boiltask-oj-poj-1409 iframe');
+const iframes = document.querySelectorAll('.boiltask-oj-nyoj-1409 iframe');
 for (let i = 0; i &lt; iframes.length; i++) {
 const iframe = iframes[i];
 iframe.style.height = event.data.height + 'px';
 }
 } else if (event.data.type === 'boiltask-oj-problem-info') {
 console.log(event.data);
-const leftElements = document.querySelectorAll('.boiltask-oj-poj-1409 .dida-content-iframe-title-left');
+const leftElements = document.querySelectorAll('.boiltask-oj-nyoj-1409 .dida-content-iframe-title-left');
 if (leftElements.length > 0) {
 if (!leftElements[0].innerHTML) {
 leftElements[0].innerHTML = event.data.title;
 }
 }
-const rightElements = document.querySelectorAll('.boiltask-oj-poj-1409 .dida-content-iframe-title-right-desc');
+const rightElements = document.querySelectorAll('.boiltask-oj-nyoj-1409 .dida-content-iframe-title-right-desc');
 if (rightElements.length > 0) {
 if (!rightElements[0].innerHTML) {
 let text = ""
@@ -37,7 +37,7 @@ rightElements[0].innerHTML = text
 }
 });
 &lt;/script>
-&lt;div class="dida-content-card boiltask-oj-poj-1409">
+&lt;div class="dida-content-card boiltask-oj-nyoj-1409">
 &lt;div class="dida-content-iframe-title">
 &lt;div class="dida-content-iframe-title-left">&lt;/div>
 &lt;div class="dida-content-iframe-title-right">
@@ -46,18 +46,18 @@ rightElements[0].innerHTML = text
 &lt;/div>
 &lt;div>
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
-onclick="refreshBoiltaskOj(this, 'poj-1409')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+onclick="refreshBoiltaskOj(this, 'nyoj-1409')">&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200">
 &lt;path
 d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
 fill="#666666" p-id="3153">&lt;/path>
 &lt;/svg>&lt;/button>
-&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/poj-1409')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/nyoj-1409')">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/button>
 &lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div>
-&lt;iframe src='https://oj.boiltask.com/widget/poj-1409?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1409?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
 &lt;/div>
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
