@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 17 Dec 2025 12:44:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p>似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Dec 2025 19:27:55 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p>似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p>
 &lt;p>不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p>
 &lt;p style="text-align:center">
 想法和目标
@@ -2827,7 +2827,10 @@ autocomplete="current-password" />
 >GitHub - CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="noopener"
 >GitHub - hugo-fixit/FixIt: 🔧 A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>尝试Obsidian与Hugo结合</title><link>https://boiltask.com/record/try-obsidian/</link><pubDate>Thu, 03 Apr 2025 21:40:08 +0800</pubDate><guid>https://boiltask.com/record/try-obsidian/</guid><description>&lt;p>之前一直是Notion的拥趸，不过随着又有好久不用Notion，又重新起了笔记软件挑选的念头。&lt;/p>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>20251229 随着Vibe Codeing的发展，&lt;a class="link" href="https://oj.boiltask.com/" target="_blank" rel="noopener"
+>BoilTask Online Judge Problem&lt;/a>站点应用了新主题。&lt;/p>&lt;/blockquote></description></item><item><title>尝试Obsidian与Hugo结合</title><link>https://boiltask.com/record/try-obsidian/</link><pubDate>Thu, 03 Apr 2025 21:40:08 +0800</pubDate><guid>https://boiltask.com/record/try-obsidian/</guid><description>&lt;p>之前一直是Notion的拥趸，不过随着又有好久不用Notion，又重新起了笔记软件挑选的念头。&lt;/p>
 &lt;p>之前一直觉得Obsidian作为一个本地存档的笔记软件，功能也没有Notion强大，还需要自己处理同步等问题，应该是没什么优势。&lt;/p>
 &lt;p>不过上次折腾起来Hugo之后，越发感觉笔记这种东西，还是返璞归真比较适合我，要不太容易忙于折腾样式、排版什么的问题而分心。到最后发现，除了设计好的模板，其实真正的内容没有多少。&lt;/p>
 &lt;p>下载下来Obsidian之后，发现他和Hugo的工作流意外的搭。使用Obsidian来管理工作区，比用专注编码的IDE要更适合文档类的整理工作。虽然这样以来又有些浪费“重金”买的Typora，不过总算也是能物尽其用吧。&lt;/p>
