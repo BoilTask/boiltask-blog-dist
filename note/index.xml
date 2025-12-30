@@ -6,7 +6,7 @@
 &lt;h3 id="源码">&lt;a href="#%e6%ba%90%e7%a0%81" class="header-anchor">&lt;/a>源码
 &lt;/h3>&lt;p>比对桶中元素时，先对比字符串长度，不同的则认为肯定不相同。&lt;/p>
 &lt;p>最新的实现根据&lt;code>LUAI_MAXSHORTLEN = 40&lt;/code>判断长短字符串，对于短字符串计算&lt;code>Hash&lt;/code>并使用桶机制进行对比，对于长字符串通过随机种子来分配&lt;code>Hash&lt;/code>。&lt;/p>
-&lt;p>❓长字符串的&lt;code>Hash&lt;/code>冲突如何解决&lt;/p></description></item><item><title>游戏设计的100个原理笔记(2) – 第1篇 游戏创新的一般原理（下）</title><link>https://boiltask.com/note/100principles-2/</link><pubDate>Thu, 14 Nov 2019 11:00:24 +0000</pubDate><guid>https://boiltask.com/note/100principles-2/</guid><description>&lt;h2 id="原理15-记忆和技巧">&lt;a href="#%e5%8e%9f%e7%90%8615-%e8%ae%b0%e5%bf%86%e5%92%8c%e6%8a%80%e5%b7%a7" class="header-anchor">&lt;/a>原理15 记忆和技巧
+&lt;p>❓长字符串的&lt;code>Hash&lt;/code>冲突如何解决&lt;/p></description></item><item><title>游戏设计的100个原理笔记(2) – 第1篇 游戏创新的一般原理（下）</title><link>https://boiltask.com/note/100-principles-of-game-design-2/</link><pubDate>Thu, 14 Nov 2019 11:00:24 +0000</pubDate><guid>https://boiltask.com/note/100-principles-of-game-design-2/</guid><description>&lt;h2 id="原理15-记忆和技巧">&lt;a href="#%e5%8e%9f%e7%90%8615-%e8%ae%b0%e5%bf%86%e5%92%8c%e6%8a%80%e5%b7%a7" class="header-anchor">&lt;/a>原理15 记忆和技巧
 &lt;/h2>&lt;p>在游戏设计领域有很多游戏种类，有更广义的游戏分类方法把游戏分为记忆游戏和技巧游戏。&lt;/p>
 &lt;p>在记忆游戏中需要用到试错法、记忆识别、本能反应（平台跳跃游戏）以及对游戏本身的掌握。技巧游戏需要体能或精神上的实力和条件来完成。许多游戏在特定情况下对这两种类型都有涵盖。&lt;/p>
 &lt;p>记忆游戏可能会在玩了一段时间之后让玩家感到无聊，解决这个问题的方法是在保持游戏机制、故事和结果不变的前提下为游戏加入一些随机性。&lt;/p>
@@ -286,7 +286,7 @@ loading="lazy"
 &lt;h4 id="先掌握概要再阅读细节">&lt;a href="#%e5%85%88%e6%8e%8c%e6%8f%a1%e6%a6%82%e8%a6%81%e5%86%8d%e9%98%85%e8%af%bb%e7%bb%86%e8%8a%82" class="header-anchor">&lt;/a>先掌握概要再阅读细节
 &lt;/h4>&lt;p>要先掌握概要再渐进式地追求细节，这是大的原则。&lt;/p>
 &lt;h4 id="从头开始逐章手抄">&lt;a href="#%e4%bb%8e%e5%a4%b4%e5%bc%80%e5%a7%8b%e9%80%90%e7%ab%a0%e6%89%8b%e6%8a%84" class="header-anchor">&lt;/a>从头开始逐章手抄
-&lt;/h4>&lt;p>当没有明确要做的事情或者想要了解的东西时，当简单浏览的内容过目即忘时，以这种学习状态，不管怎么学也无法获得真知。&lt;/p></description></item><item><title>游戏设计的100个原理笔记(1) – 第1篇 游戏创新的一般原理（上）</title><link>https://boiltask.com/note/100principles-1/</link><pubDate>Sat, 09 Nov 2019 15:50:57 +0000</pubDate><guid>https://boiltask.com/note/100principles-1/</guid><description>&lt;h2 id="原理1-游戏的对称性非对称性和同步性">&lt;a href="#%e5%8e%9f%e7%90%861-%e6%b8%b8%e6%88%8f%e7%9a%84%e5%af%b9%e7%a7%b0%e6%80%a7%e9%9d%9e%e5%af%b9%e7%a7%b0%e6%80%a7%e5%92%8c%e5%90%8c%e6%ad%a5%e6%80%a7" class="header-anchor">&lt;/a>原理1 游戏的对称性/非对称性和同步性
+&lt;/h4>&lt;p>当没有明确要做的事情或者想要了解的东西时，当简单浏览的内容过目即忘时，以这种学习状态，不管怎么学也无法获得真知。&lt;/p></description></item><item><title>游戏设计的100个原理笔记(1) – 第1篇 游戏创新的一般原理（上）</title><link>https://boiltask.com/note/100-principles-of-game-design-1/</link><pubDate>Sat, 09 Nov 2019 15:50:57 +0000</pubDate><guid>https://boiltask.com/note/100-principles-of-game-design-1/</guid><description>&lt;h2 id="原理1-游戏的对称性非对称性和同步性">&lt;a href="#%e5%8e%9f%e7%90%861-%e6%b8%b8%e6%88%8f%e7%9a%84%e5%af%b9%e7%a7%b0%e6%80%a7%e9%9d%9e%e5%af%b9%e7%a7%b0%e6%80%a7%e5%92%8c%e5%90%8c%e6%ad%a5%e6%80%a7" class="header-anchor">&lt;/a>原理1 游戏的对称性/非对称性和同步性
 &lt;/h2>&lt;p>在对称性游戏（Symmetric gameplay）中，参与游戏的玩家的体验完全一样。&lt;/p>
 &lt;p>在非对称性游戏（Asymmetric gameplay）中，参与游戏的玩家的体验并不完全一样。&lt;/p>
 &lt;p>游戏中的延迟也会导致玩家看到的画面有不同，这种意外产生的信息不对称可能会产生这样的后果，这便涉及到同步性（synchronicity）问题 。同步的游戏是指在游戏过程中参与的双方同时发动自己的动作。&lt;/p>
@@ -295,20 +295,20 @@ loading="lazy"
 &lt;p>改变某张牌的价值，总而组成一个更强力的牌组则为游戏增添了更多的复杂性。（赖子机制）&lt;/p>
 &lt;h2 id="原理3-巴特尔的玩家分类理论">&lt;a href="#%e5%8e%9f%e7%90%863-%e5%b7%b4%e7%89%b9%e5%b0%94%e7%9a%84%e7%8e%a9%e5%ae%b6%e5%88%86%e7%b1%bb%e7%90%86%e8%ae%ba" class="header-anchor">&lt;/a>原理3 巴特尔的玩家分类理论
 &lt;/h2>&lt;p>理查德·巴特尔 将MUD（ Multi-User Dimension）玩家分为四个基本类型： 成就型玩家 、 探险型玩家 、 社交型玩家 、 杀手型玩家 。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/note/100principles-1/image-1.webp"
+&lt;p>&lt;img src="https://boiltask.com/note/100-principles-of-game-design-1/image-1.webp"
 width="672"
 height="305"
-srcset="https://boiltask.com/note/100principles-1/image-1_hu_add1b1bc4c2bda85.webp 480w, https://boiltask.com/note/100principles-1/image-1_hu_8888d8db33341dc4.webp 1024w"
+srcset="https://boiltask.com/note/100-principles-of-game-design-1/image-1_hu_add1b1bc4c2bda85.webp 480w, https://boiltask.com/note/100-principles-of-game-design-1/image-1_hu_8888d8db33341dc4.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="220"
 data-flex-basis="528px"
 >&lt;/p>
 &lt;p>其用两条轴线分出的4个象限来分析这4种不同的玩家。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/note/100principles-1/image-2.webp"
+&lt;p>&lt;img src="https://boiltask.com/note/100-principles-of-game-design-1/image-2.webp"
 width="357"
 height="274"
-srcset="https://boiltask.com/note/100principles-1/image-2_hu_30ae277eff782fcd.webp 480w, https://boiltask.com/note/100principles-1/image-2_hu_5e4648105efe9b43.webp 1024w"
+srcset="https://boiltask.com/note/100-principles-of-game-design-1/image-2_hu_30ae277eff782fcd.webp 480w, https://boiltask.com/note/100-principles-of-game-design-1/image-2_hu_5e4648105efe9b43.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="130"
