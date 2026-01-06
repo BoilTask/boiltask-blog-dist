@@ -1450,13 +1450,13 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/h2&gt;&lt;h3 id="输入和输出"&gt;&lt;a href="#%e8%be%93%e5%85%a5%e5%92%8c%e8%be%93%e5%87%ba" class="header-anchor"&gt;&lt;/a&gt;输入和输出
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;按值返回，否则按引用返回。避免返回指针，除非它可以为空。&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;出于性能和安全性考虑，需要尽可能能按引用返回值，如果担心成员变量被修改可以使用const标识。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;输入参数放在所有输出参数之前。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;对于通过传入引用参数来获取输出的情况，需要注意在必要时对传入参数做初始化，防止函数执行提前结束而造成的输出与预期不一致。&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;对于通过传入引用参数来获取输出的情况，需要注意在必要时对传入参数做初始化，防止函数执行提前结束而造成的输出与预期不一致。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1469,15 +1469,15 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;&lt;h3 id="编写简短函数"&gt;&lt;a href="#%e7%bc%96%e5%86%99%e7%ae%80%e7%9f%ad%e5%87%bd%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;编写简短函数
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;如果函数特别长，应思考在不影响程序结构的前提下对其进行分割&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;如果函数特别长，应思考在不影响程序结构的前提下对其进行分割&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;编译器优化一方面是消除常用的子表达式。而函数越大，编译器进行辨识的工作量就越大。从而导致编译时间大大增长。&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;编译器优化一方面是消除常用的子表达式。而函数越大，编译器进行辨识的工作量就越大。从而导致编译时间大大增长。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="常量正确性"&gt;&lt;a href="#%e5%b8%b8%e9%87%8f%e6%ad%a3%e7%a1%ae%e6%80%a7" class="header-anchor"&gt;&lt;/a&gt;常量正确性
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;不要直接进行值传递，避免一次内存拷贝，传递const引用参数&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;不要直接进行值传递，避免一次内存拷贝，传递const引用参数&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -1513,17 +1513,13 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;TestSomething&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;StringArray&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{...}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;若方法不修改对象，将函数标记为常量函数&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;若方法不修改对象，将函数标记为常量函数
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;常量成员函数承诺不会修改类的成员变量，提高代码的安全性，防止意外的数据修改和潜在错误。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;代码逻辑更清晰，一眼就能看出这是个只读函数&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;给编译器优化空间&lt;/p&gt;
+&lt;li&gt;常量成员函数承诺不会修改类的成员变量，提高代码的安全性，防止意外的数据修改和潜在错误。&lt;/li&gt;
+&lt;li&gt;代码逻辑更清晰，一眼就能看出这是个只读函数&lt;/li&gt;
+&lt;li&gt;给编译器优化空间&lt;/li&gt;
+&lt;li&gt;避免调用者无法标记为常量函数&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1538,38 +1534,6 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 若此代码在FThing上被调用，其不会修改FThing
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;游戏中的例子：如果PrintAIData函数定位为const，则我们立马能确认函数体内的AIDataPack成员变量进行的都是只读操作，否则还要去判断是否有写入操作。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;ABaseMonster&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;PrintAIData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;CompName&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;TreeDescName&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;BBLine&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="cm"&gt;/*if (AIDataPack.ComponmentName.IsEmpty())
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; return;*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;CompName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AIDataPack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ComponmentName&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TreeDescName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AIDataPack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TreeDescription&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;AIDataPack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BlackboardDescription&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ParseIntoArrayLines&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BBLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;MARK_DIRTY&lt;/span&gt;&lt;span class="err"&gt;？？&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;若循环不修改容器，则在容器上使用常量迭代&lt;/li&gt;
@@ -1615,18 +1579,11 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;
 &lt;h3 id="缺省参数"&gt;&lt;a href="#%e7%bc%ba%e7%9c%81%e5%8f%82%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;缺省参数
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;缺省参数实际上是函数重载语义的另一种实现方式&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对于子类继承的虚函数，不允许使用缺省参数&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;缺省参数实际上是函数重载语义的另一种实现方式&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;对于子类继承的虚函数，不允许使用缺省参数
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;虚函数是动态绑定，而缺省参数值是静态绑定。即虚函数是运行时确定类型，而缺省参数值是编译时就确定的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果重新定义的话，会使得程序使用基类虚函数的默认参数，这显然并不是你想要的结果。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;虚函数是动态绑定，而缺省参数值是静态绑定。即虚函数是运行时确定类型，而缺省参数值是编译时就确定的。&lt;/li&gt;
+&lt;li&gt;如果重新定义的话，会使得程序使用基类虚函数的默认参数，这显然并不是你想要的结果。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -1769,24 +1726,18 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;
 &lt;h3 id="lambda表达式"&gt;&lt;a href="#lambda%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;Lambda表达式
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;不要使用默认捕获（=, &amp;amp;），所有变量捕获都显式写出来&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;不要使用默认捕获（=, &amp;amp;），所有变量捕获都显式写出来
 &lt;ul&gt;
-&lt;li&gt;非异步的lambda表达式除外，例如：Foreach之类的&lt;/li&gt;
+&lt;li&gt;主要针对异步执行的Lambda表达式，当执行时有可能捕获的变量已经失效&lt;/li&gt;
+&lt;li&gt;同步的lambda表达式一般没有什么副作用，所以可以使用，例如：Foreach之类的&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;异步回调Lambda表达式捕获局部变量&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lambda不要捕获UObject裸指针&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;异步回调Lambda表达式应该捕获局部变量&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;Lambda不要捕获UObject裸指针
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;如果再等待异步回调执行之前，捕获的UObject裸指针已被GC且在原来的内存上又分配了新的UObject&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果此时在回调中对该过期了的UObject进行写入，则相当于在一个未知的内存上写入，可能把新的UObject写坏了。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;如果再等待异步回调执行之前，捕获的UObject裸指针已被GC且在原来的内存上又分配了新的UObject&lt;/li&gt;
+&lt;li&gt;如果此时在回调中对该过期了的UObject进行写入，则相当于在一个未知的内存上写入，可能把新的UObject写坏了。&lt;/li&gt;
+&lt;li&gt;可以使用TWeakObjectPtr来判断执行时的有效性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1808,14 +1759,16 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;span class="lnt"&gt;14
 &lt;/span&gt;&lt;span class="lnt"&gt;15
 &lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 异步回调的情况
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UStarsAssetsManager&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Instance&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;AsyncLoad&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MeshInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MeshPath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;WeakThis&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CallBack&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CompPtr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MeshInfo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;WithCollision&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FSoftObjectPath&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;ObjectPath&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UMetaAssetsManager&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Instance&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;AsyncLoad&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MeshInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MeshPath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;WeakThis&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CallBack&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FSoftObjectPath&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;ObjectPath&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;CompPtr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValid&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;WeakThis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValid&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;WeakThis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValid&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -1829,104 +1782,37 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="配置"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;配置
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;使用&lt;code&gt;UDataManger&lt;/code&gt;来管理所有表格&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;需要使用&lt;code&gt;StarsGetDataTable&lt;/code&gt;等接口来读表，禁止使用UE自带的表格读取&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;我们会对同结构表格在读取时进行合并处理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;考虑热更配置的需求，谨慎对配置进行缓存，优先考虑以&lt;code&gt;RowName&lt;/code&gt;去查表。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;考虑热更配置的需求，谨慎对配置进行缓存，优先考虑以&lt;code&gt;RowName&lt;/code&gt;去查表。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="回调"&gt;&lt;a href="#%e5%9b%9e%e8%b0%83" class="header-anchor"&gt;&lt;/a&gt;回调
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;谨慎使用回调，尤其需要注意是否存在跨帧逻辑与递归逻辑。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;谨慎缓存Delegate，有可能会使得闭包异常。&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;谨慎使用回调，尤其需要注意是否存在跨帧逻辑与递归逻辑。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;谨慎缓存Delegate，有可能会使得闭包异常。
 &lt;ul&gt;
 &lt;li&gt;比如在Delegate的回调中，修改了这个Delegate，那么捕获的变量会存在异常。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="标准库"&gt;&lt;a href="#%e6%a0%87%e5%87%86%e5%ba%93" class="header-anchor"&gt;&lt;/a&gt;标准库
-&lt;/h2&gt;&lt;p&gt;UE有自己的一套模板库，大部分情况下应该使用UE，下面是可以在UE中使用的标准库。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;atomic&gt;&lt;/td&gt;
-&lt;td&gt;应在新代码中使用，在迁移旧代码时也应该使用。原子性（Atomic）将在所有受支持平台上高效推广。 &lt;code&gt;TAtomic&lt;/code&gt; 仅实现了部分功能，Epic后续也不会继续进行维护和改善。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&amp;lt;type_traits&amp;gt;&lt;/td&gt;
-&lt;td&gt;应在旧版UE特性（trait）和标准特性重叠的地方使用。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&amp;lt;initializer_list&amp;gt;&lt;/td&gt;
-&lt;td&gt;用于支持初始化器（initializer）语法&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;regex&gt;&lt;/td&gt;
-&lt;td&gt;正则表达式，UE没有自己的正则表达式方案&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;limits&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;std::numeric_limits&lt;/code&gt; 可以完整使用。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;cmath&gt;&lt;/td&gt;
-&lt;td&gt;这个头文件中只有浮点比较函数可以使用&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;UE有自己的一套模板库，大部分情况下应该使用UE提供的版本。&lt;/p&gt;
+&lt;p&gt;但有一些例外，可以参考官方文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine#%E6%A0%87%E5%87%86%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener"
+&gt;标准库的使用&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="排版与格式"&gt;&lt;a href="#%e6%8e%92%e7%89%88%e4%b8%8e%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;排版与格式
 &lt;/h2&gt;&lt;h3 id="命名相关"&gt;&lt;a href="#%e5%91%bd%e5%90%8d%e7%9b%b8%e5%85%b3" class="header-anchor"&gt;&lt;/a&gt;命名相关
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;命名（如类型或变量）中的每个单词需大写首字母，单词间通常无下划线。例如：&lt;code&gt;Health&lt;/code&gt; 和 &lt;code&gt;UPrimitiveComponent&lt;/code&gt;，而非 &lt;code&gt;lastMouseCoordinates&lt;/code&gt; 或 &lt;code&gt;delta_coordinates&lt;/code&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;类型名前缀需使用额外的大写字母，用于区分其和变量命名。例如：&lt;code&gt;FSkin&lt;/code&gt; 为类型名，而 &lt;code&gt;Skin&lt;/code&gt; 则是 &lt;code&gt;FSkin&lt;/code&gt; 的实例。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;模板类的前缀为T。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;继承自 &lt;code&gt;UObject&lt;/code&gt; 的类前缀为U。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;继承自 &lt;code&gt;AActor&lt;/code&gt; 的类前缀为A。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;继承自 &lt;code&gt;SWidget&lt;/code&gt; 的类前缀为S。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;接口的前缀为I。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;枚举的前缀为E。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;布尔变量必须以b为前缀（例如 &lt;code&gt;bPendingDestruction&lt;/code&gt; 或 &lt;code&gt;bHasFadedIn&lt;/code&gt;）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;其他多数类均以F为前缀，而部分子系统则以其他字母为前缀。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Typedefs应以任何与其类型相符的字母为前缀：若为结构体的Typedefs，则使用F；若为 &lt;code&gt;Uobject&lt;/code&gt; 的Typedefs，则使用U，以此类推。&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;命名（如类型或变量）中的每个单词需大写首字母，单词间通常无下划线。例如：&lt;code&gt;Health&lt;/code&gt; 和 &lt;code&gt;UPrimitiveComponent&lt;/code&gt;，而非 &lt;code&gt;lastMouseCoordinates&lt;/code&gt; 或 &lt;code&gt;delta_coordinates&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;类型名前缀需使用额外的大写字母，用于区分其和变量命名。例如：&lt;code&gt;FSkin&lt;/code&gt; 为类型名，而 &lt;code&gt;Skin&lt;/code&gt; 则是 &lt;code&gt;FSkin&lt;/code&gt; 的实例。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;模板类的前缀为T。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;继承自 &lt;code&gt;UObject&lt;/code&gt; 的类前缀为U。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;继承自 &lt;code&gt;AActor&lt;/code&gt; 的类前缀为A。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;继承自 &lt;code&gt;SWidget&lt;/code&gt; 的类前缀为S。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;接口的前缀为I。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;枚举的前缀为E。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;布尔变量必须以b为前缀（例如 &lt;code&gt;bPendingDestruction&lt;/code&gt; 或 &lt;code&gt;bHasFadedIn&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;其他多数类均以F为前缀，而部分子系统则以其他字母为前缀。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;Typedefs应以任何与其类型相符的字母为前缀：若为结构体的Typedefs，则使用F；若为 &lt;code&gt;UObject&lt;/code&gt; 的Typedefs，则使用U，以此类推。
 &lt;ul&gt;
-&lt;li&gt;特别模板实例化的Typedef不再是模板，并应加上相应前缀，例如：&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;特别模板实例化的Typedef不再是模板，并应加上相应前缀，例如：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -1936,26 +1822,15 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;typedef&lt;/span&gt; &lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FMytype&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;FArrayOfMyTypes&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;即使不暴露给蓝图，也可以遵循此命名规范以适应UE的规范。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;类型和变量的命名为名词。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;方法名是动词，以描述方法的效果或未被方法影响的返回值。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;所有返回布尔的函数应发起true/false的询问，如&lt;code&gt;IsVisible()或ShouldClearBuffer()&lt;/code&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;若函数参数通过引用传递，同时该值会写入函数，建议以&amp;quot;Out&amp;quot;做为函数参数命名的前缀（非必需）。此操作将明确表明传入该参数的值将被函数替换。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;若In或Out参数同样为布尔，以b作为In/Out的前缀，如 &lt;code&gt;bOutResult&lt;/code&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;返回值的函数应描述返回的值.命名应说明函数将返回的值。此规则对布尔函数极为重要。请参考以下两个范例方法：&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;即使不暴露给蓝图，也可以遵循此命名规范以适应UE的规范。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;类型和变量的命名为名词。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;方法名是动词，以描述方法的效果或未被方法影响的返回值。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;所有返回布尔的函数应发起true/false的询问，如&lt;code&gt;IsVisible()或ShouldClearBuffer()&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;若函数参数通过引用传递，同时该值会写入函数，建议以&amp;quot;Out&amp;quot;做为函数参数命名的前缀（非必需）。此操作将明确表明传入该参数的值将被函数替换。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;若In或Out参数同样为布尔，以b作为In/Out的前缀，如 &lt;code&gt;bOutResult&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;返回值的函数应描述返回的值.命名应说明函数将返回的值。此规则对布尔函数极为重要。请参考以下两个范例方法：&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;RPC函数应把Server、Client、Multicast放在函数名前。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1971,29 +1846,24 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 命名明确说明茶是新鲜的
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;IsTeaFresh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FTea&lt;/span&gt; &lt;span class="n"&gt;Tea&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对于缩写单词，推荐仍然使用首字母大写其余小写的格式&lt;/p&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;对于缩写单词，推荐仍然使用首字母大写其余小写的格式
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;可以避免陷入什么是缩写什么不是的争议中&lt;/p&gt;
+&lt;li&gt;可以避免陷入什么是缩写什么不是的争议中
 &lt;ul&gt;
 &lt;li&gt;PHP-&amp;gt;Php&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对于复杂变量名可以获得更清晰的展示&lt;/p&gt;
+&lt;li&gt;对于复杂变量名可以获得更清晰的展示
 &lt;ul&gt;
 &lt;li&gt;如HTTPSubsystem-&amp;gt;HttpSubsystem&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;UE内部变量两者都有，以仅大写首字母为主&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;UE内部变量两者都有，以仅大写首字母为主&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;命名范例&lt;/p&gt;
+&lt;/ul&gt;
+&lt;p&gt;命名范例：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2017,24 +1887,22 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UTexture&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;TeaTexture&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FPlayerIdentifier&lt;/span&gt; &lt;span class="n"&gt;PlayerId&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="代码格式"&gt;&lt;a href="#%e4%bb%a3%e7%a0%81%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;代码格式
+&lt;/div&gt;&lt;h3 id="代码格式"&gt;&lt;a href="#%e4%bb%a3%e7%a0%81%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;代码格式
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;一行不超过120个字符&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;一行不超过120个字符&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;尽量不使用非ASCII编码，文件编码必须为UTF-8&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;尽量不使用非ASCII编码，文件编码必须为UTF-8&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;缩进使用制表位\t&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;缩进使用制表位\t&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;大括号格式必须一致。在Epic的传统做法中，大括号固定被放在新行。请遵循此格式。&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;大括号格式必须一致。在Epic的传统做法中，大括号固定被放在新行。请遵循此格式。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;固定在单语句块中使用大括号。例如：&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;固定在单语句块中使用大括号。例如：&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2051,7 +1919,12 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;if-else语句中的所有执行块都应该使用大括号。此举是为防止编辑时出错——未使用大括号时，可能会意外地将另一行加入if块中。多余行不受if表达式控制，会成为较差代码。条件编译的项目导致if/else语句中断时，也会造成不良结果。因此务必使用大括号。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;if-else语句中的所有执行块都应该使用大括号。
+&lt;ul&gt;
+&lt;li&gt;此举是为防止编辑时出错——未使用大括号时，可能会意外地将另一行加入if块中。多余行不受if表达式控制，会成为较差代码。&lt;/li&gt;
+&lt;li&gt;条件编译的项目导致if/else语句中断时，也会造成不良结果。因此务必使用大括号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2078,7 +1951,13 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;li&gt;
 &lt;p&gt;switch语句&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;一定有Default条件，其中包含有break，以防在默认条件后添加新的条件。&lt;/li&gt;
+&lt;li&gt;switch需要带有default分支，如果不需要执行逻辑，应写break。&lt;/li&gt;
+&lt;li&gt;超过一行的逻辑需要加大括号，break放在大括号外面。
+&lt;ul&gt;
+&lt;li&gt;如果只有一行return逻辑，可以省略break语句。&lt;/li&gt;
+&lt;li&gt;其他情况下，应将逻辑放在大括号里，大括号外面加break。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2130,27 +2009,16 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="注释"&gt;&lt;a href="#%e6%b3%a8%e9%87%8a" class="header-anchor"&gt;&lt;/a&gt;注释
-&lt;/h2&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;多描述怎么用How、为什么这么写Why，不需要描述这个是什么What，代码实现已经能清晰描述（或需要努力往清晰去实现）是什么。&lt;/p&gt;
-&lt;h3 id="规范"&gt;&lt;a href="#%e8%a7%84%e8%8c%83" class="header-anchor"&gt;&lt;/a&gt;规范
+&lt;/h2&gt;&lt;h3 id="规范"&gt;&lt;a href="#%e8%a7%84%e8%8c%83" class="header-anchor"&gt;&lt;/a&gt;规范
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;无所谓英不英文，代码是项目组内的人看的，方便大家读懂就行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;函数注释&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;多描述怎么用How、为什么这么写Why，不需要描述这个是什么What，代码实现已经能清晰描述（或需要努力往清晰去实现）是什么。&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;无所谓英不英文，代码是项目组内的人看的，方便大家读懂就行&lt;/li&gt;
+&lt;li&gt;函数注释
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;大概功能描述&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;各个参数的描述&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;返回值的描述&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;其他信息&lt;/strong&gt;：可选择使用 &lt;code&gt;@warning&lt;/code&gt;、&lt;code&gt;@note&lt;/code&gt;、&lt;code&gt;@see&lt;/code&gt; 和 &lt;code&gt;@deprecated&lt;/code&gt; 记载额外相关信息。此类注释应在其他注释后单列一行声明。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;推荐使用Doxygen注释格式，对于常用标记UE可以正确识别&lt;/li&gt;
+&lt;li&gt;大概功能描述&lt;/li&gt;
+&lt;li&gt;各个参数的描述&lt;/li&gt;
+&lt;li&gt;返回值的描述&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2170,7 +2038,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * @brief 判断所给定义的道具是否是确定的
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 判断所给定义的道具是否是确定的
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 比如如果是随机品质的定义，就不是确定的
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * @param ItemDef 所需检查的物品定义
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * @param CheckQualityNum 是否需要检查该道具是否仅有一个品质
@@ -2183,7 +2051,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="原则"&gt;&lt;a href="#%e5%8e%9f%e5%88%99" class="header-anchor"&gt;&lt;/a&gt;原则
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;编写含义清晰的代码：&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;编写含义清晰的代码：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2201,7 +2069,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TotalLeaves&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SmallLeaves&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;LargeLeaves&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;SmallAndLargeLeaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;编写有用的注释：&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;编写有用的注释：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2223,7 +2091,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;Leaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;不要对低质量代码进行注释——重新编写这些代码：&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;不要对低质量代码进行注释——重新编写这些代码：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2247,7 +2115,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TotalLeaves&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SmallLeaves&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;LargeLeaves&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;SmallAndLargeLeaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;不要让代码与注释自相矛盾：&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;不要让代码与注释自相矛盾：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2269,8 +2137,14 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;Leaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="todo"&gt;&lt;a href="#todo" class="header-anchor"&gt;&lt;/a&gt;TODO
-&lt;/h3&gt;&lt;p&gt;对那些临时的, 短期的解决方案, 或已经够好但仍不完美的代码使用 TODO 注释。&lt;/p&gt;
-&lt;p&gt;标记一些未完成的或完成的不尽如人意的地方, 这样一搜索, 就知道还有哪些活要干, 日志都省了。&lt;/p&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;对那些临时的, 短期的解决方案, 或已经够好但仍不完美的代码使用 TODO 注释。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;标记一些未完成的或完成的不尽如人意的地方, 这样一搜索, 就知道还有哪些活要干, 日志都省了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2306,32 +2180,25 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/h2&gt;&lt;h3 id="sizeof"&gt;&lt;a href="#sizeof" class="header-anchor"&gt;&lt;/a&gt;Sizeof
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;尽可能的使用sizeof(varname)代替sizeof(type)&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;尽可能的使用sizeof(varname)代替sizeof(type)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;假设varname的类型变了，sizeof(type)大概率会忘改造成bug&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;假设varname的类型变了，sizeof(type)大概率会忘改造成bug&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="迭代器"&gt;&lt;a href="#%e8%bf%ad%e4%bb%a3%e5%99%a8" class="header-anchor"&gt;&lt;/a&gt;迭代器
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;前置自增效率更高，少了一次拷贝&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-success"&gt;提议&lt;/span&gt;前置自增效率更高，少了一次拷贝，但是大部分编译器可以正确优化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;迭代器失效的情况&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕迭代器失效的情况，一般是在循环中对容器进行增加或删除操作&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;TArray&lt;/p&gt;
+&lt;li&gt;TArray
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;增加导致的内存重分配&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;删除元素&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;插入元素&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;增加导致的内存重分配&lt;/li&gt;
+&lt;li&gt;删除元素&lt;/li&gt;
+&lt;li&gt;插入元素&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2339,7 +2206,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;
 &lt;h3 id="死循环"&gt;&lt;a href="#%e6%ad%bb%e5%be%aa%e7%8e%af" class="header-anchor"&gt;&lt;/a&gt;死循环
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;无符号整数错误使用导致的死循环&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;无符号整数错误使用导致的死循环&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2349,7 +2216,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;unsigned&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;容器的size()返回类型size_t是无符号整数&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;容器的size()返回类型size_t是无符号整数&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2369,24 +2236,11 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;while循环，条件永远不满足&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;死循环检查工具&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;FDeadLockDetector&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;死循环时崩掉并打印主线程堆栈&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕while循环，条件永远不满足&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="浮点数"&gt;&lt;a href="#%e6%b5%ae%e7%82%b9%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;浮点数
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;判断浮点数是否相等&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;判断浮点数是否相等时，不能直接用==判断，因为浮点数的精度问题，会导致判断错误&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2402,13 +2256,15 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="stdvectorbool"&gt;&lt;a href="#stdvectorbool" class="header-anchor"&gt;&lt;/a&gt;std::vector&amp;lt;bool&amp;gt;
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;尽量不要在vector中存放bool类型，vector为了做优化，它的内部存放的其实不是bool。&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;尽量不要在vector中存放bool类型，vector为了做优化，它的内部存放的其实不是bool。
+&lt;ul&gt;
+&lt;li&gt;当然对于UE来说大部分时候都应该优先考虑使用TArray&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="空指针"&gt;&lt;a href="#%e7%a9%ba%e6%8c%87%e9%92%88" class="header-anchor"&gt;&lt;/a&gt;空指针
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;空指针尽量使用nullptr而非NULL&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;空指针尽量使用nullptr而非NULL
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2422,7 +2278,6 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;span class="lnt"&gt; 9
 &lt;/span&gt;&lt;span class="lnt"&gt;10
 &lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -2431,7 +2286,6 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;int&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 编译失败 error: call of overloaded ‘func(NULL)’ is ambiguous
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;nullptr&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// char*
@@ -2441,7 +2295,9 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="数值溢出"&gt;&lt;a href="#%e6%95%b0%e5%80%bc%e6%ba%a2%e5%87%ba" class="header-anchor"&gt;&lt;/a&gt;数值溢出
-&lt;/h2&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;在使用FMath::RandRange时，需要注意数值溢出的情况。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2451,47 +2307,37 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;span class="lnt"&gt;5
 &lt;/span&gt;&lt;span class="lnt"&gt;6
 &lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Plain" data-lang="Plain"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;const int32 RetryToken = FMath::RandRange(0, INT_MAX); // 这里会随机出负数
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;##RandRange 实现
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;static FORCEINLINE int32 RandRange(int32 Min, int32 Max)
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; const int32 Range = (Max - Min) + 1; //INT_MAX的情况下，一定溢出
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; return Min + RandHelper(Range);
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;RetryToken&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FMath&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;RandRange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;INT_MAX&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 这里会随机出负数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// RandRange 实现
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;FORCEINLINE&lt;/span&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="nf"&gt;RandRange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;Min&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;Max&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;Range&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Max&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//INT_MAX的情况下，一定溢出
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Min&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;RandHelper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Range&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="内存"&gt;&lt;a href="#%e5%86%85%e5%ad%98" class="header-anchor"&gt;&lt;/a&gt;内存
 &lt;/h2&gt;&lt;h3 id="常见问题"&gt;&lt;a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98" class="header-anchor"&gt;&lt;/a&gt;常见问题
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;避免使用原生数组，尽量使用UE容器&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;避免使用原生数组，尽量使用UE容器&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;原生数组无法检查越界&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;空指针未判空&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;空指针未判空&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;空指针导致的崩溃占大多数&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;防御性编程&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;空指针导致的崩溃占大多数&lt;/li&gt;
+&lt;li&gt;防御性编程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;缓冲区溢出&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕缓冲区溢出&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;sprintf，printf，memcpy，memset，strcat，strcpy等等&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;上述函数拷贝内存的时候没有检查是否越界，如果发生越界会把其他不相干的内存写坏，导致无法预料的bug&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;谨慎使用内存操作相关的函数sprintf，printf，memcpy，memset，strcat，strcpy等等&lt;/li&gt;
+&lt;li&gt;上述函数拷贝内存的时候没有检查是否越界，如果发生越界会把其他不相干的内存写坏，导致无法预料的bug&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2512,7 +2358,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;返回局部引用&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;禁止返回局部引用，内存会被销毁&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2530,42 +2376,29 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;指针未初始化&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;防止指针未初始化&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;UObject成员带UPROPERTY，会被自动初始化为nullptr&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;普通指针未初始化，指向任意地址&lt;/p&gt;
+&lt;li&gt;UObject成员带UPROPERTY，会被自动初始化为nullptr&lt;/li&gt;
+&lt;li&gt;普通指针未初始化，指向任意地址
 &lt;ul&gt;
 &lt;li&gt;if判断已经无效，向野指针内写入数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;注意：USTRUCT的指针成员就算带UPROPERTY也不会初始化位null&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;注意：USTRUCT的指针成员就算带UPROPERTY也不会初始化位nullptr，需要手动初始化&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;不正确的类型转换&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;不正确的类型转换&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;使用C++的类型转换，避免C类型转换&lt;/p&gt;
+&lt;li&gt;应该优先使用UE提供的Cast来进行UObject的类型转换&lt;/li&gt;
+&lt;li&gt;其次使用C++的类型转换，避免C类型转换
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;static_cast，不使用C类型转换&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;const_cast，去掉const限定符&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;reinterpret_cast，指针类型和整形或其他指针之间进行不安全的相互转换&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;static_cast，不使用C类型转换&lt;/li&gt;
+&lt;li&gt;const_cast，去掉const限定符&lt;/li&gt;
+&lt;li&gt;reinterpret_cast，指针类型和整形或其他指针之间进行不安全的相互转换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当程序执行不正确的类型转换时，就会发生不可预测的结果。这可能会导致程序崩溃写坏内存或产生不正确的输出。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;当程序执行不正确的类型转换时，就会发生不可预测的结果。这可能会导致程序崩溃写坏内存或产生不正确的输出。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2588,7 +2421,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Memcpy, memset用于非POD类型，把vtable的指针给破坏掉了&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;Memcpy, memset用于非POD类型，把vtable的指针给破坏掉了&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2648,24 +2481,18 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;函数内自销毁，导致后续代码访问或写入成员变量时写坏内存&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;函数内自销毁，导致后续代码访问或写入成员变量时写坏内存&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;宠物切换状态会停掉行为树，而此函数在行为树Task节点中直接执行（Task内停掉行为树）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;行为树Task节点尝试删掉行为树Owner的Actor（危险操作、应延迟一帧执行）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有自销毁操作时需小心，考虑清楚是否需要延迟一帧&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;某些状态会停掉行为树，而此函数在行为树Task节点中直接执行（Task内停掉行为树）&lt;/li&gt;
+&lt;li&gt;行为树Task节点尝试删掉行为树Owner的Actor（危险操作、应延迟一帧执行）&lt;/li&gt;
+&lt;li&gt;有自销毁操作时需小心，考虑清楚是否需要延迟一帧&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;循环操作没有取引用，导致发生了结构体拷贝&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;循环操作没有取引用，导致发生了结构体拷贝&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Lambda表达式自销毁，内部引用的捕获变量被销毁后使用引发的内存问题&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;Lambda表达式自销毁，内部引用的捕获变量被销毁后使用引发的内存问题&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2682,35 +2509,6 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;span class="lnt"&gt;12
 &lt;/span&gt;&lt;span class="lnt"&gt;13
 &lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TWeakObjectPtr&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;UWorldManager&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -2719,53 +2517,22 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValid&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_GuildManager&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="k"&gt;nullptr&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;DefenEndTime&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AStarsGameState&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetWorldDayZeroTime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;triggerData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;defendendtime&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;worldTime&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AStarsGameState&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetWorldTime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;worldTime&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;DefenEndTime&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PlanetPVPStatus&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;EPlanetPVPStatus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;DefenEndTime&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;86400&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//防守结束
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PlanetPVPStatus&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EPlanetPVPStatus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_GuildManager&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;OnPlanetPVPStatusStart&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EPlanetPVPStatus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_GuildManager&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;OnPvpBattleEnd&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SetWorldInfomation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AStarsGameState&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetWorldIntTime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;triggerData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;enttime&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//完全结束
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PlanetPVPStatus&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;EPlanetPVPStatus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PVPStatusStartTime&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PVPStatusEndTime&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PVPDefenseStartTime&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PVPDefenseEndTime&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsPlanetBattleStatues&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_GuildManager&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;OnPlanetPVPStatusStart&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EPlanetPVPStatus&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_GuildManager&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;OnPVPBattleStateChanged&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_GuildManager&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;OnPvpBattleEnd&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Do something
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 这里Lambda表达式被销毁，导致thisObject被销毁
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;GetWorld&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;GetTimerManager&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;ClearTimer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;PvPingTimerHandle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 好在这里是读内存不是写，没有造成更坏的情况
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SetWorldInfomation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;thisObject&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;m_WorldInfo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 这里再使用thisObject就已经是不安全的了
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="智能指针"&gt;&lt;a href="#%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88" class="header-anchor"&gt;&lt;/a&gt;智能指针
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;智能指针&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;在管理需要自己new的对象时优先使用智能指针
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;一个裸指针使用多个智能指针包裹&lt;/p&gt;
+&lt;li&gt;一个裸指针使用多个智能指针包裹
 &lt;ul&gt;
 &lt;li&gt;前一个智能指针销毁后导致内存被销毁，后面的再写入导致内存写坏&lt;/li&gt;
 &lt;/ul&gt;
@@ -2787,21 +2554,17 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;TSharedPtr&lt;/p&gt;
+&lt;li&gt;TSharedPtr
 &lt;ul&gt;
 &lt;li&gt;引用计数&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;TUniquePtr&lt;/p&gt;
+&lt;li&gt;TUniquePtr
 &lt;ul&gt;
 &lt;li&gt;只能转移所有权&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;注意循环引用&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;注意循环引用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -2869,8 +2632,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;TWeakPtr&lt;/p&gt;
+&lt;li&gt;TWeakPtr
 &lt;ul&gt;
 &lt;li&gt;解决循环引用&lt;/li&gt;
 &lt;/ul&gt;
@@ -2881,7 +2643,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;h3 id="容器"&gt;&lt;a href="#%e5%ae%b9%e5%99%a8" class="header-anchor"&gt;&lt;/a&gt;容器
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;循环内删除与添加&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕循环内删除与添加&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2936,23 +2698,15 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;拷贝到一个新容器中再做循环删除&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用迭代器&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;拷贝到一个新容器中再做循环删除&lt;/li&gt;
+&lt;li&gt;使用迭代器&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;内存重分配问题&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;注意内存重分配问题&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;TArray&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;TMap也存在此问题&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;TArray&lt;/li&gt;
+&lt;li&gt;TMap也存在此问题&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -3005,18 +2759,13 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/h3&gt;&lt;h4 id="gc机制"&gt;&lt;a href="#gc%e6%9c%ba%e5%88%b6" class="header-anchor"&gt;&lt;/a&gt;GC机制
 &lt;/h4&gt;&lt;p&gt;  UE使用标记清除算法实现GC，当对象的引用链不可达时，GC会回收该对象所占用的内存。在进行GC之前，UE会从根集出发对所有UObject对象进行标记，标记活动对象，并清除所有未被标记的非活动对象。&lt;/p&gt;
 &lt;p&gt;  GC的触发通常在特定时机，如关卡切换、游戏循环周期等，以避免对游戏性能造成过多影响。&lt;/p&gt;
-&lt;p&gt;  开发者在UE中需要注意正确管理对象引用，避免出现不必要的长期引用，以确保GC可以正确回收不再使用的内存资源，从而提高游戏性能和稳定性。&lt;/p&gt;
+&lt;p&gt;  &lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;开发者在UE中需要注意正确管理对象引用，避免出现不必要的长期引用，以确保GC可以正确回收不再使用的内存资源，从而提高游戏性能和稳定性。&lt;/p&gt;
 &lt;h4 id="弱指针"&gt;&lt;a href="#%e5%bc%b1%e6%8c%87%e9%92%88" class="header-anchor"&gt;&lt;/a&gt;弱指针
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;通过UObject的弱指针判断其是否在生命周期内&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;通过UObject的弱指针判断其是否在生命周期内
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;通过GUObjectArray中的索引来指向具体的UObject&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;自增量校验指向的合法性&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;通过GUObjectArray中的索引来指向具体的UObject&lt;/li&gt;
+&lt;li&gt;自增量校验指向的合法性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3059,14 +2808,10 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;非主线程中使用UObject或者其弱指针的问题&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕非主线程中使用UObject或者其弱指针的问题&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;UObject是在主线程中被GC掉，所以非主线程中无法预料其生命周期&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;所以在非主线程中尽量不访问UObject或其弱指针，在外部主线程中将非主线程需要处理的数据全部备份好，通过Lambda表达式传递进去，任务处理完回到主线程后再访问UObject的弱指针&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;UObject是在主线程中被GC掉，所以非主线程中无法预料其生命周期&lt;/li&gt;
+&lt;li&gt;所以在非主线程中尽量不访问UObject或其弱指针，在外部主线程中将非主线程需要处理的数据全部备份好，通过Lambda表达式传递进去，任务处理完回到主线程后再访问UObject的弱指针&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -3161,14 +2906,10 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;成员变量保存UE的接口裸指针&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;规避成员变量保存UE的接口裸指针&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;无法判断其生命周期，应保存UObject的弱指针&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用的时候再将其Cast为接口指针&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;判断其生命周期，应保存UObject的弱指针TWeakObjectPtr，在使用的时候再将其Cast为接口指针&lt;/li&gt;
+&lt;li&gt;思路上，如果自己需要标识引用关系那么使用UPROPERTY配合TObjectPtr，否则使用TWeakObjectPtr。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -3189,37 +2930,21 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;
 &lt;h3 id="网络"&gt;&lt;a href="#%e7%bd%91%e7%bb%9c" class="header-anchor"&gt;&lt;/a&gt;网络
 &lt;/h3&gt;&lt;h3 id="proto"&gt;&lt;a href="#proto" class="header-anchor"&gt;&lt;/a&gt;Proto
-&lt;/h3&gt;&lt;p&gt;禁止直接缓存消息的Proto结构，内存有可能会被重新分配或回收。&lt;/p&gt;
-&lt;p&gt;如果需要保存调用项目封装的接口，或者使用Proto上的CopyFrom接口。&lt;/p&gt;
-&lt;p&gt;考虑使用&lt;code&gt;FByteArray&lt;/code&gt;或者&lt;code&gt;FByteCompressedArray&lt;/code&gt;来快捷保存通用数据。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;禁止直接缓存消息的Proto结构，内存有可能会被重新分配或回收。&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;如果需要保存调用项目封装的接口，或者使用Proto上的CopyFrom接口。&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;考虑使用&lt;code&gt;FByteArray&lt;/code&gt;或者&lt;code&gt;FByteCompressedArray&lt;/code&gt;来快捷保存通用数据。&lt;/p&gt;
 &lt;h2 id="日志"&gt;&lt;a href="#%e6%97%a5%e5%bf%97" class="header-anchor"&gt;&lt;/a&gt;日志
-&lt;/h2&gt;&lt;p&gt;现状：该有日志的地方没有，不该有的地方疯狂打，导致出bug时很难通过日志判断。&lt;/p&gt;
-&lt;h3 id="日志规范"&gt;&lt;a href="#%e6%97%a5%e5%bf%97%e8%a7%84%e8%8c%83" class="header-anchor"&gt;&lt;/a&gt;日志规范
+&lt;/h2&gt;&lt;h3 id="日志规范"&gt;&lt;a href="#%e6%97%a5%e5%bf%97%e8%a7%84%e8%8c%83" class="header-anchor"&gt;&lt;/a&gt;日志规范
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;各功能模块的重要事件，尽量记录（只要不是频繁重复发生）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;无用信息或过于频繁打印的就不要输出了（可通过Verbosity等级控制）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;新增加的模块，尽量记录足够还原现场的日志&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;涉及玩家数值的行为，如物品得失、经验获得、货币流通、装备升级等，尽量记录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果数量太大可以考虑归并后打印&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;避免三字符序列&lt;/p&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;各功能模块的重要事件，尽量记录（只要不是频繁重复发生）&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;无用信息或过于频繁打印的就不要输出了（可通过Verbosity等级控制）&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;新增加的模块，尽量记录足够还原现场的日志&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;涉及玩家数值的行为，如物品得失、经验获得、货币流通、装备升级等，尽量记录&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;如果数量太大可以考虑归并后打印&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;避免使用三字符序列
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在C和C++中，三字符序列是一种特殊的字符序列，用两个问号（??）开头，并由另一个字符结尾。例如，&amp;quot;??=&amp;ldquo;代表#，&amp;rdquo;??/&amp;ldquo;代表\，等等。这些三字符序列是为了在早期的编码系统中处理一些没有对应字符的情况而设计的，但在现代的编码系统中，这些三字符序列已经不再使用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当编译器在转换三字符序列时遇到问题时，就会报错：&amp;ldquo;trigraph converted to &amp;rsquo; &amp;rsquo; character&amp;rdquo;。这意味着编译器无法正确地将三字符序列转换为预期的字符，通常是因为在转换时出现了错误或者遇到了无法识别的三字符序列。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;在C和C++中，三字符序列是一种特殊的字符序列，用两个问号（??）开头，并由另一个字符结尾。例如，&amp;quot;??=&amp;ldquo;代表#，&amp;rdquo;??/&amp;ldquo;代表\，等等。这些三字符序列是为了在早期的编码系统中处理一些没有对应字符的情况而设计的，但在现代的编码系统中，这些三字符序列已经不再使用。&lt;/li&gt;
+&lt;li&gt;当编译器在转换三字符序列时遇到问题时，就会报错：&amp;ldquo;trigraph converted to &amp;rsquo; &amp;rsquo; character&amp;rdquo;。这意味着编译器无法正确地将三字符序列转换为预期的字符，通常是因为在转换时出现了错误或者遇到了无法识别的三字符序列。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3230,8 +2955,109 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UE_LOG&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LogAStar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Particle Type Shrink Error????!!&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id="checklist"&gt;&lt;a href="#checklist" class="header-anchor"&gt;&lt;/a&gt;CheckList
-&lt;/h2&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id="引擎"&gt;&lt;a href="#%e5%bc%95%e6%93%8e" class="header-anchor"&gt;&lt;/a&gt;引擎
+&lt;/h2&gt;&lt;h3 id="uobject"&gt;&lt;a href="#uobject" class="header-anchor"&gt;&lt;/a&gt;UObject
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;构造函数中加载资源，应判断是否运行时动态创建的，CDO一般来说没必要进行加载&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;可复制变量有一些规定
+&lt;ul&gt;
+&lt;li&gt;不能是Public&lt;/li&gt;
+&lt;li&gt;不能是蓝图可写&lt;/li&gt;
+&lt;li&gt;为了强推PushModel，可复制变量的写必须在成员函数中执行，配合MARK_DIRTY宏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tmap"&gt;&lt;a href="#tmap" class="header-anchor"&gt;&lt;/a&gt;TMap
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;不要依赖TMap的顺序，尤其是涉及到与服务器同步的数据。
+&lt;ul&gt;
+&lt;li&gt;在很多语言中，Map的实现都是默认无序的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;谨慎对TMap进行遍历，注意遍历期间容器大小改变问题
+&lt;ul&gt;
+&lt;li&gt;详见容器-循环内删除与添加遍历：客户端编程规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;谨慎对TMap的Value取引用，注意内存重分配问题
+&lt;ul&gt;
+&lt;li&gt;详见容器-内存重分配：客户端编程规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;永远不要使用Map[Key]的写法
+&lt;ul&gt;
+&lt;li&gt;查找使用Find函数代替&lt;/li&gt;
+&lt;li&gt;依赖Contains的拦截会造成多次查找，且判断没有原子性，容易被漏判&lt;/li&gt;
+&lt;li&gt;UE的[]内部使用的是FindChecked的实现，当找不到时会尝试直接取无效值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="蓝图"&gt;&lt;a href="#%e8%93%9d%e5%9b%be" class="header-anchor"&gt;&lt;/a&gt;蓝图
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;蓝图中局部变量不要搞一个大数组，很费（提出来作为一个数据表）&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;避免使用大函数（一个函数包含太多蓝图节点），而是将大函数分割成多个小函数
+&lt;ul&gt;
+&lt;li&gt;使用Collapse将大函数变为小函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pure函数
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;简单函数声明为Pure，降低连线复杂度&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;避免使用Pure函数实现复杂功能逻辑，每个连接Puer节点的调用都会执行依次，影响性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;条件判断
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;蓝图中的And/Or并不是短路运算，所有Pin都会执行，需要特别注意。
+&lt;ul&gt;
+&lt;li&gt;比如valid判断与调用实例函数放在一个And结点上，并不能实现拦截not valid的目的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;提示&lt;/span&gt;因为Pure函数每次都会执行，所以切记使用随机节点以及Pure里面包含随机的时候缓存临时变量；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="数据表"&gt;&lt;a href="#%e6%95%b0%e6%8d%ae%e8%a1%a8" class="header-anchor"&gt;&lt;/a&gt;数据表
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;配置表所有的引用都要使用软引用，c++代码和蓝图结构体都需要注意
+&lt;ul&gt;
+&lt;li&gt;如果是硬引用，当加载该资源的时候会强制加载所有硬依赖的资源，导致加载耗时过长，或者同步加载时卡顿&lt;/li&gt;
+&lt;li&gt;CPP
+&lt;ul&gt;
+&lt;li&gt;使用TSoftClassPtr，TSoftObjectPtr，FSoftObjectPath等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;蓝图
+&lt;ul&gt;
+&lt;li&gt;使用SoftObjectReference和SoftClassReference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="同步"&gt;&lt;a href="#%e5%90%8c%e6%ad%a5" class="header-anchor"&gt;&lt;/a&gt;同步
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;尽量用PushModel
+&lt;ul&gt;
+&lt;li&gt;减少同步属性时比对是否发生变化所产生的消耗&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;复杂数组推荐使用FastArraySerializer机制&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;Map无法在UE中使用Replication以及RPC&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;FlushNetDormancy可以及时同步，有效避免一些网络休眠的问题，尤其在BaseActor或者其Component中&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;Unreal不提供CollisionPreset的变量同步，有碰撞修改请根据实际情况使用Replication或者RPC；&lt;/li&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;在蓝图中客户端重新设置变量或者服务器重新设置变量都会走RepNotify，只是当该值在服务器进行变更时会额外同步客户端一次；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="component"&gt;&lt;a href="#component" class="header-anchor"&gt;&lt;/a&gt;Component
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;遍历各个Component的时候禁止调用自身的销毁，会影响数组的迭代器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lua"&gt;&lt;a href="#lua" class="header-anchor"&gt;&lt;/a&gt;Lua
+&lt;/h2&gt;&lt;p&gt;首先遵循UnLua实现的一些规定，然后参考Lua开发习惯与规范。&lt;/p&gt;
+&lt;p&gt;作者更为推荐放弃Lua，改为类型安全的编程语言，比如&lt;a class="link" href="https://boiltask.com/knowledge/ue/unlua-to-puerts/" &gt;PuerTs&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id="checklist"&gt;&lt;a href="#checklist" class="header-anchor"&gt;&lt;/a&gt;CheckList
+&lt;/h2&gt;&lt;p&gt;需要排查项目中是否存在以下问题：&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;裸指针成员变量未初始化为空&lt;/p&gt;
 &lt;/li&gt;
@@ -3363,12 +3189,12 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="参考文献"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"&gt;&lt;/a&gt;参考文献
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://docs.unrealengine.com/4.27/zh-CN/ProductionPipelines/DevelopmentSetup/CodingStandard/" target="_blank" rel="noopener"
-&gt;https://docs.unrealengine.com/4.27/zh-CN/ProductionPipelines/DevelopmentSetup/CodingStandard/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/" target="_blank" rel="noopener"
-&gt;https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/&lt;/a&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/" target="_blank" rel="noopener"
+&gt;Google 开源项目风格指南&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://www.zhihu.com/question/26901409/answer/1858690571" target="_blank" rel="noopener"
-&gt;https://www.zhihu.com/question/26901409/answer/1858690571&lt;/a&gt;&lt;/p&gt;
+&gt;有哪些C++大坑？ - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine" target="_blank" rel="noopener"
+&gt;Epic的虚幻引擎 C++ 代码规范 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://github.com/Allar/ue5-style-guide" target="_blank" rel="noopener"
 &gt;Allar/ue5-style-guide: An attempt to make Unreal Engine 4 projects more consistent&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Windows下C++版本Protobuf使用方法</title><link>https://boiltask.com/knowledge/cpp-protobuf/</link><pubDate>Sat, 18 Jul 2020 17:39:54 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp-protobuf/</guid><description>&lt;p&gt;参考下文配置&lt;code&gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows" target="_blank" rel="noopener"
