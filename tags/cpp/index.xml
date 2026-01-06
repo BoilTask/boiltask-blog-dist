@@ -4813,7 +4813,8 @@ loading="lazy"
 &lt;p&gt;很显然，大概有很大的意外……&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可使用&lt;code&gt;rss&lt;/code&gt;阅读器订阅&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb" &gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="https://yilan.io/" target="_blank" rel="noopener"
+&gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;RSS已废弃，可查看标签：&lt;a class="link" href="https://boiltask.com/tags/iwbtg/" &gt;愿成其身&lt;/a&gt;&lt;/p&gt;</description></item><item><title>while(m)m&amp;=m-1,s++;的解释</title><link>https://boiltask.com/knowledge/cpp-while-comma-bit/</link><pubDate>Sat, 30 Jan 2016 00:42:22 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-while-comma-bit/</guid><description>&lt;p&gt;此讨论是关于&lt;a class="link" href="https://boiltask.com/oj/nyoj/100" &gt;【NYOJ】[100]1的个数&lt;/a&gt;的补充说明&lt;br&gt;
 对于这一题标程给的这一句代码 比较难理解&lt;/p&gt;
 &lt;h2 id="所以分开来解析"&gt;&lt;a href="#%e6%89%80%e4%bb%a5%e5%88%86%e5%bc%80%e6%9d%a5%e8%a7%a3%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;所以分开来解析

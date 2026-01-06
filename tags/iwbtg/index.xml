@@ -951,5 +951,6 @@ loading="lazy"
 &lt;p&gt;很显然，大概有很大的意外……&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可使用&lt;code&gt;rss&lt;/code&gt;阅读器订阅&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb" &gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="https://yilan.io/" target="_blank" rel="noopener"
+&gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;RSS已废弃，可查看标签：&lt;a class="link" href="https://boiltask.com/tags/iwbtg/" &gt;愿成其身&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

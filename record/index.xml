@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Dec 2025 19:27:55 +0800</lastBuildDate><atom:link href="https://boiltask.com/record/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 06 Jan 2026 13:26:16 +0800</lastBuildDate><atom:link href="https://boiltask.com/record/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -227,6 +227,7 @@ alt="image.png"
 &lt;p&gt;也是吸取了一次教训，评估方案的时候还是得认真考虑全面，各个方面的事项都得仔细看看。&lt;/p&gt;
 &lt;p&gt;至于站点状态，还是老老实实的用数据库存取了。由于目前硬件资源有限，Redis与MongoDB放在同一台机器上，主要用来解决一些计算密集型数据的缓存。后面要是Redis的资源能解放出来，这种状态使用Redis来存会更合理一些。&lt;/p&gt;</description></item><item><title>记录一下TODO列表</title><link>https://boiltask.com/record/boiltask-todo/</link><pubDate>Thu, 05 Jun 2025 12:23:23 +0800</pubDate><guid>https://boiltask.com/record/boiltask-todo/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;本文用于记录一些TODO，不定期更新，过期内容有可能随时删除&lt;/p&gt;
+&lt;p&gt;[2026-01-06] 感觉用博客来做TODO还是太重了，还是用Notion来管理然后不定期整理吧&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Lyra中的传送门&lt;/li&gt;
@@ -1054,7 +1055,7 @@ alt="头像"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>欧阳天和贾一凡结个婚~</title><link>https://boiltask.com/record/wedding-oyt-jyf/</link><pubDate>Fri, 28 Mar 2025 13:59:23 +0800</pubDate><guid>https://boiltask.com/record/wedding-oyt-jyf/</guid><description>&lt;p&gt;婚礼全程欧阳天剪辑版：&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>欧阳天和贾一凡结个婚~</title><link>https://boiltask.com/record/wedding-oyt-jyf/</link><pubDate>Fri, 28 Mar 2025 13:59:23 +0800</pubDate><guid>https://boiltask.com/record/wedding-oyt-jyf/</guid><description>&lt;p&gt;婚礼全程欧阳天剪辑版，也是这辈子花费最高的一个项目了：&lt;/p&gt;
 &lt;div class="video-wrapper"&gt;
 &lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1MvoDY3Ex9"
 scrolling="no"
@@ -1383,8 +1384,7 @@ data-flex-basis="2671px"
 &lt;p&gt;比赛能获奖也很开心，虽然之前一直说有机会获奖，不过也一直说百分之十的概率…所以当最终一题一题AC，排名稳定在铜牌区的时候，还是有些难以置信到爆的。&lt;/p&gt;
 &lt;p&gt;不过发现，确实没啥说的了，补充这几段也是为了在比赛结束之后补充一下比赛结果。想来，一个铜奖，弱校开心到爆，但对于强校巨巨来说，这根本还是没什么值得说的安慰奖。特别是当自己内心明白这种水平根本在强校连ACM队都进不去，不过…加油吧。&lt;/p&gt;
 &lt;p&gt;比赛出发前，用港港的话录了个flag，爆零回来剃光头，看来头发是保住了，拿不了奖就不谈恋爱，现在奖也拿了。&lt;/p&gt;
-&lt;p&gt;所以，总得来看，虽然鲜克有终，但还是希望，如果最后有句号，那么就让句号更圆满些吧。&lt;/p&gt;</description></item><item><title>
-OJ系统上线——OJ.BoilTask.com</title><link>https://boiltask.com/record/boiltask-oj/</link><pubDate>Fri, 05 Aug 2016 16:31:07 +0800</pubDate><guid>https://boiltask.com/record/boiltask-oj/</guid><description>&lt;p&gt;我决定命名为BTOJ！&lt;br&gt;
+&lt;p&gt;所以，总得来看，虽然鲜克有终，但还是希望，如果最后有句号，那么就让句号更圆满些吧。&lt;/p&gt;</description></item><item><title>OJ系统上线——OJ.BoilTask.com</title><link>https://boiltask.com/record/boiltask-oj/</link><pubDate>Fri, 05 Aug 2016 16:31:07 +0800</pubDate><guid>https://boiltask.com/record/boiltask-oj/</guid><description>&lt;p&gt;我决定命名为BTOJ！&lt;br&gt;
 嗯&lt;br&gt;
 基于HUSTOJ开源项目&lt;br&gt;
 大家来玩呀~&lt;br&gt;
@@ -3167,11 +3167,11 @@ loading="lazy"
 &lt;p&gt;　　是的，这就是这篇“光明军团与黑暗军团”的故事的开头部分，我想很多人看过之后都会莞尔而笑。其实我当初看的时候也是情不自禁，那稚嫩的笔法、那单纯的想象、那维护正义的使命感，这些品质在复杂的社会中是难能可贵的。&lt;/p&gt;
 &lt;p&gt;　　那时候，小作者只有十岁的“芳龄”。&lt;/p&gt;
 &lt;p&gt;　　据记载，在土也星的文学辉煌的时期，有“一军一巫一冥王，一剑一仙携二江”七位有名的作家，而我们现在重点讲述的人物，就是那“二江”中的“江流儿”，我想他的人生，也足以成书……&lt;/p&gt;</description></item><item><title>《陨星记之江流传》-自序</title><link>https://boiltask.com/record/qzone-1377222151/</link><pubDate>Fri, 23 Aug 2013 01:42:22 +0000</pubDate><guid>https://boiltask.com/record/qzone-1377222151/</guid><description>&lt;p&gt;事实上直到目前为止，这可能是由煮任我执笔最多的部分了，追其原因，是我发自内心的尊敬与仰慕。&lt;/p&gt;
-&lt;p&gt;　　《陨星记之江流传》，这就是我为这一部分所做的题目，没错，这也是出自上官龙的记录，但是我又进行了再加工和整理。“江流传”作为一本传记，它记录的人物自然是“江流”了，“江流”是一个人，是一个值得敬佩的人。&lt;/p&gt;
-&lt;p&gt;　　“江流”其实是一个笔名，准确的写法是“江流儿”，当年的我第一次认识他，是在我从《陨星记》中找到的一本名为《笔魂》的书，我很喜欢作者的思维方式和其表达的思想内涵，更感慨作者的知识之广阔。是的，这本书的作者就是“江流儿”。&lt;/p&gt;
-&lt;p&gt;　　之后的时间中，我又接触到了很多江流儿的作品，我越发的喜欢上了这个人，结合上官龙给的江流儿的生平履历，我也清楚的认识到，我是应该把江流儿介绍给大家的，更要把他的作品推广给更多读者，这也是我编此书的目的。&lt;/p&gt;
-&lt;p&gt;　　我一向很讨厌写序言，因为我确实不知道怎么写，至少现在是这样，所以说……就这样吧，大家多看书中的内容，序言什么的，不用太多。&lt;/p&gt;
-&lt;p&gt;　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　——煮任&lt;/p&gt;</description></item><item><title>电脑坏了就要修——一篇由七个故事串起来的小说</title><link>https://boiltask.com/record/qzone-1372092226/</link><pubDate>Mon, 24 Jun 2013 16:43:21 +0000</pubDate><guid>https://boiltask.com/record/qzone-1372092226/</guid><description>&lt;h2 id="第一个故事作家最讨厌的事"&gt;&lt;a href="#%e7%ac%ac%e4%b8%80%e4%b8%aa%e6%95%85%e4%ba%8b%e4%bd%9c%e5%ae%b6%e6%9c%80%e8%ae%a8%e5%8e%8c%e7%9a%84%e4%ba%8b" class="header-anchor"&gt;&lt;/a&gt;第一个故事：作家最讨厌的事
+&lt;p&gt;《陨星记之江流传》，这就是我为这一部分所做的题目，没错，这也是出自上官龙的记录，但是我又进行了再加工和整理。“江流传”作为一本传记，它记录的人物自然是“江流”了，“江流”是一个人，是一个值得敬佩的人。&lt;/p&gt;
+&lt;p&gt;“江流”其实是一个笔名，准确的写法是“江流儿”，当年的我第一次认识他，是在我从《陨星记》中找到的一本名为《笔魂》的书，我很喜欢作者的思维方式和其表达的思想内涵，更感慨作者的知识之广阔。是的，这本书的作者就是“江流儿”。&lt;/p&gt;
+&lt;p&gt;之后的时间中，我又接触到了很多江流儿的作品，我越发的喜欢上了这个人，结合上官龙给的江流儿的生平履历，我也清楚的认识到，我是应该把江流儿介绍给大家的，更要把他的作品推广给更多读者，这也是我编此书的目的。&lt;/p&gt;
+&lt;p&gt;我一向很讨厌写序言，因为我确实不知道怎么写，至少现在是这样，所以说……就这样吧，大家多看书中的内容，序言什么的，不用太多。&lt;/p&gt;
+&lt;div style="text-align:right"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;——煮任&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</description></item><item><title>电脑坏了就要修——一篇由七个故事串起来的小说</title><link>https://boiltask.com/record/qzone-1372092226/</link><pubDate>Mon, 24 Jun 2013 16:43:21 +0000</pubDate><guid>https://boiltask.com/record/qzone-1372092226/</guid><description>&lt;h2 id="第一个故事作家最讨厌的事"&gt;&lt;a href="#%e7%ac%ac%e4%b8%80%e4%b8%aa%e6%95%85%e4%ba%8b%e4%bd%9c%e5%ae%b6%e6%9c%80%e8%ae%a8%e5%8e%8c%e7%9a%84%e4%ba%8b" class="header-anchor"&gt;&lt;/a&gt;第一个故事：作家最讨厌的事
 &lt;/h2&gt;&lt;p&gt;　　事情发生在那天……&lt;/p&gt;
 &lt;p&gt;　　星期六，因为高中的学习压力颇大，一个星期只有这星期六短短的几个小时的短暂休息，次日便还要踏上去学校的道路，我到五点多时才赶回了家。回到家中，才发现家中竟是空无一人，不免有些疑惑，却倒也没有什么太大的反应，毕竟也不是牙牙学语的孩童，我不需要大人的看护也能过活。&lt;/p&gt;
 &lt;p&gt;　　身为一个兼职作家，记得那次我一整天都在苦苦思索着怎么才能拿出一份令自己满意的作品。终于，暮色逐渐降下，我的思路也渐渐的一抹一抹的浮现出来，终于，伴随着夜的来临，一个完整的框架体系建设完成。于是，我自然的看了一下时间……&lt;/p&gt;

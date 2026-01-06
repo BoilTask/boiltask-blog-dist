@@ -1047,7 +1047,15 @@ autocomplete="current-password" /&gt;
 &lt;div class="decryptor-content-verify" style="display: none;"&gt;Q0hFQ71abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc50t8cEI3cWRoblp6SEpTSGdxSg==&lt;/div&gt;
 &lt;div class="decryptor-content" style="display: none;"&gt;6L&amp;#43;Z571abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5q615paH5a2X6KKr5Yqg5a&amp;#43;G&lt;/div&gt;
 &lt;div class="decryptor-content-decryptor decryptor-hidden"&gt;&lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/fab-ue-plugin-publish/</guid><description>&lt;p&gt;之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p&gt;</description></item><item><title>虚幻引擎中ASan相关机制</title><link>https://boiltask.com/knowledge/ue/ue-asan/</link><pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-asan/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;/div&gt;</description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</guid><description>&lt;p&gt;之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p&gt;
+&lt;p&gt;Fab平台对于插件有一些更为严格的要求，除了按照标准进行一些规范性的修改以外，还需要注意编译环境的区别。&lt;/p&gt;
+&lt;p&gt;通常我们会认为引入项目后插件编译成功就算成功，但是处于通用性的考虑，Fab要求比如是能成功打包的插件。&lt;/p&gt;
+&lt;p&gt;首先保证能正常编译通过，然后可以打开编辑器插件页面，选择&lt;code&gt;Package&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/9a0cac720930182862b6f1411e744bd4.png"
+loading="lazy"
+alt="image.png"
+&gt;&lt;/p&gt;
+&lt;p&gt;如果这个时候能编译通过，那么提交之后一般没有编译错误的问题。&lt;/p&gt;</description></item><item><title>虚幻引擎中ASan相关机制</title><link>https://boiltask.com/knowledge/ue/ue-asan/</link><pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-asan/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。&lt;/p&gt;
 &lt;p&gt;比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。&lt;/p&gt;
 &lt;p&gt;性能指标参考：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerPerformanceNumbers" target="_blank" rel="noopener"

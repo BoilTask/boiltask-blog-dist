@@ -2166,6 +2166,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/1131" target="_blank" rel="noopener"
 &gt;感恩节KK专场——特殊的比赛日期 - 问题详情 - 题目 - DidaOJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>记录一下TODO列表</title><link>https://boiltask.com/record/boiltask-todo/</link><pubDate>Thu, 05 Jun 2025 12:23:23 +0800</pubDate><guid>https://boiltask.com/record/boiltask-todo/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;本文用于记录一些TODO，不定期更新，过期内容有可能随时删除&lt;/p&gt;
+&lt;p&gt;[2026-01-06] 感觉用博客来做TODO还是太重了，还是用Notion来管理然后不定期整理吧&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Lyra中的传送门&lt;/li&gt;
@@ -2880,7 +2881,15 @@ autocomplete="current-password" /&gt;
 &lt;div class="decryptor-content-verify" style="display: none;"&gt;Q0hFQ71abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc50t8cEI3cWRoblp6SEpTSGdxSg==&lt;/div&gt;
 &lt;div class="decryptor-content" style="display: none;"&gt;6L&amp;#43;Z571abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5q615paH5a2X6KKr5Yqg5a&amp;#43;G&lt;/div&gt;
 &lt;div class="decryptor-content-decryptor decryptor-hidden"&gt;&lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/fab-ue-plugin-publish/</guid><description>&lt;p&gt;之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p&gt;</description></item><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p&gt;突然想开个新坑，要不&lt;code&gt;fork&lt;/code&gt;一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+&lt;/div&gt;</description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</guid><description>&lt;p&gt;之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p&gt;
+&lt;p&gt;Fab平台对于插件有一些更为严格的要求，除了按照标准进行一些规范性的修改以外，还需要注意编译环境的区别。&lt;/p&gt;
+&lt;p&gt;通常我们会认为引入项目后插件编译成功就算成功，但是处于通用性的考虑，Fab要求比如是能成功打包的插件。&lt;/p&gt;
+&lt;p&gt;首先保证能正常编译通过，然后可以打开编辑器插件页面，选择&lt;code&gt;Package&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/9a0cac720930182862b6f1411e744bd4.png"
+loading="lazy"
+alt="image.png"
+&gt;&lt;/p&gt;
+&lt;p&gt;如果这个时候能编译通过，那么提交之后一般没有编译错误的问题。&lt;/p&gt;</description></item><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p&gt;突然想开个新坑，要不&lt;code&gt;fork&lt;/code&gt;一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
 &gt;hugo-theme-stack&lt;/a&gt;自己魔改一下？&lt;/p&gt;
 &lt;p&gt;可能也就是说说……&lt;/p&gt;
 &lt;p&gt;不过Hugo的主题管理方案挺方便的，可能会逐步添加一些想要的功能，要是量级足够的话，开个新主题好像也不是不行……&lt;/p&gt;
@@ -3637,7 +3646,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &gt;「Grow by UE」图解角色移动组件 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"
 &gt;UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>欧阳天和贾一凡结个婚~</title><link>https://boiltask.com/record/wedding-oyt-jyf/</link><pubDate>Fri, 28 Mar 2025 13:59:23 +0800</pubDate><guid>https://boiltask.com/record/wedding-oyt-jyf/</guid><description>&lt;p&gt;婚礼全程欧阳天剪辑版：&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>欧阳天和贾一凡结个婚~</title><link>https://boiltask.com/record/wedding-oyt-jyf/</link><pubDate>Fri, 28 Mar 2025 13:59:23 +0800</pubDate><guid>https://boiltask.com/record/wedding-oyt-jyf/</guid><description>&lt;p&gt;婚礼全程欧阳天剪辑版，也是这辈子花费最高的一个项目了：&lt;/p&gt;
 &lt;div class="video-wrapper"&gt;
 &lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1MvoDY3Ex9"
 scrolling="no"
@@ -11682,7 +11691,8 @@ loading="lazy"
 &lt;p&gt;很显然，大概有很大的意外……&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可使用&lt;code&gt;rss&lt;/code&gt;阅读器订阅&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb" &gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="https://yilan.io/" target="_blank" rel="noopener"
+&gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;RSS已废弃，可查看标签：&lt;a class="link" href="https://boiltask.com/tags/iwbtg/" &gt;愿成其身&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[5256]序列变换</title><link>https://boiltask.com/oj/hdu-5256/</link><pubDate>Thu, 11 Aug 2016 20:09:55 +0800</pubDate><guid>https://boiltask.com/oj/hdu-5256/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -13577,8 +13587,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>
-OJ系统上线——OJ.BoilTask.com</title><link>https://boiltask.com/record/boiltask-oj/</link><pubDate>Fri, 05 Aug 2016 16:31:07 +0800</pubDate><guid>https://boiltask.com/record/boiltask-oj/</guid><description>&lt;p&gt;我决定命名为BTOJ！&lt;br&gt;
+&lt;/div&gt;</description></item><item><title>OJ系统上线——OJ.BoilTask.com</title><link>https://boiltask.com/record/boiltask-oj/</link><pubDate>Fri, 05 Aug 2016 16:31:07 +0800</pubDate><guid>https://boiltask.com/record/boiltask-oj/</guid><description>&lt;p&gt;我决定命名为BTOJ！&lt;br&gt;
 嗯&lt;br&gt;
 基于HUSTOJ开源项目&lt;br&gt;
 大家来玩呀~&lt;br&gt;
@@ -80970,11 +80979,11 @@ loading="lazy"
 &lt;p&gt;　　是的，这就是这篇“光明军团与黑暗军团”的故事的开头部分，我想很多人看过之后都会莞尔而笑。其实我当初看的时候也是情不自禁，那稚嫩的笔法、那单纯的想象、那维护正义的使命感，这些品质在复杂的社会中是难能可贵的。&lt;/p&gt;
 &lt;p&gt;　　那时候，小作者只有十岁的“芳龄”。&lt;/p&gt;
 &lt;p&gt;　　据记载，在土也星的文学辉煌的时期，有“一军一巫一冥王，一剑一仙携二江”七位有名的作家，而我们现在重点讲述的人物，就是那“二江”中的“江流儿”，我想他的人生，也足以成书……&lt;/p&gt;</description></item><item><title>《陨星记之江流传》-自序</title><link>https://boiltask.com/record/qzone-1377222151/</link><pubDate>Fri, 23 Aug 2013 01:42:22 +0000</pubDate><guid>https://boiltask.com/record/qzone-1377222151/</guid><description>&lt;p&gt;事实上直到目前为止，这可能是由煮任我执笔最多的部分了，追其原因，是我发自内心的尊敬与仰慕。&lt;/p&gt;
-&lt;p&gt;　　《陨星记之江流传》，这就是我为这一部分所做的题目，没错，这也是出自上官龙的记录，但是我又进行了再加工和整理。“江流传”作为一本传记，它记录的人物自然是“江流”了，“江流”是一个人，是一个值得敬佩的人。&lt;/p&gt;
-&lt;p&gt;　　“江流”其实是一个笔名，准确的写法是“江流儿”，当年的我第一次认识他，是在我从《陨星记》中找到的一本名为《笔魂》的书，我很喜欢作者的思维方式和其表达的思想内涵，更感慨作者的知识之广阔。是的，这本书的作者就是“江流儿”。&lt;/p&gt;
-&lt;p&gt;　　之后的时间中，我又接触到了很多江流儿的作品，我越发的喜欢上了这个人，结合上官龙给的江流儿的生平履历，我也清楚的认识到，我是应该把江流儿介绍给大家的，更要把他的作品推广给更多读者，这也是我编此书的目的。&lt;/p&gt;
-&lt;p&gt;　　我一向很讨厌写序言，因为我确实不知道怎么写，至少现在是这样，所以说……就这样吧，大家多看书中的内容，序言什么的，不用太多。&lt;/p&gt;
-&lt;p&gt;　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　——煮任&lt;/p&gt;</description></item><item><title>电脑坏了就要修——一篇由七个故事串起来的小说</title><link>https://boiltask.com/record/qzone-1372092226/</link><pubDate>Mon, 24 Jun 2013 16:43:21 +0000</pubDate><guid>https://boiltask.com/record/qzone-1372092226/</guid><description>&lt;h2 id="第一个故事作家最讨厌的事"&gt;&lt;a href="#%e7%ac%ac%e4%b8%80%e4%b8%aa%e6%95%85%e4%ba%8b%e4%bd%9c%e5%ae%b6%e6%9c%80%e8%ae%a8%e5%8e%8c%e7%9a%84%e4%ba%8b" class="header-anchor"&gt;&lt;/a&gt;第一个故事：作家最讨厌的事
+&lt;p&gt;《陨星记之江流传》，这就是我为这一部分所做的题目，没错，这也是出自上官龙的记录，但是我又进行了再加工和整理。“江流传”作为一本传记，它记录的人物自然是“江流”了，“江流”是一个人，是一个值得敬佩的人。&lt;/p&gt;
+&lt;p&gt;“江流”其实是一个笔名，准确的写法是“江流儿”，当年的我第一次认识他，是在我从《陨星记》中找到的一本名为《笔魂》的书，我很喜欢作者的思维方式和其表达的思想内涵，更感慨作者的知识之广阔。是的，这本书的作者就是“江流儿”。&lt;/p&gt;
+&lt;p&gt;之后的时间中，我又接触到了很多江流儿的作品，我越发的喜欢上了这个人，结合上官龙给的江流儿的生平履历，我也清楚的认识到，我是应该把江流儿介绍给大家的，更要把他的作品推广给更多读者，这也是我编此书的目的。&lt;/p&gt;
+&lt;p&gt;我一向很讨厌写序言，因为我确实不知道怎么写，至少现在是这样，所以说……就这样吧，大家多看书中的内容，序言什么的，不用太多。&lt;/p&gt;
+&lt;div style="text-align:right"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;——煮任&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</description></item><item><title>电脑坏了就要修——一篇由七个故事串起来的小说</title><link>https://boiltask.com/record/qzone-1372092226/</link><pubDate>Mon, 24 Jun 2013 16:43:21 +0000</pubDate><guid>https://boiltask.com/record/qzone-1372092226/</guid><description>&lt;h2 id="第一个故事作家最讨厌的事"&gt;&lt;a href="#%e7%ac%ac%e4%b8%80%e4%b8%aa%e6%95%85%e4%ba%8b%e4%bd%9c%e5%ae%b6%e6%9c%80%e8%ae%a8%e5%8e%8c%e7%9a%84%e4%ba%8b" class="header-anchor"&gt;&lt;/a&gt;第一个故事：作家最讨厌的事
 &lt;/h2&gt;&lt;p&gt;　　事情发生在那天……&lt;/p&gt;
 &lt;p&gt;　　星期六，因为高中的学习压力颇大，一个星期只有这星期六短短的几个小时的短暂休息，次日便还要踏上去学校的道路，我到五点多时才赶回了家。回到家中，才发现家中竟是空无一人，不免有些疑惑，却倒也没有什么太大的反应，毕竟也不是牙牙学语的孩童，我不需要大人的看护也能过活。&lt;/p&gt;
 &lt;p&gt;　　身为一个兼职作家，记得那次我一整天都在苦苦思索着怎么才能拿出一份令自己满意的作品。终于，暮色逐渐降下，我的思路也渐渐的一抹一抹的浮现出来，终于，伴随着夜的来临，一个完整的框架体系建设完成。于是，我自然的看了一下时间……&lt;/p&gt;
