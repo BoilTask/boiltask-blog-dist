@@ -41149,69 +41149,51 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;a class="link" href="http://acm.zzuli.edu.cn/problem.php?id=1743" target="_blank" rel="noopener"
-&gt;【郑轻】[1743]解方程&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
-【郑轻】[1675]YJJ的福利</title><link>https://boiltask.com/oj/zzuli-1675/</link><pubDate>Sat, 13 Feb 2016 00:35:09 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1675/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
-&lt;/h2&gt;&lt;script&gt;
-window.addEventListener('message', function (event) {
-if (!event.data) {
-return;
-}
-if (event.data.type === 'boiltask-oj-set-height') {
-const iframes = document.querySelectorAll('.boiltask-oj-zzuli-1675 iframe');
-for (let i = 0; i &lt; iframes.length; i++) {
-const iframe = iframes[i];
-iframe.style.height = event.data.height + 'px';
-}
-} else if (event.data.type === 'boiltask-oj-problem-info') {
-console.log(event.data);
-const leftElements = document.querySelectorAll('.boiltask-oj-zzuli-1675 .dida-content-iframe-title-left');
-if (leftElements.length &gt; 0) {
-if (!leftElements[0].innerHTML) {
-leftElements[0].innerHTML = event.data.title;
-}
-}
-const rightElements = document.querySelectorAll('.boiltask-oj-zzuli-1675 .dida-content-iframe-title-right-desc');
-if (rightElements.length &gt; 0) {
-if (!rightElements[0].innerHTML) {
-let text = ""
-if (event.data.time_limit){
-text += "&lt;b&gt;Time:&lt;/b&gt; " + event.data.time_limit
-}
-if (event.data.memory_limit){
-if (text.length &gt; 0){
-text += " | "
-}
-text += " &lt;b&gt;Memory:&lt;/b&gt; " + event.data.memory_limit
-}
-rightElements[0].innerHTML = text
-}
-}
-}
-});
-&lt;/script&gt;
-&lt;div class="dida-content-card boiltask-oj-zzuli-1675"&gt;
+&gt;【郑轻】[1743]解方程&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1675]YJJ的福利</title><link>https://boiltask.com/oj/zzuli-1675/</link><pubDate>Sat, 13 Feb 2016 00:35:09 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1675/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
-&lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
+&lt;div class="dida-content-iframe-title-left"&gt;
+YJJ的福利
+&lt;/div&gt;
 &lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
-&lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
-onclick="refreshBoiltaskOj(this, 'zzuli-1675')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
-width="200" height="200"&gt;
-&lt;path
-d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
-fill="#666666" p-id="3153"&gt;&lt;/path&gt;
-&lt;/svg&gt;&lt;/button&gt;
-&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/zzuli-1675')"&gt;&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em"&gt;&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;span&gt;时间限制：1 Sec&lt;/span&gt;&lt;span style="margin-left: 20px;"&gt;内存限制：128 MB&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;h3 id="description"&gt;&lt;a href="#description" class="header-anchor"&gt;&lt;/a&gt;Description
+&lt;/h3&gt;&lt;p&gt;快到期末了，YJJ决定给大家福利，福利是什么？就是一串数字啊！&lt;/p&gt;
+&lt;p&gt;GG顿时就不高兴了，为什么YJJ没有给我？&lt;/p&gt;
+&lt;p&gt;YJJ：只要你告诉我这串数当中能整除m的数的和，我就给你福利。&lt;/p&gt;
+&lt;p&gt;GG：（·········）。&lt;/p&gt;
+&lt;p&gt;PS：看这样子GG已经晕了，聪明ACMer，你能帮GG得到YJJ的福利么？&lt;/p&gt;
+&lt;h3 id="input"&gt;&lt;a href="#input" class="header-anchor"&gt;&lt;/a&gt;Input
+&lt;/h3&gt;&lt;p&gt;本题为多实例测试。首先输入一个t（t&amp;lt;=100）代表有t组测试实例。&lt;/p&gt;
+&lt;p&gt;对于每一组测试实例先输入两个整数n和m。（1&amp;lt;=n&amp;lt;=100,1&amp;lt;=m&amp;lt;=1000000）&lt;/p&gt;
+&lt;p&gt;接下是n个数，代表这串数字。&lt;/p&gt;
+&lt;h3 id="output"&gt;&lt;a href="#output" class="header-anchor"&gt;&lt;/a&gt;Output
+&lt;/h3&gt;&lt;p&gt;对于每组测试实例，输出一个整数占一行，代表这串数字中能整除m的数的和。&lt;/p&gt;
+&lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;10 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 2 3 4 5 6 7 8 9 10&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/zzuli-1675?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;18&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;题目不难&lt;br&gt;
 但这一串代码好像不对……&lt;br&gt;
@@ -54370,69 +54352,41 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;&lt;p&gt;看完的感觉就是……&lt;br&gt;
 我勒个去……这也行 -.-&lt;/p&gt;
 &lt;p&gt;题目地址：&lt;a class="link" href="http://acm.zzuli.edu.cn/problem.php?id=1773" target="_blank" rel="noopener"
-&gt;【杭电】[1773]Lovely simple problem two&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
-【郑轻】[1768]Lovely Circular And Linear</title><link>https://boiltask.com/oj/zzuli-1768/</link><pubDate>Sat, 26 Dec 2015 21:02:46 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1768/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
-&lt;/h2&gt;&lt;script&gt;
-window.addEventListener('message', function (event) {
-if (!event.data) {
-return;
-}
-if (event.data.type === 'boiltask-oj-set-height') {
-const iframes = document.querySelectorAll('.boiltask-oj-zzuli-1768 iframe');
-for (let i = 0; i &lt; iframes.length; i++) {
-const iframe = iframes[i];
-iframe.style.height = event.data.height + 'px';
-}
-} else if (event.data.type === 'boiltask-oj-problem-info') {
-console.log(event.data);
-const leftElements = document.querySelectorAll('.boiltask-oj-zzuli-1768 .dida-content-iframe-title-left');
-if (leftElements.length &gt; 0) {
-if (!leftElements[0].innerHTML) {
-leftElements[0].innerHTML = event.data.title;
-}
-}
-const rightElements = document.querySelectorAll('.boiltask-oj-zzuli-1768 .dida-content-iframe-title-right-desc');
-if (rightElements.length &gt; 0) {
-if (!rightElements[0].innerHTML) {
-let text = ""
-if (event.data.time_limit){
-text += "&lt;b&gt;Time:&lt;/b&gt; " + event.data.time_limit
-}
-if (event.data.memory_limit){
-if (text.length &gt; 0){
-text += " | "
-}
-text += " &lt;b&gt;Memory:&lt;/b&gt; " + event.data.memory_limit
-}
-rightElements[0].innerHTML = text
-}
-}
-}
-});
-&lt;/script&gt;
-&lt;div class="dida-content-card boiltask-oj-zzuli-1768"&gt;
+&gt;【杭电】[1773]Lovely simple problem two&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1768]Lovely Circular And Linear</title><link>https://boiltask.com/oj/zzuli-1768/</link><pubDate>Sat, 26 Dec 2015 21:02:46 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1768/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
-&lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
+&lt;div class="dida-content-iframe-title-left"&gt;
+Lovely Circular And Linear
+&lt;/div&gt;
 &lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
-&lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
-onclick="refreshBoiltaskOj(this, 'zzuli-1768')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
-width="200" height="200"&gt;
-&lt;path
-d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
-fill="#666666" p-id="3153"&gt;&lt;/path&gt;
-&lt;/svg&gt;&lt;/button&gt;
-&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/zzuli-1768')"&gt;&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em"&gt;&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;span&gt;时间限制：1 Sec&lt;/span&gt;&lt;span style="margin-left: 20px;"&gt;内存限制：128 MB&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;h3 id="description"&gt;&lt;a href="#description" class="header-anchor"&gt;&lt;/a&gt;Description
+&lt;/h3&gt;&lt;p&gt;求圆（圆心坐标：（x,y） 半径：r）与直线(A&lt;em&gt;x+B&lt;/em&gt;y+C=0)交点的个数。&lt;/p&gt;
+&lt;h3 id="input"&gt;&lt;a href="#input" class="header-anchor"&gt;&lt;/a&gt;Input
+&lt;/h3&gt;&lt;p&gt;多实例测试，处理到文件尾结束（EOF），输入包括一行 x, y, r ,A ,B, C ,所有数据均为浮点数，且绝对值小于等于1000。&lt;/p&gt;
+&lt;h3 id="output"&gt;&lt;a href="#output" class="header-anchor"&gt;&lt;/a&gt;Output
+&lt;/h3&gt;&lt;p&gt;输出一个数字代表直线与圆交点个数。&lt;/p&gt;
+&lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0 0 2 1 -1 0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/zzuli-1768?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;数学问题~&lt;br&gt;
 直线和圆交点的判断&lt;br&gt;
@@ -54483,67 +54437,42 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.zzuli.edu.cn/problem.php?id=1768" target="_blank" rel="noopener"
 &gt;【郑轻】[1768]Lovely Circular And Linear&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1770]Lovely Ball</title><link>https://boiltask.com/oj/zzuli-1770/</link><pubDate>Sat, 26 Dec 2015 20:59:14 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1770/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
-&lt;/h2&gt;&lt;script&gt;
-window.addEventListener('message', function (event) {
-if (!event.data) {
-return;
-}
-if (event.data.type === 'boiltask-oj-set-height') {
-const iframes = document.querySelectorAll('.boiltask-oj-zzuli-1770 iframe');
-for (let i = 0; i &lt; iframes.length; i++) {
-const iframe = iframes[i];
-iframe.style.height = event.data.height + 'px';
-}
-} else if (event.data.type === 'boiltask-oj-problem-info') {
-console.log(event.data);
-const leftElements = document.querySelectorAll('.boiltask-oj-zzuli-1770 .dida-content-iframe-title-left');
-if (leftElements.length &gt; 0) {
-if (!leftElements[0].innerHTML) {
-leftElements[0].innerHTML = event.data.title;
-}
-}
-const rightElements = document.querySelectorAll('.boiltask-oj-zzuli-1770 .dida-content-iframe-title-right-desc');
-if (rightElements.length &gt; 0) {
-if (!rightElements[0].innerHTML) {
-let text = ""
-if (event.data.time_limit){
-text += "&lt;b&gt;Time:&lt;/b&gt; " + event.data.time_limit
-}
-if (event.data.memory_limit){
-if (text.length &gt; 0){
-text += " | "
-}
-text += " &lt;b&gt;Memory:&lt;/b&gt; " + event.data.memory_limit
-}
-rightElements[0].innerHTML = text
-}
-}
-}
-});
-&lt;/script&gt;
-&lt;div class="dida-content-card boiltask-oj-zzuli-1770"&gt;
+&lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
-&lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
+&lt;div class="dida-content-iframe-title-left"&gt;
+Lovely Ball
+&lt;/div&gt;
 &lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
-&lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
-onclick="refreshBoiltaskOj(this, 'zzuli-1770')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
-width="200" height="200"&gt;
-&lt;path
-d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
-fill="#666666" p-id="3153"&gt;&lt;/path&gt;
-&lt;/svg&gt;&lt;/button&gt;
-&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/zzuli-1770')"&gt;&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em"&gt;&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;span&gt;时间限制：1 Sec&lt;/span&gt;&lt;span style="margin-left: 20px;"&gt;内存限制：128 MB&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;h3 id="description"&gt;&lt;a href="#description" class="header-anchor"&gt;&lt;/a&gt;Description
+&lt;/h3&gt;&lt;p&gt;小明在做一个关于小球的实验，但是他太笨了，所以跪求大神你（orz）来帮个忙。&lt;/p&gt;
+&lt;p&gt;他做的实验是这样的：在一个长为_1的圆柱形管子中（假设两端密封，且半径与小球相同），有两个小球从管子两端分别以速度p（假设从左边出发）：Q（假设从最右边出发）开始相向运动，相遇后无动能损失且以原速度立刻反向运动：撞到两端后又同样无动能损失以原速度继续反向运动，一直重复。&lt;/p&gt;
+&lt;p&gt;你能不能告诉他，两个小球第二次相遇位置离左端的距离为多少。&lt;/p&gt;
+&lt;h3 id="input"&gt;&lt;a href="#input" class="header-anchor"&gt;&lt;/a&gt;Input
+&lt;/h3&gt;&lt;p&gt;单实例测试，输入包括三个实数 1(1 &amp;lt;= 1 &amp;lt;= 1000),p,α(1 &amp;lt;=p,α&amp;lt;= 500).&lt;/p&gt;
+&lt;h3 id="output"&gt;&lt;a href="#output" class="header-anchor"&gt;&lt;/a&gt;Output
+&lt;/h3&gt;&lt;p&gt;输出一个小数,表示两个小球第二次相遇位置离左端的距离，保留三位小数。&lt;/p&gt;
+&lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;100 50 50&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/zzuli-1770?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;50.000&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;一道考验智商的题~&lt;br&gt;
 哈哈哈&lt;br&gt;
