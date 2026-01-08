@@ -62,7 +62,15 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>加入了一些博客组织</title><link>https://boiltask.com/record/join-blog-group/</link><pubDate>Mon, 21 Apr 2025 22:06:12 +0800</pubDate><guid>https://boiltask.com/record/join-blog-group/</guid><description>&lt;p&gt;通过在别的博客中关注到的信息，最近陆续申请加入了一些博客的互联组织。&lt;/p&gt;
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>历时数月终于把CSDN迁移完了</title><link>https://boiltask.com/record/oj-problem-migrate/</link><pubDate>Fri, 30 May 2025 23:53:23 +0800</pubDate><guid>https://boiltask.com/record/oj-problem-migrate/</guid><description>&lt;p&gt;大学时候在CSDN上传了一大批OJ题目的题解（虽然很多都是水题），之前数次迁移都因为量级太大而且性价比不高，这些题目都没有跟随着迁移出去。&lt;/p&gt;
+&lt;p&gt;4月初某一次突然灵感乍现，想把这些文章都迁移到hugo，使用markdown管理也更自由一些。想想当年写的时候，其实就想留一份md文件的备份，结果因为太麻烦而没有实践。这次趁着这波机会，也算是又整理出来了这些文章。&lt;/p&gt;
+&lt;p&gt;过程中，为了这些醋包了好多饺子，比如展示题目的各种shortcode，比如写了一个备份静态题目的&lt;a class="link" href="https://oj.boiltask.com" target="_blank" rel="noopener"
+&gt;爬虫站点&lt;/a&gt;，比如重新从零开始搭建了新的&lt;a class="link" href="https://oj.didapipa.com" target="_blank" rel="noopener"
+&gt;DidaOJ&lt;/a&gt;系统。&lt;/p&gt;
+&lt;p&gt;总之，虽然过程比较体力活，但结果还挺令人满意的。&lt;/p&gt;
+&lt;p&gt;也留下了一些TODO，有的是因为原始站点短时或长时间无法访问，导致很多记录难以取回，有的是当年就留下了一些尾巴，遗留了这么多年也没收尾。&lt;/p&gt;
+&lt;p&gt;后面有机会慢慢地完善吧（希望这不是新坑的又一个flag）。&lt;/p&gt;
+&lt;p&gt;后面类似的这种题解都优先提交分类：&lt;a class="link" href="https://boiltask.com/oj/" &gt;OnlineJudge&lt;/a&gt;之中。&lt;/p&gt;</description></item><item><title>加入了一些博客组织</title><link>https://boiltask.com/record/join-blog-group/</link><pubDate>Mon, 21 Apr 2025 22:06:12 +0800</pubDate><guid>https://boiltask.com/record/join-blog-group/</guid><description>&lt;p&gt;通过在别的博客中关注到的信息，最近陆续申请加入了一些博客的互联组织。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://icp.gov.moe/?keyword=20250158" target="_blank" rel="noopener"
 &gt;萌ICP备&lt;/a&gt;&lt;/li&gt;
@@ -371,7 +379,42 @@ autocomplete="current-password" /&gt;
 经过插件的导出，得到了一个文章的压缩包，又根据我自己的需求简单调整了一下，一个大体的博客就算搭建完毕了。&lt;/p&gt;
 &lt;p&gt;不过有一些陈年老文章，还有一些图片需要再整理一下，就后续再慢慢翻新吧。&lt;/p&gt;
 &lt;h2 id="评论区配置"&gt;&lt;a href="#%e8%af%84%e8%ae%ba%e5%8c%ba%e9%85%8d%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;评论区配置
-&lt;/h2&gt;&lt;p&gt;评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class="link" href="https://boiltask.com/knowledge/hugo-giscus/" &gt;Hogo中Giscus配置&lt;/a&gt;&lt;/p&gt;</description></item><item><title>写在正式写博客之前——博客的意义</title><link>https://boiltask.com/record/blog-significance/</link><pubDate>Sat, 19 Dec 2015 08:47:04 +0000</pubDate><guid>https://boiltask.com/record/blog-significance/</guid><description>&lt;p&gt;终于想明白了博客的意义&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class="link" href="https://boiltask.com/knowledge/hugo-giscus/" &gt;Hogo中Giscus配置&lt;/a&gt;&lt;/p&gt;</description></item><item><title>欢迎前往煮梦空间——www.BoilTask.com</title><link>https://boiltask.com/record/www-boiltask-com/</link><pubDate>Fri, 29 Jul 2016 08:58:40 +0800</pubDate><guid>https://boiltask.com/record/www-boiltask-com/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;20250530：本文初始发表于CSDN&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;顶级域名：&lt;br&gt;
+&lt;a class="link" href="http://www.BoilTask.com" target="_blank" rel="noopener"
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;br&gt;
+博客地址：&lt;br&gt;
+&lt;a class="link" href="http://www.boiltask.com/blog/" target="_blank" rel="noopener"
+&gt;煮梦空间——www.BoilTask.com/blog&lt;/a&gt;&lt;br&gt;
+后面的文章就优先照顾网站了&lt;br&gt;
+直接同步过来显示效果可能不是特别好&lt;br&gt;
+所以推荐点击查看原文进入网站阅读&lt;br&gt;
+——BoilTask&lt;/p&gt;</description></item><item><title>这是第200篇博文</title><link>https://boiltask.com/record/201602021/</link><pubDate>Tue, 02 Feb 2016 03:11:09 +0800</pubDate><guid>https://boiltask.com/record/201602021/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;20250405：指的是CSDN上的第200篇博文，不太好用，放弃CSDN很久了……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;据说200是个槛&lt;br&gt;
+先打个点~&lt;br&gt;
+以后想起来了这一篇再来编辑一下&lt;br&gt;
+以此来说说吧~&lt;br&gt;
+哈哈哈哈&lt;br&gt;
+===========2016.02.02-03:10===========&lt;/p&gt;</description></item><item><title>【吐槽】为什么用户名不能换啊！</title><link>https://boiltask.com/record/csdn-username/</link><pubDate>Mon, 28 Dec 2015 14:09:59 +0800</pubDate><guid>https://boiltask.com/record/csdn-username/</guid><description>&lt;p&gt;为什么网址要变成这个啊！！！！&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/u011493189" target="_blank" rel="noopener"
+&gt;http://blog.csdn.net/u011493189&lt;/a&gt;&lt;br&gt;
+在下想要&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/BoilTask" target="_blank" rel="noopener"
+&gt;http://blog.csdn.net/BoilTask&lt;/a&gt;&lt;br&gt;
+啊！！！！！！&lt;br&gt;
+这让一个排版都研究半天的人很难受啊！&lt;/p&gt;
+&lt;p&gt;算了……&lt;br&gt;
+懒得换了&lt;br&gt;
+吐个槽记录一下就好&lt;/p&gt;
+&lt;p&gt;改变强迫症&lt;br&gt;
+从乱七八糟的网址开始！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;20250405：这么想，一直不喜欢CSDN然后反复折腾博客也是有原因的……&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>写在正式写博客之前——博客的意义</title><link>https://boiltask.com/record/blog-significance/</link><pubDate>Sat, 19 Dec 2015 08:47:04 +0000</pubDate><guid>https://boiltask.com/record/blog-significance/</guid><description>&lt;p&gt;终于想明白了博客的意义&lt;/p&gt;
 &lt;p&gt;嗯……至少&lt;/p&gt;
 &lt;p&gt;帮忙记录下自己AC的总题目数啊~&lt;/p&gt;
 &lt;p&gt;算是个计数器吧&lt;/p&gt;
