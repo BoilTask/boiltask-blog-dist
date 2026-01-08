@@ -2199,7 +2199,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1463/description" target="_blank" rel="noopener"
-&gt;A+B Problem III&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1767]一种排序</title><link>https://boiltask.com/oj/nyoj-1767/</link><pubDate>Wed, 10 Feb 2016 01:15:03 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1767/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&gt;A+B Problem III&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1767]变态最大值</title><link>https://boiltask.com/oj/nyoj-1767/</link><pubDate>Wed, 10 Feb 2016 01:15:03 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1767/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -2393,8 +2393,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=811" target="_blank" rel="noopener"
-&gt;【NYOJ】[811]变态最大值&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1008]一种排序</title><link>https://boiltask.com/oj/nyoj-1008/</link><pubDate>Tue, 02 Feb 2016 03:08:40 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1008/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1767/description" target="_blank" rel="noopener"
+&gt;【NYOJ】[1767]变态最大值&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1008]一种排序</title><link>https://boiltask.com/oj/nyoj-1008/</link><pubDate>Tue, 02 Feb 2016 03:08:40 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1008/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7303,8 +7303,7 @@ C语言还是要好好学啊~&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1096/description" target="_blank" rel="noopener"
-&gt;n-1位数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
-【NYOJ】[1094]cigarettes</title><link>https://boiltask.com/oj/nyoj-1094/</link><pubDate>Mon, 18 Jan 2016 23:19:20 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1094/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&gt;n-1位数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1094]cigarettes</title><link>https://boiltask.com/oj/nyoj-1094/</link><pubDate>Mon, 18 Jan 2016 23:19:20 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1094/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7467,8 +7466,7 @@ Tom现有n根烟 每k个烟蒂能卷一个新烟&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1094/description" target="_blank" rel="noopener"
-&gt;cigarettes&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
-【NYOJ】[1077]开灯问题</title><link>https://boiltask.com/oj/nyoj-1077/</link><pubDate>Mon, 18 Jan 2016 22:50:53 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1077/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&gt;cigarettes&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1077]开灯问题</title><link>https://boiltask.com/oj/nyoj-1077/</link><pubDate>Mon, 18 Jan 2016 22:50:53 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1077/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
