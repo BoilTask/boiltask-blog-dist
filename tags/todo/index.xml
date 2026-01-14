@@ -38,7 +38,7 @@ UCommonActivatableWidget &amp;lt;|-- UGameSettingScreen
 UGameSettingScreen &amp;lt;|-- ULyraSettingScreen
 ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/pre&gt;
-&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/ue/plugin-common-ui" &gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui" &gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="页头页签"&gt;&lt;a href="#%e9%a1%b5%e5%a4%b4%e9%a1%b5%e7%ad%be" class="header-anchor"&gt;&lt;/a&gt;页头页签
 &lt;/h3&gt;&lt;p&gt;标签控件使用一个&lt;code&gt;ULyraTabListWidgetBase&lt;/code&gt;制作，通过在C++中定义&lt;code&gt;BindWidget&lt;/code&gt;，可以创建一个在C++中可以访问的蓝图控件。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
