@@ -39,13 +39,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-didaoj-1132"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'didaoj-1132')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -598,13 +598,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-5777"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-5777')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -743,13 +743,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-poj-3279"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'poj-3279')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1061,13 +1061,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-599B"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-599B')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1227,13 +1227,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-612B"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-612B')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1352,13 +1352,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-615A"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-615A')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1488,13 +1488,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-611A"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-611A')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1601,13 +1601,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-610A"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-610A')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1716,13 +1716,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-1997"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-1997')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -1888,13 +1888,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-uva-1524"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'uva-1524')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2013,13 +2013,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-lightoj-1297"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'lightoj-1297')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2133,13 +2133,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-624A"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-624A')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2230,13 +2230,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-300A"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-300A')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2411,13 +2411,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-codeforces-651C"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'codeforces-651C')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2641,13 +2641,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-nyoj-1046"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'nyoj-1046')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2773,13 +2773,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-1220"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-1220')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -2894,13 +2894,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-2073"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-2073')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -3068,13 +3068,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-didaoj-311"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'didaoj-311')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -3202,13 +3202,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-2050"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-2050')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -3309,13 +3309,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-3788"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-3788')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -3584,13 +3584,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-zzuli-1769"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'zzuli-1769')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -3703,13 +3703,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-2045"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-2045')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -3826,13 +3826,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-2054"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-2054')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
@@ -4065,13 +4065,13 @@ rightElements[0].innerHTML = text
 });
 &lt;/script&gt;
 &lt;div class="dida-content-card boiltask-oj-hdu-1097"&gt;
-&lt;div class="dida-content-iframe-title"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
-&lt;div class="dida-content-iframe-title-right"&gt;
-&lt;div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
 &lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
 &lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
 onclick="refreshBoiltaskOj(this, 'hdu-1097')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
 width="200" height="200"&gt;
