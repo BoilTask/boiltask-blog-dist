@@ -139,8 +139,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1769?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1769?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1769 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -237,8 +250,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1799?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1799?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1799 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -567,8 +593,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1046?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1046?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1046 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -687,8 +726,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1023?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1023?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1023 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -783,8 +835,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1265?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1265?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1265 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -888,8 +953,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1923?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1923?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1923 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -1056,8 +1134,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-2028?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-2028?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-2028 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -1329,8 +1420,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1798?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1798?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1798 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -1437,8 +1541,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-178?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-178?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-178 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -1566,8 +1683,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1267?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1267?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1267 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -1820,8 +1950,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1254?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1254?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1254 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -1955,8 +2098,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1577?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1577?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1577 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -2139,8 +2295,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1463?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1463?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1463 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -2255,8 +2424,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1767?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1767?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1767 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -2450,8 +2632,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1008?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1008?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1008 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -2604,8 +2799,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-186?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-186?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-186 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -2762,8 +2970,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1198?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1198?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1198 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -2906,8 +3127,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1197?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1197?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1197 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -3053,8 +3287,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-179?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-179?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-179 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -3231,8 +3478,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-60?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-60?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-60 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -3425,8 +3685,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1409?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1409?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1409 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -3529,8 +3802,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1124?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1124?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1124 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -3708,8 +3994,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1121?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1121?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1121 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -3852,8 +4151,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1112?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1112?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1112 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4016,8 +4328,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1110?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1110?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1110 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4213,8 +4538,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-164?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-164?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-164 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4356,8 +4694,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1100?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1100?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1100 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4531,8 +4882,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1098?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1098?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1098 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4706,8 +5070,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1097?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1097?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1097 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4836,8 +5213,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-143?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-143?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-143 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -4970,8 +5360,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1062?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1062?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1062 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -5210,8 +5613,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1060?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1060?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1060 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -5434,8 +5850,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1057?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1057?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1057 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -5730,8 +6159,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1056?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1056?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1056 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -5930,8 +6372,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-135?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-135?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-135 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -6074,8 +6529,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1040?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1040?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1040 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -6239,8 +6707,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-63?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-63?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-63 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -6600,8 +7081,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1025?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1025?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1025 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -6811,8 +7305,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1024?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1024?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1024 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -7027,8 +7534,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1022?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1022?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1022 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -7209,8 +7729,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1096?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1096?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1096 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -7359,8 +7892,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1094?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1094?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1094 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -7522,8 +8068,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1077?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1077?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1077 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -7698,8 +8257,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1075?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1075?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1075 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -7885,8 +8457,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1074?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1074?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1074 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -8080,8 +8665,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1072?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1072?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1072 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -8210,8 +8808,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1065?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-1065?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-1065 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -8416,8 +9027,21 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;
-&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-62?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write"&gt;&lt;/iframe&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/nyoj-acm-62?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-nyoj-acm-62 { position: relative; }
+&lt;/style&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
