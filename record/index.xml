@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 06 Jan 2026 13:26:16 +0800</lastBuildDate><atom:link href="https://boiltask.com/record/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 16 Jan 2026 13:08:03 +0800</lastBuildDate><atom:link href="https://boiltask.com/record/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -62,7 +62,19 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>最近几天优化了一下DidaOJ的部署</title><link>https://boiltask.com/record/optimize-didaoj-deployment/</link><pubDate>Wed, 29 Oct 2025 12:57:16 +0800</pubDate><guid>https://boiltask.com/record/optimize-didaoj-deployment/</guid><description>&lt;p&gt;最近DidaOJ的用户量开始上来了，想寻找一种尽可能正式并且成本能接受的部署方式。&lt;/p&gt;
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>终于按自己的理解创建了一个Hugo主题</title><link>https://boiltask.com/record/hugo-boiltask-blog/</link><pubDate>Fri, 16 Jan 2026 13:08:03 +0800</pubDate><guid>https://boiltask.com/record/hugo-boiltask-blog/</guid><description>&lt;p&gt;得益于大模型的发展，借助&lt;a class="link" href="https://www.trae.cn/" target="_blank" rel="noopener"
+&gt;Trae&lt;/a&gt;的帮助，终于能按照自己的设计完成一个符合自己预期的主题了。&lt;/p&gt;
+&lt;p&gt;整体设计上参考了原先使用的&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+&gt;hugo-theme-stack&lt;/a&gt;主题，不过根据我自己的需求，做了很多调整。&lt;/p&gt;
+&lt;p&gt;首先整体的布局使用左中右三列，左边是导航栏，中间是内容区域，右边是侧边栏。&lt;/p&gt;
+&lt;p&gt;导航栏可以切换菜单和文章树，允许用户通过拖拽来调整宽度，在手机端的窄屏上会精简为一个按钮，用户可以点击展开。&lt;/p&gt;
+&lt;p&gt;文章树是参考notion、知识库等产品的目录结构，是一种很好的整理文章结构的方式，因此通过允许在文章中指定parent来确定父子级关系，从而生成一个文章的&lt;a class="link" href="https://boiltask.com/tree/index.json" &gt;树状结构配置&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;正文区域引入了&lt;a class="link" href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener"
+&gt;霞鹜文楷&lt;/a&gt;字体，这是一个开源的中文字体，在中文显示上有很好的效果。&lt;/p&gt;
+&lt;p&gt;右侧的目录会根据文章的目录结构自动生成，用户可以点击目录项来跳转到对应的位置，当屏幕宽度较少时会隐藏。&lt;/p&gt;
+&lt;p&gt;整体的色调使用了我入行以来一直喜欢的配色Solarized，整体营造一种纸张感，同时考虑的暗色模式。在这个设计下正文配色有种黑色墨水的感觉，而链接则是一种蓝色墨水的质感。&lt;/p&gt;
+&lt;p&gt;体验下来基本符合我现阶段的审美了，也许后面会继续优化一下。&lt;/p&gt;
+&lt;p&gt;不过还是之前说的，一个博客的意义更多的肯定还是内容，对于主题的改造更多地是作者的情怀和个人的情绪价值吧。&lt;/p&gt;</description></item><item><title>最近几天优化了一下DidaOJ的部署</title><link>https://boiltask.com/record/optimize-didaoj-deployment/</link><pubDate>Wed, 29 Oct 2025 12:57:16 +0800</pubDate><guid>https://boiltask.com/record/optimize-didaoj-deployment/</guid><description>&lt;p&gt;最近DidaOJ的用户量开始上来了，想寻找一种尽可能正式并且成本能接受的部署方式。&lt;/p&gt;
 &lt;h2 id="分析"&gt;&lt;a href="#%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;分析
 &lt;/h2&gt;&lt;p&gt;核心可能需要处理下面几个部分：&lt;/p&gt;
 &lt;ul&gt;
