@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UnrealEngine on BoilTask's Blog</title><link>https://boiltask.com/tags/unrealengine/</link><description>Recent content in UnrealEngine on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 07 Jan 2026 23:33:49 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/unrealengine/index.xml" rel="self" type="application/rss+xml"/><item><title>UE5资源异步加载流程分析</title><link>https://boiltask.com/knowledge/ue/asset-async-load/</link><pubDate>Wed, 07 Jan 2026 23:33:49 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/asset-async-load/</guid><description>&lt;h2 id="概述"&gt;&lt;a href="#%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;概述
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UnrealEngine on BoilTask's Blog</title><link>https://boiltask.com/tags/unrealengine/</link><description>Recent content in UnrealEngine on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 27 Jan 2026 19:58:33 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/unrealengine/index.xml" rel="self" type="application/rss+xml"/><item><title>UE5资源异步加载流程分析</title><link>https://boiltask.com/knowledge/ue/asset-async-load/</link><pubDate>Wed, 07 Jan 2026 23:33:49 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/asset-async-load/</guid><description>&lt;h2 id="概述"&gt;&lt;a href="#%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;概述
 &lt;/h2&gt;&lt;p&gt;本文档详细分析 UE5 中 &lt;code&gt;FStreamableManager&lt;/code&gt; 的资源异步加载流程，从 &lt;code&gt;RequestAsyncLoad&lt;/code&gt; 开始到回调执行结束的完整过程。通过深入分析源码，我们将理解主线程与加载线程的交互机制，以及资源依赖的处理方式。&lt;/p&gt;
 &lt;h2 id="核心概念"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;核心概念
 &lt;/h2&gt;&lt;h3 id="关键类和结构"&gt;&lt;a href="#%e5%85%b3%e9%94%ae%e7%b1%bb%e5%92%8c%e7%bb%93%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;关键类和结构
@@ -479,8 +479,31 @@ M --&amp;gt;|否| O[继续等待]
 &lt;p&gt;Axis and Action mapping are now deprecated.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在UE5中，官方推荐使用增强输入机制来替代UE4的映射机制。&lt;/p&gt;
-&lt;h2 id="自定义键位"&gt;&lt;a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e9%94%ae%e4%bd%8d" class="header-anchor"&gt;&lt;/a&gt;自定义键位
-&lt;/h2&gt;&lt;p&gt;TODO&lt;/p&gt;
+&lt;h2 id="示例"&gt;&lt;a href="#%e7%a4%ba%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;示例
+&lt;/h2&gt;&lt;p&gt;以跳跃功能为例，使用增强输入来实现按下空格键时角色跳起。&lt;/p&gt;
+&lt;h3 id="资产设置"&gt;&lt;a href="#%e8%b5%84%e4%ba%a7%e8%ae%be%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;资产设置
+&lt;/h3&gt;&lt;p&gt;首先创建一个&lt;code&gt;InputAction&lt;/code&gt;，可以叫做&lt;code&gt;IA_Jump&lt;/code&gt;，代表一个动作，可以被某个蓝图监听。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/bddbe91d5f8cf4b7d67a3ec56b06d5f4.png"
+loading="lazy"
+alt="image-20260127154347903"
+&gt;&lt;/p&gt;
+&lt;p&gt;创建一个&lt;code&gt;InputMapContext&lt;/code&gt;，比如叫做&lt;code&gt;IMC_CharacterBase&lt;/code&gt;，代表一组&lt;code&gt;Action&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/c16d8f6d2ade2ad8fde620a749fd5917.png"
+loading="lazy"
+alt="image-20260127154853503"
+&gt;&lt;/p&gt;
+&lt;h3 id="添加上下文"&gt;&lt;a href="#%e6%b7%bb%e5%8a%a0%e4%b8%8a%e4%b8%8b%e6%96%87" class="header-anchor"&gt;&lt;/a&gt;添加上下文
+&lt;/h3&gt;&lt;p&gt;获取&lt;code&gt;EnhancedInputLocalPlayerSubsystem&lt;/code&gt;添加上下文。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/2b3ff89de903a0cda1f7e1102a45a28f.png"
+loading="lazy"
+alt="image-20260127154902723"
+&gt;&lt;/p&gt;
+&lt;h3 id="监听动作"&gt;&lt;a href="#%e7%9b%91%e5%90%ac%e5%8a%a8%e4%bd%9c" class="header-anchor"&gt;&lt;/a&gt;监听动作
+&lt;/h3&gt;&lt;p&gt;在蓝图中可以监听&lt;code&gt;IA_Jump&lt;/code&gt;来触发跳跃。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/064c05e38659ad9f8812b8ccaff23e9b.png"
+loading="lazy"
+alt="image-20260127154936319"
+&gt;&lt;/p&gt;
 &lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/input-overview-in-unreal-engine" target="_blank" rel="noopener"
