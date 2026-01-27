@@ -1,4 +1,225 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识笔记 on BoilTask's Blog</title><link>https://boiltask.com/note/</link><description>Recent content in 知识笔记 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 01 Aug 2022 11:21:14 +0000</lastBuildDate><atom:link href="https://boiltask.com/note/index.xml" rel="self" type="application/rss+xml"/><item><title>Lua设计与实现</title><link>https://boiltask.com/note/lua-design-implement-1/</link><pubDate>Mon, 01 Aug 2022 11:21:14 +0000</pubDate><guid>https://boiltask.com/note/lua-design-implement-1/</guid><description>&lt;h2 id="string实现"&gt;&lt;a href="#string%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;String实现
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识笔记 on BoilTask's Blog</title><link>https://boiltask.com/note/</link><description>Recent content in 知识笔记 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 26 Jan 2026 22:37:41 +0800</lastBuildDate><atom:link href="https://boiltask.com/note/index.xml" rel="self" type="application/rss+xml"/><item><title>GAMES104现代游戏引擎 - 引擎架构分层</title><link>https://boiltask.com/note/games104-game-engine-2/</link><pubDate>Mon, 26 Jan 2026 22:37:41 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-2/</guid><description>&lt;p&gt;记住“5+1”层模型与两大驱动神兽。&lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;层级&lt;/th&gt;
+&lt;th&gt;英文&lt;/th&gt;
+&lt;th&gt;关键词&lt;/th&gt;
+&lt;th&gt;典型职责&lt;/th&gt;
+&lt;th&gt;小明“让角色动起来”时要写的代码示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;⑤&lt;/td&gt;
+&lt;td&gt;工具层 Tool Layer&lt;/td&gt;
+&lt;td&gt;编辑器、生产力&lt;/td&gt;
+&lt;td&gt;关卡/材质/蓝图/粒子/音效&amp;hellip; 所有DCC导入与可视化编辑&lt;/td&gt;
+&lt;td&gt;用Level Editor把机器人拖进场景，调相机、动画状态机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;④&lt;/td&gt;
+&lt;td&gt;功能层 Function Layer&lt;/td&gt;
+&lt;td&gt;看得见、动得起来、玩得起来&lt;/td&gt;
+&lt;td&gt;渲染(Render)、动画(Animation)、物理(Physics)、AI/脚本、UI(HUD)&lt;/td&gt;
+&lt;td&gt;TickLogic：读输入→更新骨骼动画；TickRender：提交DrawCall&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;③&lt;/td&gt;
+&lt;td&gt;资源层 Resource Layer&lt;/td&gt;
+&lt;td&gt;资产=高效数据+关系&lt;/td&gt;
+&lt;td&gt;将不同类型的资产转为高效的所需格式 1. 把.max/.psd→引擎Asset（DDS贴图、压缩Mesh）；2. 管理GUID、Handle、生命周期、延迟加载、GC&lt;/td&gt;
+&lt;td&gt;写Composite Asset：让“Robot.asset”指向Mesh/Texture/Anim&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;②&lt;/td&gt;
+&lt;td&gt;核心层 Core Layer&lt;/td&gt;
+&lt;td&gt;瑞士军刀&lt;/td&gt;
+&lt;td&gt;数学库（SIMD）、容器（无碎片）、内存池、线程/任务系统、RTTI/反射&lt;/td&gt;
+&lt;td&gt;提供Vec3/Quat运算、高效Queue、内存分配器给上层调用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;①&lt;/td&gt;
+&lt;td&gt;平台层 Platform Layer&lt;/td&gt;
+&lt;td&gt;一次编写，到处运行&lt;/td&gt;
+&lt;td&gt;封装OS、文件路径、CPU/GPU差异、RHI（DX/Metal/Vulkan抽象）、输入设备&lt;/td&gt;
+&lt;td&gt;实现RHI::CreateBuffer()：PC走DX12，Mac走Metal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;避免下层中反向调用上层的逻辑，从而导致结构混乱。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;两大“神兽”——游戏主循环
+每16.67ms（60 FPS）一次 Tick：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TickLogic：
+&lt;ul&gt;
+&lt;li&gt;读取输入→AI决策→动画骨骼更新→物理碰撞→内存GC→&amp;hellip;&lt;/li&gt;
+&lt;li&gt;（无论你看不看得到，世界状态已推进）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TickRender：
+&lt;ul&gt;
+&lt;li&gt;根据最新状态做裁剪→生成CommandBuffer→GPU执行→呈现画面&lt;/li&gt;
+&lt;li&gt;（纯表现，不影响真实物理/逻辑）
+→ 逻辑与渲染严格分离，方便多线程、录像、网络同步。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;资源→资产的生命周期（重点）&lt;/p&gt;
+&lt;p&gt;原始文件（Resource）&lt;br&gt;
+↓ Import/Convert（离线）&lt;br&gt;
+引擎资产（Asset）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据紧凑、GPU友好（如DDS贴图）&lt;/li&gt;
+&lt;li&gt;带GUID，可重命名/移动不丢失引用&lt;/li&gt;
+&lt;li&gt;Composite Asset 描述关联关系（Mesh+Mat+Anim）&lt;br&gt;
+↓&lt;br&gt;
+运行时 Handle 系统 + Asset Manager：&lt;/li&gt;
+&lt;li&gt;延迟加载、引用计数、异步卸载&lt;/li&gt;
+&lt;li&gt;关卡切换时避免“卡顿”与“爆内存”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;多线程与Job系统演进&lt;/p&gt;
+&lt;p&gt;单线程→Logic/Render双线程→功能模块线程（Physics/Animation）→全Job化（Task Graph）&lt;br&gt;
+关键：识别依赖（Dependency），建立DAG，把任务拆成原子Job喂满所有核。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;内存三条金律（Core层设计口诀）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据集中放（Array-of-Struct → Struct-of-Array）&lt;/li&gt;
+&lt;li&gt;顺序访问（Cache-line友好）&lt;/li&gt;
+&lt;li&gt;批量读写/释放（减少malloc/free，用Pool）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;平台层易忽略陷阱&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件路径分隔符、大小写、编码&lt;/li&gt;
+&lt;li&gt;不同CPU架构（x86/ARM、大小核、SPU）&lt;/li&gt;
+&lt;li&gt;图形API差异→RHI抽象&lt;/li&gt;
+&lt;li&gt;输入设备（键鼠、手柄、方向盘、Kinect&amp;hellip;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;工具层 = 生产力&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自研：Level Editor、Material Editor、Blueprint&amp;hellip;&lt;/li&gt;
+&lt;li&gt;DCC链：Max/Maya/PS/Houdini → Export Plugin → Asset Conditioning Pipeline → 引擎&lt;/li&gt;
+&lt;li&gt;统一数据格式（FBX→USD？）仍无绝对标准，多数引擎自建。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;引擎=⑤工具④功能③资源②核心①平台，Tick驱动上下分层，越底越稳越顶越活。&lt;/p&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏引擎导论</title><link>https://boiltask.com/note/games104-game-engine-1/</link><pubDate>Mon, 26 Jan 2026 21:05:27 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;还是得静下心来系统的整理整理游戏引擎相关知识，随手记些东西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;视角&lt;/th&gt;
+&lt;th&gt;一句话定义&lt;/th&gt;
+&lt;th&gt;关键词&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;技术视角&lt;/td&gt;
+&lt;td&gt;构建“黑客帝国”的底层框架&lt;/td&gt;
+&lt;td&gt;Matrix Foundation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;生产力视角&lt;/td&gt;
+&lt;td&gt;把创意/想象工业化落地的工具链&lt;/td&gt;
+&lt;td&gt;Creative Pipeline&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;系统视角&lt;/td&gt;
+&lt;td&gt;在有限算力+实时约束下的复杂妥协艺术&lt;/td&gt;
+&lt;td&gt;Real-time Complexity&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1960-80s&lt;/strong&gt;：无引擎概念，卡带/街机直接烧录，40 KB内做完整游戏。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1990&lt;/strong&gt;：John Carmack 从《Wolf3D》→《Doom》首次抽出可复用模块 → “Game Engine”一词诞生。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1996&lt;/strong&gt;：显卡出现，Quake 引擎+OpenGL 奠定 3D+联机架构。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2000-10&lt;/strong&gt;：主机世代迭代，算力↑20 万倍 → 代码量从 10 K→10 M 行；出现专用中间件（Havok-Physics、FMOD-Sound、SpeedTree&amp;hellip;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-now&lt;/strong&gt;：商业引擎三足鼎立（UE/Unity/自研），引擎即基础设施，向影视、仿真、数字孪生、元宇宙外溢。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;┌─ 硬件/驱动抽象层（跨平台）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├─ 核心系统（内存、线程、IO、反射、序列化）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├─ 运行时“大三件”
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├─ Rendering 渲染（Forward/Deferred/Cluster/RTX）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├─ Animation 动画（骨骼、蒙皮、BlendTree、IK、Motion Matching）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └─ Physics 物理（刚体→软体→流体；连续碰撞、约束求解）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├─ Gameplay 层
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├─ 世界对象模型（Entity/Component/Archetype）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├─ 脚本/可视化蓝图（事件→状态→行为）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └─ AI + 寻路（NavMesh、行为树、感知系统）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├─ 在线子系统
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ├─ 网络同步模型（帧同步 vs 状态同步）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └─ 低延迟、丢包、预测、回滚
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└─ 工具链与数据管线
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├─ 场景/关卡/动画/材质/特效 编辑器
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├─ 反射+序列化保证“热更新+版本兼容”
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └─ 构建、打包、分发、Crash 收集&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;图形学只占其中一小块；引擎≠渲染。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;引擎基础与分层思想（本节）&lt;/li&gt;
+&lt;li&gt;实时渲染管线（Forward/Deferred/透明排序/移动端优化）&lt;/li&gt;
+&lt;li&gt;动画系统（Clip→Blend→IK→Motion Matching）&lt;/li&gt;
+&lt;li&gt;物理与碰撞（刚体→粒子→布料→车辆；性能预算）&lt;/li&gt;
+&lt;li&gt;Gameplay 架构（Entity-Component、事件、脚本、可视化编程）&lt;/li&gt;
+&lt;li&gt;特效 &amp;amp; 粒子（GPU Sprite、Niagara 思想）&lt;/li&gt;
+&lt;li&gt;AI 与寻路（NavMesh、行为树、感知、Crowd）&lt;/li&gt;
+&lt;li&gt;相机/3C（Character-Camera-Control）&lt;/li&gt;
+&lt;li&gt;工具链设计（反射、序列化、数据兼容、插件机制）&lt;/li&gt;
+&lt;li&gt;多线程与任务系统（Job System、Data-Oriented）&lt;/li&gt;
+&lt;li&gt;网络同步基础（帧同步、状态同步、预测、延迟补偿）&lt;/li&gt;
+&lt;li&gt;开放世界与流式加载（World Partition、HLOD、PCG）&lt;/li&gt;
+&lt;li&gt;全局光照与实时光追（SSGI、Lumen、RTX）&lt;/li&gt;
+&lt;li&gt;前沿主题1：Motion Matching + 机器学习动画&lt;/li&gt;
+&lt;li&gt;前沿主题2：程序化生成（PCG）+ 城市/地形&lt;/li&gt;
+&lt;li&gt;前沿主题3：面向数据架构（ECS）与引擎性能极限&lt;/li&gt;
+&lt;li&gt;迷你引擎实战课（代码走读：Update 循环→模块拆分）
+结课项目：一起做出“可联网对战的小游戏”并复盘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;主书：《Game Engine Architecture》第 4 版（英文）/ 第 3 版（中文）
+辅助：Games101（图形学）、Games103（物理）、Games202（渲染高级）&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;引擎是实时约束下的妥协艺术。&lt;/li&gt;
+&lt;li&gt;算法只占 10%，剩下 90% 是工具、数据、协作与兼容。&lt;/li&gt;
+&lt;li&gt;Update() 是引擎的‘宇宙大爆炸’入口——从它顺藤摸瓜，可读任何引擎。&lt;/li&gt;
+&lt;li&gt;做引擎先学会做工具；用户首先是美术与设计师，其次才是程序员。&lt;/li&gt;
+&lt;li&gt;在飞行的飞机上换引擎，还不能让飞机掉下来——这就是线上迭代。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Lua设计与实现</title><link>https://boiltask.com/note/lua-design-implement-1/</link><pubDate>Mon, 01 Aug 2022 11:21:14 +0000</pubDate><guid>https://boiltask.com/note/lua-design-implement-1/</guid><description>&lt;h2 id="string实现"&gt;&lt;a href="#string%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;String实现
 &lt;/h2&gt;&lt;h3 id="思路"&gt;&lt;a href="#%e6%80%9d%e8%b7%af" class="header-anchor"&gt;&lt;/a&gt;思路
 &lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;Hash&lt;/code&gt;方式分配字符串，根据&lt;code&gt;Hash&lt;/code&gt;值获取对应桶，与其存在的元素比对，若都不相同，则在桶中新增元素&lt;/p&gt;
 &lt;p&gt;需要判断的时候根据&lt;code&gt;Hash&lt;/code&gt;值判断&lt;/p&gt;
