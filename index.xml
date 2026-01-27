@@ -139,37 +139,108 @@ GPU：每个核心较弱，数量多，适合处理大规模并行计算，如�
 loading="lazy"
 alt="image-20260127163232589"
 &gt;&lt;/p&gt;
+&lt;h3 id="内存架构与数据流"&gt;&lt;a href="#%e5%86%85%e5%ad%98%e6%9e%b6%e6%9e%84%e4%b8%8e%e6%95%b0%e6%8d%ae%e6%b5%81" class="header-anchor"&gt;&lt;/a&gt;内存架构与数据流
+&lt;/h3&gt;&lt;p&gt;冯·诺依曼架构：计算和数据分开，会导致数据搬运成本较高。&lt;/p&gt;
+&lt;p&gt;关键概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显存与内存：CPU内存到GPU显存的传输是主要瓶颈，必须遵循数据单向传输原则（CPU→GPU，尽量避免读回）&lt;/li&gt;
+&lt;li&gt;Cache（缓存）：现代计算性能的关键。访问主存可能需要100+个时钟周期，而访问缓存只需几个周期
+&lt;ul&gt;
+&lt;li&gt;Cache Hit：数据在缓存中，快速访问&lt;/li&gt;
+&lt;li&gt;Cache Miss：数据不在缓存中，需要等待&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bandwidth（带宽）：渲染中的常见瓶颈，包括纹理带宽、顶点带宽等&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="渲染数据组织从逻辑对象到可绘制实体"&gt;&lt;a href="#%e6%b8%b2%e6%9f%93%e6%95%b0%e6%8d%ae%e7%bb%84%e7%bb%87%e4%bb%8e%e9%80%bb%e8%be%91%e5%af%b9%e8%b1%a1%e5%88%b0%e5%8f%af%e7%bb%98%e5%88%b6%e5%ae%9e%e4%bd%93" class="header-anchor"&gt;&lt;/a&gt;渲染数据组织：从逻辑对象到可绘制实体
-&lt;/h2&gt;&lt;h3 id="渲染基础三要素"&gt;&lt;a href="#%e6%b8%b2%e6%9f%93%e5%9f%ba%e7%a1%80%e4%b8%89%e8%a6%81%e7%b4%a0" class="header-anchor"&gt;&lt;/a&gt;渲染基础三要素
-&lt;/h3&gt;&lt;p&gt;要绘制一个物体，需要三种核心数据：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;游戏中的GameObject（如一辆车、一个角色）是逻辑对象，本身无法直接绘制。需要通过Renderable（可绘制对象）来表达。&lt;/p&gt;
+&lt;h3 id="renderable的组成"&gt;&lt;a href="#renderable%e7%9a%84%e7%bb%84%e6%88%90" class="header-anchor"&gt;&lt;/a&gt;Renderable的组成
+&lt;/h3&gt;&lt;p&gt;要绘制一个物体（Renderable），一般需要：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Mesh（网格）&lt;/strong&gt;：顶点数据、三角形索引&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Texture（纹理）&lt;/strong&gt;：材质表面细节&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Shader Code（着色器代码）&lt;/strong&gt;：决定光照和外观的计算程序&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mesh（网格）&lt;/strong&gt;：顶点数据、三角形索引
+&lt;ol&gt;
+&lt;li&gt;Vertex Data：顶点位置、法线（Normal）、UV坐标等&lt;/li&gt;
+&lt;li&gt;Index Data：三角形索引，复用顶点以节省内存（通常顶点数约为三角形数的一半）&lt;/li&gt;
+&lt;li&gt;Triangle Strip：一种优化的顶点存储方式，提高Cache友好性&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重要提示：顶点法线必须单独存储，不能简单通过三角形面法线平均计算。例如立方体的棱角处，同一位置的顶点需要存储多个不同方向的法线。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;这三者构成&lt;strong&gt;Renderable&lt;/strong&gt;（可渲染对象），是渲染系统的基本单元。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Material（材质）&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;表达物体表面属性（金属、塑料、石头等）&lt;/li&gt;
+&lt;li&gt;现代引擎使用PBR（Physically Based Rendering，基于物理的渲染）模型&lt;/li&gt;
+&lt;li&gt;注意与Physics Material（物理材质）区分：前者用于视觉，后者用于摩擦系数、弹性等物理属性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Texture（纹理）&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;材质会引用纹理来采样，一个材质可能引用多个纹理，同一个纹理也可能被多个材质引用&lt;/li&gt;
+&lt;li&gt;不仅存储颜色（Albedo），还存储粗糙度（Roughness）、法线（Normal）、金属度（Metallic）等&lt;/li&gt;
+&lt;li&gt;纹理采样是昂贵的操作：单次采样需要访问8个像素并进行7次插值（考虑Mipmap和双线性过滤）&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我已经有一张 Texture 了，为什么还要 Material？&lt;br&gt;
+因为 GPU 不知道：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这张图是颜色？法线？还是粗糙度？&lt;/li&gt;
+&lt;li&gt;要不要参与光照？&lt;/li&gt;
+&lt;li&gt;是透明还是不透明？&lt;/li&gt;
+&lt;li&gt;Gamma / Linear 怎么处理？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Material 就是告诉 GPU 这张图该怎么解释、怎么参与计算&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shader Code（着色器代码）&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;独特的&amp;quot;代码即数据&amp;quot;存在：既是源代码，又被当作数据资源管理&lt;/li&gt;
+&lt;li&gt;现代引擎支持Shader Graph，允许美术像搭积木一样组合材质逻辑，自动生成Shader代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3 id="submesh资源复用的关键"&gt;&lt;a href="#submesh%e8%b5%84%e6%ba%90%e5%a4%8d%e7%94%a8%e7%9a%84%e5%85%b3%e9%94%ae" class="header-anchor"&gt;&lt;/a&gt;SubMesh：资源复用的关键
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;核心思想&lt;/strong&gt;：将大网格拆分为多个子网格（SubMesh），每个SubMesh共享同一个顶点缓冲区和索引缓冲区，但通过&lt;strong&gt;偏移量&lt;/strong&gt;引用不同的数据段。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 伪代码示例
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;SubMesh&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;uint32_t&lt;/span&gt; &lt;span class="n"&gt;indexOffset&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 起始索引
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;uint32_t&lt;/span&gt; &lt;span class="n"&gt;indexCount&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 索引数量
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Material&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;material&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 材质指针
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Shader&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;shader&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 着色器指针
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;一个面片可能包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顶点&lt;/li&gt;
+&lt;li&gt;朝向&lt;/li&gt;
+&lt;li&gt;颜色&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个复杂模型（如士兵）的不同部分（头盔、布料、皮肤、武器）需要不同的材质。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/9607113ef8ffab849070859b0c00e4c7.png"
+loading="lazy"
+alt="image-20260127182306364"
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么每个顶点都需要存法线，而不是直接通过三角形面法线平均计算？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;物体表面是连续曲面并不是三角形，因此以三角形算会产生跳变&lt;/li&gt;
+&lt;li&gt;一个像素只属于一个三角形，并不能知道周围有哪些面&lt;/li&gt;
+&lt;li&gt;GPU的插值是顶点级别的，因此对于法线需要记录在顶点上&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/510f23b535a6f2fdb71ee289aa4593be.png"
+loading="lazy"
+alt="image-20260127183531617"
+&gt;&lt;/p&gt;
+&lt;p&gt;顶点法线 = 相邻三角形面法线的加权平均（通常权重为三角形面积），再归一化&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引入SubMesh概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将Mesh按照材质切分为多个SubMesh&lt;/li&gt;
+&lt;li&gt;所有SubMesh共享同一个Vertex Buffer（顶点缓冲区）/Index Buffer（索引缓冲区），但各自记录Offset（&lt;strong&gt;偏移量&lt;/strong&gt;）范围&lt;/li&gt;
+&lt;li&gt;每个SubMesh对应特定的材质、纹理和Shader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;渲染优化策略：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;材质排序：将相同材质的SubMesh分组，减少GPU状态切换（State Change）的开销&lt;/li&gt;
+&lt;li&gt;Instance（实例化）：相同几何体（如小兵、树木）只存一份定义（Definition），通过实例数据（位置、旋转等）绘制多个副本&lt;/li&gt;
+&lt;li&gt;GPU-based Batch Rendering：现代引擎使用GPU计算着色器一次性处理大量相同物体的绘制，进一步减少CPU提交开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;内存效率：多个物体共享相同的几何数据&lt;/li&gt;
 &lt;li&gt;渲染优化：按材质排序后批量渲染，减少状态切换&lt;/li&gt;
