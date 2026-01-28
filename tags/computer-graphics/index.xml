@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机图形学 on BoilTask's Blog</title><link>https://boiltask.com/tags/computer-graphics/</link><description>Recent content in 计算机图形学 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/computer-graphics/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机图形学复习笔记</title><link>https://boiltask.com/knowledge/computer-graphics-note/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/knowledge/computer-graphics-note/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机图形学 on BoilTask's Blog</title><link>https://boiltask.com/tags/computer-graphics/</link><description>Recent content in 计算机图形学 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/computer-graphics/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机图形学复习笔记</title><link>https://boiltask.com/note/computer-graphics-review/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/note/computer-graphics-review/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="第1章"&gt;&lt;a href="#%e7%ac%ac1%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;第1章
@@ -493,14 +493,9 @@ $P_{1} P_{0}$的延长线上取一点$P_{-1}$，使得：
 $$P_{-1} P_{0}= P_{0} P_{1}$$&lt;p&gt;
 &lt;/p&gt;
 $$P_{n} P_{n+1}= P_{n-1}P_{n}$$&lt;p&gt;
-&lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-1.png"
-width="264"
-height="220"
-srcset="https://boiltask.com/knowledge/computer-graphics-note/image-1_hu_466922509c685a1.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-1_hu_7292ef8d3df373b.png 1024w"
+&lt;img src="https://r2.boiltask.com/2026/01/baa4e13d4c15e9c099ca04b8f81b3161.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="120"
-data-flex-basis="288px"
+alt="image-1"
 &gt;&lt;br&gt;
 求得：
 &lt;/p&gt;
@@ -509,14 +504,9 @@ $$P_{-1}= 2 P_{0} - P_{1}$$&lt;p&gt;
 $$P_{4}= 2 P_{3} - P_{2}$$&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;重点技术：&lt;br&gt;
-&lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-2.png"
-width="389"
-height="197"
-srcset="https://boiltask.com/knowledge/computer-graphics-note/image-2_hu_61bbd5867ddd8c3e.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-2_hu_ade6b2230cbc2d61.png 1024w"
+&lt;img src="https://r2.boiltask.com/2026/01/ad3d526dd8ae8e79c1d8bc2415496081.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="197"
-data-flex-basis="473px"
+alt="image-2"
 &gt;&lt;br&gt;
 在首末端点处采用重合点，使得：
 &lt;/p&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GAMES104现代游戏引擎 on BoilTask's Blog</title><link>https://boiltask.com/tags/games104-game-engine/</link><description>Recent content in GAMES104现代游戏引擎 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 27 Jan 2026 13:11:25 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/games104-game-engine/index.xml" rel="self" type="application/rss+xml"/><item><title>GAMES104现代游戏引擎 - 游戏引擎中的渲染实践</title><link>https://boiltask.com/note/games104-game-engine-4/</link><pubDate>Tue, 27 Jan 2026 13:11:25 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-4/</guid><description>&lt;h2 id="课程概述"&gt;&lt;a href="#%e8%af%be%e7%a8%8b%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;课程概述
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GAMES104现代游戏引擎 on BoilTask's Blog</title><link>https://boiltask.com/tags/games104-game-engine/</link><description>Recent content in GAMES104现代游戏引擎 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 27 Jan 2026 23:11:25 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/games104-game-engine/index.xml" rel="self" type="application/rss+xml"/><item><title>GAMES104现代游戏引擎 - 游戏引擎中的渲染实践</title><link>https://boiltask.com/note/games104-game-engine-4/</link><pubDate>Tue, 27 Jan 2026 23:11:25 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-4/</guid><description>&lt;h2 id="课程概述"&gt;&lt;a href="#%e8%af%be%e7%a8%8b%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;课程概述
 &lt;/h2&gt;&lt;p&gt;在现代游戏引擎中，渲染系统（Rendering System）占据着极其重要的地位。它不仅占据了引擎代码量的最大部分，也是技术难度和专业壁垒最高的领域之一。虽然很多人认为&amp;quot;游戏引擎只是一个画图引擎&amp;quot;，但实际上游戏引擎的渲染与教科书上的计算机图形学有着本质区别。&lt;/p&gt;
 &lt;h3 id="游戏渲染-vs-理论图形学"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e6%b8%b2%e6%9f%93-vs-%e7%90%86%e8%ae%ba%e5%9b%be%e5%bd%a2%e5%ad%a6" class="header-anchor"&gt;&lt;/a&gt;游戏渲染 vs 理论图形学
 &lt;/h3&gt;&lt;p&gt;计算机图形学理论关注的是：&lt;/p&gt;
@@ -56,7 +56,7 @@ GPU：每个核心较弱，数量多，适合处理大规模并行计算，如�
 &lt;li&gt;现代GPU算力可达10+ TeraFLOPs，远超CPU（通常&amp;lt;1 TeraFLOP）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;TeraFLOP：每秒万亿次浮点运算，$10^12$ 次浮点运算（FLOP），$10^15$ 次双精度浮点运算（DFLOP）&lt;/p&gt;
+&lt;p&gt;TeraFLOP：每秒万亿次浮点运算，$10^{12}$ 次浮点运算（FLOP），$10^{15}$ 次双精度浮点运算（DFLOP）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id="现代gpu硬件结构以nvidia-fermi架构为例"&gt;&lt;a href="#%e7%8e%b0%e4%bb%a3gpu%e7%a1%ac%e4%bb%b6%e7%bb%93%e6%9e%84%e4%bb%a5nvidia-fermi%e6%9e%b6%e6%9e%84%e4%b8%ba%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;现代GPU硬件结构（以NVIDIA Fermi架构为例）
 &lt;/h3&gt;&lt;p&gt;GPU由多个GPC（Graphics Processing Cluster，图形处理集群）组成，每个GPC包含：&lt;/p&gt;
@@ -140,7 +140,8 @@ alt="image-20260127163232589"
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="submesh资源复用的关键"&gt;&lt;a href="#submesh%e8%b5%84%e6%ba%90%e5%a4%8d%e7%94%a8%e7%9a%84%e5%85%b3%e9%94%ae" class="header-anchor"&gt;&lt;/a&gt;SubMesh：资源复用的关键
-&lt;/h3&gt;&lt;p&gt;一个面片可能包括：&lt;/p&gt;
+&lt;/h3&gt;&lt;h4 id="submesh概念"&gt;&lt;a href="#submesh%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;SubMesh概念
+&lt;/h4&gt;&lt;p&gt;一个面片可能包括：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;顶点&lt;/li&gt;
 &lt;li&gt;朝向&lt;/li&gt;
@@ -164,17 +165,10 @@ alt="image-20260127183531617"
 &gt;&lt;/p&gt;
 &lt;p&gt;顶点法线 = 相邻三角形面法线的加权平均（通常权重为三角形面积），再归一化&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;引入SubMesh概念：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;将Mesh按照材质切分为多个SubMesh&lt;/li&gt;
 &lt;li&gt;所有SubMesh共享同一个Vertex Buffer（顶点缓冲区）/Index Buffer（索引缓冲区），但各自记录Offset（&lt;strong&gt;偏移量&lt;/strong&gt;）范围&lt;/li&gt;
 &lt;li&gt;每个SubMesh对应特定的材质、纹理和Shader&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;渲染优化策略：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;材质排序：将相同材质的SubMesh分组，减少GPU状态切换（State Change）的开销&lt;/li&gt;
-&lt;li&gt;Instance（实例化）：相同几何体（如小兵、树木）只存一份定义（Definition），通过实例数据（位置、旋转等）绘制多个副本&lt;/li&gt;
-&lt;li&gt;GPU-based Batch Rendering：现代引擎使用GPU计算着色器一次性处理大量相同物体的绘制，进一步减少CPU提交开销&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
@@ -182,16 +176,20 @@ alt="image-20260127183531617"
 &lt;li&gt;渲染优化：按材质排序后批量渲染，减少状态切换&lt;/li&gt;
 &lt;li&gt;工业标准：虚幻引擎等主流引擎均采用类似结构&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="资源池resource-pool设计"&gt;&lt;a href="#%e8%b5%84%e6%ba%90%e6%b1%a0resource-pool%e8%ae%be%e8%ae%a1" class="header-anchor"&gt;&lt;/a&gt;资源池（Resource Pool）设计
-&lt;/h3&gt;&lt;p&gt;现代引擎通过资源池解决数据冗余问题：&lt;/p&gt;
+&lt;h4 id="资源池resource-pool设计"&gt;&lt;a href="#%e8%b5%84%e6%ba%90%e6%b1%a0resource-pool%e8%ae%be%e8%ae%a1" class="header-anchor"&gt;&lt;/a&gt;资源池（Resource Pool）设计
+&lt;/h4&gt;&lt;p&gt;现代引擎通过资源池解决数据冗余问题：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Mesh Pool&lt;/strong&gt;：统一管理所有网格数据&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Texture Pool&lt;/strong&gt;：纹理跨物体共享（如多人角色的皮肤、服装）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Material Pool&lt;/strong&gt;：材质实例化系统&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="gpu-driven渲染与批处理优化"&gt;&lt;a href="#gpu-driven%e6%b8%b2%e6%9f%93%e4%b8%8e%e6%89%b9%e5%a4%84%e7%90%86%e4%bc%98%e5%8c%96" class="header-anchor"&gt;&lt;/a&gt;GPU Driven渲染与批处理优化
-&lt;/h2&gt;&lt;h3 id="gpu-based-batch-rendering"&gt;&lt;a href="#gpu-based-batch-rendering" class="header-anchor"&gt;&lt;/a&gt;GPU Based Batch Rendering
+&lt;h4 id="渲染优化策略"&gt;&lt;a href="#%e6%b8%b2%e6%9f%93%e4%bc%98%e5%8c%96%e7%ad%96%e7%95%a5" class="header-anchor"&gt;&lt;/a&gt;渲染优化策略
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;材质排序：将相同材质的SubMesh分组，减少GPU状态切换（State Change）的开销&lt;/li&gt;
+&lt;li&gt;Instance（实例化）：相同几何体（如小兵、树木）只存一份定义（Definition），通过实例数据（位置、旋转等）绘制多个副本&lt;/li&gt;
+&lt;li&gt;GPU-based Batch Rendering：现代引擎使用GPU计算着色器一次性处理大量相同物体的绘制，进一步减少CPU提交开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="gpu-based-batch-rendering"&gt;&lt;a href="#gpu-based-batch-rendering" class="header-anchor"&gt;&lt;/a&gt;GPU Based Batch Rendering
 &lt;/h3&gt;&lt;p&gt;对于大量重复物体（树木、草丛、建筑），传统方式需要为每个物体设置一次VBO/IBO。现代技术利用&lt;strong&gt;Computer Shader&lt;/strong&gt;实现：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;单次Draw Call渲染数百个实例&lt;/strong&gt;&lt;/li&gt;
@@ -209,6 +207,25 @@ alt="image-20260127183531617"
 &lt;hr&gt;
 &lt;h2 id="可见性裁剪visibility-culling"&gt;&lt;a href="#%e5%8f%af%e8%a7%81%e6%80%a7%e8%a3%81%e5%89%aavisibility-culling" class="header-anchor"&gt;&lt;/a&gt;可见性裁剪（Visibility Culling）
 &lt;/h2&gt;&lt;p&gt;渲染优化的最高境界： &lt;strong&gt;&amp;ldquo;Do Nothing&amp;rdquo;&lt;/strong&gt; ——通过算法让计算机尽可能少做事情。&lt;/p&gt;
+&lt;h3 id="基础裁剪方法"&gt;&lt;a href="#%e5%9f%ba%e7%a1%80%e8%a3%81%e5%89%aa%e6%96%b9%e6%b3%95" class="header-anchor"&gt;&lt;/a&gt;基础裁剪方法
+&lt;/h3&gt;&lt;h4 id="视锥裁剪view-frustum-culling"&gt;&lt;a href="#%e8%a7%86%e9%94%a5%e8%a3%81%e5%89%aaview-frustum-culling" class="header-anchor"&gt;&lt;/a&gt;视锥裁剪（View Frustum Culling）
+&lt;/h4&gt;&lt;p&gt;使用Bounding Volume（包围盒）快速判断物体是否在相机视锥内&lt;/p&gt;
+&lt;p&gt;包围盒类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bounding Sphere：测试最快，但包围松散&lt;/li&gt;
+&lt;li&gt;AABB（Axis-Aligned Bounding Box）：轴对齐包围盒，只需存储两个顶点，计算效率极高&lt;/li&gt;
+&lt;li&gt;OBB（Object-Oriented Bounding Box）：物体对齐包围盒，更贴合但计算复杂&lt;/li&gt;
+&lt;li&gt;Convex Hull（凸包）：物理计算中常用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/7b44e02361e6880496fc935ac5b50877.png"
+loading="lazy"
+alt="image-20260128105845049"
+&gt;&lt;/p&gt;
+&lt;h4 id="空间加速结构"&gt;&lt;a href="#%e7%a9%ba%e9%97%b4%e5%8a%a0%e9%80%9f%e7%bb%93%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;空间加速结构
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;四叉树/八叉树：适合静态大场景&lt;/li&gt;
+&lt;li&gt;BVH（Bounding Volume Hierarchy）：树状结构，适合动态场景（物体移动频繁的FPS游戏）&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id="bvhbounding-volume-hierarchy"&gt;&lt;a href="#bvhbounding-volume-hierarchy" class="header-anchor"&gt;&lt;/a&gt;BVH（Bounding Volume Hierarchy）
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：动态物体多的场景（如RTS游戏中的大量单位）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：&lt;/p&gt;
@@ -240,7 +257,7 @@ alt="image-20260127183531617"
 &lt;p&gt;&lt;strong&gt;核心原理&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;将空间划分为&lt;strong&gt;Portal&lt;/strong&gt;（门窗）连接的&lt;strong&gt;Cell&lt;/strong&gt;（房间）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;预计算&lt;/strong&gt;：每个Cell可见的其他Cell集合&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预计算&lt;/strong&gt;：每个Cell记录从该位置通过Portals能看到哪些其他Cell&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;运行时&lt;/strong&gt;：只渲染当前Cell的PVS中的物体&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;现代应用延伸&lt;/strong&gt;：&lt;/p&gt;
@@ -250,23 +267,26 @@ alt="image-20260127183531617"
 &lt;li&gt;&lt;strong&gt;尽管纯PVS裁剪已少用，但其思想指导资源调度&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="gpu-based-culling"&gt;&lt;a href="#gpu-based-culling" class="header-anchor"&gt;&lt;/a&gt;GPU Based Culling
-&lt;/h3&gt;&lt;p&gt;现代硬件性能使得部分裁剪可直接在GPU完成：&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;现代硬件性能使得部分裁剪可直接在GPU完成，利用GPU并行计算能力，将数千个物体的包围盒测试并行化。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Occlusion Query&lt;/strong&gt;：GPU返回可见性0/1数组&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Early-Z / Hi-Z&lt;/strong&gt;：硬件级深度测试，被遮挡像素不执行Fragment Shader&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Compute Shader Hierarchy&lt;/strong&gt;：在GPU构建BVH并并行裁剪&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
 &lt;h2 id="纹理压缩技术"&gt;&lt;a href="#%e7%ba%b9%e7%90%86%e5%8e%8b%e7%bc%a9%e6%8a%80%e6%9c%af" class="header-anchor"&gt;&lt;/a&gt;纹理压缩技术
-&lt;/h2&gt;&lt;h3 id="游戏引擎的特殊需求"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e5%bc%95%e6%93%8e%e7%9a%84%e7%89%b9%e6%ae%8a%e9%9c%80%e6%b1%82" class="header-anchor"&gt;&lt;/a&gt;游戏引擎的特殊需求
-&lt;/h3&gt;&lt;p&gt;与普通图片压缩（JPEG）不同，纹理压缩必须支持：&lt;/p&gt;
+&lt;/h2&gt;&lt;h3 id="纹理压缩格式"&gt;&lt;a href="#%e7%ba%b9%e7%90%86%e5%8e%8b%e7%bc%a9%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;纹理压缩格式
+&lt;/h3&gt;&lt;p&gt;游戏引擎的特殊需求与普通图片压缩（JPEG）不同，纹理压缩必须支持：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;随机访问&lt;/strong&gt;：快速读取任意纹素&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;实时解压&lt;/strong&gt;：解压开销极低&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;固定压缩率&lt;/strong&gt;：显存占用可预测&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="block-based-compression"&gt;&lt;a href="#block-based-compression" class="header-anchor"&gt;&lt;/a&gt;Block Based Compression
+&lt;h3 id="block-based-compression基于块的压缩"&gt;&lt;a href="#block-based-compression%e5%9f%ba%e4%ba%8e%e5%9d%97%e7%9a%84%e5%8e%8b%e7%bc%a9" class="header-anchor"&gt;&lt;/a&gt;Block-based Compression（基于块的压缩）
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;核心思想&lt;/strong&gt;：将纹理分割为4×4或更大块，独立压缩每块。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将纹理切分为4×4像素的小块&lt;/li&gt;
+&lt;li&gt;记录块内颜色最大值和最小值，其他像素存储插值比例&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;DXT/BC系列&lt;/strong&gt;（PC/主机）：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;每块存颜色最大值和最小值&lt;/li&gt;
@@ -280,7 +300,6 @@ alt="image-20260127183531617"
 &lt;li&gt;&lt;strong&gt;劣势&lt;/strong&gt;：不适合运行时动态压缩&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;技术意义&lt;/strong&gt;：纹理压缩是引擎资源系统的重要模块，直接影响显存带宽和加载性能。&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id="资产生产管线"&gt;&lt;a href="#%e8%b5%84%e4%ba%a7%e7%94%9f%e4%ba%a7%e7%ae%a1%e7%ba%bf" class="header-anchor"&gt;&lt;/a&gt;资产生产管线
 &lt;/h2&gt;&lt;p&gt;现代游戏资产来源多样化，推动渲染技术进步：&lt;/p&gt;
 &lt;table&gt;
