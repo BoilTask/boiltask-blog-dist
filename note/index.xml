@@ -1104,7 +1104,7 @@ alt="image-20260128105845049"
 &lt;p&gt;如果这个策略成功，他们会受到鼓励而继续这样的行为——并且可能会有更多的玩家选择这种对自己来说没有风险的做法——这样也就把越来越多的责任转嫁到了仍然愿意执行危险任务的团队成员身上。显然，如果这个趋势继续下去，整个团队（包括那些搭便车者）都会完蛋。&lt;/p&gt;
 &lt;h2 id="心得"&gt;&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor"&gt;&lt;/a&gt;心得
 &lt;/h2&gt;&lt;p&gt;书中所介绍游戏原理其实很多在目前主流游戏中都有所体现，而学习游戏原理的意义，在于自己不仅限于“感觉这个模块挺有意思，可以拿来借鉴一下”，而是能够根据原理去设计一个模块。&lt;/p&gt;
-&lt;p&gt;成品是游戏原理的实际运用，游戏设计的“抄作业”也至少应该明白这道题的答案为何，这样才能在以后的设计中交出一个满意的答卷。&lt;/p&gt;</description></item><item><title>代码之髓：编程语言核心概念笔记</title><link>https://boiltask.com/note/coreconcept/</link><pubDate>Mon, 11 Nov 2019 13:43:08 +0000</pubDate><guid>https://boiltask.com/note/coreconcept/</guid><description>&lt;h2 id="第1章-如何深入高效地学习语言"&gt;&lt;a href="#%e7%ac%ac1%e7%ab%a0-%e5%a6%82%e4%bd%95%e6%b7%b1%e5%85%a5%e9%ab%98%e6%95%88%e5%9c%b0%e5%ad%a6%e4%b9%a0%e8%af%ad%e8%a8%80" class="header-anchor"&gt;&lt;/a&gt;第1章 如何深入高效地学习语言
+&lt;p&gt;成品是游戏原理的实际运用，游戏设计的“抄作业”也至少应该明白这道题的答案为何，这样才能在以后的设计中交出一个满意的答卷。&lt;/p&gt;</description></item><item><title>代码之髓：编程语言核心概念笔记</title><link>https://boiltask.com/note/code-core-concept/</link><pubDate>Mon, 11 Nov 2019 13:43:08 +0000</pubDate><guid>https://boiltask.com/note/code-core-concept/</guid><description>&lt;h2 id="第1章-如何深入高效地学习语言"&gt;&lt;a href="#%e7%ac%ac1%e7%ab%a0-%e5%a6%82%e4%bd%95%e6%b7%b1%e5%85%a5%e9%ab%98%e6%95%88%e5%9c%b0%e5%ad%a6%e4%b9%a0%e8%af%ad%e8%a8%80" class="header-anchor"&gt;&lt;/a&gt;第1章 如何深入高效地学习语言
 &lt;/h2&gt;&lt;p&gt;在比较中学习多种语言时，一些知识能理解得更深刻。所谓语言不同，规则不同。&lt;/p&gt;
 &lt;p&gt;知道了语言设计者为解决何种问题而创造了这种语言，以及这种语言经历过怎么样的历史变迁后，慢慢地就能理解为什么需要有这种功能了。&lt;/p&gt;
 &lt;p&gt;了解了语言的历史，我们往往更能加深所学。&lt;/p&gt;
@@ -1306,7 +1306,7 @@ $$&lt;p&gt;秘密的重要性，是与其表面上看起来无辜的程度及其
 &lt;p&gt;我们有两种不同的方式来实践MDA。&lt;/p&gt;
 &lt;p&gt;第一种方式，游戏设计师以定义在游戏中想要达到的体验效果作为设计流程的开始，然后确定要达到这样的体验效果玩家需要参与什么样的游戏运行过程，最终再为这样的运行过程设置游戏的机制。&lt;/p&gt;
 &lt;p&gt;第二种方式，玩家反向体验MDA的3个要素并且首先与游戏机制进行互动，这些机制会带来特定的游戏运行，而这又将让玩家产生特定的体验。&lt;/p&gt;
-&lt;p&gt;MDA只是在游戏中达到创造特定情绪反应效果的一个方法，它有它的局限性。&lt;/p&gt;</description></item><item><title>计算机图形学复习笔记</title><link>https://boiltask.com/note/computer-graphics-review/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/note/computer-graphics-review/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;MDA只是在游戏中达到创造特定情绪反应效果的一个方法，它有它的局限性。&lt;/p&gt;</description></item><item><title>计算机图形学基础 - 计算机图形学复习笔记</title><link>https://boiltask.com/note/computer-graphics-opengl/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/note/computer-graphics-opengl/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="第1章"&gt;&lt;a href="#%e7%ac%ac1%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;第1章
