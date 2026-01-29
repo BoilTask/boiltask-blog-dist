@@ -1,4 +1,249 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识笔记 on BoilTask's Blog</title><link>https://boiltask.com/note/</link><description>Recent content in 知识笔记 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 28 Jan 2026 13:19:37 +0800</lastBuildDate><atom:link href="https://boiltask.com/note/index.xml" rel="self" type="application/rss+xml"/><item><title>GAMES104现代游戏引擎 - 渲染中光和材质的数学魔法</title><link>https://boiltask.com/note/games104-game-engine-5/</link><pubDate>Wed, 28 Jan 2026 13:19:37 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-5/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识笔记 on BoilTask's Blog</title><link>https://boiltask.com/note/</link><description>Recent content in 知识笔记 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 29 Jan 2026 12:26:47 +0800</lastBuildDate><atom:link href="https://boiltask.com/note/index.xml" rel="self" type="application/rss+xml"/><item><title>GAMES104现代游戏引擎 - 游戏中地形大气和云的渲染(上)</title><link>https://boiltask.com/note/games104-game-engine-6/</link><pubDate>Thu, 29 Jan 2026 12:26:47 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-6/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;存在不少东西没有看懂，后续需要再整理一遍。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="大地之神与天空之神"&gt;&lt;a href="#%e5%a4%a7%e5%9c%b0%e4%b9%8b%e7%a5%9e%e4%b8%8e%e5%a4%a9%e7%a9%ba%e4%b9%8b%e7%a5%9e" class="header-anchor"&gt;&lt;/a&gt;大地之神与天空之神
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;课程定位&lt;/strong&gt;：GAMES104《现代游戏引擎：从入门到实践》第6讲，主题为&amp;quot;Mother Nature（自然之母）&amp;ldquo;的渲染——如何用0和1表达壮美的自然界。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;大地之神&amp;rdquo;（God of the Earth）与&amp;quot;天空之神&amp;rdquo;（God of the Sky）&lt;/strong&gt;：游戏引擎团队中，负责地形系统的工程师被称为&amp;quot;大地之神&amp;quot;，负责天空、光照、云层的被称为&amp;quot;天空之神&amp;quot;。这些称号是团队自发形成的，体现了对自然渲染技术的热爱。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;渲染自然之美&lt;/strong&gt;：从西班牙洞穴壁画到毕加索，人类对自然的表达本能延续至今。游戏引擎开发者的使命是用数学公式将山川、河流、天空转化为虚拟世界。&lt;/p&gt;
+&lt;h2 id="地形渲染基础terrain-rendering-basics"&gt;&lt;a href="#%e5%9c%b0%e5%bd%a2%e6%b8%b2%e6%9f%93%e5%9f%ba%e7%a1%80terrain-rendering-basics" class="header-anchor"&gt;&lt;/a&gt;地形渲染基础（Terrain Rendering Basics）
+&lt;/h2&gt;&lt;h3 id="核心概念height-field高度场高程图"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5height-field%e9%ab%98%e5%ba%a6%e5%9c%ba%e9%ab%98%e7%a8%8b%e5%9b%be" class="header-anchor"&gt;&lt;/a&gt;核心概念：Height Field（高度场/高程图）
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：地形在游戏引擎中称为 &lt;strong&gt;Terrain&lt;/strong&gt;，源自古英语中&amp;quot;地球之母&amp;quot;的含义。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Height Field&lt;/strong&gt; 是最基础的地形表达方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用二维灰度图表示地形高低（类似等高线地形图）&lt;/li&gt;
+&lt;li&gt;数学本质：$y = f(x,z)$，单一数值函数&lt;/li&gt;
+&lt;li&gt;早在计算机游戏出现前，测绘领域已使用等高线（Counter）表达地形&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;几何生成&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成均匀网格（如每1米一个顶点）&lt;/li&gt;
+&lt;li&gt;根据Height Field对顶点进行Y轴位移&lt;/li&gt;
+&lt;li&gt;早期方法简单，但开放世界（Open World）中数据量爆炸（1km×1km需100万个顶点）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="分形fractal与自然规律"&gt;&lt;a href="#%e5%88%86%e5%bd%a2fractal%e4%b8%8e%e8%87%aa%e7%84%b6%e8%a7%84%e5%be%8b" class="header-anchor"&gt;&lt;/a&gt;分形（Fractal）与自然规律
+&lt;/h3&gt;&lt;p&gt;自然界的地形（山脉、海岸线、腐蚀痕迹）符合&lt;strong&gt;分形&lt;/strong&gt;原则：无限自相似的形状。这一数学规律是程序化生成地形的基础。&lt;/p&gt;
+&lt;h2 id="地形lodlevel-of-detail技术"&gt;&lt;a href="#%e5%9c%b0%e5%bd%a2lodlevel-of-detail%e6%8a%80%e6%9c%af" class="header-anchor"&gt;&lt;/a&gt;地形LOD（Level of Detail）技术
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;核心矛盾&lt;/strong&gt;：近处需要细节，远处需要效率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LOD原则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;距离相关&lt;/strong&gt;：近处密，远处疏&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FOV（Field of View）相关&lt;/strong&gt;：视角越窄（如开镜），三角形越细密；视角越宽，越稀疏
+&lt;ul&gt;
+&lt;li&gt;原理：相同屏幕像素下，FOV越小，单个物体占据像素越多，需要更高几何精度&lt;/li&gt;
+&lt;li&gt;应用：3倍镜、8倍镜的实现就是缩小FOV&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="网格细分算法"&gt;&lt;a href="#%e7%bd%91%e6%a0%bc%e7%bb%86%e5%88%86%e7%ae%97%e6%b3%95" class="header-anchor"&gt;&lt;/a&gt;网格细分算法
+&lt;/h3&gt;&lt;h4 id="binary-triangle-tree基于三角形的二分细分"&gt;&lt;a href="#binary-triangle-tree%e5%9f%ba%e4%ba%8e%e4%b8%89%e8%a7%92%e5%bd%a2%e7%9a%84%e4%ba%8c%e5%88%86%e7%bb%86%e5%88%86" class="header-anchor"&gt;&lt;/a&gt;Binary Triangle Tree（基于三角形的二分细分）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;方法&lt;/strong&gt;：永远对等腰直角三角形的最长边（斜边）中点切分，生成两个新的等腰直角三角形&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构&lt;/strong&gt;：二叉树结构&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：&lt;strong&gt;T Junction（T型连接/裂缝）&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;当相邻三角形细分层级不同时，共享边上出现&amp;quot;一边有顶点，一边无顶点&amp;quot;的情况&lt;/li&gt;
+&lt;li&gt;结果：地形出现裂缝（看到天空背景的白边）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决&lt;/strong&gt;：强制细化较粗的一边，直到与邻居同级&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="quadtree四叉树--现代游戏主流方案"&gt;&lt;a href="#quadtree%e5%9b%9b%e5%8f%89%e6%a0%91--%e7%8e%b0%e4%bb%a3%e6%b8%b8%e6%88%8f%e4%b8%bb%e6%b5%81%e6%96%b9%e6%a1%88" class="header-anchor"&gt;&lt;/a&gt;Quadtree（四叉树）- 现代游戏主流方案
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;思想&lt;/strong&gt;：将地形切成&amp;quot;豆腐块&amp;quot;，符合人的直觉和计算机存储规范（纹理、高度图都是方块状）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;层级&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Block&lt;/strong&gt;：如512m×512m磁盘数据块（存储高度图、贴图、植被、建筑信息）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Patch&lt;/strong&gt;：继续细分为64m×64m等&lt;/li&gt;
+&lt;li&gt;细分到视觉极限后停止合并&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;T Junction解决方案：Stitching（缝合）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不修改几何拓扑，而是将多出的顶点&amp;quot;吸附&amp;quot;（Stitch）到邻居边上&lt;/li&gt;
+&lt;li&gt;形成&lt;strong&gt;退化三角形（Degenerate Triangle）&lt;/strong&gt;（面积为0的三角形）&lt;/li&gt;
+&lt;li&gt;优点：不改变网格结构，代码实现比Binary Triangle Tree简单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="地形gpu-driven-tessellation"&gt;&lt;a href="#%e5%9c%b0%e5%bd%a2gpu-driven-tessellation" class="header-anchor"&gt;&lt;/a&gt;地形GPU Driven Tessellation
+&lt;/h2&gt;&lt;h3 id="传统管线dx11"&gt;&lt;a href="#%e4%bc%a0%e7%bb%9f%e7%ae%a1%e7%ba%bfdx11" class="header-anchor"&gt;&lt;/a&gt;传统管线（DX11）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hull Shader&lt;/strong&gt;：生成细分用的Patch（控制点）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tessellator&lt;/strong&gt;：硬件固定单元，按设定次数细分边&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domain Shader&lt;/strong&gt;：在细分后的顶点上采样高度图，位移顶点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geometry Shader&lt;/strong&gt;：后处理，传递顶点数据到下一阶段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="现代方案mesh-shaderdx12"&gt;&lt;a href="#%e7%8e%b0%e4%bb%a3%e6%96%b9%e6%a1%88mesh-shaderdx12" class="header-anchor"&gt;&lt;/a&gt;现代方案：Mesh Shader（DX12+）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;革命性变化&lt;/strong&gt;：合并Hull、Domain、Geometry Shader，一次性生成Meshlet（小片几何体）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;程序员完全控制细分算法&lt;/li&gt;
+&lt;li&gt;更灵活的几何生成能力&lt;/li&gt;
+&lt;li&gt;为动态地形（Deformable Terrain）提供基础&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="动态地形dynamicdeformable-terrain"&gt;&lt;a href="#%e5%8a%a8%e6%80%81%e5%9c%b0%e5%bd%a2dynamicdeformable-terrain" class="header-anchor"&gt;&lt;/a&gt;动态地形（Dynamic/Deformable Terrain）
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拖拉机在稻田压出车辙&lt;/li&gt;
+&lt;li&gt;《战神》中的可变形雪地&lt;/li&gt;
+&lt;li&gt;炮弹爆炸留下的弹坑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;实现逻辑&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用GPU Tessellation实时生成几何&lt;/li&gt;
+&lt;li&gt;在Runtime维护一张Deformation Texture（变形贴图）&lt;/li&gt;
+&lt;li&gt;在Vertex Shader中叠加变形偏移量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;物理同步&lt;/strong&gt;：需同步更新碰撞体（Collision Mesh），否则出现&amp;quot;人走在虚空&amp;quot;的Bug&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="复杂地形特征超越height-field"&gt;&lt;a href="#%e5%a4%8d%e6%9d%82%e5%9c%b0%e5%bd%a2%e7%89%b9%e5%be%81%e8%b6%85%e8%b6%8aheight-field" class="header-anchor"&gt;&lt;/a&gt;复杂地形特征：超越Height Field
+&lt;/h2&gt;&lt;h3 id="height-field的局限"&gt;&lt;a href="#height-field%e7%9a%84%e5%b1%80%e9%99%90" class="header-anchor"&gt;&lt;/a&gt;Height Field的局限
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;无法表达垂直悬崖（Overhang）&lt;/li&gt;
+&lt;li&gt;无法表达洞穴（Cave）、隧道&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="传统hack方案"&gt;&lt;a href="#%e4%bc%a0%e7%bb%9fhack%e6%96%b9%e6%a1%88" class="header-anchor"&gt;&lt;/a&gt;传统Hack方案
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;挖洞标记&lt;/strong&gt;：在Vertex Shader中，将需要挖洞区域的顶点输出为NaN（无效数），GPU会自动剔除相关三角形&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接缝处放置物体&lt;/strong&gt;：在悬崖边缘人工放置岩石模型遮挡接缝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="volumetric-terrain体素化地形-marching-cubes"&gt;&lt;a href="#volumetric-terrain%e4%bd%93%e7%b4%a0%e5%8c%96%e5%9c%b0%e5%bd%a2-marching-cubes" class="header-anchor"&gt;&lt;/a&gt;Volumetric Terrain（体素化地形）+ Marching Cubes
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;：在三维空间体素（Voxel）中存储密度值（Weight），而非单一高度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Marching Cubes算法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据8个体素点的密度值，查找预先定义的15种（或更多）剖分方式&lt;/li&gt;
+&lt;li&gt;生成水密的三角网格（Watertight Mesh）&lt;/li&gt;
+&lt;li&gt;应用：CT扫描可视化、数字人、流体模拟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;现状与展望&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目前主要用于《Minecraft》等体素游戏&lt;/li&gt;
+&lt;li&gt;挑战：LOD过渡、数据管理复杂&lt;/li&gt;
+&lt;li&gt;潜力：实现真正的全动态地形（任意挖洞、挖掘）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="地形材质系统"&gt;&lt;a href="#%e5%9c%b0%e5%bd%a2%e6%9d%90%e8%b4%a8%e7%b3%bb%e7%bb%9f" class="header-anchor"&gt;&lt;/a&gt;地形材质系统
+&lt;/h2&gt;&lt;h3 id="texture-splatting纹理-splatting混合"&gt;&lt;a href="#texture-splatting%e7%ba%b9%e7%90%86-splatting%e6%b7%b7%e5%90%88" class="header-anchor"&gt;&lt;/a&gt;Texture Splatting（纹理 splatting/混合）
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;基础方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Splat Map（混合贴图）&lt;/strong&gt;：每个通道代表一种材质的权重&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;材质属性&lt;/strong&gt;：Base Color、Normal、Roughness、Metallic、Height&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Height Based Blending（基于高度的混合）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题：Alpha混合导致沙子&amp;quot;浮&amp;quot;在石头表面，不真实&lt;/li&gt;
+&lt;li&gt;解决：结合Height Map比较高度，高者保留，低者消退&lt;/li&gt;
+&lt;li&gt;效果：沙子填充石缝，草从石缝生长，而非覆盖石头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;优化抖动&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加入&lt;strong&gt;Bias（偏移量，如0.2）&lt;strong&gt;和&lt;/strong&gt;Smoothstep&lt;/strong&gt;，避免材质切换时的锐利分界和远处视角的闪烁（Aliasing）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="multi-material-management多材质管理texture-array"&gt;&lt;a href="#multi-material-management%e5%a4%9a%e6%9d%90%e8%b4%a8%e7%ae%a1%e7%90%86texture-array" class="header-anchor"&gt;&lt;/a&gt;Multi-Material Management（多材质管理）：Texture Array
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;概念&lt;/strong&gt;：将多层无关的2D纹理堆叠，用Index访问（而非3D Texture的Trilinear插值）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：支持几十种材质混合，层间无插值开销&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据组织&lt;/strong&gt;：Splat Map同时存储材质Index和混合权重&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="凹凸细节增强"&gt;&lt;a href="#%e5%87%b9%e5%87%b8%e7%bb%86%e8%8a%82%e5%a2%9e%e5%bc%ba" class="header-anchor"&gt;&lt;/a&gt;凹凸细节增强
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Parallax Mapping（视差贴图）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;通过光线步进（Raymarching）模拟视差&lt;/li&gt;
+&lt;li&gt;产生立体感的凹凸效果，但几何边界仍平整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Displacement Mapping（置换贴图）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;结合Tessellation真实位移顶点&lt;/li&gt;
+&lt;li&gt;成本较高，未来趋势&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="virtual-texture虚拟纹理"&gt;&lt;a href="#virtual-texture%e8%99%9a%e6%8b%9f%e7%ba%b9%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;Virtual Texture（虚拟纹理）
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;核心思想&lt;/strong&gt;：只加载视锥内可见区域的纹理，类似操作系统的虚拟内存管理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工作流程&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将大地形划分为多级Tile（瓦片），组成Mipmaps金字塔&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Physics Texture（物理纹理/缓存）&lt;/strong&gt;：仅存储当前可见的Tile&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feedback/Indirection&lt;/strong&gt;：通过查找表（Page Table）将UV映射到物理纹理位置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异步加载&lt;/strong&gt;：通过&amp;quot;小徒弟&amp;quot;（线程/IO系统）从磁盘/内存按需加载Tile，卸载不可见Tile&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;：显存占用有理论上限（几何级数收敛）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能&lt;/strong&gt;：材质混合在加载时预计算（Baking），Runtime直接采样单张纹理，极大降低Overdraw和Texture Sampling开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;硬件加速&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DirectStorage&lt;/strong&gt;：硬盘→显存，保持压缩状态传输，在GPU解压&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DMA（Direct Memory Access）&lt;/strong&gt;：PS5技术，数据直接从SSD到显存，绕过CPU和内存总线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="浮点精度问题floating-point-precision"&gt;&lt;a href="#%e6%b5%ae%e7%82%b9%e7%b2%be%e5%ba%a6%e9%97%ae%e9%a2%98floating-point-precision" class="header-anchor"&gt;&lt;/a&gt;浮点精度问题（Floating Point Precision）
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：32位Float在表达大范围世界（如地球到月球，或大型开放世界）时，小数部分精度不足（精度随数值增大而降低），导致远处物体抖动（Jittering）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：在2-3公里外，数值达数万时，小数精度可能超过1厘米，导致贴花（Decal）与墙面打架、物体闪烁。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案：Camera Relative Rendering（相机相对渲染）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将相机坐标设为原点（0,0,0）&lt;/li&gt;
+&lt;li&gt;所有世界坐标减去相机坐标，转换为相对坐标&lt;/li&gt;
+&lt;li&gt;保留高精度的小数部分，消除抖动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;其他方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用Double（64位浮点）：数据量和带宽成本过高&lt;/li&gt;
+&lt;li&gt;Sublevel（子关卡）相对坐标：UE5等大型引擎采用，每个关卡重置坐标系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="环境要素系统"&gt;&lt;a href="#%e7%8e%af%e5%a2%83%e8%a6%81%e7%b4%a0%e7%b3%bb%e7%bb%9f" class="header-anchor"&gt;&lt;/a&gt;环境要素系统
+&lt;/h2&gt;&lt;h3 id="树木渲染foliage"&gt;&lt;a href="#%e6%a0%91%e6%9c%a8%e6%b8%b2%e6%9f%93foliage" class="header-anchor"&gt;&lt;/a&gt;树木渲染（Foliage）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SpeedTree&lt;/strong&gt;：行业标准的植被中间件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LOD策略&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;近处：真实Mesh&lt;/li&gt;
+&lt;li&gt;中距离：插片（Card）组合&lt;/li&gt;
+&lt;li&gt;远处：Billboard（公告板）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="decorator装饰物"&gt;&lt;a href="#decorator%e8%a3%85%e9%a5%b0%e7%89%a9" class="header-anchor"&gt;&lt;/a&gt;Decorator（装饰物）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：小草、碎石、小灌木等环境细节&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技术&lt;/strong&gt;：Simple Mesh、Billboard集群渲染&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="道路系统road-system"&gt;&lt;a href="#%e9%81%93%e8%b7%af%e7%b3%bb%e7%bb%9froad-system" class="header-anchor"&gt;&lt;/a&gt;道路系统（Road System）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spline（样条曲线）&lt;/strong&gt;：艺术家通过控制点拖拽生成道路&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Erosion（腐蚀/切割）&lt;/strong&gt;：道路生成后，需对Height Field进行切割和平整处理，使山地适合作道路&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="decal贴花"&gt;&lt;a href="#decal%e8%b4%b4%e8%8a%b1" class="header-anchor"&gt;&lt;/a&gt;Decal（贴花）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：投射到表面的细节纹理（如弹孔、污渍、路面标线）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用&lt;/strong&gt;：与Virtual Texture结合，烘焙到地形贴图中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="程序化生成procedural-generation"&gt;&lt;a href="#%e7%a8%8b%e5%ba%8f%e5%8c%96%e7%94%9f%e6%88%90procedural-generation" class="header-anchor"&gt;&lt;/a&gt;程序化生成（Procedural Generation）
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;趋势&lt;/strong&gt;：从手工编辑转向基于规则的程序化生成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;能力&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于坡度、高度、材质类型自动生成植被（阔叶林→针叶林过渡）&lt;/li&gt;
+&lt;li&gt;模拟流水腐蚀生成山脊、冲沟&lt;/li&gt;
+&lt;li&gt;自动生成道路网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;要求&lt;/strong&gt;：引擎开发者需具备博物学知识，理解地质、生态规律。&lt;/p&gt;
+&lt;h2 id="总结成为大地之神的技术路径"&gt;&lt;a href="#%e6%80%bb%e7%bb%93%e6%88%90%e4%b8%ba%e5%a4%a7%e5%9c%b0%e4%b9%8b%e7%a5%9e%e7%9a%84%e6%8a%80%e6%9c%af%e8%b7%af%e5%be%84" class="header-anchor"&gt;&lt;/a&gt;总结：成为&amp;quot;大地之神&amp;quot;的技术路径
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;基础&lt;/strong&gt;：掌握Height Field与LOD原理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;几何&lt;/strong&gt;：实现Quadtree + GPU Tessellation，处理T Junction&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;材质&lt;/strong&gt;：Texture Splatting + Virtual Texture&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态&lt;/strong&gt;：GPU Driven Deformable Terrain&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;精度&lt;/strong&gt;：Camera Relative Rendering解决大空间问题&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生态&lt;/strong&gt;：整合SpeedTree、Decorator、Road、Decal系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;未来&lt;/strong&gt;：探索Volumetric Terrain与Marching Cubes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1au411y7Fq" target="_blank" rel="noopener"
+&gt;游戏中地形大气和云的渲染(上) | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GAMES104现代游戏引擎 - 渲染中光和材质的数学魔法</title><link>https://boiltask.com/note/games104-game-engine-5/</link><pubDate>Wed, 28 Jan 2026 13:19:37 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-5/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;存在不少东西没有看懂，后续需要再整理一遍。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="引言渲染的本质挑战"&gt;&lt;a href="#%e5%bc%95%e8%a8%80%e6%b8%b2%e6%9f%93%e7%9a%84%e6%9c%ac%e8%b4%a8%e6%8c%91%e6%88%98" class="header-anchor"&gt;&lt;/a&gt;引言：渲染的本质挑战
