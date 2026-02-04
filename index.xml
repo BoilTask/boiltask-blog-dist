@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 Feb 2026 22:17:35 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Feb 2026 12:51:11 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -83,7 +83,393 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎（UE5）下PuerTS的最佳实践</title><link>https://boiltask.com/knowledge/ue/ue-puerts-best-practice/</link><pubDate>Tue, 03 Feb 2026 22:17:22 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-puerts-best-practice/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>构建带有GAS的RPG - RPG及GAS构建入门</title><link>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</link><pubDate>Wed, 04 Feb 2026 12:51:11 +0800</pubDate><guid>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;根据虚幻引擎社区中的课程《Building an RPG with Gameplay Ability System》的介绍，整理一版相关文档。&lt;/p&gt;
+&lt;p&gt;GAS：游戏能力系统（Gameplay Ability System，GAS）是虚幻引擎中用于实现游戏能力系统的插件。它提供了一种灵活的方式来定义和管理游戏中的能力，例如攻击、移动、跳跃等。GAS允许开发人员以声明式的方式定义能力，而不是在代码中硬编码。这使得游戏能力系统更加可扩展和可维护。&lt;/p&gt;
+&lt;p&gt;RPG：角色扮演游戏（Role-Playing Game，RPG）是一种通过模拟角色互动来创建虚拟世界的游戏。它通常包括玩家扮演角色，与其他玩家或 NPC（非玩家角色）互动，完成任务和挑战。RPG通常注重角色发展、社会互动和个人成长。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="gas-到底是什么"&gt;&lt;a href="#gas-%e5%88%b0%e5%ba%95%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor"&gt;&lt;/a&gt;GAS 到底是什么？
+&lt;/h2&gt;&lt;h3 id="核心定义"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e5%ae%9a%e4%b9%89" class="header-anchor"&gt;&lt;/a&gt;核心定义
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Gameplay Ability System（GAS）&lt;/strong&gt; 是 Epic Games 官方开发并长期维护的一套&lt;strong&gt;基于&amp;quot;技能&amp;quot;（Abilities）理念的游戏角色交互设计框架&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一句话概括&lt;/strong&gt;：它是让游戏角色能够&amp;quot;干点啥&amp;quot;的底层机制系统。&lt;/p&gt;
+&lt;h3 id="适用场景"&gt;&lt;a href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af" class="header-anchor"&gt;&lt;/a&gt;适用场景
+&lt;/h3&gt;&lt;p&gt;GAS 特别适合以下类型的游戏开发：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;游戏类型&lt;/th&gt;
+&lt;th&gt;典型特征&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RPG&lt;/strong&gt;（角色扮演游戏）&lt;/td&gt;
+&lt;td&gt;复杂的技能树系统、角色成长体系&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;动作冒险游戏&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;多样化的战斗动作、连招系统&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;MOBA&lt;/strong&gt;（多人在线战术竞技）&lt;/td&gt;
+&lt;td&gt;多英雄技能交互、团队协作机制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;核心判断标准&lt;/strong&gt;：只要你的游戏需要角色具备&amp;quot;炫酷技能树、能打能升级、能与他人战斗或合作&amp;quot;，GAS 就是最佳选择。&lt;/p&gt;
+&lt;h3 id="为什么需要-gas"&gt;&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81-gas" class="header-anchor"&gt;&lt;/a&gt;为什么需要 GAS？
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;传统开发痛点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从零构建技能系统需要&lt;strong&gt;数年经验积累&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;特别是&lt;strong&gt;联网多人游戏&lt;/strong&gt;，开发工作量巨大且容易出错&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;GAS 的优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;官方背书&lt;/strong&gt;：Epic Games 官方开发，长期维护更新&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;久经沙场&lt;/strong&gt;：已被多款 3A 大作验证，稳定性极高&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;高度灵活&lt;/strong&gt;：模块化设计，可自由扩展和定制&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;开箱即用&lt;/strong&gt;：内置联网支持、状态同步、输入验证等机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="gas-的另一面"&gt;&lt;a href="#gas-%e7%9a%84%e5%8f%a6%e4%b8%80%e9%9d%a2" class="header-anchor"&gt;&lt;/a&gt;GAS 的&amp;quot;另一面&amp;quot;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;⚠️ 上手门槛&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;学习曲线陡峭&lt;/strong&gt;：需要理解大量子系统及其关联关系&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置复杂度高&lt;/strong&gt;：高度模块化意味着需要配置更多组件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;调试难度大&lt;/strong&gt;：模块间的解耦设计增加了问题定位的复杂度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;❌ 不适用场景&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;极简小品级游戏（Overkill）&lt;/li&gt;
+&lt;li&gt;对响应速度要求苛刻的毫秒级竞技游戏（性能开销）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="gas-的设计哲学核心玩法循环"&gt;&lt;a href="#gas-%e7%9a%84%e8%ae%be%e8%ae%a1%e5%93%b2%e5%ad%a6%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e5%be%aa%e7%8e%af" class="header-anchor"&gt;&lt;/a&gt;GAS 的设计哲学：核心玩法循环
+&lt;/h2&gt;&lt;h3 id="传统游戏逻辑的问题"&gt;&lt;a href="#%e4%bc%a0%e7%bb%9f%e6%b8%b8%e6%88%8f%e9%80%bb%e8%be%91%e7%9a%84%e9%97%ae%e9%a2%98" class="header-anchor"&gt;&lt;/a&gt;传统游戏逻辑的问题
+&lt;/h3&gt;&lt;p&gt;虚幻引擎虽然提供了智能决策系统（让玩家/NPC 根据战况自主决策），但&lt;strong&gt;具体的交互逻辑仍需开发者从零手写&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;真正的游戏体验来自于&lt;strong&gt;操作对底层机制的实际影响&lt;/strong&gt;，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;释放技能 → 改变基础属性 → 解锁新技能 → 角色升级 → 形成循环&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="gas-的三大支柱"&gt;&lt;a href="#gas-%e7%9a%84%e4%b8%89%e5%a4%a7%e6%94%af%e6%9f%b1" class="header-anchor"&gt;&lt;/a&gt;GAS 的&amp;quot;三大支柱&amp;quot;
+&lt;/h3&gt;&lt;p&gt;GAS 将核心玩法循环正式拆解为三大模块，并提供&lt;strong&gt;开箱即用&lt;/strong&gt;的支持：&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph LR
+A[Abilities&amp;lt;br/&amp;gt;技能] --&amp;gt; B[Attributes&amp;lt;br/&amp;gt;属性]
+B --&amp;gt; C[Effects&amp;lt;br/&amp;gt;效果]
+C --&amp;gt; A
+&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模块&lt;/th&gt;
+&lt;th&gt;职责&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Abilities（技能）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;定义角色可执行的动作&lt;/td&gt;
+&lt;td&gt;普通攻击、翻滚闪避、吟唱施法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Attributes（属性）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;角色的数值状态&lt;/td&gt;
+&lt;td&gt;生命值、体力值、魔法值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Effects（效果）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;对属性的实际影响&lt;/td&gt;
+&lt;td&gt;造成伤害、恢复生命、添加 Buff&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;核心优势&lt;/strong&gt;：这种设计实现了&lt;strong&gt;超神级模块化&lt;/strong&gt;——各模块彼此解耦，既可开发小型原型，也能支撑 3A 级大作。&lt;/p&gt;
+&lt;h3 id="gas-的网络同步一站式支持"&gt;&lt;a href="#gas-%e7%9a%84%e7%bd%91%e7%bb%9c%e5%90%8c%e6%ad%a5%e4%b8%80%e7%ab%99%e5%bc%8f%e6%94%af%e6%8c%81" class="header-anchor"&gt;&lt;/a&gt;GAS 的网络同步一站式支持
+&lt;/h3&gt;&lt;p&gt;GAS 内置了强大的多人联机支持：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;输入验证机制&lt;/strong&gt;：防止作弊，确保操作合法性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态回滚系统&lt;/strong&gt;：处理复杂交互时的同步问题&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;帧级同步&lt;/strong&gt;：保证全网公平性，即使在复杂网络环境下也能稳定运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="gas-六大核心组件详解"&gt;&lt;a href="#gas-%e5%85%ad%e5%a4%a7%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e8%af%a6%e8%a7%a3" class="header-anchor"&gt;&lt;/a&gt;GAS 六大核心组件详解
+&lt;/h2&gt;&lt;h3 id="ability-system-componentasc-系统心脏"&gt;&lt;a href="#ability-system-componentasc-%e7%b3%bb%e7%bb%9f%e5%bf%83%e8%84%8f" class="header-anchor"&gt;&lt;/a&gt;Ability System Component（ASC）—— 系统心脏
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：GAS 架构的核心与基础&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心功能&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作为&lt;strong&gt;中心枢纽&lt;/strong&gt;，协调管理所有其他 GAS 组件&lt;/li&gt;
+&lt;li&gt;负责技能的授予、激活、取消等生命周期管理&lt;/li&gt;
+&lt;li&gt;处理属性集的注册与同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;使用方式&lt;/strong&gt;：只需将 ASC 组件挂载到任意 Actor 上，该 Actor 即具备使用 GAS 的能力。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 核心概念：ASC 是 GAS 的&amp;#34;入口点&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 所有功能都建立在 ASC 的基础之上
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="gameplay-tags游戏性标签-状态描述语言"&gt;&lt;a href="#gameplay-tags%e6%b8%b8%e6%88%8f%e6%80%a7%e6%a0%87%e7%ad%be-%e7%8a%b6%e6%80%81%e6%8f%8f%e8%bf%b0%e8%af%ad%e8%a8%80" class="header-anchor"&gt;&lt;/a&gt;Gameplay Tags（游戏性标签）—— 状态描述语言
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：内置标签系统的&amp;quot;Pro 升级版&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心特性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;树状层级结构&lt;/strong&gt;：支持父子继承关系（如 &lt;code&gt;Status.Buff.Fire&lt;/code&gt; 继承自 &lt;code&gt;Status.Buff&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态快照&lt;/strong&gt;：精确描述 Actor 当前所处的各种状态&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;条件触发器&lt;/strong&gt;：定义技能激活的前置条件（如&amp;quot;只有在 &lt;code&gt;Status.Stunned&lt;/code&gt; 标签存在时才能使用解控技能&amp;quot;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;设计价值&lt;/strong&gt;：Gameplay Tags 是 GAS 实现&lt;strong&gt;模块化设计&lt;/strong&gt;与&lt;strong&gt;高可扩展性&lt;/strong&gt;的核心支柱。&lt;/p&gt;
+&lt;h3 id="gameplay-abilitiesga-玩法实现层"&gt;&lt;a href="#gameplay-abilitiesga-%e7%8e%a9%e6%b3%95%e5%ae%9e%e7%8e%b0%e5%b1%82" class="header-anchor"&gt;&lt;/a&gt;Gameplay Abilities（GA）—— 玩法实现层
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：真正的&amp;quot;玩法&amp;quot;定义层，每个可执行动作都对应一个 GA&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;覆盖范围&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基础动作：普通攻击、翻滚、跳跃&lt;/li&gt;
+&lt;li&gt;复杂技能：吟唱施法、连招、终极技能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;执行流程&lt;/strong&gt;：
+GA 内置完整的&lt;strong&gt;生命周期管理&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TD
+A[尝试激活] --&amp;gt; B{检查标签条件}
+B --&amp;gt;|通过| C[激活成功]
+B --&amp;gt;|失败| D[激活失败]
+C --&amp;gt; E[执行 Ability Tasks]
+E --&amp;gt; F{执行结果}
+F --&amp;gt;|成功| G[触发 Gameplay Events]
+F --&amp;gt;|取消| H[执行取消逻辑]
+F --&amp;gt;|失败| I[执行失败回调]
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;关键特性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ability Tasks&lt;/strong&gt;：专门处理异步流程（如&amp;quot;蓄力 2 秒后释放&amp;quot;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件驱动&lt;/strong&gt;：成功后触发 Gameplay Events，影响系统其他部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="attribute-sets属性集-数据本体"&gt;&lt;a href="#attribute-sets%e5%b1%9e%e6%80%a7%e9%9b%86-%e6%95%b0%e6%8d%ae%e6%9c%ac%e4%bd%93" class="header-anchor"&gt;&lt;/a&gt;Attribute Sets（属性集）—— 数据本体
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：角色属性的&amp;quot;数据容器&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;属性分类&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;特征&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;持久属性&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;长期存在，保存到存档&lt;/td&gt;
+&lt;td&gt;生命值（Health）、等级（Level）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;临时属性&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;瞬时存在，用于计算传递&lt;/td&gt;
+&lt;td&gt;本次攻击的伤害值（Damage）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;设计模式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;UAttributeSet&lt;/code&gt; 类定义属性&lt;/li&gt;
+&lt;li&gt;支持预测性网络同步（Client-Side Prediction）&lt;/li&gt;
+&lt;li&gt;属性变化时自动触发委托事件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="gameplay-effectsge-属性修改器"&gt;&lt;a href="#gameplay-effectsge-%e5%b1%9e%e6%80%a7%e4%bf%ae%e6%94%b9%e5%99%a8" class="header-anchor"&gt;&lt;/a&gt;Gameplay Effects（GE）—— 属性修改器
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：游戏里所有交互的本质 —— &lt;strong&gt;对目标属性值的修改&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心机制&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;只要玩家的操作稳稳打中目标，Gameplay Effect 就负责决定目标属性如何变化。&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例流程&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;玩家发动攻击（GA）→ 命中判定成功 → 应用 Gameplay Effect → 修改 NPC 的生命值属性&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GE 的多样化能力&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;效果类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;应用场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;瞬时修改&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;立即改变属性值&lt;/td&gt;
+&lt;td&gt;瞬间伤害、瞬间治疗&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;持续伤害（DoT）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;一段时间内持续扣血&lt;/td&gt;
+&lt;td&gt;中毒、燃烧效果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;持续恢复（HoT）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;一段时间内持续回血&lt;/td&gt;
+&lt;td&gt;治疗术、生命恢复光环&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Buff/Debuff 叠层&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;可叠加的状态效果&lt;/td&gt;
+&lt;td&gt;攻击力提升、防御力降低&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;无敌帧&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;短暂的无敌状态&lt;/td&gt;
+&lt;td&gt;闪避后的无敌时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;开发友好性&lt;/strong&gt;：所有 GE 都可以在&lt;strong&gt;蓝图中纯可视化配置&lt;/strong&gt;，无需编写代码，只需调整参数。&lt;/p&gt;
+&lt;h3 id="gameplay-cuesgc-视听反馈层"&gt;&lt;a href="#gameplay-cuesgc-%e8%a7%86%e5%90%ac%e5%8f%8d%e9%a6%88%e5%b1%82" class="header-anchor"&gt;&lt;/a&gt;Gameplay Cues（GC）—— 视听反馈层
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：专门管理&amp;quot;装饰性效果&amp;quot;的独立系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设计初衷&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;分离核心逻辑与表现&lt;/strong&gt;：服务器只需要处理游戏逻辑，不需要播放特效&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优化网络带宽&lt;/strong&gt;：GC 可以在客户端本地触发，减少不必要的网络同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;涵盖内容&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;视觉特效（VFX）：粒子效果、屏幕震动、材质变化&lt;/li&gt;
+&lt;li&gt;音频反馈（SFX）：技能音效、受击音效、环境音效&lt;/li&gt;
+&lt;li&gt;UI 反馈：伤害数字飘字、血条变化动画&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;执行时机&lt;/strong&gt;：通常在 GE 修改属性后触发，为玩家提供即时反馈。&lt;/p&gt;
+&lt;h2 id="gas-核心玩法循环的完整链路"&gt;&lt;a href="#gas-%e6%a0%b8%e5%bf%83%e7%8e%a9%e6%b3%95%e5%be%aa%e7%8e%af%e7%9a%84%e5%ae%8c%e6%95%b4%e9%93%be%e8%b7%af" class="header-anchor"&gt;&lt;/a&gt;GAS 核心玩法循环的完整链路
+&lt;/h2&gt;&lt;p&gt;为直观展示各组件如何协同工作，以下是完整的战斗循环流程：&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TD
+subgraph &amp;#34;输入阶段&amp;#34;
+A[玩家输入] --&amp;gt; B[Gameplay Ability&amp;lt;br/&amp;gt;GA: 攻击技能]
+end
+subgraph &amp;#34;执行阶段&amp;#34;
+B --&amp;gt; C{Gameplay Tags&amp;lt;br/&amp;gt;检查激活条件}
+C --&amp;gt;|条件满足| D[Ability Tasks&amp;lt;br/&amp;gt;执行攻击动画/检测]
+D --&amp;gt; E[命中检测&amp;lt;br/&amp;gt;触发 Gameplay Event]
+end
+subgraph &amp;#34;效果阶段&amp;#34;
+E --&amp;gt; F[Gameplay Effect&amp;lt;br/&amp;gt;GE: 伤害计算]
+F --&amp;gt; G[Attribute Set&amp;lt;br/&amp;gt;修改 Health/Damage]
+end
+subgraph &amp;#34;反馈阶段&amp;#34;
+G --&amp;gt; H[Gameplay Cue&amp;lt;br/&amp;gt;GC: 播放受击特效/音效]
+H --&amp;gt; I[UI 更新&amp;lt;br/&amp;gt;血条变化/伤害数字]
+end
+subgraph &amp;#34;循环闭环&amp;#34;
+G --&amp;gt; J[经验值增加]
+J --&amp;gt; K[升级判定]
+K --&amp;gt;|升级| L[解锁新 GA&amp;lt;br/&amp;gt;属性成长]
+L --&amp;gt; A
+end
+&lt;/pre&gt;
+&lt;h2 id="课程学习路径规划"&gt;&lt;a href="#%e8%af%be%e7%a8%8b%e5%ad%a6%e4%b9%a0%e8%b7%af%e5%be%84%e8%a7%84%e5%88%92" class="header-anchor"&gt;&lt;/a&gt;课程学习路径规划
+&lt;/h2&gt;&lt;p&gt;本系列课程将按照以下里程碑逐步深入：&lt;/p&gt;
+&lt;h3 id="里程碑一gas-基础环境搭建"&gt;&lt;a href="#%e9%87%8c%e7%a8%8b%e7%a2%91%e4%b8%80gas-%e5%9f%ba%e7%a1%80%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba" class="header-anchor"&gt;&lt;/a&gt;里程碑一：GAS 基础环境搭建
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内容&lt;/strong&gt;：配置 ASC、理解 Gameplay Tags、创建首个 GA&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：建立 GAS 开发环境，掌握基础概念&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="里程碑二核心战斗系统"&gt;&lt;a href="#%e9%87%8c%e7%a8%8b%e7%a2%91%e4%ba%8c%e6%a0%b8%e5%bf%83%e6%88%98%e6%96%97%e7%b3%bb%e7%bb%9f" class="header-anchor"&gt;&lt;/a&gt;里程碑二：核心战斗系统
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;攻击技能实现&lt;/strong&gt;：基于输入触发，通过动画通知（Anim Notify）实现精准帧检测&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;属性系统搭建&lt;/strong&gt;：创建 AttributeSet，定义 Health 等核心属性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伤害机制&lt;/strong&gt;：使用 GE 实现标准化的生命值扣减&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;临时属性应用&lt;/strong&gt;：引入 Damage 属性处理复杂攻击场景（暴击、元素伤害等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;视觉反馈&lt;/strong&gt;：配置 Gameplay Cues，实现打击感&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;达成目标&lt;/strong&gt;：完成玩家与 NPC 之间的完整战斗闭环。&lt;/p&gt;
+&lt;h3 id="里程碑三成长体系与进阶机制"&gt;&lt;a href="#%e9%87%8c%e7%a8%8b%e7%a2%91%e4%b8%89%e6%88%90%e9%95%bf%e4%bd%93%e7%b3%bb%e4%b8%8e%e8%bf%9b%e9%98%b6%e6%9c%ba%e5%88%b6" class="header-anchor"&gt;&lt;/a&gt;里程碑三：成长体系与进阶机制
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;经验值系统&lt;/strong&gt;：击败 NPC 获得经验值&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;升级机制&lt;/strong&gt;：经验值累积触发升级，属性成长&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;持续型效果&lt;/strong&gt;：利用 GE 的 Duration 机制实现 DoT、临时 Buff、无敌帧等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;达成目标&lt;/strong&gt;：完成&amp;quot;战斗 → 成长 → 更强战斗&amp;quot;的核心玩法闭环。&lt;/p&gt;
+&lt;h2 id="七配套项目说明"&gt;&lt;a href="#%e4%b8%83%e9%85%8d%e5%a5%97%e9%a1%b9%e7%9b%ae%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;七、配套项目说明
+&lt;/h2&gt;&lt;h3 id="项目结构"&gt;&lt;a href="#%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;项目结构
+&lt;/h3&gt;&lt;p&gt;示例项目分为两大资源文件夹：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件夹&lt;/th&gt;
+&lt;th&gt;内容说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Arena Battle/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;通用资源（基于 Infinity Blade 素材包）&lt;br&gt;包含场景、动画、材质、基础 VFX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Arena Battle GAS/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;GAS 专用资源&lt;br&gt;随课程进度持续更新，包含 GA、GE、AttributeSet 等配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="c-vs-蓝图最佳实践"&gt;&lt;a href="#c-vs-%e8%93%9d%e5%9b%be%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" class="header-anchor"&gt;&lt;/a&gt;C++ vs 蓝图：最佳实践
+&lt;/h2&gt;&lt;h3 id="技术栈选择建议"&gt;&lt;a href="#%e6%8a%80%e6%9c%af%e6%a0%88%e9%80%89%e6%8b%a9%e5%bb%ba%e8%ae%ae" class="header-anchor"&gt;&lt;/a&gt;技术栈选择建议
+&lt;/h3&gt;&lt;p&gt;虽然 GAS 的大部分功能可通过蓝图实现，但要&lt;strong&gt;榨干其全部潜力&lt;/strong&gt;，需要结合 C++。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推荐开发模式&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;层级&lt;/th&gt;
+&lt;th&gt;技术方案&lt;/th&gt;
+&lt;th&gt;负责内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;核心逻辑层&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;C++&lt;/td&gt;
+&lt;td&gt;ASC 初始化、AttributeSet 定义、复杂 GE 计算、网络同步逻辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;表现配置层&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;蓝图&lt;/td&gt;
+&lt;td&gt;GA 的具体流程、Gameplay Tags 配置、GE 参数调整、视觉特效绑定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;核心理念&lt;/strong&gt;：C++ 构建稳定框架，蓝图负责高频迭代的内容设计。&lt;/p&gt;
+&lt;h2 id="总结与展望"&gt;&lt;a href="#%e6%80%bb%e7%bb%93%e4%b8%8e%e5%b1%95%e6%9c%9b" class="header-anchor"&gt;&lt;/a&gt;总结与展望
+&lt;/h2&gt;&lt;h3 id="核心要点回顾"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e8%a6%81%e7%82%b9%e5%9b%9e%e9%a1%be" class="header-anchor"&gt;&lt;/a&gt;核心要点回顾
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;GAS 本质&lt;/strong&gt;：基于 Abilities 理念的模块化角色交互框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;三大支柱&lt;/strong&gt;：Abilities（做什么）、Attributes（状态数据）、Effects（如何改变）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;六大组件&lt;/strong&gt;：ASC（心脏）、Tags（状态语言）、GA（玩法层）、AttributeSets（数据层）、GE（修改器）、GC（反馈层）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心优势&lt;/strong&gt;：官方维护、网络就绪、高度可扩展、适合从原型到 3A 的全规模开发&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="学习价值"&gt;&lt;a href="#%e5%ad%a6%e4%b9%a0%e4%bb%b7%e5%80%bc" class="header-anchor"&gt;&lt;/a&gt;学习价值
+&lt;/h3&gt;&lt;p&gt;即使最终项目中不直接使用 GAS，深入理解其&lt;strong&gt;底层架构设计&lt;/strong&gt;也能帮助你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;构建更健壮的自定义游戏系统&lt;/li&gt;
+&lt;li&gt;掌握模块化解耦的设计思想&lt;/li&gt;
+&lt;li&gt;提升复杂系统的架构能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/courses/QQv/unreal-engine-building-an-rpg-with-gameplay-ability-system/zBvq/unreal-engine-introduction-to-building-an-rpg-with-gameplay-ability-system" target="_blank" rel="noopener"
+&gt;Introduction to Building an RPG with Gameplay Ability System - Building an RPG with Gameplay Ability System&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>虚幻引擎（UE5）下PuerTS的最佳实践</title><link>https://boiltask.com/knowledge/ue/ue-puerts-best-practice/</link><pubDate>Tue, 03 Feb 2026 22:17:22 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-puerts-best-practice/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;由于&lt;a class="link" href="https://github.com/Tencent/puerts/" target="_blank" rel="noopener"
 &gt;PuerTS&lt;/a&gt;官方更倾向于各个项目组自行处理独有机制，官方也没有给更为通用的最佳实践。&lt;/p&gt;
 &lt;p&gt;不过在项目中落地时，总还是需要一些具体的方案来实现相关需求，因此这里总结了个人实际运用&lt;code&gt;PuerTS&lt;/code&gt;时的一些最佳实践。&lt;/p&gt;
@@ -195,69 +581,6 @@
 &lt;/div&gt;&lt;h2 id="热重载hotreload"&gt;&lt;a href="#%e7%83%ad%e9%87%8d%e8%bd%bdhotreload" class="header-anchor"&gt;&lt;/a&gt;热重载HotReload
 &lt;/h2&gt;&lt;p&gt;参考&lt;a class="link" href="https://github.com/Tencent/puerts/issues/140" target="_blank" rel="noopener"
 &gt;需要代码&amp;quot;热重载&amp;quot;功能&lt;/a&gt;中提到的方案，可以实现代码变更之后，自动重新加载JavaScript类。&lt;/p&gt;
-&lt;h2 id="日志扩展"&gt;&lt;a href="#%e6%97%a5%e5%bf%97%e6%89%a9%e5%b1%95" class="header-anchor"&gt;&lt;/a&gt;日志扩展
-&lt;/h2&gt;&lt;h3 id="从javascript转为typescript"&gt;&lt;a href="#%e4%bb%8ejavascript%e8%bd%ac%e4%b8%batypescript" class="header-anchor"&gt;&lt;/a&gt;从JavaScript转为TypeScript
-&lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;source-map&lt;/code&gt;与&lt;code&gt;source-map-support&lt;/code&gt;来实现从&lt;code&gt;JavaScript&lt;/code&gt;转为&lt;code&gt;TypeScript&lt;/code&gt;的信息。&lt;/p&gt;
-&lt;p&gt;由于没有使用&lt;code&gt;nodejs&lt;/code&gt;环境，而使用的&lt;code&gt;v8&lt;/code&gt;引擎，因此需要使用项目自己封装的文件操作函数来手动注册&lt;code&gt;path&lt;/code&gt;和&lt;code&gt;fs&lt;/code&gt;模块。&lt;/p&gt;
-&lt;div class="highlight-wrapper"&gt;
-&lt;div class="highlight-header"&gt;
-&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class="highlight-body"&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 获取文件所在目录路径
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UFUNCTION&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintPure&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;IO&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;GetDirectoryName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 合并路径
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UFUNCTION&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintPure&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;IO&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;CombinePath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Directory&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 检查文件是否存在
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UFUNCTION&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintPure&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;IO&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;FileExists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 读取文件所有文本内容
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UFUNCTION&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintCallable&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;IO&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;ReadAllText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
 &lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
@@ -295,23 +618,165 @@
 &lt;/span&gt;&lt;span class="lnt"&gt;28
 &lt;/span&gt;&lt;span class="lnt"&gt;29
 &lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;span class="lnt"&gt;49
+&lt;/span&gt;&lt;span class="lnt"&gt;50
+&lt;/span&gt;&lt;span class="lnt"&gt;51
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;UPlatformLibrary&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetDirectoryName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;UMetaGameInstance&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;StartJavaScriptEnv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#if WITH_EDITOR
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;SourceLoadedCallback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;nullptr&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SourceFileWatcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MakeShared&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PUERTS_NAMESPACE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;FSourceFileWatcher&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;InPath&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;HotReloadJavaScriptEnv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;InPath&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SourceLoadedCallback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;InPath&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SourceFileWatcher&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValid&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SourceFileWatcher&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;OnSourceLoaded&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;InPath&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#endif
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;JsEnv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MakeShared&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;puerts&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;FJsEnv&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;make_unique&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;puerts&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;DefaultJSModuleLoader&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;JavaScript&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;make_shared&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;puerts&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;FDefaultLogger&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SourceLoadedCallback&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;TPair&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UObject&lt;/span&gt;&lt;span class="o"&gt;*&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TPair&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UObject&lt;/span&gt;&lt;span class="o"&gt;*&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;GameInstance&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// JsEnv-&amp;gt;WaitDebugger();
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;JsEnv&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Start&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;QuickStart&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;UMetaGameInstance&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;HotReloadJavaScriptEnv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;JsEnv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValid&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;uint8&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Source&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FFileHelper&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;LoadFileToArray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;LOG_CATEGORY_INFO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Puerts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;start ReloadSource %s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;JsEnv&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;ReloadSource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;puerts&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;PString&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;Source&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetData&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;Source&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Num&lt;/span&gt;&lt;span class="p"&gt;()));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;LOG_CATEGORY_INFO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Puerts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;end ReloadSource %s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;UE_LOG&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Puerts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;read file fail for %s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="日志扩展"&gt;&lt;a href="#%e6%97%a5%e5%bf%97%e6%89%a9%e5%b1%95" class="header-anchor"&gt;&lt;/a&gt;日志扩展
+&lt;/h2&gt;&lt;h3 id="从javascript转为typescript"&gt;&lt;a href="#%e4%bb%8ejavascript%e8%bd%ac%e4%b8%batypescript" class="header-anchor"&gt;&lt;/a&gt;从JavaScript转为TypeScript
+&lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;source-map&lt;/code&gt;与&lt;code&gt;source-map-support&lt;/code&gt;来实现从&lt;code&gt;JavaScript&lt;/code&gt;转为&lt;code&gt;TypeScript&lt;/code&gt;的信息。&lt;/p&gt;
+&lt;p&gt;由于没有使用&lt;code&gt;nodejs&lt;/code&gt;环境，而使用的&lt;code&gt;v8&lt;/code&gt;引擎，因此需要使用项目自己封装的文件操作函数来手动注册&lt;code&gt;path&lt;/code&gt;和&lt;code&gt;fs&lt;/code&gt;模块。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 获取文件所在目录路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;UPlatformLibrary&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetDirectoryName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;FPaths&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;GetPath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 合并路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;UPlatformLibrary&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;CombinePath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Directory&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;FPaths&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Combine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Directory&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 检查文件是否存在
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;UPlatformLibrary&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;FileExists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;FPaths&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;FileExists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * 读取文件所有文本内容
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;UPlatformLibrary&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;ReadAllText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;FPaths&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;FileExists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
