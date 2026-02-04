@@ -18,6 +18,8 @@
 &lt;/h3&gt;&lt;p&gt;输出乘积矩阵：输出占m行，每行n个数据，以空格隔开。&lt;/p&gt;
 &lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -39,8 +41,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4 5 6 7
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;8 9 1 0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -49,6 +55,8 @@
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;9 10 2 3
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;8 9 1 0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -61,6 +69,11 @@
 用结构体重载运算符&lt;br&gt;
 进而可以直接进行结构体乘法运算&lt;br&gt;
 然后直接输出就行&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -103,6 +116,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1127" target="_blank" rel="noopener"
 &gt;【郑轻】[1127]矩阵乘积&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

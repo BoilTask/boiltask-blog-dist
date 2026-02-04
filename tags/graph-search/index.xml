@@ -76,6 +76,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;求树中所有点的最远距离&lt;/p&gt;
 &lt;p&gt;先找任意点的最远点u，在找u的最远点v，在这个过程中记录u到每个点的距离dis[0][i]，再以v为起点寻找最远点，记录v到每个点的距离dis[1][i]，则各个点的最远距离为max(dis[0][i],dis[1][i])&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -185,6 +190,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[1383]Labyrinth</title><link>https://boiltask.com/oj/hdu-1383/</link><pubDate>Wed, 03 Aug 2016 09:39:09 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1383/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -264,6 +271,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;依照树的直径的思路&lt;br&gt;
 先找出任意一点的最远点u，再找出u的最远点v，u-v距离即使最远距离，这题同样按照这种思路进行搜索&lt;br&gt;
 不过虽然题目说容易栈溢出，但是提交时也没有这种错误情况&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -361,6 +373,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[2631]Roads in the North</title><link>https://boiltask.com/oj/poj-2631/</link><pubDate>Wed, 03 Aug 2016 08:59:06 +0800</pubDate><guid>https://boiltask.com/oj/poj-2631/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -438,6 +452,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;运用DFS求树的直径&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -518,6 +537,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;%d&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[1321]棋盘问题</title><link>https://boiltask.com/oj/poj-1321/</link><pubDate>Wed, 03 Aug 2016 08:52:17 +0800</pubDate><guid>https://boiltask.com/oj/poj-1321/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -601,6 +622,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;搜索还是采取看有几个能达到$n==k$&lt;br&gt;
 所以设置好搜索条件即可
 详细看代码注释&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -686,6 +712,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[1985]Cow Marathon</title><link>https://boiltask.com/oj/poj-1985/</link><pubDate>Tue, 02 Aug 2016 17:51:52 +0800</pubDate><guid>https://boiltask.com/oj/poj-1985/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -769,6 +797,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 因为时间类似而DFS比较简洁&lt;br&gt;
 所以这里运用DFS&lt;/p&gt;
 &lt;p&gt;储存树使用了邻接表&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -864,6 +897,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【UVa】[11624]Fire!</title><link>https://boiltask.com/oj/uva-11624/</link><pubDate>Sat, 30 Jul 2016 11:03:55 +0800</pubDate><guid>https://boiltask.com/oj/uva-11624/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -947,6 +982,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;（节点中加入一个是否是火节点的判断，就可以两种节点按不同的细节处理）&lt;/p&gt;
 &lt;p&gt;本段分析参考博客：&lt;a class="link" href="http://blog.csdn.net/mobius_strip/article/details/21531719" target="_blank" rel="noopener"
 &gt;UVa 11624 - Fire! - 小白菜又菜&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1110,6 +1150,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://vjudge.net/problem/uva-227" target="_blank" rel="noopener"
 &gt;Puzzle - UVA 227 - Virtual Judge&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2612]Find a way</title><link>https://boiltask.com/oj/hdu-2612/</link><pubDate>Sat, 30 Jul 2016 09:22:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2612/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1192,6 +1234,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 然后分别以两人为起点搜索&lt;br&gt;
 取每个KFC的两人距离之和&lt;br&gt;
 其中最小的那个即为结果&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1335,6 +1382,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1010]Tempter of the Bone</title><link>https://boiltask.com/oj/hdu-1010/</link><pubDate>Fri, 29 Jul 2016 15:58:48 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1010/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1422,6 +1471,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;li&gt;记录总可走&amp;rsquo;.&amp;lsquo;如果tcnt+1&amp;lt;T则肯定不行&lt;/li&gt;
 &lt;li&gt;最重要的根据曼哈顿距离（从一个点到达另外一个点的最短路径长度|x1-x2|+|y1-y2|）进行剪枝，路径长度(非最短)与最短路径的长度同奇偶,它们的差一定是偶数。所以判断当前位置到终点的曼哈顿距离与它到终点如果成立所需要的路径长度的奇偶性，如果它们的差是奇数则可以停止递归。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1539,6 +1593,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1241]Oil Deposits</title><link>https://boiltask.com/oj/hdu-1241/</link><pubDate>Fri, 29 Jul 2016 12:01:02 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1241/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1619,6 +1675,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 需要注意的是只要八个方向上有石油&lt;br&gt;
 那么这片区域就视作连通的&lt;br&gt;
 所以dfs进行搜索填充就好&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1679,6 +1740,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[3620]Avoid The Lakes</title><link>https://boiltask.com/oj/poj-3620/</link><pubDate>Fri, 29 Jul 2016 11:34:29 +0800</pubDate><guid>https://boiltask.com/oj/poj-3620/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1760,6 +1823,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 注意给的坐标是以1&lt;del&gt;n而不是0&lt;/del&gt;n-1&lt;br&gt;
 每次查找后把当前位置填充防止重复查找&lt;br&gt;
 取查找的最大值为结果&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1841,6 +1909,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1312]Red and Black</title><link>https://boiltask.com/oj/hdu-1312/</link><pubDate>Fri, 29 Jul 2016 10:51:50 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1312/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1920,6 +1990,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;感觉做过好多遍的题都没贴-.-&lt;br&gt;
 最简单的DFS迷宫搜索问题&lt;br&gt;
 递归查找能走的路径&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1988,6 +2063,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[2251]Dungeon Master</title><link>https://boiltask.com/oj/poj-2251/</link><pubDate>Fri, 29 Jul 2016 10:34:16 +0800</pubDate><guid>https://boiltask.com/oj/poj-2251/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2072,6 +2149,11 @@ DFS必然超时 (不是很喜欢POJ这样子-.-)&lt;br&gt;
 否则也会把一个点加入队列多次&lt;br&gt;
 导致内存超限或者时间超限&lt;br&gt;
 -.-就是这么严&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2191,6 +2273,8 @@ DFS必然超时 (不是很喜欢POJ这样子-.-)&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[2553]N皇后问题</title><link>https://boiltask.com/oj/hdu-2553/</link><pubDate>Fri, 29 Jul 2016 09:15:32 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2553/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -2272,6 +2356,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 dfs中记录已经下了多少个棋子&lt;br&gt;
 如果达到N个则说明有一种方案完成&lt;br&gt;
 所以这一如此进行递归判断&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2350,6 +2439,8 @@ dfs中记录已经下了多少个棋子&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;%d&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[1573]Robot Motion</title><link>https://boiltask.com/oj/poj-1573/</link><pubDate>Thu, 28 Jul 2016 15:29:22 +0800</pubDate><guid>https://boiltask.com/oj/poj-1573/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2432,6 +2523,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 如果当前位置已经有记录&lt;br&gt;
 说明已经被走过 也就是进入了循环&lt;br&gt;
 如果有越界说明已经走出&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2529,6 +2625,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1181]变形课</title><link>https://boiltask.com/oj/hdu-1181/</link><pubDate>Thu, 28 Jul 2016 11:57:50 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1181/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -2608,6 +2706,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;通过DFS来递归查找有无以&amp;rsquo;m&amp;rsquo;结尾的单词&lt;br&gt;
 递归开始条件设为&amp;rsquo;b&amp;rsquo;&lt;br&gt;
 每处理一组数据进行初始化&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2672,6 +2775,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1254]推箱子</title><link>https://boiltask.com/oj/hdu-1254/</link><pubDate>Tue, 26 Jul 2016 17:01:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1254/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2831,6 +2936,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;上次校赛出了这一题&lt;br&gt;
 也是初中无意中学的一个幻方定理&lt;/p&gt;
 &lt;p&gt;这次用深搜写了一下&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2926,6 +3036,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1998" target="_blank" rel="noopener"
 &gt;【杭电】[1998]奇数阶魔方&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[1140]MZY寻宝</title><link>https://boiltask.com/oj/didaoj-1140/</link><pubDate>Tue, 29 Mar 2016 18:35:29 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-1140/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3006,6 +3118,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;无聊灌灌水&lt;br&gt;
 这个亮点一些的是用两个数组&lt;br&gt;
 达到了以循环来代替了多次地分开写&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3082,6 +3199,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/1140" target="_blank" rel="noopener"
 &gt;【DidaOJ】[1140]MZY寻宝&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1495]非常可乐</title><link>https://boiltask.com/oj/hdu-1495/</link><pubDate>Tue, 29 Mar 2016 17:57:44 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1495/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -3175,6 +3294,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 通过数组来保存数据&lt;br&gt;
 可以达到用循环来找寻的目的&lt;br&gt;
 而不用一个一个地写&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3332,6 +3456,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1495" target="_blank" rel="noopener"
 &gt;【杭电】[1495]非常可乐&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1242]Rescue</title><link>https://boiltask.com/oj/hdu-1242/</link><pubDate>Tue, 29 Mar 2016 17:48:43 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1242/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3418,6 +3544,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 然后递归搜索&lt;br&gt;
 遇见&lt;code&gt;x&lt;/code&gt;就+2&lt;br&gt;
 遇见&lt;code&gt;.&lt;/code&gt;就+1&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3543,6 +3674,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目记录:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1242" target="_blank" rel="noopener"
 &gt;【杭电】[1242]Rescue&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[1147]老王特警队</title><link>https://boiltask.com/oj/didaoj-1147/</link><pubDate>Thu, 24 Mar 2016 20:19:03 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-1147/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3622,6 +3755,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;需要注意坐标的对应&lt;br&gt;
 用了bfs&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3772,6 +3910,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//还不如直接给n1,m1,n2,m2-.-
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/1147" target="_blank" rel="noopener"
 &gt;【DidaOJ】[1147]老王特警队&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[1144]老王修公园</title><link>https://boiltask.com/oj/didaoj-1144/</link><pubDate>Thu, 24 Mar 2016 20:10:35 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-1144/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3851,6 +3991,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;一个很简单的搜索题目&lt;br&gt;
 用的bfs&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3923,6 +4068,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/1144" target="_blank" rel="noopener"
 &gt;【DidaOJ】[1144]老王修公园&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2717]Catch That Cow</title><link>https://boiltask.com/oj/hdu-2717/</link><pubDate>Fri, 18 Mar 2016 23:14:48 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2717/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -4008,6 +4155,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 直到目标点有了记录&lt;/p&gt;
 &lt;p&gt;需要注意的是给搜索加入越界判断&lt;br&gt;
 防止有数组超限等情况&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4088,6 +4240,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=2717" target="_blank" rel="noopener"
 &gt;【杭电】[2717]Catch That Cow&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

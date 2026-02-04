@@ -78,6 +78,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 问把这n个坐标连接起来需要多少墨水&lt;/p&gt;
 &lt;p&gt;先记录坐标&lt;br&gt;
 然后分别计算坐标与坐标之间的距离&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -197,6 +202,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1162" target="_blank" rel="noopener"
 &gt;【杭电】[1162]Eddy&amp;rsquo;s picture&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1879]继续畅通工程</title><link>https://boiltask.com/oj/hdu-1879/</link><pubDate>Sat, 04 Jun 2016 20:30:45 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1879/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -276,6 +283,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;如果道路已建&lt;br&gt;
 则把成本赋值为0&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -387,6 +399,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1879" target="_blank" rel="noopener"
 &gt;【杭电】[1879]继续畅通工程&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1863]畅通工程</title><link>https://boiltask.com/oj/hdu-1863/</link><pubDate>Sat, 04 Jun 2016 20:23:02 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1863/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -465,6 +479,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;比普通最小生成树多了一个不成树判定&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -586,6 +605,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1863" target="_blank" rel="noopener"
 &gt;【杭电】[1863]畅通工程&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【杭电】[1102]Constructing Roads</title><link>https://boiltask.com/oj/hdu-1102/</link><pubDate>Sat, 04 Jun 2016 20:10:54 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1102/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -668,6 +689,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;先以矩阵形式给了村庄与村庄之间道路的距离&lt;br&gt;
 然后再给出哪些村庄之间道路已经通了&lt;br&gt;
 此时把这两个村庄的距离改为0就好了&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;ccpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -787,6 +813,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1102" target="_blank" rel="noopener"
 &gt;【杭电】[1102]Constructing Roads&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[1146]老王修马路(二)</title><link>https://boiltask.com/oj/didaoj-1146/</link><pubDate>Thu, 24 Mar 2016 20:16:36 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-1146/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -867,6 +895,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;最小生成树问题&lt;br&gt;
 没什么弯&lt;br&gt;
 需要注意的是有可能无法连通&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -989,6 +1022,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/1146" target="_blank" rel="noopener"
 &gt;【DidaOJ】[1146]老王修马路(二)&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
@@ -1234,6 +1269,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;现在看都是非常水的一个最小生成树了……&lt;br&gt;
 可以说是秒A……&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1333,6 +1373,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1258" target="_blank" rel="noopener"
 &gt;【POJ】[1258]Agri-Net&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【POJ】[1751]Highways</title><link>https://boiltask.com/oj/poj-1751/</link><pubDate>Sun, 21 Feb 2016 01:29:04 +0800</pubDate><guid>https://boiltask.com/oj/poj-1751/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -1420,6 +1462,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 这里我用的Prim的改写&lt;/p&gt;
 &lt;p&gt;用了一个数组来记录每一条所更新边的两端点&lt;br&gt;
 当边值不为0时输出这一条边的两端就好了&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1561,6 +1608,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1751" target="_blank" rel="noopener"
 &gt;【POJ】[1751]Highways&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[2349]Arctic Network</title><link>https://boiltask.com/oj/poj-2349/</link><pubDate>Sun, 21 Feb 2016 00:47:10 +0800</pubDate><guid>https://boiltask.com/oj/poj-2349/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1647,6 +1696,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 而且当取了&lt;br&gt;
 P-1-(S-1)==P-S条边时，这一条边便是所要求边&lt;br&gt;
 不需要进行后续操作了&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1808,6 +1862,8 @@ P-1-(S-1)==P-S条边时，这一条边便是所要求边&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=2349" target="_blank" rel="noopener"
 &gt;【POJ】[2349]Arctic Network&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[1789]Truck History</title><link>https://boiltask.com/oj/poj-1789/</link><pubDate>Sat, 20 Feb 2016 17:27:57 +0800</pubDate><guid>https://boiltask.com/oj/poj-1789/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1886,6 +1942,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;本质就是每一个字符串与其它字符串不同的字符的个数，就是它到其它字符串的权值，然后进行求最小总权和，按照要求输出1/sum&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1997,6 +2058,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1789" target="_blank" rel="noopener"
 &gt;【POJ】[1789]Truck History&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【ZOJ】[1586]QS Network</title><link>https://boiltask.com/oj/zoj-1586/</link><pubDate>Sat, 20 Feb 2016 17:00:47 +0800</pubDate><guid>https://boiltask.com/oj/zoj-1586/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2076,6 +2139,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;题意大概就是说&lt;br&gt;
 不光边上有权 每个点上也有权 所以计算时需要把各个边的权给加上点的权&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2207,6 +2275,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1586" target="_blank" rel="noopener"
 &gt;【ZOJ】[1586]QS Network&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[2421]Constructing Roads</title><link>https://boiltask.com/oj/poj-2421/</link><pubDate>Sat, 20 Feb 2016 05:27:39 +0800</pubDate><guid>https://boiltask.com/oj/poj-2421/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2289,6 +2359,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 要求其余的&lt;br&gt;
 不过只要直接把对应的村庄距离更新为0就好了&lt;/p&gt;
 &lt;p&gt;(-.-据说有人想到了并查集等等等等 然后超时了……)&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2404,6 +2479,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=2421" target="_blank" rel="noopener"
 &gt;【POJ】[2421]Constructing Roads&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[2031]Building a Space Station</title><link>https://boiltask.com/oj/poj-2031/</link><pubDate>Sat, 20 Feb 2016 04:57:09 +0800</pubDate><guid>https://boiltask.com/oj/poj-2031/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2496,6 +2573,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 G++好多都WA了……&lt;br&gt;
 看算法……&lt;br&gt;
 也暂时不考虑这个问题了&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2617,6 +2699,8 @@ G++好多都WA了……&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=2031" target="_blank" rel="noopener"
 &gt;【POJ】[2031]Building a Space Station&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【POJ】[1287]Networking</title><link>https://boiltask.com/oj/poj-1287/</link><pubDate>Sat, 20 Feb 2016 04:25:34 +0800</pubDate><guid>https://boiltask.com/oj/poj-1287/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -2699,6 +2783,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 再看这题就感觉特别水……&lt;br&gt;
 注意的就是有重复边&lt;br&gt;
 所以需要判断一下&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2800,6 +2889,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1287" target="_blank" rel="noopener"
 &gt;【POJ】[1287]Networking&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1875]畅通工程再续</title><link>https://boiltask.com/oj/hdu-1875/</link><pubDate>Sat, 20 Feb 2016 04:07:14 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1875/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2890,6 +2981,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 所以可以break 进行输出&lt;/p&gt;
 &lt;p&gt;成功AC……&lt;br&gt;
 要猝死的节奏……&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3033,6 +3129,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1875" target="_blank" rel="noopener"
 &gt;【杭电】[1875]畅通工程再续&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1251]Jungle Roads</title><link>https://boiltask.com/oj/hdu-1301/</link><pubDate>Sat, 20 Feb 2016 02:46:21 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1301/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3124,6 +3222,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 嗯……应该说很坑……&lt;br&gt;
 算法一点没问题……卡在输入数据动弹不得……&lt;br&gt;
 舍本逐末嘛！&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3267,6 +3370,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;br&gt;
 &lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1301" target="_blank" rel="noopener"
 &gt;【杭电】[1301]Jungle Roads&lt;/a&gt;&lt;br&gt;
@@ -3350,6 +3455,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;基础的最小生成树题目&lt;br&gt;
 可以拿来练习一下Prim算法和Kruskal算法的运用&lt;/p&gt;
 &lt;p&gt;Prim:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3445,6 +3555,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Kruskal:&lt;/p&gt;
 &lt;p&gt;有个小插曲就是这次用了这一句&lt;br&gt;
 &lt;code&gt;using namespace std;&lt;/code&gt;&lt;br&gt;
@@ -3452,6 +3564,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 应该是命名重名那方面的原因……&lt;br&gt;
 虽然本地调试并没问题&lt;br&gt;
 然后改了个名字 也是AC了&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3568,6 +3685,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1233" target="_blank" rel="noopener"
 &gt;【杭电】[1233]还是畅通工程&lt;/a&gt;&lt;/p&gt;</description></item><item><title>最小生成树——所有点成树有最小总权和</title><link>https://boiltask.com/knowledge/minimum-spanning-tree/</link><pubDate>Sat, 20 Feb 2016 00:16:16 +0800</pubDate><guid>https://boiltask.com/knowledge/minimum-spanning-tree/</guid><description>&lt;h2 id="问题介绍"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e4%bb%8b%e7%bb%8d" class="header-anchor"&gt;&lt;/a&gt;问题介绍

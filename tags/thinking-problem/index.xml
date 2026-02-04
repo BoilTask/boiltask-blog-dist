@@ -76,6 +76,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;由于每日积累的时间与精力总是能消耗而不会浪费，因此直接判断总共能提供的时间和精力即可。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -161,6 +166,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/1132" target="_blank" rel="noopener"
 &gt;感恩节KK专场——考试来了 - 问题详情 - 题目 - DidaOJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1841]so easy！麻麻再也不用担心我的数学了！</title><link>https://boiltask.com/oj/zzuli-1841/</link><pubDate>Fri, 02 Sep 2016 01:12:58 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1841/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
@@ -183,6 +190,8 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/h3&gt;&lt;p&gt;对于每个测试实例，用一行输出所求得的a1(保留2位小数).&lt;/p&gt;
 &lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -200,8 +209,12 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;50 25
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;10 20&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -210,6 +223,8 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;27.50
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;15.00&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
@@ -220,6 +235,11 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;p&gt;……&lt;/p&gt;
 &lt;p&gt;所以可得&lt;/p&gt;
 &lt;p&gt;由此可直接得出结果&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -257,6 +277,8 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1841" target="_blank" rel="noopener"
 &gt;【郑轻】[1841]so easy！麻麻再也不用担心我的数学了！&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1897]985的红绿灯难题</title><link>https://boiltask.com/oj/zzuli-1897/</link><pubDate>Wed, 03 Aug 2016 20:16:01 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1897/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
@@ -278,6 +300,8 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/h3&gt;&lt;p&gt;若x秒后变成红色输出R，变成绿色输出G，反之输出Y。&lt;/p&gt;
 &lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -291,8 +315,12 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;7 5 2 8
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;16 5 2 8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -304,6 +332,8 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;R
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;G&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="hint"&gt;&lt;a href="#hint" class="header-anchor"&gt;&lt;/a&gt;HINT
 &lt;/h3&gt;&lt;p&gt; 红绿灯顺序:绿-&amp;gt;黄-&amp;gt;红-&amp;gt;绿
  &lt;/p&gt;
@@ -312,6 +342,11 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/h2&gt;&lt;p&gt;签到水题&lt;br&gt;
 x%(r+y+g)后推算即可&lt;br&gt;
 注意r+y+g是可以爆int的&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -357,6 +392,8 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1897" target="_blank" rel="noopener"
 &gt;【郑轻】[1897]985的红绿灯难题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1899]985的最大和难题</title><link>https://boiltask.com/oj/zzuli-1899/</link><pubDate>Wed, 03 Aug 2016 20:00:54 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1899/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
@@ -378,6 +415,8 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;/h3&gt;&lt;p&gt;输出一个整数代表可以得到的最大和。&lt;/p&gt;
 &lt;h3 id="sample-input"&gt;&lt;a href="#sample-input" class="header-anchor"&gt;&lt;/a&gt;Sample Input
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -393,8 +432,12 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-10 20 -10&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="sample-output"&gt;&lt;a href="#sample-output" class="header-anchor"&gt;&lt;/a&gt;Sample Output
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -404,11 +447,15 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;40&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;n=3时的负数变化&lt;br&gt;
 (0为负数1为正数)&lt;br&gt;
 有一个：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -422,7 +469,11 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 0 1 0 0
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 1 1 1 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;有两个：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -436,7 +487,11 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 1 1 1 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;有三个：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -447,6 +502,8 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0 0 0 1 1
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 1 1 1 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;总结规律：&lt;/p&gt;
 &lt;table&gt;
@@ -498,6 +555,11 @@ x%(r+y+g)后推算即可&lt;br&gt;
 (但不一定是原来就有的负数)&lt;br&gt;
 为了让总和最大&lt;br&gt;
 可以使绝对值最小的数为负数&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -556,6 +618,8 @@ x%(r+y+g)后推算即可&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1899" target="_blank" rel="noopener"
 &gt;【郑轻】[1899]985的最大和难题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[5777]domino</title><link>https://boiltask.com/oj/hdu-5777/</link><pubDate>Mon, 01 Aug 2016 18:04:37 +0800</pubDate><guid>https://boiltask.com/oj/hdu-5777/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -644,6 +708,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 所以把累加（距离+1）再尽量减去最大距离&lt;br&gt;
 就可以取得最小高度&lt;/p&gt;
 &lt;p&gt;PS：注意数据范围 int 存不下sum&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -702,6 +771,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[3279]Fliptile</title><link>https://boiltask.com/oj/poj-3279/</link><pubDate>Fri, 29 Jul 2016 20:44:55 +0800</pubDate><guid>https://boiltask.com/oj/poj-3279/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -805,6 +876,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;代码：&lt;br&gt;
 为了方便表示出第一行灯的操作&lt;br&gt;
 可以使用二进制来表示是否操作&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -818,11 +891,15 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0010(2) 表示 否否是否
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0011(3) 表示 否否是是&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;以此类推即可用循环把所有操作表示出来&lt;br&gt;
 共有$2^m$次循环&lt;br&gt;
 对于每一个i可以进行且操作i&amp;amp;1为二进制最后一位数&lt;br&gt;
 而对于判断灯亮灭则可使用异或操作&lt;br&gt;
 因为我们有运算法则&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -836,10 +913,17 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0^0==0
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1^0==1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;也就是异或1则改变异或0则不变&lt;br&gt;
 这与灯是否被操作的情况是相同的&lt;/p&gt;
 &lt;p&gt;得到每种状态第一行的操作后&lt;br&gt;
 我们可以依次向下判断来更新答案&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1021,6 +1105,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【Codeforces】[599B]Spongebob and Joke</title><link>https://boiltask.com/oj/codeforces-599B/</link><pubDate>Thu, 21 Jul 2016 16:07:40 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-599B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1100,6 +1186,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;记录数字出现次数及坐标&lt;br&gt;
 然后读取时判断能不能对应&lt;br&gt;
 最后判断输出方式&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1187,6 +1278,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【Codeforces】[612B]HDD is Outdated Technology</title><link>https://boiltask.com/oj/codeforces-612B/</link><pubDate>Thu, 21 Jul 2016 16:04:25 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-612B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1265,6 +1358,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;记录数字的下标存入$a[t]=i$&lt;br&gt;
 然后直接累加$abs(a[i+1]-a[i])$&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1311,6 +1409,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【Codeforces】[615A]Bulbs</title><link>https://boiltask.com/oj/codeforces-615A/</link><pubDate>Thu, 21 Jul 2016 15:45:05 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-615A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1393,6 +1493,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;因为点亮后的灯不会熄灭&lt;br&gt;
 所以只要有按钮控制的灯都能点亮&lt;br&gt;
 也就是只要出现过的灯都能点亮&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1447,6 +1552,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【Codeforces】[611A]New Year and Days</title><link>https://boiltask.com/oj/codeforces-611A/</link><pubDate>Thu, 21 Jul 2016 15:40:51 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-611A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1532,6 +1639,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;一年有12个月有29号&lt;br&gt;
 一年有11个月有30号&lt;br&gt;
 一年有7个月有31号&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1560,6 +1672,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【Codeforces】[610A]Pasha and Stick</title><link>https://boiltask.com/oj/codeforces-610A/</link><pubDate>Thu, 21 Jul 2016 15:35:41 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-610A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1645,6 +1759,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 而在1~n/2的范围里有n/4个偶数&lt;br&gt;
 当n/2位偶数，则最后结果不能为自身&lt;br&gt;
 当其为奇数，则最后结果为(n/2-1)/2&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1675,6 +1794,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1997]汉诺塔VII</title><link>https://boiltask.com/oj/hdu-1997/</link><pubDate>Wed, 20 Jul 2016 10:25:43 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1997/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -1759,6 +1880,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 如果盘号最大的盘子在C柱上，说明其它盘子正在进行B–&amp;gt;C的操作，所以考虑移动的那个n-1个盘子，然后同样按①判断，只不过，最大盘号变成了n-1，而移动方向变成了B–&amp;gt;C；&lt;br&gt;
 利用递归按这种方式不断地进行①操作。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1848,6 +1974,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【UVa】[1524]Hot or Cold?</title><link>https://boiltask.com/oj/uva-1524/</link><pubDate>Tue, 19 Jul 2016 10:53:56 +0800</pubDate><guid>https://boiltask.com/oj/uva-1524/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1926,6 +2054,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;多项式的积分问题&lt;br&gt;
 算出积分后除以所用时间&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1972,6 +2105,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【LightOJ】[1297]Largest Box</title><link>https://boiltask.com/oj/lightoj-1297/</link><pubDate>Sun, 05 Jun 2016 02:05:58 +0800</pubDate><guid>https://boiltask.com/oj/lightoj-1297/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2055,6 +2190,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 求导有题意可知&lt;br&gt;
 V&amp;rsquo;=0必有解&lt;br&gt;
 求V在取较小的解时有最大值&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2091,6 +2231,8 @@ V&amp;rsquo;=0必有解&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://lightoj.com/volume_showproblem.php?problem=1297" target="_blank" rel="noopener"
 &gt;【Light】[1297]Largest Box&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[624A]Save Luke</title><link>https://boiltask.com/oj/codeforces-624A/</link><pubDate>Wed, 01 Jun 2016 02:34:59 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-624A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -2170,6 +2312,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;又是一个一句话AC题目&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2188,6 +2335,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;%lf&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,(&lt;/span&gt;&lt;span class="kt"&gt;double&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;v2&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/624/problem/A" target="_blank" rel="noopener"
 &gt;【CodeForces】[624A]Save Luke&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[300A]Array</title><link>https://boiltask.com/oj/codeforces-300A/</link><pubDate>Wed, 01 Jun 2016 02:21:30 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-300A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -2279,6 +2428,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 从第一组抽出两个元素移至第二组&lt;/p&gt;
 &lt;p&gt;然后判断第一组的元素数是不是奇数&lt;br&gt;
 如果不是则把一个元素移至第三组&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2369,6 +2523,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/300/A" target="_blank" rel="noopener"
 &gt;【CodeForces】[300A]Array&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[651C]Watchmen</title><link>https://boiltask.com/oj/codeforces-651C/</link><pubDate>Mon, 30 May 2016 04:10:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-651C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -2465,6 +2621,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 然后去除重复的&lt;/p&gt;
 &lt;p&gt;最后需要注意的是&lt;br&gt;
 数据类型要用__int64&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2600,6 +2761,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/651/problem/C" target="_blank" rel="noopener"
 &gt;【CodeForces】[651C]Watchmen&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1046]少乘法次数</title><link>https://boiltask.com/oj/nyoj-1046/</link><pubDate>Fri, 20 May 2016 21:04:49 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1046/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -2687,6 +2850,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 之后再进行相乘计算&lt;/p&gt;
 &lt;p&gt;所以计数时遇见奇数cnt+=2&lt;br&gt;
 偶数时cnt++&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2731,6 +2899,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1046/description" target="_blank" rel="noopener"
 &gt;【NYOJ】[1046]最少乘法次数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1220]Cube</title><link>https://boiltask.com/oj/hdu-1220/</link><pubDate>Thu, 14 Apr 2016 07:18:06 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1220/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -2816,6 +2986,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 其余的小于4的有除了周围的六块和它自身&lt;/p&gt;
 &lt;p&gt;然后相加后把结果除2(一对算了两次)&lt;br&gt;
 可得结果&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2852,6 +3027,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1220" target="_blank" rel="noopener"
 &gt;【杭电】[1220]Cube&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2073]无限的路</title><link>https://boiltask.com/oj/hdu-2073/</link><pubDate>Thu, 07 Apr 2016 07:47:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2073/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -2934,6 +3111,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 后一个是前一个加sqrt(2.0)&lt;br&gt;
 特殊的是折线由下转上时&lt;br&gt;
 是加上两点的距离&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3027,6 +3209,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=2073" target="_blank" rel="noopener"
 &gt;【杭电】[2073]无限的路&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[311]序列的区间操作</title><link>https://boiltask.com/oj/didaoj-311/</link><pubDate>Thu, 24 Mar 2016 20:02:26 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-311/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3106,6 +3290,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;也算是个经典类型的题目了&lt;/p&gt;
 &lt;p&gt;没有完全按照宇神说的写&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3160,6 +3349,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/311" target="_blank" rel="noopener"
 &gt;【DidaOJ】[311]序列的区间操作&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>【杭电】[2050]折线分割平面</title><link>https://boiltask.com/oj/hdu-2050/</link><pubDate>Wed, 23 Mar 2016 12:41:41 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2050/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -3241,6 +3432,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;递推问题&lt;br&gt;
 这种找规律题目有时候也是需要一些灵感&lt;br&gt;
 不能心急&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3267,6 +3463,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=2050" target="_blank" rel="noopener"
 &gt;【杭电】[2050]折线分割平面&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[3788]ZOJ问题</title><link>https://boiltask.com/oj/hdu-3788/</link><pubDate>Sat, 19 Mar 2016 00:46:27 +0800</pubDate><guid>https://boiltask.com/oj/hdu-3788/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -3368,6 +3566,11 @@ a b b*a&lt;br&gt;
 所以可以排除其它完全不可能的&lt;br&gt;
 (zj中间一个o没有 没有z或j)&lt;br&gt;
 写出AC条件&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3455,6 +3658,8 @@ a b b*a&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=3788" target="_blank" rel="noopener"
 &gt;【杭电】[3788]ZOJ问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[v1-799]兰州烧饼</title><link>https://boiltask.com/oj/nyoj-v1-799/</link><pubDate>Sun, 21 Feb 2016 04:31:06 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-v1-799/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
@@ -3475,6 +3680,8 @@ a b b*a&lt;br&gt;
 &lt;/h3&gt;&lt;p&gt;输出全部做好至少需要的分钟数&lt;/p&gt;
 &lt;h3 id="样例输入"&gt;&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor"&gt;&lt;/a&gt;样例输入
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -3482,14 +3689,20 @@ a b b*a&lt;br&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3 2&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="样例输出"&gt;&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor"&gt;&lt;/a&gt;样例输出
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="提示"&gt;&lt;a href="#%e6%8f%90%e7%a4%ba" class="header-anchor"&gt;&lt;/a&gt;提示
 &lt;/h3&gt;&lt;p&gt;如样例，三个兰州烧饼编号a，b，C，首先a和b，然后a和c，最后b和c，3分钟完成&lt;/p&gt;
@@ -3514,6 +3727,11 @@ n*2/k有关&lt;/p&gt;
 &lt;p&gt;而当n&amp;lt;k时&lt;br&gt;
 总是需要2分钟&lt;/p&gt;
 &lt;p&gt;所以代码为&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3542,6 +3760,8 @@ n*2/k有关&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=779" target="_blank" rel="noopener"
 &gt;【NYOJ】[799]兰州烧饼&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【郑轻】[1769]去师院的旅程：能怎么走（三）</title><link>https://boiltask.com/oj/zzuli-1769/</link><pubDate>Sat, 26 Dec 2015 17:09:12 +0800</pubDate><guid>https://boiltask.com/oj/zzuli-1769/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -3623,6 +3843,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;阶梯问题&lt;br&gt;
 有点考验智商……&lt;br&gt;
 自己推一推就好啦~&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3655,6 +3880,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;话说……写出来感觉代码好简单啊……&lt;br&gt;
 有好多题都是这样&lt;br&gt;
@@ -3741,6 +3968,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;高中的找规律的题……&lt;br&gt;
 用排列组合算就好&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3785,6 +4017,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[2054]A==B</title><link>https://boiltask.com/oj/hdu-2054/</link><pubDate>Sun, 20 Dec 2015 18:09:05 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2054/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
@@ -3865,6 +4099,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;一开始觉得非常简单的一道题&lt;br&gt;
 结果写了这么多&lt;br&gt;
 发完代码再说话：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3998,9 +4237,16 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;还是放在杭电11页中的中文题&lt;br&gt;
 第一次感受到来自ACM满满的恶意……&lt;br&gt;
 当时天真的以为是这样的：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4013,6 +4259,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;YES&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;else&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;NO&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;但是！&lt;br&gt;
 在WA了之后&lt;br&gt;
@@ -4105,6 +4353,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 话说上传顺序貌似不对……&lt;br&gt;
 这题是之后写的了&lt;br&gt;
 不过这都不重要啦&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4137,5 +4390,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item></channel></rss>

@@ -78,6 +78,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 给出n行&lt;br&gt;
 每行有以0结束的若干行数字，第i行的数字表示i排在这些数字前面&lt;br&gt;
 所以根据题意进行拓扑排序即可&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -179,6 +184,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[2585]Window Pains</title><link>https://boiltask.com/oj/poj-2585/</link><pubDate>Mon, 08 Aug 2016 10:04:07 +0800</pubDate><guid>https://boiltask.com/oj/poj-2585/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -257,6 +264,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;理解之后算是道比较水的题。&lt;/p&gt;
 &lt;p&gt;因为对于每一个网格，如果网格内的数字不是相同的，则网格内的数字必然出现的比应该出现的那个晚，这样把map遍历一遍，便可得到关于1~9的有向图，剩下就是看其能否topo排序，如果无环则这个图形就能出现。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -366,6 +378,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1811]Rank of Tetris</title><link>https://boiltask.com/oj/hdu-1811/</link><pubDate>Sat, 06 Aug 2016 16:36:05 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1811/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -447,6 +461,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;因为相等时互相是按照编号进行排列，所以对于其它元素来说，这些相等的元素是一样的，可以把他们当成一个整体，所以思考使用并查集。&lt;/p&gt;
 &lt;p&gt;在判断是，只需要考虑i==find(i)的元素，为了判断是否唯一，可以使用队列，当队列中全程同时只有一个元素时，这个排序便是唯一的，若排序完成发现还有元素没有排序(num&amp;gt;0)则说明关系有环，则无法进行排序。&lt;/p&gt;
 &lt;p&gt;依旧使用邻接表储存边与点的信息。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -630,6 +649,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[4857]逃生</title><link>https://boiltask.com/oj/hdu-4857/</link><pubDate>Sat, 06 Aug 2016 11:27:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu-4857/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -712,6 +733,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;所以考虑反向建边，则先取最一小级中最大的，并且每一次取当前队列中的最大的，则可以保证在按照1~n的顺序的情况下，按照特殊条件排序。&lt;/p&gt;
 &lt;p&gt;因为是反向建边，所以要把得到的结果倒序输出。&lt;/p&gt;
 &lt;p&gt;测试数据:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -729,7 +752,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;5 4
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4 2 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;输出：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -738,6 +765,13 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;6 3 1 5 4 2&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -847,6 +881,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[2647]Reward</title><link>https://boiltask.com/oj/hdu-2647/</link><pubDate>Sat, 06 Aug 2016 09:58:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2647/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -930,6 +966,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 第二低的标记为1&lt;br&gt;
 则每个人的工资应该为888+入度&lt;br&gt;
 运用了队列和邻接表优化&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1045,6 +1086,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【杭电】[1285]确定比赛名次</title><link>https://boiltask.com/oj/hdu-1285/</link><pubDate>Fri, 05 Aug 2016 18:08:15 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1285/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1125,6 +1168,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 寻找入度为0的点，存入topo数组，删除它与它相连的边，然后把与它相连的点入度减少1&lt;br&gt;
 最终topo即为所求排序后的数组&lt;br&gt;
 运用邻接表优化存储&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1224,6 +1272,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【POJ】[2485]Highways</title><link>https://boiltask.com/oj/poj-2485/</link><pubDate>Wed, 03 Aug 2016 11:48:35 +0800</pubDate><guid>https://boiltask.com/oj/poj-2485/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1303,6 +1353,11 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;给出一个n*n的列表&lt;br&gt;
 第i行第j列代表 i - j 的距离&lt;br&gt;
 求使n个点连通的总距离最小的路中最大的距离&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1429,5 +1484,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;%d&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item></channel></rss>

@@ -16,7 +16,13 @@
 &gt;BoilTask/PuertsAutoMixin&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;这个插件实现了在蓝图中继承&lt;code&gt;PuertsInterface&lt;/code&gt;之后，通过重写&lt;code&gt;GetJavaScriptModule&lt;/code&gt;函数，来指定关联的&lt;code&gt;JavaScript&lt;/code&gt;类。对于大部分时候，使用插件自动生成的路径即可符合需求，如果有指定类的需求也可以手动修改。&lt;/p&gt;
 &lt;p&gt;通过在虚拟机启动后调用&lt;code&gt;BindMixin&lt;/code&gt;函数，来关联&lt;code&gt;JavaScript&lt;/code&gt;类。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;span class="highlight-title"&gt;在C&amp;#43;&amp;#43;中注册执行mixin的函数&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight" title="在C++中注册执行mixin的函数"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;span class="lnt"&gt;2
@@ -30,7 +36,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;span class="highlight-title"&gt;在TypeScript中调用绑定&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight" title="在TypeScript中调用绑定"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;span class="lnt"&gt;2
@@ -39,8 +53,15 @@
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;gameInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getByName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;GameInstance&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kr"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;UE&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;MetaGameInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;gameInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;BindMixin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;toDelegate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;gameInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;ToMinix&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="自动生成javascript文件"&gt;&lt;a href="#%e8%87%aa%e5%8a%a8%e7%94%9f%e6%88%90javascript%e6%96%87%e4%bb%b6" class="header-anchor"&gt;&lt;/a&gt;自动生成JavaScript文件
 &lt;/h2&gt;&lt;p&gt;可以使用&lt;code&gt;TypeScript&lt;/code&gt;原生的&lt;code&gt;tsc --watch&lt;/code&gt;命令来增加一个生成任务，启动&lt;code&gt;tsc&lt;/code&gt;来监视文件变更自动生成对应的&lt;code&gt;JavaScript&lt;/code&gt;文件。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;json&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -84,6 +105,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="热重载hotreload"&gt;&lt;a href="#%e7%83%ad%e9%87%8d%e8%bd%bdhotreload" class="header-anchor"&gt;&lt;/a&gt;热重载HotReload
 &lt;/h2&gt;&lt;p&gt;参考&lt;a class="link" href="https://github.com/Tencent/puerts/issues/140" target="_blank" rel="noopener"
 &gt;需要代码&amp;quot;热重载&amp;quot;功能&lt;/a&gt;中提到的方案，可以实现代码变更之后，自动重新加载JavaScript类。&lt;/p&gt;
@@ -91,6 +114,11 @@
 &lt;/h2&gt;&lt;h3 id="从javascript转为typescript"&gt;&lt;a href="#%e4%bb%8ejavascript%e8%bd%ac%e4%b8%batypescript" class="header-anchor"&gt;&lt;/a&gt;从JavaScript转为TypeScript
 &lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;source-map&lt;/code&gt;与&lt;code&gt;source-map-support&lt;/code&gt;来实现从&lt;code&gt;JavaScript&lt;/code&gt;转为&lt;code&gt;TypeScript&lt;/code&gt;的信息。&lt;/p&gt;
 &lt;p&gt;由于没有使用&lt;code&gt;nodejs&lt;/code&gt;环境，而使用的&lt;code&gt;v8&lt;/code&gt;引擎，因此需要使用项目自己封装的文件操作函数来手动注册&lt;code&gt;path&lt;/code&gt;和&lt;code&gt;fs&lt;/code&gt;模块。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -143,6 +171,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;ReadAllText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -209,6 +244,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -274,8 +316,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;source-map-support&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;install&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="输出调用者信息"&gt;&lt;a href="#%e8%be%93%e5%87%ba%e8%b0%83%e7%94%a8%e8%80%85%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;输出调用者信息
 &lt;/h3&gt;&lt;p&gt;可以在输出日志的时候附带当前调用的&lt;code&gt;TypeScript&lt;/code&gt;文件名和行号。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -415,7 +464,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;originalLog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;combinedArgs&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;同理可以处理&lt;code&gt;console.info&lt;/code&gt;、&lt;code&gt;console.warn&lt;/code&gt;，对于&lt;code&gt;console.error&lt;/code&gt;，还会额外输出调用者堆栈。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -445,8 +501,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;originalError&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;errorOutput&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="自定义对象输出格式"&gt;&lt;a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e5%af%b9%e8%b1%a1%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;自定义对象输出格式
 &lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;JavaScript&lt;/code&gt;的原型机制，调整某个类型在输出日志时默认的&lt;code&gt;toString&lt;/code&gt;方法。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -462,8 +525,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sb"&gt;`(&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;X&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;, &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Y&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;)`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="配置参考"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e8%80%83" class="header-anchor"&gt;&lt;/a&gt;配置参考
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt;核心是&lt;code&gt;typescript&lt;/code&gt;、&lt;code&gt;eslint&lt;/code&gt;、&lt;code&gt;source-map&lt;/code&gt;等。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;json&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -515,7 +585,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;tsconfig.json&lt;/code&gt;配置如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;json&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -556,6 +633,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;TypeScript/**/*&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>虚幻引擎适用于Unlua转到PuerTS的一些知识</title><link>https://boiltask.com/knowledge/ue/unlua-to-puerts/</link><pubDate>Tue, 19 Aug 2025 21:53:47 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/unlua-to-puerts/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;随着项目规模的扩大，越来越感觉&lt;code&gt;Lua&lt;/code&gt;脚本不受控制，因此尝试选择&lt;code&gt;TypeScript&lt;/code&gt;的脚本方案。&lt;/p&gt;

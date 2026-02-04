@@ -710,6 +710,8 @@ alt="image-20260128105845049"
 &lt;h3 id="bvhbounding-volume-hierarchy"&gt;&lt;a href="#bvhbounding-volume-hierarchy" class="header-anchor"&gt;&lt;/a&gt;BVH（Bounding Volume Hierarchy）
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：动态物体多的场景（如RTS游戏中的大量单位）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -728,6 +730,8 @@ alt="image-20260128105845049"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── 子节点2（单位区域）
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── 叶节点：士兵1
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── 叶节点：士兵2&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;层级包围盒&lt;/strong&gt;：自顶向下测试，不可见的节点整枝裁剪&lt;/li&gt;

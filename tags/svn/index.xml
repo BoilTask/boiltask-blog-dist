@@ -45,12 +45,19 @@ alt="image.png"
 &lt;h2 id="svn命令行"&gt;&lt;a href="#svn%e5%91%bd%e4%bb%a4%e8%a1%8c" class="header-anchor"&gt;&lt;/a&gt;SVN命令行
 &lt;/h2&gt;&lt;p&gt;很多基于svn命令行的工具会尝试调用&lt;code&gt;svn&lt;/code&gt;相关的程序，因此机器上最好正确安装SVN命令行。&lt;/p&gt;
 &lt;p&gt;在安装的时候选择&lt;code&gt;command line client tools&lt;/code&gt;进行安装。&lt;/p&gt;</description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/knowledge/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-merge/</guid><description>&lt;p&gt;UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nl"&gt;D&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;MetaEngine&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Engine&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Binaries&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Win64&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;UE4Editor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt; &lt;span class="nl"&gt;D&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Meta&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uproject&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;theirs&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;mine&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;merged&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/6ff4805b67172a4e5b7cb85d3eb9d043.png"
 loading="lazy"
@@ -846,6 +853,11 @@ data-flex-basis="290px"
 &lt;p&gt;本文描述的是如何从外部调用引擎的对比工具。&lt;/p&gt;
 &lt;h2 id="工具使用"&gt;&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;工具使用
 &lt;/h2&gt;&lt;p&gt;直接使用可以在&lt;code&gt;cmd&lt;/code&gt;命令提示符窗口输入如下命令：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -853,13 +865,22 @@ data-flex-basis="290px"
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;引擎路径&lt;span class="se"&gt;\E&lt;/span&gt;ngine&lt;span class="se"&gt;\B&lt;/span&gt;inaries&lt;span class="se"&gt;\W&lt;/span&gt;in64&lt;span class="se"&gt;\U&lt;/span&gt;E4Editor.exe 项目路径&lt;span class="se"&gt;\M&lt;/span&gt;eta.uproject -diff 文件1路径 文件2路径&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;完整示例如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;D:&lt;span class="se"&gt;\M&lt;/span&gt;etaEngine&lt;span class="se"&gt;\E&lt;/span&gt;ngine&lt;span class="se"&gt;\B&lt;/span&gt;inaries&lt;span class="se"&gt;\W&lt;/span&gt;in64&lt;span class="se"&gt;\U&lt;/span&gt;E4Editor.exe D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\M&lt;/span&gt;eta.uproject -diff D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\C&lt;/span&gt;ontent&lt;span class="se"&gt;\T&lt;/span&gt;est1.uasset D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\C&lt;/span&gt;ontent&lt;span class="se"&gt;\T&lt;/span&gt;est2.uasset&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;原理是运行引擎时传入&lt;code&gt;-diff&lt;/code&gt;参数开启对比窗口，同时传入所需的项目路径与文件路径。&lt;/p&gt;
 &lt;h2 id="结合svn"&gt;&lt;a href="#%e7%bb%93%e5%90%88svn" class="header-anchor"&gt;&lt;/a&gt;结合SVN
@@ -942,12 +963,19 @@ loading="lazy"
 &lt;/table&gt;
 &lt;p&gt;扩展名输入：&lt;code&gt;.uasset&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;命令行完整示例如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;D:&lt;span class="se"&gt;\M&lt;/span&gt;etaEngine&lt;span class="se"&gt;\E&lt;/span&gt;ngine&lt;span class="se"&gt;\B&lt;/span&gt;inaries&lt;span class="se"&gt;\W&lt;/span&gt;in64&lt;span class="se"&gt;\U&lt;/span&gt;E4Editor.exe D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\M&lt;/span&gt;eta.uproject -diff %base %mine&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中&lt;code&gt;D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code&gt;为引擎可执行文件，&lt;code&gt;D:\Meta\Meta.uproject&lt;/code&gt;为项目文件，&lt;code&gt;%base&lt;/code&gt;会被转义为&lt;code&gt;svn&lt;/code&gt;文件，&lt;code&gt;%mine&lt;/code&gt;会被转义为当前文件。&lt;/p&gt;
 &lt;h2 id="对比效果"&gt;&lt;a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor"&gt;&lt;/a&gt;对比效果

@@ -16,7 +16,13 @@
 &gt;BoilTask/PuertsAutoMixin&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;这个插件实现了在蓝图中继承&lt;code&gt;PuertsInterface&lt;/code&gt;之后，通过重写&lt;code&gt;GetJavaScriptModule&lt;/code&gt;函数，来指定关联的&lt;code&gt;JavaScript&lt;/code&gt;类。对于大部分时候，使用插件自动生成的路径即可符合需求，如果有指定类的需求也可以手动修改。&lt;/p&gt;
 &lt;p&gt;通过在虚拟机启动后调用&lt;code&gt;BindMixin&lt;/code&gt;函数，来关联&lt;code&gt;JavaScript&lt;/code&gt;类。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;span class="highlight-title"&gt;在C&amp;#43;&amp;#43;中注册执行mixin的函数&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight" title="在C++中注册执行mixin的函数"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;span class="lnt"&gt;2
@@ -30,7 +36,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;span class="highlight-title"&gt;在TypeScript中调用绑定&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight" title="在TypeScript中调用绑定"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;span class="lnt"&gt;2
@@ -39,8 +53,15 @@
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;gameInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getByName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;GameInstance&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kr"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;UE&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;MetaGameInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;gameInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;BindMixin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;toDelegate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;gameInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;ToMinix&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="自动生成javascript文件"&gt;&lt;a href="#%e8%87%aa%e5%8a%a8%e7%94%9f%e6%88%90javascript%e6%96%87%e4%bb%b6" class="header-anchor"&gt;&lt;/a&gt;自动生成JavaScript文件
 &lt;/h2&gt;&lt;p&gt;可以使用&lt;code&gt;TypeScript&lt;/code&gt;原生的&lt;code&gt;tsc --watch&lt;/code&gt;命令来增加一个生成任务，启动&lt;code&gt;tsc&lt;/code&gt;来监视文件变更自动生成对应的&lt;code&gt;JavaScript&lt;/code&gt;文件。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;json&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -84,6 +105,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="热重载hotreload"&gt;&lt;a href="#%e7%83%ad%e9%87%8d%e8%bd%bdhotreload" class="header-anchor"&gt;&lt;/a&gt;热重载HotReload
 &lt;/h2&gt;&lt;p&gt;参考&lt;a class="link" href="https://github.com/Tencent/puerts/issues/140" target="_blank" rel="noopener"
 &gt;需要代码&amp;quot;热重载&amp;quot;功能&lt;/a&gt;中提到的方案，可以实现代码变更之后，自动重新加载JavaScript类。&lt;/p&gt;
@@ -91,6 +114,11 @@
 &lt;/h2&gt;&lt;h3 id="从javascript转为typescript"&gt;&lt;a href="#%e4%bb%8ejavascript%e8%bd%ac%e4%b8%batypescript" class="header-anchor"&gt;&lt;/a&gt;从JavaScript转为TypeScript
 &lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;source-map&lt;/code&gt;与&lt;code&gt;source-map-support&lt;/code&gt;来实现从&lt;code&gt;JavaScript&lt;/code&gt;转为&lt;code&gt;TypeScript&lt;/code&gt;的信息。&lt;/p&gt;
 &lt;p&gt;由于没有使用&lt;code&gt;nodejs&lt;/code&gt;环境，而使用的&lt;code&gt;v8&lt;/code&gt;引擎，因此需要使用项目自己封装的文件操作函数来手动注册&lt;code&gt;path&lt;/code&gt;和&lt;code&gt;fs&lt;/code&gt;模块。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -143,6 +171,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt; &lt;span class="n"&gt;ReadAllText&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -209,6 +244,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -274,8 +316,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;source-map-support&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;install&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="输出调用者信息"&gt;&lt;a href="#%e8%be%93%e5%87%ba%e8%b0%83%e7%94%a8%e8%80%85%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;输出调用者信息
 &lt;/h3&gt;&lt;p&gt;可以在输出日志的时候附带当前调用的&lt;code&gt;TypeScript&lt;/code&gt;文件名和行号。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -415,7 +464,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;originalLog&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;combinedArgs&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;同理可以处理&lt;code&gt;console.info&lt;/code&gt;、&lt;code&gt;console.warn&lt;/code&gt;，对于&lt;code&gt;console.error&lt;/code&gt;，还会额外输出调用者堆栈。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -445,8 +501,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;originalError&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;errorOutput&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="自定义对象输出格式"&gt;&lt;a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e5%af%b9%e8%b1%a1%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;自定义对象输出格式
 &lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;JavaScript&lt;/code&gt;的原型机制，调整某个类型在输出日志时默认的&lt;code&gt;toString&lt;/code&gt;方法。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;typescript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -462,8 +525,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sb"&gt;`(&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;X&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;, &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Y&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;)`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="配置参考"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e8%80%83" class="header-anchor"&gt;&lt;/a&gt;配置参考
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt;核心是&lt;code&gt;typescript&lt;/code&gt;、&lt;code&gt;eslint&lt;/code&gt;、&lt;code&gt;source-map&lt;/code&gt;等。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;json&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -515,7 +585,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;tsconfig.json&lt;/code&gt;配置如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;json&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -557,6 +634,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>UE5资源异步加载流程分析</title><link>https://boiltask.com/knowledge/ue/asset-async-load/</link><pubDate>Wed, 07 Jan 2026 23:33:49 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/asset-async-load/</guid><description>&lt;h2 id="概述"&gt;&lt;a href="#%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;概述
 &lt;/h2&gt;&lt;p&gt;本文档详细分析 UE5 中 &lt;code&gt;FStreamableManager&lt;/code&gt; 的资源异步加载流程，从 &lt;code&gt;RequestAsyncLoad&lt;/code&gt; 开始到回调执行结束的完整过程。通过深入分析源码，我们将理解主线程与加载线程的交互机制，以及资源依赖的处理方式。&lt;/p&gt;
 &lt;h2 id="核心概念"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;核心概念
@@ -578,6 +657,11 @@
 &lt;h2 id="完整流程分析"&gt;&lt;a href="#%e5%ae%8c%e6%95%b4%e6%b5%81%e7%a8%8b%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;完整流程分析
 &lt;/h2&gt;&lt;h3 id="请求发起阶段"&gt;&lt;a href="#%e8%af%b7%e6%b1%82%e5%8f%91%e8%b5%b7%e9%98%b6%e6%ae%b5" class="header-anchor"&gt;&lt;/a&gt;请求发起阶段
 &lt;/h3&gt;&lt;p&gt;从 &lt;code&gt;RequestAsyncLoadInternal&lt;/code&gt; 函数开始：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -597,6 +681,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;bStartStalled&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;DebugName&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;主要步骤&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;创建加载句柄&lt;/strong&gt;：创建 &lt;code&gt;FStreamableHandle&lt;/code&gt; 对象来跟踪加载请求&lt;/li&gt;
@@ -607,12 +693,19 @@
 &lt;/ol&gt;
 &lt;h3 id="加载处理阶段"&gt;&lt;a href="#%e5%8a%a0%e8%bd%bd%e5%a4%84%e7%90%86%e9%98%b6%e6%ae%b5" class="header-anchor"&gt;&lt;/a&gt;加载处理阶段
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;StartHandleRequests&lt;/code&gt; 函数处理实际的加载请求：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;FStreamableManager&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;StartHandleRequests&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TSharedRef&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FStreamableHandle&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Handle&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;主要步骤&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
@@ -622,6 +715,11 @@
 &lt;/ol&gt;
 &lt;h3 id="资源加载核心"&gt;&lt;a href="#%e8%b5%84%e6%ba%90%e5%8a%a0%e8%bd%bd%e6%a0%b8%e5%bf%83" class="header-anchor"&gt;&lt;/a&gt;资源加载核心
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;StreamInternal&lt;/code&gt; 是资源加载的核心实现：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -635,6 +733,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TAsyncLoadPriority&lt;/span&gt; &lt;span class="n"&gt;Priority&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TSharedRef&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FStreamableHandle&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Handle&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;主要步骤&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;检查内存中是否存在&lt;/strong&gt;：如果资源已在内存中，直接返回&lt;/li&gt;
@@ -645,12 +745,19 @@
 &lt;/ol&gt;
 &lt;h3 id="回调处理阶段"&gt;&lt;a href="#%e5%9b%9e%e8%b0%83%e5%a4%84%e7%90%86%e9%98%b6%e6%ae%b5" class="header-anchor"&gt;&lt;/a&gt;回调处理阶段
 &lt;/h3&gt;&lt;p&gt;加载完成后，会调用 &lt;code&gt;AsyncLoadCallback&lt;/code&gt; 函数：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;FStreamableManager&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;AsyncLoadCallback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FSoftObjectPath&lt;/span&gt; &lt;span class="n"&gt;TargetName&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UPackage&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Package&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;主要步骤&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
@@ -754,6 +861,11 @@ M --&amp;gt;|否| O[继续等待]
 &lt;h3 id="关键代码解析"&gt;&lt;a href="#%e5%85%b3%e9%94%ae%e4%bb%a3%e7%a0%81%e8%a7%a3%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;关键代码解析
 &lt;/h3&gt;&lt;h4 id="请求创建与初始化"&gt;&lt;a href="#%e8%af%b7%e6%b1%82%e5%88%9b%e5%bb%ba%e4%b8%8e%e5%88%9d%e5%a7%8b%e5%8c%96" class="header-anchor"&gt;&lt;/a&gt;请求创建与初始化
 &lt;/h4&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -771,9 +883,16 @@ M --&amp;gt;|否| O[继续等待]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;NewRequest&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;RequestedAssets&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MoveTemp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TargetsToStream&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;NewRequest&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;DebugName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MoveTemp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DebugName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这段代码创建了一个新的 &lt;code&gt;FStreamableHandle&lt;/code&gt; 对象，并设置了回调函数、资源路径等信息。&lt;/p&gt;
 &lt;h4 id="资源加载核心-1"&gt;&lt;a href="#%e8%b5%84%e6%ba%90%e5%8a%a0%e8%bd%bd%e6%a0%b8%e5%bf%83-1" class="header-anchor"&gt;&lt;/a&gt;资源加载核心
 &lt;/h4&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -793,9 +912,16 @@ M --&amp;gt;|否| O[继续等待]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;INDEX_NONE&lt;/span&gt; &lt;span class="cm"&gt;/* InPIEInstanceID */&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Priority&lt;/span&gt; &lt;span class="cm"&gt;/* InPackagePriority */&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这段代码调用 &lt;code&gt;LoadPackageAsync&lt;/code&gt; 发起异步加载请求，并设置回调函数。&lt;/p&gt;
 &lt;h4 id="回调处理"&gt;&lt;a href="#%e5%9b%9e%e8%b0%83%e5%a4%84%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;回调处理
 &lt;/h4&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -845,10 +971,17 @@ M --&amp;gt;|否| O[继续等待]
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这段代码处理加载完成的回调，标记加载状态，并检查是否所有请求都已完成。&lt;/p&gt;
 &lt;h2 id="实际应用示例"&gt;&lt;a href="#%e5%ae%9e%e9%99%85%e5%ba%94%e7%94%a8%e7%a4%ba%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;实际应用示例
 &lt;/h2&gt;&lt;h3 id="基本异步加载"&gt;&lt;a href="#%e5%9f%ba%e6%9c%ac%e5%bc%82%e6%ad%a5%e5%8a%a0%e8%bd%bd" class="header-anchor"&gt;&lt;/a&gt;基本异步加载
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -884,8 +1017,15 @@ M --&amp;gt;|否| O[继续等待]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;ExampleLoad&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="带句柄的异步加载"&gt;&lt;a href="#%e5%b8%a6%e5%8f%a5%e6%9f%84%e7%9a%84%e5%bc%82%e6%ad%a5%e5%8a%a0%e8%bd%bd" class="header-anchor"&gt;&lt;/a&gt;带句柄的异步加载
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -933,8 +1073,15 @@ M --&amp;gt;|否| O[继续等待]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="依赖加载示例"&gt;&lt;a href="#%e4%be%9d%e8%b5%96%e5%8a%a0%e8%bd%bd%e7%a4%ba%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;依赖加载示例
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -957,6 +1104,8 @@ M --&amp;gt;|否| O[继续等待]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 这里可以安全地使用角色蓝图及其所有依赖资源
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;CharacterLoad&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="性能优化建议"&gt;&lt;a href="#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96%e5%bb%ba%e8%ae%ae" class="header-anchor"&gt;&lt;/a&gt;性能优化建议
 &lt;/h2&gt;&lt;h3 id="加载策略优化"&gt;&lt;a href="#%e5%8a%a0%e8%bd%bd%e7%ad%96%e7%95%a5%e4%bc%98%e5%8c%96" class="header-anchor"&gt;&lt;/a&gt;加载策略优化
@@ -1103,6 +1252,11 @@ alt="image-20260127154936319"
 &lt;/h2&gt;&lt;h3 id="uproperty"&gt;&lt;a href="#uproperty" class="header-anchor"&gt;&lt;/a&gt;UP­ROP­ER­TY
 &lt;/h3&gt;&lt;p&gt;对于一个属性来说，只需要将变量重命名为&lt;code&gt;_DEPRECATED&lt;/code&gt;版本，并且附加上废弃标识即可。&lt;/p&gt;
 &lt;p&gt;这不会影响到原有蓝图的编译，可以在此期间删除引用。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1113,6 +1267,13 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1122,8 +1283,15 @@ alt="image-20260127154936319"
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UPROPERTY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;meta&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DeprecatedProperty&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;DeprecationMessage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Use NewValue instead.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;Value_DEPRECATED&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="ufunction"&gt;&lt;a href="#ufunction" class="header-anchor"&gt;&lt;/a&gt;UFUNC­TION
 &lt;/h3&gt;&lt;p&gt;对于&lt;code&gt;UFUNC­TION&lt;/code&gt;比较简单，给函数添加上&lt;code&gt;meta&lt;/code&gt;属性&lt;code&gt;DeprecatedFunction&lt;/code&gt;即可。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1138,6 +1306,13 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1151,8 +1326,15 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="uclass"&gt;&lt;a href="#uclass" class="header-anchor"&gt;&lt;/a&gt;UCLASS
 &lt;/h3&gt;&lt;p&gt;对于&lt;code&gt;UCLASS&lt;/code&gt;来说，也需要进行重命名。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1167,6 +1349,13 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1180,6 +1369,8 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;GENERATED_BODY&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="uenum--ustruct"&gt;&lt;a href="#uenum--ustruct" class="header-anchor"&gt;&lt;/a&gt;UENUM &amp;amp; USTRUCT
 &lt;/h3&gt;&lt;p&gt;似乎并不支持上述&lt;code&gt;DEPRECATED_&lt;/code&gt;的语法来影响蓝图编译，不过对于C++似乎引擎存在标记&lt;code&gt;UE_DEPRECATED&lt;/code&gt;的语法。&lt;/p&gt;
 &lt;p&gt;更推荐改个已废弃的名，然后使用重定向系统来处理：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-redirect/" &gt;虚幻引擎中重定向的相关知识&lt;/a&gt;。&lt;/p&gt;
@@ -1188,6 +1379,11 @@ alt="image-20260127154936319"
 &lt;p&gt;语法为&lt;code&gt;UE_DEPRECATED(引擎版本号, 提示消息)&lt;/code&gt;，当在被废弃的版本之后的C++中，使用被废弃的变量或函数时，编译器和IDE会给出提示。&lt;/p&gt;
 &lt;h3 id="自定义废弃宏"&gt;&lt;a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e5%ba%9f%e5%bc%83%e5%ae%8f" class="header-anchor"&gt;&lt;/a&gt;自定义废弃宏
 &lt;/h3&gt;&lt;p&gt;由于虚幻引擎的&lt;code&gt;UE_DEPRECATED&lt;/code&gt;是否废弃与引擎版本有关，在平常的项目里可能不太方便，因此可以自己封装一个废弃宏。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1201,6 +1397,8 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#define META_DEPRECATED_DISABLE() META_WARNING_DISABLE(4996)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#define META_DEPRECATED_ENABLE() META_WARNING_ENABLE()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class="link" href="https://squareys.de/blog/ue4-deprecating-symbols/" target="_blank" rel="noopener"
@@ -1211,6 +1409,11 @@ alt="image-20260127154936319"
 &lt;h2 id="实现"&gt;&lt;a href="#%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;实现
 &lt;/h2&gt;&lt;h3 id="java"&gt;&lt;a href="#java" class="header-anchor"&gt;&lt;/a&gt;Java
 &lt;/h3&gt;&lt;p&gt;基础思路是通过&lt;code&gt;synchronized&lt;/code&gt;加互斥锁，保证同时只有一个线程在处理某一逻辑，这样就比较容易写出来如下逻辑：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;java&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1334,8 +1537,15 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;也即让两个线程交替利用&lt;code&gt;lock&lt;/code&gt;变量来表达自己的任务处理完了该交由其他线程处理了。&lt;/p&gt;
 &lt;p&gt;也可以使用可重入锁&lt;code&gt;ReentrantLock&lt;/code&gt;，搭配&lt;code&gt;Condition&lt;/code&gt;可以指定唤醒某一线程，这样更为灵活一些。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;java&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1375,7 +1585,14 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;EvenThread&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;还有一种思路是使用信号量&lt;code&gt;Semaphore&lt;/code&gt;，也即把输出数字作为一种资源，两个检测交替去获取这个资源。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;java&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1463,9 +1680,16 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;通过&lt;code&gt;new Semaphore(1)&lt;/code&gt;的声明，让同时只有一个线程去执行，执行完就把资源耗完然后等另一个线程&lt;code&gt;release&lt;/code&gt;释放。&lt;/p&gt;
 &lt;h3 id="c"&gt;&lt;a href="#c" class="header-anchor"&gt;&lt;/a&gt;C++
 &lt;/h3&gt;&lt;p&gt;对于C++来说，常用&lt;code&gt;std::mutex&lt;/code&gt;来表示一个互斥锁，可以有以下逻辑：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1615,10 +1839,17 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;使用&lt;code&gt;condition_variable&lt;/code&gt;表达了如果&lt;code&gt;true&lt;/code&gt;则&lt;code&gt;lock&lt;/code&gt;，然后通过别的线程&lt;code&gt;notify_one&lt;/code&gt;来重新激活。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mutex&lt;/code&gt;用于保证同时只有一个线程在操作数字。&lt;/p&gt;
 &lt;h3 id="golang"&gt;&lt;a href="#golang" class="header-anchor"&gt;&lt;/a&gt;Golang
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;Golang&lt;/code&gt;中也有&lt;code&gt;sync.Mutex&lt;/code&gt;和&lt;code&gt;sync.Cond&lt;/code&gt;，所以可以轻松的实现上述的算法。不过对于&lt;code&gt;Golang&lt;/code&gt;来说，可以利用&lt;code&gt;Channel&lt;/code&gt;机制更便捷的实现这个需求。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;golang&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1716,6 +1947,8 @@ alt="image-20260127154936319"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;打印完成！&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;思路上，通过&lt;code&gt;chan&lt;/code&gt;，可以更直观的表达通知另一个线程执行某个逻辑，可以把数据“发送”到目标，通过语法也更为简洁。&lt;/p&gt;
 &lt;h2 id="总结"&gt;&lt;a href="#%e6%80%bb%e7%bb%93" class="header-anchor"&gt;&lt;/a&gt;总结
 &lt;/h2&gt;&lt;p&gt;可以看出，Golang事实上改变了一些常规多线程编程的思维，通过goroutine和channel等机制，让开发者尽量少的避免纠结细节，把精力聚焦到实际业务中。&lt;/p&gt;
@@ -1751,6 +1984,11 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui" &gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="页头页签"&gt;&lt;a href="#%e9%a1%b5%e5%a4%b4%e9%a1%b5%e7%ad%be" class="header-anchor"&gt;&lt;/a&gt;页头页签
 &lt;/h3&gt;&lt;p&gt;标签控件使用一个&lt;code&gt;ULyraTabListWidgetBase&lt;/code&gt;制作，通过在C++中定义&lt;code&gt;BindWidget&lt;/code&gt;，可以创建一个在C++中可以访问的蓝图控件。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1759,6 +1997,8 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UPROPERTY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintReadOnly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Input&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;meta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BindWidget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;OptionalWidget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AllowPrivateAccess&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TObjectPtr&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ULyraTabListWidgetBase&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;TopSettingsTabs&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个控件在蓝图中被设为一个&lt;code&gt;W_HorizontalTabList&lt;/code&gt;，可以方便调整具体样式。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1847,6 +2087,11 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;h2 id="如何使用"&gt;&lt;a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;如何使用
 &lt;/h2&gt;&lt;h3 id="开启配置"&gt;&lt;a href="#%e5%bc%80%e5%90%af%e9%85%8d%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;开启配置
 &lt;/h3&gt;&lt;p&gt;核心功能只需要在&lt;code&gt;DefaultEngine.ini&lt;/code&gt;中配置上对应的检测时间，即可对主线程的死锁进行检测：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;ini&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1856,13 +2101,22 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;[Core.System]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;HangDuration&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;15.0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;需要注意默认的宏控制为：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#define USE_HANG_DETECTION (ALLOW_HANG_DETECTION &amp;amp;&amp;amp; !WITH_EDITORONLY_DATA &amp;amp;&amp;amp; !IS_PROGRAM &amp;amp;&amp;amp; !UE_BUILD_DEBUG &amp;amp;&amp;amp; !ENABLE_PGO_PROFILE &amp;amp;&amp;amp; !USING_THREAD_SANITISER &amp;amp;&amp;amp; !USING_INSTRUMENTATION)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;也即如果是&lt;code&gt;Editor&lt;/code&gt;环境下，不会开启，如果想要测试可以把&lt;code&gt;&amp;amp;&amp;amp; !WITH_EDITORONLY_DATA&lt;/code&gt;删除掉重新编译。&lt;/p&gt;
 &lt;h3 id="自定义线程"&gt;&lt;a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%ba%bf%e7%a8%8b" class="header-anchor"&gt;&lt;/a&gt;自定义线程
@@ -1915,12 +2169,19 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;p&gt;注意&lt;code&gt;FCoreUObjectDelegates&lt;/code&gt;的对象是进程级的，如果以多玩家的方式运行，此时有可能会触发非本&lt;code&gt;GameInstance&lt;/code&gt;的回调，需要判断&lt;code&gt;World&lt;/code&gt;的&lt;code&gt;GameInstance&lt;/code&gt;是否是本&lt;code&gt;GameInstance&lt;/code&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在&lt;code&gt;PreLoadMapWithContext&lt;/code&gt;时，标记此时处于&lt;code&gt;LoadMap&lt;/code&gt;状态。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;bCurrentlyInLoadMap&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在&lt;code&gt;PostLoadMapWithWorld&lt;/code&gt;时，标记此时已不处于&lt;code&gt;LoadMap&lt;/code&gt;状态。&lt;/p&gt;
 &lt;h3 id="输出为何处于loading状态"&gt;&lt;a href="#%e8%be%93%e5%87%ba%e4%b8%ba%e4%bd%95%e5%a4%84%e4%ba%8eloading%e7%8a%b6%e6%80%81" class="header-anchor"&gt;&lt;/a&gt;输出为何处于Loading状态
@@ -1937,6 +2198,11 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/ul&gt;
 &lt;h3 id="拦截input"&gt;&lt;a href="#%e6%8b%a6%e6%88%aainput" class="header-anchor"&gt;&lt;/a&gt;拦截Input
 &lt;/h3&gt;&lt;p&gt;通过在创建&lt;code&gt;Loading&lt;/code&gt;时，注册了一个&lt;code&gt;InputPreProcessor&lt;/code&gt;来实现输入拦截。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1946,11 +2212,18 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;InputPreProcessor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MakeShareable&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FLoadingScreenInputPreProcessor&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;FLoadingScreenInputPreProcessor&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FSlateApplication&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;RegisterInputPreProcessor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;InputPreProcessor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="调整线程心跳"&gt;&lt;a href="#%e8%b0%83%e6%95%b4%e7%ba%bf%e7%a8%8b%e5%bf%83%e8%b7%b3" class="header-anchor"&gt;&lt;/a&gt;调整线程心跳
 &lt;/h3&gt;&lt;p&gt;在&lt;code&gt;Loading&lt;/code&gt;的控制流程里，通过调用&lt;code&gt;FThreadHeartBeat&lt;/code&gt;上的接口来控制线程心跳。&lt;/p&gt;
 &lt;p&gt;详情可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/thread-heart-beat/" &gt;UnrealEngine 中的 ThreadHeartBeat 机制&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="界面刷新"&gt;&lt;a href="#%e7%95%8c%e9%9d%a2%e5%88%b7%e6%96%b0" class="header-anchor"&gt;&lt;/a&gt;界面刷新
 &lt;/h3&gt;&lt;p&gt;通过调用一次&lt;code&gt;SlateApplication&lt;/code&gt;的Tick函数，来确保&lt;code&gt;Loading&lt;/code&gt;界面立刻刷新。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -1960,13 +2233,22 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// Tick Slate to make sure the loading screen is displayed immediately
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FSlateApplication&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;Tick&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在界面隐藏时，会立即调用一次GC函数，确保&lt;code&gt;Loading&lt;/code&gt;界面销毁（感觉这个倒是意义不太明显）。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;GEngine&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;ForceGarbageCollection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="总结"&gt;&lt;a href="#%e6%80%bb%e7%bb%93" class="header-anchor"&gt;&lt;/a&gt;总结
 &lt;/h2&gt;&lt;p&gt;设计思路上，&lt;code&gt;CommonLoadingScreen&lt;/code&gt;不是采用需要&lt;code&gt;Loading&lt;/code&gt;时调用&lt;code&gt;Loading&lt;/code&gt;，而是采用了判断需要&lt;code&gt;Loading&lt;/code&gt;状态时创建&lt;code&gt;Loading&lt;/code&gt;。这一设计有利于处理当同时有多个&lt;code&gt;Loading&lt;/code&gt;逻辑需要调用时，如何控制最终的&lt;code&gt;Loading&lt;/code&gt;状态。同时借助良好的&lt;code&gt;Debug&lt;/code&gt;埋点，可以方便的知道此时&lt;code&gt;Loading&lt;/code&gt;的具体原因。&lt;/p&gt;</description></item><item><title>Lyra中Loading界面的创建</title><link>https://boiltask.com/knowledge/ue/lyra-loading-ui/</link><pubDate>Mon, 28 Jul 2025 13:01:12 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-loading-ui/</guid><description>&lt;p&gt;在打开游戏地图之后，会发现首先打开了Loading界面，下面分析Loading界面的相关机制&lt;/p&gt;
@@ -2034,6 +2316,11 @@ alt="image.png"
 &lt;p&gt;在安装的时候选择&lt;code&gt;command line client tools&lt;/code&gt;进行安装。&lt;/p&gt;</description></item><item><title>Windows下文件链接</title><link>https://boiltask.com/knowledge/windows-mklink/</link><pubDate>Sat, 26 Apr 2025 22:18:12 +0800</pubDate><guid>https://boiltask.com/knowledge/windows-mklink/</guid><description>&lt;p&gt;Windows下可以使用硬链接来关联两个文件夹，从而实现文件的复用，避免两边分别修改。&lt;/p&gt;
 &lt;p&gt;核心指令：&lt;code&gt;mklink&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;cmd&lt;/code&gt;中输入即可查看帮助如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cmd&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2057,13 +2344,22 @@ alt="image.png"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Target 指定新链接引用的路径
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;(&lt;/span&gt;相对或绝对&lt;span class="p"&gt;)&lt;/span&gt;。&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;根据提示输入形如：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cmd&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;mklink&lt;/span&gt; /J D:\sync1 D:\sync2&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;即可把&lt;code&gt;sync2&lt;/code&gt;的文件内容同步到&lt;code&gt;sync1&lt;/code&gt;中。&lt;/p&gt;</description></item><item><title>Cloudflare Page环境下百度站点验证308问题</title><link>https://boiltask.com/knowledge/cloudflare-page-baidu-308/</link><pubDate>Sat, 19 Apr 2025 19:46:23 +0800</pubDate><guid>https://boiltask.com/knowledge/cloudflare-page-baidu-308/</guid><description>&lt;p&gt;百度提供了一个站长服务，通过认证后，可以干预一些百度爬虫的行为，同时也可以检测链接对百度的可见性。&lt;/p&gt;
 &lt;p&gt;服务地址：&lt;a class="link" href="https://ziyuan.baidu.com/site/" target="_blank" rel="noopener"
@@ -2123,6 +2419,11 @@ alt="image.png"
 &gt;AddressSanitizerCallStack · google/sanitizers Wiki&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;会使得输出日志稍微慢几秒，目测可以接受。&lt;/p&gt;
 &lt;p&gt;可以使用格式文本设定&lt;code&gt;stack_trace_format&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2163,17 +2464,26 @@ alt="image.png"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// %M - prints module basename and offset, if it is known, or PC.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;不过测试下来似乎未取到函数行号，判断是&lt;code&gt;llvm&lt;/code&gt;的问题，&lt;code&gt;addr2line&lt;/code&gt;就可以。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;windows&lt;/code&gt;下使用&lt;code&gt;llvm-symbolizer.exe&lt;/code&gt;也可以成功取到。&lt;/p&gt;
 &lt;p&gt;同时，测试下来&lt;code&gt;windows&lt;/code&gt;下使用&lt;code&gt;MinGW&lt;/code&gt;版本的&lt;code&gt;addr2line&lt;/code&gt;也可以取到堆栈，但是慢到无法接收。&lt;/p&gt;
 &lt;h3 id="推荐配置"&gt;&lt;a href="#%e6%8e%a8%e8%8d%90%e9%85%8d%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;推荐配置
 &lt;/h3&gt;&lt;p&gt;开启堆栈输出并设置日志路径：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;ASAN_OPTIONS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;symbolize=1:print_stacktrace=1:log_path=/home/crash/ds-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;版本&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;-asan-crash.log&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="问题记录"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e8%ae%b0%e5%bd%95" class="header-anchor"&gt;&lt;/a&gt;问题记录
 &lt;/h2&gt;&lt;h3 id="开启asan之后加载过慢"&gt;&lt;a href="#%e5%bc%80%e5%90%afasan%e4%b9%8b%e5%90%8e%e5%8a%a0%e8%bd%bd%e8%bf%87%e6%85%a2" class="header-anchor"&gt;&lt;/a&gt;开启ASan之后加载过慢
@@ -2182,6 +2492,11 @@ alt="image.png"
 &gt;Address Sanitizer  |  Android NDK  |  Android Developers&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="堆栈还原"&gt;&lt;a href="#%e5%a0%86%e6%a0%88%e8%bf%98%e5%8e%9f" class="header-anchor"&gt;&lt;/a&gt;堆栈还原
 &lt;/h2&gt;&lt;p&gt;写了一个&lt;code&gt;golang&lt;/code&gt;的脚本用于快速的分析堆栈：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;golang&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2396,6 +2711,8 @@ alt="image.png"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
@@ -2686,6 +3003,11 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;</description></item><item><title>UnrealEngine虚幻引擎编译选项</title><link>https://boiltask.com/knowledge/ue/build-configuration/</link><pubDate>Wed, 05 Mar 2025 12:42:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/build-configuration/</guid><description>&lt;h2 id="配置参数"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;配置参数
 &lt;/h2&gt;&lt;h3 id="window指定编译sdk"&gt;&lt;a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor"&gt;&lt;/a&gt;Window指定编译SDK
 &lt;/h3&gt;&lt;p&gt;修改&lt;code&gt;Engine/Saved/UnrealBuildTool/BuildConfiguration.xml&lt;/code&gt;中的配置，添加&lt;code&gt;MSVC&lt;/code&gt;版本号、&lt;code&gt;SDK&lt;/code&gt;的版本号。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;xml&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2699,8 +3021,15 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;WindowsSdkVersion&amp;gt;&lt;/span&gt;10.0.20348.0&lt;span class="nt"&gt;&amp;lt;/WindowsSdkVersion&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/WindowsPlatform&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="最终示例"&gt;&lt;a href="#%e6%9c%80%e7%bb%88%e7%a4%ba%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;最终示例
 &lt;/h2&gt;&lt;p&gt;配置文件形如：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;xml&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -2718,6 +3047,8 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/WindowsPlatform&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Configuration&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine" target="_blank" rel="noopener"
 &gt;Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE4常用控制台指令</title><link>https://boiltask.com/knowledge/ue/common-console-command-ue4/</link><pubDate>Wed, 26 Feb 2025 11:44:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-console-command-ue4/</guid><description>&lt;p&gt;在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p&gt;
@@ -2732,12 +3063,19 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;p&gt;t.maxfps 60 设置最大帧率&lt;/p&gt;
 &lt;p&gt;更多控制台指令可以在下面这个网站查询： &lt;a class="link" href="https://digilander.libero.it/ZioYuri78/" target="_blank" rel="noopener"
 &gt;https://digilander.libero.it/ZioYuri78/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/knowledge/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-merge/</guid><description>&lt;p&gt;UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nl"&gt;D&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;MetaEngine&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Engine&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Binaries&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Win64&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;UE4Editor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt; &lt;span class="nl"&gt;D&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Meta&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uproject&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;theirs&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;mine&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;merged&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/6ff4805b67172a4e5b7cb85d3eb9d043.png"
 loading="lazy"
@@ -2954,6 +3292,11 @@ alt="image.png"
 &lt;p&gt;在虚幻引擎启动器&lt;code&gt;Epic Games Launcher&lt;/code&gt;中，可以在库找到&lt;code&gt;Lyra&lt;/code&gt;项目，创建项目即可。&lt;/p&gt;
 &lt;p&gt;经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p&gt;</description></item><item><title>Cloudflare环境下开启Rocket Loader之后Katex失效问题</title><link>https://boiltask.com/knowledge/katex-cloudflare/</link><pubDate>Sat, 09 Nov 2024 12:45:51 +0800</pubDate><guid>https://boiltask.com/knowledge/katex-cloudflare/</guid><description>&lt;p&gt;在博客部署到线上之后，发现&lt;code&gt;Katex&lt;/code&gt;公式无法正常显示，而相同的&lt;code&gt;Html&lt;/code&gt;文件在本地环境下是可以正常显示的。&lt;/p&gt;
 &lt;p&gt;其中解析的核心代码如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;javascript&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -2980,6 +3323,8 @@ alt="image.png"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;ignoredClasses&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;gist&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;})&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;通过添加日志发现是&lt;code&gt;DOMContentLoaded&lt;/code&gt;事件没有触发。&lt;/p&gt;
 &lt;p&gt;但是一直没想到是什么原因，直到留意到了线上版本里&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签变成了形如&lt;code&gt;&amp;lt;script type=&amp;quot;d6a94c0af8a975daac5bee56-text/javascript&amp;quot;&amp;gt;&lt;/code&gt;。&lt;/p&gt;
@@ -3817,6 +4162,11 @@ data-flex-basis="290px"
 &lt;p&gt;本文描述的是如何从外部调用引擎的对比工具。&lt;/p&gt;
 &lt;h2 id="工具使用"&gt;&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;工具使用
 &lt;/h2&gt;&lt;p&gt;直接使用可以在&lt;code&gt;cmd&lt;/code&gt;命令提示符窗口输入如下命令：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -3824,13 +4174,22 @@ data-flex-basis="290px"
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;引擎路径&lt;span class="se"&gt;\E&lt;/span&gt;ngine&lt;span class="se"&gt;\B&lt;/span&gt;inaries&lt;span class="se"&gt;\W&lt;/span&gt;in64&lt;span class="se"&gt;\U&lt;/span&gt;E4Editor.exe 项目路径&lt;span class="se"&gt;\M&lt;/span&gt;eta.uproject -diff 文件1路径 文件2路径&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;完整示例如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;D:&lt;span class="se"&gt;\M&lt;/span&gt;etaEngine&lt;span class="se"&gt;\E&lt;/span&gt;ngine&lt;span class="se"&gt;\B&lt;/span&gt;inaries&lt;span class="se"&gt;\W&lt;/span&gt;in64&lt;span class="se"&gt;\U&lt;/span&gt;E4Editor.exe D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\M&lt;/span&gt;eta.uproject -diff D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\C&lt;/span&gt;ontent&lt;span class="se"&gt;\T&lt;/span&gt;est1.uasset D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\C&lt;/span&gt;ontent&lt;span class="se"&gt;\T&lt;/span&gt;est2.uasset&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;原理是运行引擎时传入&lt;code&gt;-diff&lt;/code&gt;参数开启对比窗口，同时传入所需的项目路径与文件路径。&lt;/p&gt;
 &lt;h2 id="结合svn"&gt;&lt;a href="#%e7%bb%93%e5%90%88svn" class="header-anchor"&gt;&lt;/a&gt;结合SVN
@@ -3913,12 +4272,19 @@ loading="lazy"
 &lt;/table&gt;
 &lt;p&gt;扩展名输入：&lt;code&gt;.uasset&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;命令行完整示例如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;D:&lt;span class="se"&gt;\M&lt;/span&gt;etaEngine&lt;span class="se"&gt;\E&lt;/span&gt;ngine&lt;span class="se"&gt;\B&lt;/span&gt;inaries&lt;span class="se"&gt;\W&lt;/span&gt;in64&lt;span class="se"&gt;\U&lt;/span&gt;E4Editor.exe D:&lt;span class="se"&gt;\M&lt;/span&gt;eta&lt;span class="se"&gt;\M&lt;/span&gt;eta.uproject -diff %base %mine&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中&lt;code&gt;D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code&gt;为引擎可执行文件，&lt;code&gt;D:\Meta\Meta.uproject&lt;/code&gt;为项目文件，&lt;code&gt;%base&lt;/code&gt;会被转义为&lt;code&gt;svn&lt;/code&gt;文件，&lt;code&gt;%mine&lt;/code&gt;会被转义为当前文件。&lt;/p&gt;
 &lt;h2 id="对比效果"&gt;&lt;a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor"&gt;&lt;/a&gt;对比效果
@@ -3931,6 +4297,11 @@ loading="lazy"
 &lt;p&gt;此工具不能自动合并蓝图，因此仍需要自己手动合并文件，请谨慎操作避免冲突。&lt;/p&gt;
 &lt;p&gt;期待&lt;code&gt;UnrealEngine&lt;/code&gt;能更为完善！&lt;/p&gt;</description></item><item><title>强制修改Git记录中提交者</title><link>https://boiltask.com/knowledge/git-modify/</link><pubDate>Thu, 16 Feb 2023 19:02:13 +0000</pubDate><guid>https://boiltask.com/knowledge/git-modify/</guid><description>&lt;p&gt;在自己维护项目的时候，有的时候会因为忘了切换账号而错误标记了提交者。&lt;/p&gt;
 &lt;p&gt;考虑只有自己在用，&lt;code&gt;force&lt;/code&gt;强制推送也是可以接受的，所以记录一下可以使用工具来强制修改信息。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -3971,12 +4342,21 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push --force --tags origin &lt;span class="s1"&gt;&amp;#39;refs/heads/*&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>C++项目编程规范</title><link>https://boiltask.com/knowledge/cpp-style-guide/</link><pubDate>Mon, 12 Dec 2022 23:11:59 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-style-guide/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;根据作者多年的从业经验，结合C++项目的最佳实践，整理出以下编码规范&lt;/p&gt;
@@ -4007,6 +4387,11 @@ loading="lazy"
 target="_blank" rel="noopener"
 &gt;斐波纳契数列&lt;/a&gt; &lt;code&gt;(0, 1, 1, 2, 3, 5, ...)&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;参考代码：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Go&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4052,12 +4437,19 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>【Go指南】练习：映射</title><link>https://boiltask.com/knowledge/golang-map/</link><pubDate>Wed, 01 Sep 2021 00:40:23 +0800</pubDate><guid>https://boiltask.com/knowledge/golang-map/</guid><description>&lt;h2 id="练习映射"&gt;&lt;a href="#%e7%bb%83%e4%b9%a0%e6%98%a0%e5%b0%84" class="header-anchor"&gt;&lt;/a&gt;练习：映射
 &lt;/h2&gt;&lt;p&gt;实现 &lt;code&gt;WordCount&lt;/code&gt;。它应当返回一个映射，其中包含字符串 &lt;code&gt;s&lt;/code&gt; 中每个“单词”的个数。函数 &lt;code&gt;wc.Test&lt;/code&gt; 会对此函数执行一系列测试用例，并输出成功还是失败。&lt;/p&gt;
 &lt;p&gt;你会发现 &lt;a class="link" href="https://go-zh.org/pkg/strings/#Fields" title="strings.Fields"
 target="_blank" rel="noopener"
 &gt;strings.Fields&lt;/a&gt; 很有帮助。&lt;/p&gt;
 &lt;p&gt;代码参考：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;Go&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4101,6 +4493,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;wc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;WordCount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>UE虚幻引擎客户端项目规范</title><link>https://boiltask.com/knowledge/ue/client-style-guide/</link><pubDate>Mon, 10 May 2021 21:34:36 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/client-style-guide/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;根据作者多年的从业经验，结合UnrealEngine虚幻引擎项目的最佳实践，整理出以下编码规范&lt;/p&gt;
 &lt;p&gt;本文尽可能做到有理有据，后续可能还会不定期修订。&lt;/p&gt;
@@ -4118,6 +4512,11 @@ target="_blank" rel="noopener"
 &lt;h2 id="代码引用"&gt;&lt;a href="#%e4%bb%a3%e7%a0%81%e5%bc%95%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;代码引用
 &lt;/h2&gt;&lt;h3 id="版权声明"&gt;&lt;a href="#%e7%89%88%e6%9d%83%e5%a3%b0%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;版权声明
 &lt;/h3&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-success"&gt;提议&lt;/span&gt;如果文件有可能被多个项目调用，那么在每个文件头最好添加版权声明，例如：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4140,6 +4539,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; *
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * HISTORY: xxxxxx
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="头文件"&gt;&lt;a href="#%e5%a4%b4%e6%96%87%e4%bb%b6" class="header-anchor"&gt;&lt;/a&gt;头文件
 &lt;/h3&gt;&lt;ul&gt;
@@ -4175,6 +4576,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;h3 id="范例"&gt;&lt;a href="#%e8%8c%83%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;范例
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4270,12 +4676,19 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 内联函数定义
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="作用域"&gt;&lt;a href="#%e4%bd%9c%e7%94%a8%e5%9f%9f" class="header-anchor"&gt;&lt;/a&gt;作用域
 &lt;/h2&gt;&lt;h3 id="命名空间"&gt;&lt;a href="#%e5%91%bd%e5%90%8d%e7%a9%ba%e9%97%b4" class="header-anchor"&gt;&lt;/a&gt;命名空间
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;命名空间将全局作用域细分为独立的, 具名的作用域, 可有效防止全局作用域的命名冲突。&lt;/li&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;禁止使用using namespace xxx;&lt;/li&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;禁止使用内联命名空间
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4290,6 +4703,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;X::Y::foo与X::foo是等价的&lt;/li&gt;
@@ -4312,6 +4727,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4331,6 +4751,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="局部变量"&gt;&lt;a href="#%e5%b1%80%e9%83%a8%e5%8f%98%e9%87%8f" class="header-anchor"&gt;&lt;/a&gt;局部变量
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -4340,6 +4762,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;局部变量在声明的同时进行显式值初始化，比起隐式初始化再赋值的两步过程要高效，同时也贯彻了计算机体系结构重要的概念「局部性（locality）」。&lt;/li&gt;
 &lt;li&gt;对象：循环作用域外声明要高效的多&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4389,15 +4816,24 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DoSomething&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;属于 &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt; 和 &lt;code&gt;for&lt;/code&gt; 语句的变量应当在这些语句中正常地声明，这样子这些变量的作用域就被限制在这些语句中了，举例而言:&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;strchr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4455,6 +4891,11 @@ target="_blank" rel="noopener"
 &lt;/li&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;如果定义了拷贝/移动操作, 则要保证这些操作的默认实现是正确的. 记得时刻检查默认操作的正确性, 并且在文档中说明类是可拷贝的且/或可移动的&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4476,9 +4917,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Field&lt;/span&gt; &lt;span class="n"&gt;field_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;如果你的类不需要拷贝 / 移动操作, 请显式地通过在 &lt;code&gt;public&lt;/code&gt; 域中使用 &lt;code&gt;= delete&lt;/code&gt; 或其他手段禁用之.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4490,10 +4938,17 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;MyClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;MyClass&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;MyClass&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;operator&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;MyClass&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="继承"&gt;&lt;a href="#%e7%bb%a7%e6%89%bf" class="header-anchor"&gt;&lt;/a&gt;继承
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;如果类具有继承关系，析构函数需要是虚函数&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4591,6 +5046,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="多重继承"&gt;&lt;a href="#%e5%a4%9a%e9%87%8d%e7%bb%a7%e6%89%bf" class="header-anchor"&gt;&lt;/a&gt;多重继承
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -4607,6 +5064,11 @@ target="_blank" rel="noopener"
 &lt;h3 id="成员变量"&gt;&lt;a href="#%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f" class="header-anchor"&gt;&lt;/a&gt;成员变量
 &lt;/h3&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;一般不建议把成员变量标记为&lt;code&gt;public&lt;/code&gt;，接口变更时更容易出现遗漏。并且一个&lt;code&gt;public&lt;/code&gt;的变量，对象自身对其更难以控制，不利于约束其读写行为。考虑为其增加&lt;code&gt;public&lt;/code&gt;的&lt;code&gt;Set&lt;/code&gt;与&lt;code&gt;Get&lt;/code&gt;相关接口来实现对其的操作。&lt;/p&gt;
 &lt;p&gt;比如如下例子：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4622,11 +5084,18 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SaveKey&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;GetName&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;如果调用者错误使用了&lt;code&gt;FString&amp;amp; SaveKey = StarsSaveGame-&amp;gt;OverrideSaveKey&lt;/code&gt;，那么就会错误修改成员变量。&lt;/p&gt;
 &lt;p&gt;如果改成函数的返回则没有这种隐患，会在编译器得到警告：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Binding r-value to l-value reference is non-standard Microsoft C++ extension&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4642,10 +5111,17 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;SaveKey&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;GetName&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="结构体"&gt;&lt;a href="#%e7%bb%93%e6%9e%84%e4%bd%93" class="header-anchor"&gt;&lt;/a&gt;结构体
 &lt;/h2&gt;&lt;h3 id="成员变量初始化"&gt;&lt;a href="#%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f%e5%88%9d%e5%a7%8b%e5%8c%96" class="header-anchor"&gt;&lt;/a&gt;成员变量初始化
 &lt;/h3&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;在代码中用到的指针一定要进行初始化，在栈上创建结构体时，指针并不会被UE初始化，会造成野指针。&lt;/p&gt;
 &lt;p&gt;如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4679,6 +5155,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;AActor&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Victim&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;nullptr&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;但并不是所有的成员变量都需要初始化，比如&lt;code&gt;TArray&lt;/code&gt;、&lt;code&gt;TMap&lt;/code&gt;等容器类，它们会在构造函数中初始化。对于有些结构直接靠赋值来初始化反倒有可能有问题，可参考：&lt;a class="link" href="https://blog.ch-wind.com/note-tweakobjectptr-compile/" target="_blank" rel="noopener"
 &gt;记录TWeakObjectPtr的一个比较坑的编译报错&lt;/a&gt;。此时如果需要初始化，可以再构造函数内进行，以避免与预期不符。&lt;/p&gt;
 &lt;h2 id="枚举"&gt;&lt;a href="#%e6%9e%9a%e4%b8%be" class="header-anchor"&gt;&lt;/a&gt;枚举
@@ -4704,6 +5182,11 @@ target="_blank" rel="noopener"
 &lt;p&gt;若枚举值无固定值，则可以默认视为枚举值顺序改变不影响逻辑。&lt;/p&gt;
 &lt;h3 id="枚举值举例"&gt;&lt;a href="#%e6%9e%9a%e4%b8%be%e5%80%bc%e4%b8%be%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;枚举值举例
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4720,6 +5203,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Local&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Multiple&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="异常"&gt;&lt;a href="#%e5%bc%82%e5%b8%b8" class="header-anchor"&gt;&lt;/a&gt;异常
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -4747,12 +5232,19 @@ target="_blank" rel="noopener"
 &lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;对于通过传入引用参数来获取输出的情况，需要注意在必要时对传入参数做初始化，防止函数执行提前结束而造成的输出与预期不一致。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;TestFunction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;bOutResult1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;OutResult2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="编写简短函数"&gt;&lt;a href="#%e7%bc%96%e5%86%99%e7%ae%80%e7%9f%ad%e5%87%bd%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;编写简短函数
 &lt;/h3&gt;&lt;ul&gt;
@@ -4767,6 +5259,11 @@ target="_blank" rel="noopener"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;不要直接进行值传递，避免一次内存拷贝，传递const引用参数&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -4800,6 +5297,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 优 - 移动语义（避免一次内存拷贝）
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;TestSomething&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FString&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;StringArray&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{...}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;建议&lt;/span&gt;若方法不修改对象，将函数标记为常量函数
 &lt;ul&gt;
@@ -4810,6 +5309,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4823,9 +5327,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 若此代码在FThing上被调用，其不会修改FThing
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;若循环不修改容器，则在容器上使用常量迭代&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4841,10 +5352,17 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 此循环的主体不会修改StringArray
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="函数重载"&gt;&lt;a href="#%e5%87%bd%e6%95%b0%e9%87%8d%e8%bd%bd" class="header-anchor"&gt;&lt;/a&gt;函数重载
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;若要使用函数重载, 则必须能让读者一看调用点就胸有成竹, 而不用花心思猜测调用的重载函数到底是哪一种. 这一规则也适用于构造函数&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -4862,6 +5380,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Analyze&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;size_t&lt;/span&gt; &lt;span class="n"&gt;textlen&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;如果函数单靠不同的参数类型而重载 (这意味着参数数量不变), 读者就得十分熟悉 C++ 五花八门的匹配规则, 以了解匹配过程具体到底如何。另外，如果派生类只重载了某个函数的部分变体，继承语义就容易令人困惑。&lt;/li&gt;
 &lt;/ul&gt;
@@ -4873,6 +5393,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;虚函数是动态绑定，而缺省参数值是静态绑定。即虚函数是运行时确定类型，而缺省参数值是编译时就确定的。&lt;/li&gt;
 &lt;li&gt;如果重新定义的话，会使得程序使用基类虚函数的默认参数，这显然并不是你想要的结果。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5010,6 +5535,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="lambda表达式"&gt;&lt;a href="#lambda%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;Lambda表达式
@@ -5029,6 +5556,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5068,6 +5600,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="配置"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;配置
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;考虑热更配置的需求，谨慎对配置进行缓存，优先考虑以&lt;code&gt;RowName&lt;/code&gt;去查表。&lt;/li&gt;
@@ -5102,12 +5636,19 @@ target="_blank" rel="noopener"
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;特别模板实例化的Typedef不再是模板，并应加上相应前缀，例如：&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;typedef&lt;/span&gt; &lt;span class="n"&gt;TArray&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;FMytype&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;FArrayOfMyTypes&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;即使不暴露给蓝图，也可以遵循此命名规范以适应UE的规范。&lt;/li&gt;
@@ -5119,6 +5660,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;返回值的函数应描述返回的值.命名应说明函数将返回的值。此规则对布尔函数极为重要。请参考以下两个范例方法：&lt;/li&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;RPC函数应把Server、Client、Multicast放在函数名前。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5133,6 +5679,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 命名明确说明茶是新鲜的
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;IsTeaFresh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FTea&lt;/span&gt; &lt;span class="n"&gt;Tea&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;对于缩写单词，推荐仍然使用首字母大写其余小写的格式
@@ -5152,6 +5700,11 @@ target="_blank" rel="noopener"
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;命名范例：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5175,6 +5728,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UTexture&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;TeaTexture&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FPlayerIdentifier&lt;/span&gt; &lt;span class="n"&gt;PlayerId&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="代码格式"&gt;&lt;a href="#%e4%bb%a3%e7%a0%81%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;代码格式
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -5193,6 +5748,11 @@ target="_blank" rel="noopener"
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;固定在单语句块中使用大括号。例如：&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5206,6 +5766,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;if-else语句中的所有执行块都应该使用大括号。
 &lt;ul&gt;
@@ -5214,6 +5776,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5235,6 +5802,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;CallMarkRein&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;switch语句&lt;/p&gt;
@@ -5247,6 +5816,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5294,6 +5868,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="注释"&gt;&lt;a href="#%e6%b3%a8%e9%87%8a" class="header-anchor"&gt;&lt;/a&gt;注释
@@ -5310,6 +5886,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5337,10 +5918,17 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UFUNCTION&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintCallable&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Item&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;IsItemDefCertain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FBagItemDef&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;ItemDef&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;CheckQualityNum&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="原则"&gt;&lt;a href="#%e5%8e%9f%e5%88%99" class="header-anchor"&gt;&lt;/a&gt;原则
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;编写含义清晰的代码：&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5356,9 +5944,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 正确示范：
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TotalLeaves&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SmallLeaves&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;LargeLeaves&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;SmallAndLargeLeaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;编写有用的注释：&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5378,9 +5973,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// we know there is another tea leaf
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;Leaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;不要对低质量代码进行注释——重新编写这些代码：&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5402,9 +6004,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 正确示范：
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TotalLeaves&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SmallLeaves&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;LargeLeaves&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;SmallAndLargeLeaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;不要让代码与注释自相矛盾：&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5424,6 +6033,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// we know there is another tea leaf
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="n"&gt;Leaves&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="todo"&gt;&lt;a href="#todo" class="header-anchor"&gt;&lt;/a&gt;TODO
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -5433,6 +6044,11 @@ target="_blank" rel="noopener"
 &lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;标记一些未完成的或完成的不尽如人意的地方, 这样一搜索, 就知道还有哪些活要干, 日志都省了。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5463,6 +6079,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;continue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="其他相关"&gt;&lt;a href="#%e5%85%b6%e4%bb%96%e7%9b%b8%e5%85%b3" class="header-anchor"&gt;&lt;/a&gt;其他相关
 &lt;/h2&gt;&lt;h3 id="sizeof"&gt;&lt;a href="#sizeof" class="header-anchor"&gt;&lt;/a&gt;Sizeof
@@ -5496,6 +6114,11 @@ target="_blank" rel="noopener"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;无符号整数错误使用导致的死循环&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5503,9 +6126,16 @@ target="_blank" rel="noopener"
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;unsigned&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;容器的size()返回类型size_t是无符号整数&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5523,6 +6153,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;===== &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕while循环，条件永远不满足&lt;/li&gt;
 &lt;/ul&gt;
@@ -5530,6 +6162,11 @@ target="_blank" rel="noopener"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;判断浮点数是否相等时，不能直接用==判断，因为浮点数的精度问题，会导致判断错误&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5542,6 +6179,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mf"&gt;0.00001&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="c1"&gt;// 正确用法
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="stdvectorbool"&gt;&lt;a href="#stdvectorbool" class="header-anchor"&gt;&lt;/a&gt;std::vector&amp;lt;bool&amp;gt;
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;尽量不要在vector中存放bool类型，vector为了做优化，它的内部存放的其实不是bool。
@@ -5553,6 +6192,11 @@ target="_blank" rel="noopener"
 &lt;h3 id="空指针"&gt;&lt;a href="#%e7%a9%ba%e6%8c%87%e9%92%88" class="header-anchor"&gt;&lt;/a&gt;空指针
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;空指针尽量使用nullptr而非NULL
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5580,12 +6224,19 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="数值溢出"&gt;&lt;a href="#%e6%95%b0%e5%80%bc%e6%ba%a2%e5%87%ba" class="header-anchor"&gt;&lt;/a&gt;数值溢出
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;在使用FMath::RandRange时，需要注意数值溢出的情况。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5604,6 +6255,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;int32&lt;/span&gt; &lt;span class="n"&gt;Range&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Max&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//INT_MAX的情况下，一定溢出
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Min&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;RandHelper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Range&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="内存"&gt;&lt;a href="#%e5%86%85%e5%ad%98" class="header-anchor"&gt;&lt;/a&gt;内存
 &lt;/h2&gt;&lt;h3 id="常见问题"&gt;&lt;a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98" class="header-anchor"&gt;&lt;/a&gt;常见问题
@@ -5627,6 +6280,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;谨慎使用内存操作相关的函数sprintf，printf，memcpy，memset，strcat，strcpy等等&lt;/li&gt;
 &lt;li&gt;上述函数拷贝内存的时候没有检查是否越界，如果发生越界会把其他不相干的内存写坏，导致无法预料的bug&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5644,9 +6302,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;strcpy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;szName&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;禁止返回局部引用，内存会被销毁&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5661,6 +6326,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
@@ -5688,6 +6355,11 @@ target="_blank" rel="noopener"
 &lt;/li&gt;
 &lt;li&gt;当程序执行不正确的类型转换时，就会发生不可预测的结果。这可能会导致程序崩溃写坏内存或产生不正确的输出。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5707,9 +6379,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;Memcpy, memset用于非POD类型，把vtable的指针给破坏掉了&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5767,6 +6446,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;memset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;函数内自销毁，导致后续代码访问或写入成员变量时写坏内存&lt;/p&gt;
@@ -5781,6 +6462,11 @@ target="_blank" rel="noopener"
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;Lambda表达式自销毁，内部引用的捕获变量被销毁后使用引发的内存问题&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5814,6 +6500,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="智能指针"&gt;&lt;a href="#%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88" class="header-anchor"&gt;&lt;/a&gt;智能指针
@@ -5826,6 +6514,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -5841,6 +6534,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;p1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;nullptr&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;TSharedPtr
 &lt;ul&gt;
@@ -5854,6 +6549,11 @@ target="_blank" rel="noopener"
 &lt;/li&gt;
 &lt;li&gt;注意循环引用&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5919,6 +6619,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;TWeakPtr
 &lt;ul&gt;
@@ -5932,6 +6634,11 @@ target="_blank" rel="noopener"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕循环内删除与添加&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -5985,6 +6692,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;拷贝到一个新容器中再做循环删除&lt;/li&gt;
 &lt;li&gt;使用迭代器&lt;/li&gt;
@@ -5996,6 +6705,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;TArray&lt;/li&gt;
 &lt;li&gt;TMap也存在此问题&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6041,6 +6755,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;structMap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Emplace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="ue的内存管理"&gt;&lt;a href="#ue%e7%9a%84%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;UE的内存管理
@@ -6057,6 +6773,11 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6094,6 +6815,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 新的TestActor复用原有内存
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ATestActor&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;pActor2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;GetWorld&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;SpawnActor&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ATestActor&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;警惕非主线程中使用UObject或者其弱指针的问题&lt;/p&gt;
@@ -6101,6 +6824,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;UObject是在主线程中被GC掉，所以非主线程中无法预料其生命周期&lt;/li&gt;
 &lt;li&gt;所以在非主线程中尽量不访问UObject或其弱指针，在外部主线程中将非主线程需要处理的数据全部备份好，通过Lambda表达式传递进去，任务处理完回到主线程后再访问UObject的弱指针&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6192,6 +6920,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;});&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;规避成员变量保存UE的接口裸指针&lt;/p&gt;
@@ -6199,6 +6929,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;判断其生命周期，应保存UObject的弱指针TWeakObjectPtr，在使用的时候再将其Cast为接口指针&lt;/li&gt;
 &lt;li&gt;思路上，如果自己需要标识引用关系那么使用UPROPERTY配合TObjectPtr，否则使用TWeakObjectPtr。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -6213,6 +6948,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;IAttributeInterface&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;GetCauserAttributeInterface&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;IAttributeInterface&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;GetTakerAttributeInterface&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -6236,12 +6973,19 @@ target="_blank" rel="noopener"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-C++" data-lang="C++"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UE_LOG&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LogAStar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Particle Type Shrink Error????!!&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="引擎"&gt;&lt;a href="#%e5%bc%95%e6%93%8e" class="header-anchor"&gt;&lt;/a&gt;引擎
 &lt;/h2&gt;&lt;h3 id="uobject"&gt;&lt;a href="#uobject" class="header-anchor"&gt;&lt;/a&gt;UObject
@@ -6526,6 +7270,11 @@ target="_blank" rel="noopener"
 &lt;/h2&gt;&lt;p&gt;修改变量的存储区域和生命周期，使变量存储在静态区，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。&lt;/p&gt;
 &lt;p&gt;普通变量，当程序执行到它的定义处时，为其在栈上分配空间，在函数执行结束时被释放掉。使用&lt;code&gt;static&lt;/code&gt;修饰变量，可以使得函数中的值保存至下一次调用。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;static&lt;/code&gt;修饰的静态局部变量只执行初始化一次，而且延长了局部变量的生命周期，直到程序运行结束以后才释放。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6555,6 +7304,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="修饰普通函数"&gt;&lt;a href="#%e4%bf%ae%e9%a5%b0%e6%99%ae%e9%80%9a%e5%87%bd%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;修饰普通函数
 &lt;/h2&gt;&lt;p&gt;表明函数的作用范围，仅在定义该函数的文件内才能使用。在多人开发项目时，为了防止与他人命名空间里的函数重名，可以将函数定位为&lt;code&gt;static&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="修饰成员变量"&gt;&lt;a href="#%e4%bf%ae%e9%a5%b0%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f" class="header-anchor"&gt;&lt;/a&gt;修饰成员变量
@@ -6575,6 +7326,11 @@ target="_blank" rel="noopener"
 &lt;/h2&gt;&lt;p&gt;分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。&lt;/p&gt;
 &lt;h3 id="const-int-p--a"&gt;&lt;a href="#const-int-p--a" class="header-anchor"&gt;&lt;/a&gt;const int *p = &amp;amp;a;
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;*p&lt;/code&gt;不可变，&lt;code&gt;*p&lt;/code&gt;是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容，所以&lt;code&gt;*p&lt;/code&gt;不可变也就是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容不可变。&lt;code&gt;p&lt;/code&gt;是可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元（变量）是可变的，但是&lt;code&gt;p&lt;/code&gt;指向谁，谁的值就不可变。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6638,8 +7394,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="int-const-p--a"&gt;&lt;a href="#int-const-p--a" class="header-anchor"&gt;&lt;/a&gt;int* const p = &amp;amp;a;
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;const&lt;/code&gt;修饰&lt;code&gt;p&lt;/code&gt;，指针&lt;code&gt;p&lt;/code&gt;是不可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元不可变。&lt;code&gt;p&lt;/code&gt;的指向不可变，&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容可以变。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6695,8 +7458,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="const-int-const-p--a"&gt;&lt;a href="#const-int-const-p--a" class="header-anchor"&gt;&lt;/a&gt;const int* const p = &amp;amp;a;
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;const&lt;/code&gt;修饰了&lt;code&gt;*p&lt;/code&gt;和&lt;code&gt;p&lt;/code&gt;，所以&lt;code&gt;p&lt;/code&gt;指向的内存单元和&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容都不可变。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6744,8 +7514,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="修饰引用"&gt;&lt;a href="#%e4%bf%ae%e9%a5%b0%e5%bc%95%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;修饰引用
 &lt;/h2&gt;&lt;p&gt;指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6835,6 +7612,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;rp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;const&lt;/code&gt;引用的目的,禁止通过修改引用值来改变被引用的对象。&lt;/p&gt;
 &lt;p&gt;没有const reference，因为引用本身就是 const pointer。&lt;/p&gt;
 &lt;ul&gt;
@@ -6847,6 +7626,11 @@ target="_blank" rel="noopener"
 &lt;li&gt;有&lt;code&gt;const&lt;/code&gt;修饰的成员函数，对数据成员只能读取，没有&lt;code&gt;const&lt;/code&gt;修饰的成员函数，对数据成员可读可写。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;const&lt;/code&gt;对象可以调用&lt;code&gt;const&lt;/code&gt;成员函数，不能调用非&lt;code&gt;const&lt;/code&gt;修饰的函数。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6890,8 +7674,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;相当于，C++对类的成员函数数中的&lt;code&gt;this&lt;/code&gt;指针做了隐藏。本质上，&lt;code&gt;const&lt;/code&gt;修饰的是被隐藏的&lt;code&gt;this&lt;/code&gt;指针所指向的内存空间，修饰的是&lt;code&gt;this&lt;/code&gt;指针（&lt;code&gt;const Class *this&lt;/code&gt;）。&lt;/p&gt;</description></item><item><title>C++用实现大数模板（string、int128）</title><link>https://boiltask.com/knowledge/cpp-big-int/</link><pubDate>Tue, 13 Nov 2018 00:16:30 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-big-int/</guid><description>&lt;h2 id="相加"&gt;&lt;a href="#%e7%9b%b8%e5%8a%a0" class="header-anchor"&gt;&lt;/a&gt;相加
 &lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -6961,8 +7752,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="相乘"&gt;&lt;a href="#%e7%9b%b8%e4%b9%98" class="header-anchor"&gt;&lt;/a&gt;相乘
 &lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -7028,8 +7826,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="整数转string"&gt;&lt;a href="#%e6%95%b4%e6%95%b0%e8%bd%acstring" class="header-anchor"&gt;&lt;/a&gt;整数转string
 &lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -7059,8 +7864,15 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="较大的值"&gt;&lt;a href="#%e8%be%83%e5%a4%a7%e7%9a%84%e5%80%bc" class="header-anchor"&gt;&lt;/a&gt;较大的值
 &lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -7080,9 +7892,16 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="nl"&gt;a&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="long-long"&gt;&lt;a href="#long-long" class="header-anchor"&gt;&lt;/a&gt;long long
 &lt;/h2&gt;&lt;p&gt;时间复杂度比较高是个问题&lt;br&gt;
 考虑用long long拼接&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -7148,6 +7967,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>中国荷斯坦牛建模相关技术的研究（Open3D、D435）</title><link>https://boiltask.com/knowledge/cattle-model-technology/</link><pubDate>Thu, 11 Oct 2018 12:22:07 +0800</pubDate><guid>https://boiltask.com/knowledge/cattle-model-technology/</guid><description>&lt;ul&gt;
 &lt;li&gt;相关环境&lt;/li&gt;
 &lt;/ul&gt;
@@ -7204,6 +8025,11 @@ target="_blank" rel="noopener"
 &lt;p&gt;合成代码：&lt;a class="link" href="https://paste.ubuntu.com/p/gq2SwfjVss/" title="https://paste.ubuntu.com/p/gq2SwfjVss/"
 target="_blank" rel="noopener"
 &gt;https://paste.ubuntu.com/p/gq2SwfjVss/&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;python&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -7497,6 +8323,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw=="
 loading="lazy"
 &gt;&lt;/p&gt;
@@ -7573,6 +8401,11 @@ target="_blank" rel="noopener"
 &lt;p&gt;正在慢慢完善之中，可观察其后续进展。&lt;/p&gt;
 &lt;p&gt;​&lt;/p&gt;</description></item><item><title>AutoCAD LISP编程绘制摩天轮</title><link>https://boiltask.com/knowledge/autocad-lisp-mtl/</link><pubDate>Sat, 19 May 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/knowledge/autocad-lisp-mtl/</guid><description>&lt;p&gt;在AutoCAD中写了一个生成摩天轮的程序，这辈子估计也少有机会深入学AutoCAD了，留作纪念。&lt;/p&gt;
 &lt;p&gt;代码如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;lsp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -7826,6 +8659,8 @@ target="_blank" rel="noopener"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;cecolor&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>背包——误认为贪心的陷阱</title><link>https://boiltask.com/knowledge/knapsack-problem/</link><pubDate>Tue, 09 Aug 2016 18:14:29 +0800</pubDate><guid>https://boiltask.com/knowledge/knapsack-problem/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -8027,6 +8862,11 @@ data-flex-grow="132"
 data-flex-basis="317px"
 &gt;&lt;/p&gt;
 &lt;p&gt;下边附上构建邻接表的通用模板：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -8112,11 +8952,18 @@ data-flex-basis="317px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;参考文章:&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"
 &gt;如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a&gt;&lt;/p&gt;</description></item><item><title>二分查找——与答案进行比较的思维</title><link>https://boiltask.com/knowledge/binary-search/</link><pubDate>Tue, 26 Jul 2016 17:24:57 +0800</pubDate><guid>https://boiltask.com/knowledge/binary-search/</guid><description>&lt;p&gt;二分查找不算是一种算法
 我认为其更偏向为一种思想&lt;/p&gt;
 &lt;h2 id="核心代码"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e4%bb%a3%e7%a0%81" class="header-anchor"&gt;&lt;/a&gt;核心代码
 &lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -8135,6 +8982,8 @@ data-flex-basis="317px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;mid&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="优点"&gt;&lt;a href="#%e4%bc%98%e7%82%b9" class="header-anchor"&gt;&lt;/a&gt;优点
 &lt;/h2&gt;&lt;p&gt;使正常搜索的O(n)复杂度降为O(logn)&lt;/p&gt;
@@ -8172,6 +9021,11 @@ data-flex-basis="317px"
 &lt;/h3&gt;&lt;p&gt;a，b的最大公约数&lt;/p&gt;
 &lt;h3 id="代码"&gt;&lt;a href="#%e4%bb%a3%e7%a0%81" class="header-anchor"&gt;&lt;/a&gt;代码
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -8182,6 +9036,8 @@ data-flex-basis="317px"
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;gcd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="nl"&gt;a&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;gcd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="扩展欧几里得"&gt;&lt;a href="#%e6%89%a9%e5%b1%95%e6%ac%a7%e5%87%a0%e9%87%8c%e5%be%97" class="header-anchor"&gt;&lt;/a&gt;扩展欧几里得
 &lt;/h2&gt;&lt;h3 id="任务-1"&gt;&lt;a href="#%e4%bb%bb%e5%8a%a1-1" class="header-anchor"&gt;&lt;/a&gt;任务
@@ -8211,6 +9067,8 @@ AY’+B(X’-A/B&lt;/em&gt;Y’)=GCD(A,B)
 调用后x，y满足方程ax+by=GCD(a,b)。&lt;/p&gt;
 &lt;h3 id="代码-1"&gt;&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="header-anchor"&gt;&lt;/a&gt;代码
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -8237,6 +9095,8 @@ AY’+B(X’-A/B&lt;/em&gt;Y’)=GCD(A,B)
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; return r;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;p&gt;ACM国际大学生程序设计竞赛：算法与实现
@@ -8265,6 +9125,8 @@ N台计算机K个任务，各个计算机可以处理的任务种类不同，最
 &lt;h2 id="算法写法"&gt;&lt;a href="#%e7%ae%97%e6%b3%95%e5%86%99%e6%b3%95" class="header-anchor"&gt;&lt;/a&gt;算法写法
 &lt;/h2&gt;&lt;h3 id="直接求解"&gt;&lt;a href="#%e7%9b%b4%e6%8e%a5%e6%b1%82%e8%a7%a3" class="header-anchor"&gt;&lt;/a&gt;直接求解
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -8294,8 +9156,12 @@ N台计算机K个任务，各个计算机可以处理的任务种类不同，最
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; return res;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;} &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="筛法"&gt;&lt;a href="#%e7%ad%9b%e6%b3%95" class="header-anchor"&gt;&lt;/a&gt;筛法
 &lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -8320,6 +9186,8 @@ N台计算机K个任务，各个计算机可以处理的任务种类不同，最
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; a[j]=j;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; a[j]=a[j]/i*(i-1);
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;参考资料:&lt;br&gt;
 &lt;a class="link" href="http://baike.baidu.com/link?url=Mxfd5P91VH6uydQ3pkR9XoTojeNGlLonX9YVfuEZUgvfBjrBf9f3qwAwb4zPVLYLjws2wWPcTrA1PIpjF4XR0q" target="_blank" rel="noopener"
@@ -8401,6 +9269,8 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br&gt;
 &lt;h2 id="所以分开来解析"&gt;&lt;a href="#%e6%89%80%e4%bb%a5%e5%88%86%e5%bc%80%e6%9d%a5%e8%a7%a3%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;所以分开来解析
 &lt;/h2&gt;&lt;h3 id="逗号表达式"&gt;&lt;a href="#%e9%80%97%e5%8f%b7%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;逗号表达式
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;while(m)m&amp;amp;=m-1,s++;&lt;/code&gt;可以写为:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -8409,6 +9279,8 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;while(m)
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; m&amp;amp;=m-1,s++;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;首先是&amp;quot;,&amp;ldquo;所代表的意思&lt;br&gt;
 此处是作为 逗号运算符&lt;br&gt;
@@ -8427,6 +9299,8 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br&gt;
 &lt;p&gt;逗号运算符保证左边的子表达式运算结束后才进行右边的子表达式的运算。也就是说，逗号运算符是一个序列点，其左边所有副作用都结束后，才对其右边的子表达式进行运算。因此，上例中，c 得到 b 的值后，才进行自增运算。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;验证程序:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -8450,7 +9324,11 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; return 0;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;所以&lt;code&gt;while(m)m&amp;amp;=m-1,s++;&lt;/code&gt;可看作是两条循环语句&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -8459,6 +9337,8 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;m&amp;amp;=m-1;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;s++;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="位运算"&gt;&lt;a href="#%e4%bd%8d%e8%bf%90%e7%ae%97" class="header-anchor"&gt;&lt;/a&gt;位运算
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;s++&lt;/code&gt; 很好理解&lt;br&gt;
@@ -8574,6 +9454,11 @@ op2 --&amp;gt; cond
 &lt;p&gt;这个流程图画的还不错吧~哈哈哈&lt;/p&gt;
 &lt;p&gt;验证:&lt;/p&gt;
 &lt;p&gt;初始条件在第一次判断前就执行&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -8593,7 +9478,14 @@ op2 --&amp;gt; cond
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;第一次循环体执行前就需要 判断条件:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -8619,7 +9511,14 @@ op2 --&amp;gt; cond
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;而do-while形式为&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -8654,6 +9553,8 @@ op2 --&amp;gt; cond
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;n的值为%d&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;两次输出都为 n的值为1&lt;/p&gt;
 &lt;p&gt;由此可以验证&lt;br&gt;
