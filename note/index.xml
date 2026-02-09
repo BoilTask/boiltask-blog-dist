@@ -1,4 +1,1110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学习笔记 on BoilTask's Blog</title><link>https://boiltask.com/note/</link><description>Recent content in 学习笔记 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Feb 2026 12:51:11 +0800</lastBuildDate><atom:link href="https://boiltask.com/note/index.xml" rel="self" type="application/rss+xml"/><item><title>构建带有GAS的RPG - RPG及GAS构建入门</title><link>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</link><pubDate>Wed, 04 Feb 2026 12:51:11 +0800</pubDate><guid>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学习笔记 on BoilTask's Blog</title><link>https://boiltask.com/note/</link><description>Recent content in 学习笔记 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Feb 2026 23:17:41 +0800</lastBuildDate><atom:link href="https://boiltask.com/note/index.xml" rel="self" type="application/rss+xml"/><item><title>深入GAS架构设计 | EpicGames 大钊 - 观看笔记</title><link>https://boiltask.com/note/in-depth-analysis-of-gas-architecture-design/</link><pubDate>Wed, 04 Feb 2026 23:17:41 +0800</pubDate><guid>https://boiltask.com/note/in-depth-analysis-of-gas-architecture-design/</guid><description>&lt;h2 id="gas系统概述"&gt;&lt;a href="#gas%e7%b3%bb%e7%bb%9f%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;GAS系统概述
+&lt;/h2&gt;&lt;h3 id="基本定义"&gt;&lt;a href="#%e5%9f%ba%e6%9c%ac%e5%ae%9a%e4%b9%89" class="header-anchor"&gt;&lt;/a&gt;基本定义
+&lt;/h3&gt;&lt;p&gt;GAS全称Gameplay Ability System，即游戏能力系统，国内俗称游戏技能系统。这是Epic Games从《Paragon》和《Fortnite》开始开发和使用的游戏技能框架，后封装为插件公开使用。&lt;/p&gt;
+&lt;h3 id="系统特性"&gt;&lt;a href="#%e7%b3%bb%e7%bb%9f%e7%89%b9%e6%80%a7" class="header-anchor"&gt;&lt;/a&gt;系统特性
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;独立于虚幻引擎自身Gameplay框架之外，但需要与Gameplay框架配合使用&lt;/li&gt;
+&lt;li&gt;支持怪物逻辑实现，可与AI模块协同工作&lt;/li&gt;
+&lt;li&gt;原生支持网络复制和预测功能&lt;/li&gt;
+&lt;li&gt;服务器技能逻辑可广播到客户端展示&lt;/li&gt;
+&lt;li&gt;客户端技能可本地先执行，服务器预测不通过时可回滚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="为什么选择gas"&gt;&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9gas" class="header-anchor"&gt;&lt;/a&gt;为什么选择GAS
+&lt;/h2&gt;&lt;h3 id="核心优势"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e4%bc%98%e5%8a%bf" class="header-anchor"&gt;&lt;/a&gt;核心优势
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;灵活可扩展&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;框架已定义大多数技能流程和功能模块&lt;/li&gt;
+&lt;li&gt;通过配置和逻辑填充即可实现常见逻辑&lt;/li&gt;
+&lt;li&gt;提供多种回调和重载机制&lt;/li&gt;
+&lt;li&gt;开源设计，可修改源码满足特殊需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;网络支持完善&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持属性复制和RPC广播&lt;/li&gt;
+&lt;li&gt;内置预测和回滚机制&lt;/li&gt;
+&lt;li&gt;积累了大量网络问题修复经验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;架构解耦&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TB
+A[技能逻辑] --&amp;gt; B[效果系统]
+A --&amp;gt; C[特效系统]
+B --&amp;gt; D[属性修改]
+C --&amp;gt; E[视觉表现]
+style A fill:#e1f5fe
+style B fill:#f3e5f5
+style C fill:#e8f5e8
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;降低开发复杂度&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模块化设计让开发者只需关注特定模块&lt;/li&gt;
+&lt;li&gt;技能、效果、特效在不同蓝图类中实现&lt;/li&gt;
+&lt;li&gt;支持团队并行开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;数据驱动配置&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提供Data Table和Curve Table配置方式&lt;/li&gt;
+&lt;li&gt;支持自定义数值计算公式&lt;/li&gt;
+&lt;li&gt;完善的数值配置和计算体系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;流程管理自动化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动处理技能触发、消耗扣除、动画播放、伤害结算等完整流程&lt;/li&gt;
+&lt;li&gt;在联机环境下自动处理客户端与服务器间的复杂同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="学习挑战"&gt;&lt;a href="#%e5%ad%a6%e4%b9%a0%e6%8c%91%e6%88%98" class="header-anchor"&gt;&lt;/a&gt;学习挑战
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;入门门槛较高&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;概念体系复杂（ASC、GA、GE、GC等）&lt;/li&gt;
+&lt;li&gt;源码阅读难度大，类与字段众多&lt;/li&gt;
+&lt;li&gt;主要基于C++实现，蓝图支持有限&lt;/li&gt;
+&lt;li&gt;学习曲线陡峭，需要耐心积累&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;部署成本&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始配置需要定义多个类&lt;/li&gt;
+&lt;li&gt;必须按照GAS框架规范开发&lt;/li&gt;
+&lt;li&gt;联机游戏需要采用UE的DS服务器框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;文档不足&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官方文档不够详细完善&lt;/li&gt;
+&lt;li&gt;框架仍处于Beta阶段，持续开发中&lt;/li&gt;
+&lt;li&gt;技能表现千变万化，缺乏标准模板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="gas核心架构解析"&gt;&lt;a href="#gas%e6%a0%b8%e5%bf%83%e6%9e%b6%e6%9e%84%e8%a7%a3%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;GAS核心架构解析
+&lt;/h2&gt;&lt;h3 id="整体模块结构"&gt;&lt;a href="#%e6%95%b4%e4%bd%93%e6%a8%a1%e5%9d%97%e7%bb%93%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;整体模块结构
+&lt;/h3&gt;&lt;pre class="mermaid"&gt;
+graph LR
+A[GameplayTags] --&amp;gt; B[GameplayAbilities]
+C[GameplayTasks] --&amp;gt; B
+D[Runtime模块] --&amp;gt; E[Editor模块]
+style A fill:#bbdefb
+style C fill:#c8e6c9
+style B fill:#ffecb3
+&lt;/pre&gt;
+&lt;h3 id="核心组件详解"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e8%af%a6%e8%a7%a3" class="header-anchor"&gt;&lt;/a&gt;核心组件详解
+&lt;/h3&gt;&lt;h4 id="ability-system-component-asc"&gt;&lt;a href="#ability-system-component-asc" class="header-anchor"&gt;&lt;/a&gt;Ability System Component (ASC)
+&lt;/h4&gt;&lt;p&gt;技能系统的核心管理组件，只有拥有ASC的Actor才具备技能管理能力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键特性：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;继承自Task组件，具备异步任务执行能力&lt;/li&gt;
+&lt;li&gt;管理所有激活的技能、效果、属性等&lt;/li&gt;
+&lt;li&gt;在联机游戏中推荐放在PlayerState上&lt;/li&gt;
+&lt;li&gt;提供完整的技能生命周期管理接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-ability-ga"&gt;&lt;a href="#gameplay-ability-ga" class="header-anchor"&gt;&lt;/a&gt;Gameplay Ability (GA)
+&lt;/h4&gt;&lt;p&gt;定义技能主体逻辑的类，代表角色的各种能力行为。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设计理念：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;能力是广义抽象，不仅包括主动技能，还包括受击、格挡等细分行为&lt;/li&gt;
+&lt;li&gt;通过等级系统支持技能成长&lt;/li&gt;
+&lt;li&gt;提供激活、提交、取消、结束等回调函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-effect-ge"&gt;&lt;a href="#gameplay-effect-ge" class="header-anchor"&gt;&lt;/a&gt;Gameplay Effect (GE)
+&lt;/h4&gt;&lt;p&gt;定义游戏效果的系统，主要用于属性修改和状态效果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心机制：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph LR
+A[GE应用] --&amp;gt; B[效果规格]
+B --&amp;gt; C[属性修改器]
+B --&amp;gt; D[标签管理]
+B --&amp;gt; E[特效触发]
+style A fill:#ffccbc
+style B fill:#d1c4e9
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;效果类型：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;属性修改（伤害、治疗等）&lt;/li&gt;
+&lt;li&gt;状态效果（眩晕、沉默等）&lt;/li&gt;
+&lt;li&gt;能力赋予&lt;/li&gt;
+&lt;li&gt;特效触发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-attribute"&gt;&lt;a href="#gameplay-attribute" class="header-anchor"&gt;&lt;/a&gt;Gameplay Attribute
+&lt;/h4&gt;&lt;p&gt;游戏属性系统，采用BaseValue和CurrentValue双值设计。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数学表示：&lt;/strong&gt;
+&lt;/p&gt;
+$$
+CurrentValue = BaseValue \times (1 + \sum BuffMultipliers) + \sum BuffAdditions
+$$&lt;p&gt;&lt;strong&gt;设计优势：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动处理Buff效果的叠加和移除&lt;/li&gt;
+&lt;li&gt;支持属性回滚机制&lt;/li&gt;
+&lt;li&gt;通过Attribute Set组织属性分组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-tags"&gt;&lt;a href="#gameplay-tags" class="header-anchor"&gt;&lt;/a&gt;Gameplay Tags
+&lt;/h4&gt;&lt;p&gt;层次化标签系统，是GAS的精髓设计。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标签结构：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Character.State.Buff.DamageIncrease
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Character.State.Debuff.Stun
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ability.Type.Active.Attack&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;应用场景：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;条件判断和状态查询&lt;/li&gt;
+&lt;li&gt;效果分类和筛选&lt;/li&gt;
+&lt;li&gt;技能触发条件配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-cues-gc"&gt;&lt;a href="#gameplay-cues-gc" class="header-anchor"&gt;&lt;/a&gt;Gameplay Cues (GC)
+&lt;/h4&gt;&lt;p&gt;特效管理系统，负责技能视觉和听觉表现。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;类型区分：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Execute类型&lt;/strong&gt;：一次性特效（如爆炸）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active类型&lt;/strong&gt;：持续性特效（如地面燃烧）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;优化特性：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象池管理，减少实例化开销&lt;/li&gt;
+&lt;li&gt;静态调用机制，避免状态保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-tasks"&gt;&lt;a href="#gameplay-tasks" class="header-anchor"&gt;&lt;/a&gt;Gameplay Tasks
+&lt;/h4&gt;&lt;p&gt;异步任务系统，用于处理需要时间完成的操作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常见应用：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;等待动画播放完成&lt;/li&gt;
+&lt;li&gt;延迟执行逻辑&lt;/li&gt;
+&lt;li&gt;异步条件检测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gameplay-events"&gt;&lt;a href="#gameplay-events" class="header-anchor"&gt;&lt;/a&gt;Gameplay Events
+&lt;/h4&gt;&lt;p&gt;事件通信系统，用于技能间的协调调度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工作机制：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+sequenceDiagram
+participant A as AbilityA
+participant ASC as AbilitySystemComponent
+participant B as AbilityB
+A-&amp;gt;&amp;gt;ASC: SendGameplayEvent(Tag, Payload)
+ASC-&amp;gt;&amp;gt;B: OnGameplayEvent(Tag, Payload)
+&lt;/pre&gt;
+&lt;h2 id="实战应用指南"&gt;&lt;a href="#%e5%ae%9e%e6%88%98%e5%ba%94%e7%94%a8%e6%8c%87%e5%8d%97" class="header-anchor"&gt;&lt;/a&gt;实战应用指南
+&lt;/h2&gt;&lt;h3 id="适用场景分析"&gt;&lt;a href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;适用场景分析
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;推荐使用GAS的情况：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;团队规模较大（几十人以上）&lt;/li&gt;
+&lt;li&gt;中大型项目，技能数量众多&lt;/li&gt;
+&lt;li&gt;网络联机游戏需求&lt;/li&gt;
+&lt;li&gt;动作表现要求较高&lt;/li&gt;
+&lt;li&gt;团队技术实力较强&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;不建议使用GAS的情况：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小型团队或项目&lt;/li&gt;
+&lt;li&gt;技能系统简单，数量较少&lt;/li&gt;
+&lt;li&gt;单机游戏项目&lt;/li&gt;
+&lt;li&gt;团队成员技术积累不足&lt;/li&gt;
+&lt;li&gt;更注重玩法而非表现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="学习路径建议"&gt;&lt;a href="#%e5%ad%a6%e4%b9%a0%e8%b7%af%e5%be%84%e5%bb%ba%e8%ae%ae" class="header-anchor"&gt;&lt;/a&gt;学习路径建议
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;从基础模块开始&lt;/strong&gt;：先掌握GameplayTags和GameplayTasks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;简单项目实践&lt;/strong&gt;：避免直接学习复杂的ActionRPG示例&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源码阅读策略&lt;/strong&gt;：重点阅读接口和常用流程部分&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渐进式学习&lt;/strong&gt;：从简单技能开始，逐步深入复杂功能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="最佳实践"&gt;&lt;a href="#%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" class="header-anchor"&gt;&lt;/a&gt;最佳实践
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;架构设计：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;属性修改统一通过GE进行&lt;/li&gt;
+&lt;li&gt;合理使用Tag系统进行状态管理&lt;/li&gt;
+&lt;li&gt;利用Task处理异步操作&lt;/li&gt;
+&lt;li&gt;事件机制用于系统间解耦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;性能优化：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;合理使用GC对象池&lt;/li&gt;
+&lt;li&gt;优化Tag查询性能&lt;/li&gt;
+&lt;li&gt;注意网络带宽使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="总结"&gt;&lt;a href="#%e6%80%bb%e7%bb%93" class="header-anchor"&gt;&lt;/a&gt;总结
+&lt;/h2&gt;&lt;p&gt;GAS是Epic Games为处理联机环境下复杂技能逻辑而设计的专业框架，其核心价值在于提供了一套完整、可扩展、网络友好的技能系统解决方案。虽然学习成本较高，但对于符合条件的项目来说，能够显著提升开发效率和质量。&lt;/p&gt;
+&lt;p&gt;掌握GAS的关键在于理解其模块化设计思想和各组件间的协作关系。通过合理运用Tag系统、Effect机制、Task异步处理等核心功能，可以构建出强大而灵活的游戏技能系统。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文基于虚幻引擎官方技术分享整理，建议结合官方文档和社区资源进行深入学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1zD4y1X77M" target="_blank" rel="noopener"
+&gt;[UnrealOpenDay2020]深入GAS架构设计 | EpicGames 大钊&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GAS插件介绍（入门篇） | 伍德 大钊 - 观看笔记</title><link>https://boiltask.com/note/introduction-to-gas-beginner-guide/</link><pubDate>Wed, 04 Feb 2026 22:22:49 +0800</pubDate><guid>https://boiltask.com/note/introduction-to-gas-beginner-guide/</guid><description>&lt;h2 id="概述"&gt;&lt;a href="#%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;概述
+&lt;/h2&gt;&lt;p&gt;Gameplay Ability System (GAS) 是Unreal Engine中用于构建复杂技能系统的框架。它提供了一套完整的解决方案来处理游戏中的技能、效果、属性和状态管理。GAS特别适合需要复杂技能交互的游戏，如MOBA、MMORPG和动作游戏。&lt;/p&gt;
+&lt;h2 id="核心概念"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;核心概念
+&lt;/h2&gt;&lt;h3 id="gameplay-tags-标签系统"&gt;&lt;a href="#gameplay-tags-%e6%a0%87%e7%ad%be%e7%b3%bb%e7%bb%9f" class="header-anchor"&gt;&lt;/a&gt;Gameplay Tags (标签系统)
+&lt;/h3&gt;&lt;p&gt;Gameplay Tags是GAS的基础构建块，用于标识游戏中的各种状态和效果。与传统的布尔值或枚举相比，Tags具有层级结构，支持更灵活的查询和匹配。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tags的特点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;层级结构：支持父子关系（如&lt;code&gt;State.Stun&lt;/code&gt;，&lt;code&gt;State.Silence&lt;/code&gt;都继承自&lt;code&gt;State&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;字符串基础：易于配置和修改&lt;/li&gt;
+&lt;li&gt;运行时管理：无需重新编译即可修改&lt;/li&gt;
+&lt;li&gt;高效的查询：引擎优化了Tag的查找性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tags的应用场景：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;状态标识（眩晕、沉默、霸体等）&lt;/li&gt;
+&lt;li&gt;技能类型分类&lt;/li&gt;
+&lt;li&gt;效果免疫和交互规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="ability-system-component-asc"&gt;&lt;a href="#ability-system-component-asc" class="header-anchor"&gt;&lt;/a&gt;Ability System Component (ASC)
+&lt;/h3&gt;&lt;p&gt;ASC是GAS的核心组件，需要添加到任何需要使用技能系统的Actor上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配置步骤：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目的&lt;code&gt;.Build.cs&lt;/code&gt;文件中添加模块依赖：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;PublicDependencyModuleNames&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddRange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s"&gt;&amp;#34;GameplayAbilities&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;GameplayTags&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;GameplayTasks&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;});&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;在角色类中添加ASC组件和接口：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UCLASS&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;YOUR_API&lt;/span&gt; &lt;span class="nl"&gt;AYourCharacter&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;ACharacter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IAbilitySystemInterface&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;GENERATED_BODY&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;AYourCharacter&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 实现AbilitySystem接口
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="n"&gt;UAbilitySystemComponent&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;GetAbilitySystemComponent&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ASC组件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;UPROPERTY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VisibleAnywhere&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;BlueprintReadOnly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Abilities&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;UAbilitySystemComponent&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;AbilitySystemComponent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;protected&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;BeginPlay&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;初始化ASC和赋予初始技能：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;AYourCharacter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;BeginPlay&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Super&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;BeginPlay&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AbilitySystemComponent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="nl"&gt;Ability&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;InitialAbilities&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Ability&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;AbilitySystemComponent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;GiveAbility&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FGameplayAbilitySpec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Ability&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="gameplay-ability-ga"&gt;&lt;a href="#gameplay-ability-ga" class="header-anchor"&gt;&lt;/a&gt;Gameplay Ability (GA)
+&lt;/h3&gt;&lt;p&gt;Gameplay Ability代表角色可以执行的具体技能或动作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ability的生命周期：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;CanActivate&lt;/strong&gt; - 检查技能是否可以释放（CD、资源、条件等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Activate&lt;/strong&gt; - 激活技能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit&lt;/strong&gt; - 提交消耗（蓝量、体力等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute&lt;/strong&gt; - 执行技能逻辑&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;End&lt;/strong&gt; - 技能结束&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Ability蓝图示例结构：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TD
+A[Ability激活] --&amp;gt; B[播放蒙太奇动画]
+B --&amp;gt; C[等待命中事件]
+C --&amp;gt; D{是否命中目标?}
+D --&amp;gt;|是| E[应用Gameplay Effect]
+D --&amp;gt;|否| F[技能结束]
+E --&amp;gt; F
+&lt;/pre&gt;
+&lt;h3 id="gameplay-effect-ge"&gt;&lt;a href="#gameplay-effect-ge" class="header-anchor"&gt;&lt;/a&gt;Gameplay Effect (GE)
+&lt;/h3&gt;&lt;p&gt;Gameplay Effect用于实现技能的具体效果，如伤害、治疗、状态改变等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Effect的三种类型：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instant&lt;/strong&gt; - 立即生效（如直接伤害）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Duration&lt;/strong&gt; - 持续一段时间（如持续伤害Buff）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Infinite&lt;/strong&gt; - 无限持续，需要手动移除（如被动技能）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Effect的配置要素：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modifiers&lt;/strong&gt; - 属性修改器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Granted Tags&lt;/strong&gt; - 授予的Tags&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immunities&lt;/strong&gt; - 免疫规则&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stacking&lt;/strong&gt; - 堆叠规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="实战示例"&gt;&lt;a href="#%e5%ae%9e%e6%88%98%e7%a4%ba%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;实战示例
+&lt;/h2&gt;&lt;h3 id="基础攻击技能实现"&gt;&lt;a href="#%e5%9f%ba%e7%a1%80%e6%94%bb%e5%87%bb%e6%8a%80%e8%83%bd%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;基础攻击技能实现
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. 创建攻击Ability&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置输入绑定（如按键1）&lt;/li&gt;
+&lt;li&gt;设置阻塞Tags防止技能连发&lt;/li&gt;
+&lt;li&gt;添加蒙太奇动画播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 创建受击Effect&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类型：Duration（0.1秒受击硬直）&lt;/li&gt;
+&lt;li&gt;授予Tag：&lt;code&gt;State.Hit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;配置受击动画播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 创建伤害Effect&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类型：Instant&lt;/li&gt;
+&lt;li&gt;Modifier：减少目标生命值&lt;/li&gt;
+&lt;li&gt;消耗Effect：减少自身体力值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="格挡技能实现"&gt;&lt;a href="#%e6%a0%bc%e6%8c%a1%e6%8a%80%e8%83%bd%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;格挡技能实现
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. 格挡Ability配置：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph LR
+A[按下格挡键] --&amp;gt; B[激活格挡Ability]
+B --&amp;gt; C[添加格挡Tag: State.Blocking]
+C --&amp;gt; D[播放格挡动画]
+D --&amp;gt; E[松开按键结束]
+E --&amp;gt; F[移除格挡Tag]
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;2. 伤害免疫配置：&lt;/strong&gt;
+在伤害Effect中配置Application Tag Requirements：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Not State.Blocking&lt;/code&gt; - 只有当目标没有格挡Tag时才造成伤害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="连招系统实现"&gt;&lt;a href="#%e8%bf%9e%e6%8b%9b%e7%b3%bb%e7%bb%9f%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;连招系统实现
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;技能取消机制：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 在Ability中配置取消Tags
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;CancelAbilitiesWithTag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddTag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Ability.Positive&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 在连招技能中配置被取消Tags
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;BlockAbilitiesWithTag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddTag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Ability.Positive&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="高级功能"&gt;&lt;a href="#%e9%ab%98%e7%ba%a7%e5%8a%9f%e8%83%bd" class="header-anchor"&gt;&lt;/a&gt;高级功能
+&lt;/h2&gt;&lt;h3 id="属性系统-attribute-set"&gt;&lt;a href="#%e5%b1%9e%e6%80%a7%e7%b3%bb%e7%bb%9f-attribute-set" class="header-anchor"&gt;&lt;/a&gt;属性系统 (Attribute Set)
+&lt;/h3&gt;&lt;p&gt;Attribute Set用于定义和管理角色的各种属性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;属性定义示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UCLASS&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;YOUR_API&lt;/span&gt; &lt;span class="nl"&gt;UYourAttributeSet&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;UAttributeSet&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;GENERATED_BODY&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;UPROPERTY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintReadOnly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Attributes&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;FGameplayAttributeData&lt;/span&gt; &lt;span class="n"&gt;Health&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;ATTRIBUTE_ACCESSORS&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UYourAttributeSet&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Health&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;UPROPERTY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BlueprintReadOnly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Attributes&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;FGameplayAttributeData&lt;/span&gt; &lt;span class="n"&gt;MaxHealth&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;ATTRIBUTE_ACCESSORS&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UYourAttributeSet&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MaxHealth&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 属性变化回调
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;PreAttributeChange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FGameplayAttribute&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Attribute&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;float&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;NewValue&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;PostGameplayEffectExecute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;FGameplayEffectModCallbackData&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;Data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;属性修改流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+sequenceDiagram
+participant GE as Gameplay Effect
+participant AS as Attribute Set
+participant Character
+GE-&amp;gt;&amp;gt;AS: 应用属性修改
+AS-&amp;gt;&amp;gt;AS: PreAttributeChange (验证)
+AS-&amp;gt;&amp;gt;AS: 实际修改属性值
+AS-&amp;gt;&amp;gt;Character: PostGameplayEffectExecute (通知)
+Character-&amp;gt;&amp;gt;Character: 更新UI/状态
+&lt;/pre&gt;
+&lt;h3 id="技能预测-prediction"&gt;&lt;a href="#%e6%8a%80%e8%83%bd%e9%a2%84%e6%b5%8b-prediction" class="header-anchor"&gt;&lt;/a&gt;技能预测 (Prediction)
+&lt;/h3&gt;&lt;p&gt;GAS支持客户端预测，提供更流畅的联网体验：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;预测支持的功能：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;技能激活&lt;/li&gt;
+&lt;li&gt;属性修改&lt;/li&gt;
+&lt;li&gt;Gameplay Cues（特效、音效）&lt;/li&gt;
+&lt;li&gt;蒙太奇播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="效果堆叠-stacking"&gt;&lt;a href="#%e6%95%88%e6%9e%9c%e5%a0%86%e5%8f%a0-stacking" class="header-anchor"&gt;&lt;/a&gt;效果堆叠 (Stacking)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;堆叠配置选项：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;堆叠类型&lt;/strong&gt;：按来源堆叠或按目标堆叠&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;堆叠限制&lt;/strong&gt;：最大堆叠层数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;溢出处理&lt;/strong&gt;：拒绝新层或刷新持续时间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;过期策略&lt;/strong&gt;：逐层过期或全部过期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="最佳实践"&gt;&lt;a href="#%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" class="header-anchor"&gt;&lt;/a&gt;最佳实践
+&lt;/h2&gt;&lt;h3 id="项目规划建议"&gt;&lt;a href="#%e9%a1%b9%e7%9b%ae%e8%a7%84%e5%88%92%e5%bb%ba%e8%ae%ae" class="header-anchor"&gt;&lt;/a&gt;项目规划建议
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. Tag系统设计&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提前规划Tag的层级结构&lt;/li&gt;
+&lt;li&gt;建立统一的命名规范&lt;/li&gt;
+&lt;li&gt;使用Tag编辑器进行可视化管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Ability组织结构&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按功能划分Ability类别（攻击、防御、移动等）&lt;/li&gt;
+&lt;li&gt;建立基础的Ability父类减少重复代码&lt;/li&gt;
+&lt;li&gt;使用DataTable配置技能数值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 性能优化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免在Tick中执行复杂逻辑&lt;/li&gt;
+&lt;li&gt;合理使用预测功能&lt;/li&gt;
+&lt;li&gt;注意网络同步的数据量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="开发工作流"&gt;&lt;a href="#%e5%bc%80%e5%8f%91%e5%b7%a5%e4%bd%9c%e6%b5%81" class="header-anchor"&gt;&lt;/a&gt;开发工作流
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;策划与程序协作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;策划：配置Tags、Effects、动画蒙太奇&lt;/li&gt;
+&lt;li&gt;程序：实现复杂的Ability逻辑、自定义Task节点&lt;/li&gt;
+&lt;li&gt;美术：提供动画资源和特效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;配置驱动开发：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TB
+A[策划配置Tags和Effects] --&amp;gt; B[程序实现Ability逻辑]
+B --&amp;gt; C[美术提供资源]
+C --&amp;gt; D[整合测试]
+D --&amp;gt; E[迭代优化]
+&lt;/pre&gt;
+&lt;h2 id="调试和问题排查"&gt;&lt;a href="#%e8%b0%83%e8%af%95%e5%92%8c%e9%97%ae%e9%a2%98%e6%8e%92%e6%9f%a5" class="header-anchor"&gt;&lt;/a&gt;调试和问题排查
+&lt;/h2&gt;&lt;h3 id="常用调试技巧"&gt;&lt;a href="#%e5%b8%b8%e7%94%a8%e8%b0%83%e8%af%95%e6%8a%80%e5%b7%a7" class="header-anchor"&gt;&lt;/a&gt;常用调试技巧
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. Tag状态查看&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 在控制台显示当前Tags
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ShowDebug&lt;/span&gt; &lt;span class="n"&gt;AbilitySystem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 查看特定Ability的状态
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;AbilitySystem&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DebugAbility&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;AbilityName&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. Effect调试&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 显示当前激活的Effects
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;AbilitySystem&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DebugEffect&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 查看属性修改历史
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;AbilitySystem&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DebugAttribute&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="常见问题解决"&gt;&lt;a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3" class="header-anchor"&gt;&lt;/a&gt;常见问题解决
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;技能无法激活：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查CD和资源消耗配置&lt;/li&gt;
+&lt;li&gt;验证Blocking Tags设置&lt;/li&gt;
+&lt;li&gt;确认网络权限（服务器端技能）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;效果不生效：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查Tag Requirements配置&lt;/li&gt;
+&lt;li&gt;验证Immunity设置&lt;/li&gt;
+&lt;li&gt;确认Attribute Set正确配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="学习资源"&gt;&lt;a href="#%e5%ad%a6%e4%b9%a0%e8%b5%84%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;学习资源
+&lt;/h2&gt;&lt;h3 id="官方文档"&gt;&lt;a href="#%e5%ae%98%e6%96%b9%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;官方文档
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/tranek/GASDocumentation" target="_blank" rel="noopener"
+&gt;https://github.com/tranek/GASDocumentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://docs.unrealengine.com/" target="_blank" rel="noopener"
+&gt;https://docs.unrealengine.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="示例项目"&gt;&lt;a href="#%e7%a4%ba%e4%be%8b%e9%a1%b9%e7%9b%ae" class="header-anchor"&gt;&lt;/a&gt;示例项目
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Action RPG&lt;/strong&gt; - 单机版GAS示例&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shooter Game&lt;/strong&gt; - 包含网络同步的示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="社区资源"&gt;&lt;a href="#%e7%a4%be%e5%8c%ba%e8%b5%84%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;社区资源
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Unreal Engine论坛GAS板块&lt;/li&gt;
+&lt;li&gt;相关技术博客和视频教程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="总结"&gt;&lt;a href="#%e6%80%bb%e7%bb%93" class="header-anchor"&gt;&lt;/a&gt;总结
+&lt;/h2&gt;&lt;p&gt;GAS提供了强大而灵活的技能系统框架，通过合理的规划和设计，可以大大提升游戏开发的效率和质量。掌握GAS需要理解其核心概念和设计哲学，结合实际项目需求进行适当的定制和扩展。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键要点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tags是系统的基石，良好的Tag设计至关重要&lt;/li&gt;
+&lt;li&gt;理解Ability的生命周期和交互机制&lt;/li&gt;
+&lt;li&gt;合理使用预测功能提升网络游戏体验&lt;/li&gt;
+&lt;li&gt;建立适合团队的工作流程和规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过本指南的学习，您应该能够理解GAS的核心概念并开始在实际项目中使用这一强大的框架。&lt;/p&gt;
+&lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1X5411V7jh/" target="_blank" rel="noopener"
+&gt;[中文直播]第31期｜GAS插件介绍（入门篇） | 伍德 大钊&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>构建带有GAS的RPG - GAS入门指南</title><link>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-2/</link><pubDate>Wed, 04 Feb 2026 20:13:45 +0800</pubDate><guid>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-2/</guid><description>&lt;h2 id="核心学习目标"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e5%ad%a6%e4%b9%a0%e7%9b%ae%e6%a0%87" class="header-anchor"&gt;&lt;/a&gt;核心学习目标
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;能力系统组件初始化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握一键启用关键插件的方法&lt;/li&gt;
+&lt;li&gt;完成GAS核心组件ASC的初始化配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;玩法能力设计&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习Gameplay Ability的设计和实现方法&lt;/li&gt;
+&lt;li&gt;理解能力触发和取消的完整生命周期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;游戏玩法标签系统&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握Gameplay Tag的创建和管理&lt;/li&gt;
+&lt;li&gt;利用标签实现角色间的灵活互动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="gas核心架构解析"&gt;&lt;a href="#gas%e6%a0%b8%e5%bf%83%e6%9e%b6%e6%9e%84%e8%a7%a3%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;GAS核心架构解析
+&lt;/h2&gt;&lt;h3 id="能力系统组件asc"&gt;&lt;a href="#%e8%83%bd%e5%8a%9b%e7%b3%bb%e7%bb%9f%e7%bb%84%e4%bb%b6asc" class="header-anchor"&gt;&lt;/a&gt;能力系统组件(ASC)
+&lt;/h3&gt;&lt;p&gt;ASC是GAS框架的心脏，具有以下特性：&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TB
+A[ASC] --&amp;gt; B[Owner Actor]
+A --&amp;gt; C[Avatar Actor]
+A --&amp;gt; D[Ability Actor Info]
+D --&amp;gt; E[Player Controller]
+D --&amp;gt; F[Animation Instance]
+D --&amp;gt; G[Movement Component]
+A --&amp;gt; H[Gameplay Abilities]
+A --&amp;gt; I[Gameplay Tags]
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;ASC核心特性：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;独占性组件：每个Actor只能挂载一个ASC&lt;/li&gt;
+&lt;li&gt;中枢神经：负责技能触发、效果计算、状态同步等底层逻辑&lt;/li&gt;
+&lt;li&gt;双向交互：实现Actor间的实时互动和反馈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Owner与Avatar的区别：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;/strong&gt;：拥有ASC的Actor（如Gameplay角色或PlayerController）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Avatar&lt;/strong&gt;：在游戏世界中执行动作的实体Actor（如玩家角色或NPC）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在单机游戏或普通NPC中，Owner和Avatar通常是同一个Actor；在多人游戏中，为提高性能和逻辑清晰度，建议将两者分离。&lt;/p&gt;
+&lt;h3 id="游戏玩法能力gameplay-ability"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e7%8e%a9%e6%b3%95%e8%83%bd%e5%8a%9bgameplay-ability" class="header-anchor"&gt;&lt;/a&gt;游戏玩法能力(Gameplay Ability)
+&lt;/h3&gt;&lt;p&gt;Gameplay Ability驱动游戏中的所有动作，从普通攻击到复杂技能：&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+stateDiagram-v2
+[*] --&amp;gt; Granted
+Granted --&amp;gt; Activated : TryActivateAbility
+Activated --&amp;gt; Executing : OnActivate
+Executing --&amp;gt; Cancelled : CancelAbility
+Executing --&amp;gt; Ended : OnEnd
+Cancelled --&amp;gt; [*]
+Ended --&amp;gt; [*]
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;能力生命周期管理：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;授予能力&lt;/strong&gt;：使用&lt;code&gt;GiveAbility()&lt;/code&gt;函数将能力类分配给ASC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储句柄&lt;/strong&gt;：能力被封装为SpecHandle存储在ASC中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实例化触发&lt;/strong&gt;：需要时实例化为GameplayAbility对象&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行控制&lt;/strong&gt;：通过SpecHandle进行激活和取消操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="游戏玩法标签gameplay-tag"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e7%8e%a9%e6%b3%95%e6%a0%87%e7%ad%begameplay-tag" class="header-anchor"&gt;&lt;/a&gt;游戏玩法标签(Gameplay Tag)
+&lt;/h3&gt;&lt;p&gt;Gameplay Tag是轻量级的字符串标识符，具有层级结构：&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph TD
+A[CharacterAction] --&amp;gt; A1[Attack]
+A --&amp;gt; A2[Skill]
+A1 --&amp;gt; A11[Melee]
+A1 --&amp;gt; A12[Ranged]
+A2 --&amp;gt; A21[FireSpell]
+A2 --&amp;gt; A22[IceSpell]
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;标签系统优势：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;全局管理&lt;/strong&gt;：在项目设置中统一配置，全项目范围内可用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;层级结构&lt;/strong&gt;：支持父子关系的树状分类，便于组织管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态扩展&lt;/strong&gt;：可在运行时动态添加和移除标签&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器支持&lt;/strong&gt;：Gameplay Tag Container可容纳多个标签组合使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="实战演练一基础跳跃能力改造"&gt;&lt;a href="#%e5%ae%9e%e6%88%98%e6%bc%94%e7%bb%83%e4%b8%80%e5%9f%ba%e7%a1%80%e8%b7%b3%e8%b7%83%e8%83%bd%e5%8a%9b%e6%94%b9%e9%80%a0" class="header-anchor"&gt;&lt;/a&gt;实战演练一：基础跳跃能力改造
+&lt;/h2&gt;&lt;h3 id="项目设置与环境准备"&gt;&lt;a href="#%e9%a1%b9%e7%9b%ae%e8%ae%be%e7%bd%ae%e4%b8%8e%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87" class="header-anchor"&gt;&lt;/a&gt;项目设置与环境准备
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;步骤1：创建项目&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新建第三人称模板项目，命名为&lt;code&gt;Example1_1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在编辑器偏好设置中启用&lt;code&gt;Gameplay Abilities&lt;/code&gt;插件&lt;/li&gt;
+&lt;li&gt;重启编辑器完成插件激活&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;步骤2：改造角色蓝图&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 在角色蓝图中添加Ability System Component
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UAbilitySystemComponent&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;ASC&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CreateDefaultSubobject&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;UAbilitySystemComponent&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;ASC&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;步骤3：创建跳跃能力&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于引擎内置的&lt;code&gt;GameplayAbility&lt;/code&gt;类创建蓝图&lt;code&gt;BPGAJump&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将实例化策略设置为&amp;quot;按Actor实例化&amp;quot;&lt;/li&gt;
+&lt;li&gt;在角色初始化时调用&lt;code&gt;GiveAbility()&lt;/code&gt;函数授予跳跃能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="能力触发机制实现"&gt;&lt;a href="#%e8%83%bd%e5%8a%9b%e8%a7%a6%e5%8f%91%e6%9c%ba%e5%88%b6%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;能力触发机制实现
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;SpecHandle管理：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 存储能力句柄
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FGameplayAbilitySpecHandle&lt;/span&gt; &lt;span class="n"&gt;JumpSpecHandle&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 激活跳跃能力
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ASC&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;TryActivateAbility&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;JumpSpecHandle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 取消跳跃能力
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ASC&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;CancelAbilityHandle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;JumpSpecHandle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;输入绑定重构：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将原有的直接跳跃调用替换为通过ASC触发能力&lt;/li&gt;
+&lt;li&gt;按键按下时激活能力，释放时取消能力&lt;/li&gt;
+&lt;li&gt;保持原有跳跃手感的同时实现GAS架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="区域跳跃限制实现"&gt;&lt;a href="#%e5%8c%ba%e5%9f%9f%e8%b7%b3%e8%b7%83%e9%99%90%e5%88%b6%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;区域跳跃限制实现
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;创建游戏玩法标签：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目设置中创建&lt;code&gt;Character.BlockJump&lt;/code&gt;标签&lt;/li&gt;
+&lt;li&gt;在触发区域蓝图中添加&lt;code&gt;BlockTag&lt;/code&gt;变量（Gameplay Tag类型）&lt;/li&gt;
+&lt;li&gt;设置默认值为&lt;code&gt;Character.BlockJump&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;触发区域逻辑：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+sequenceDiagram
+participant P as Player
+participant T as Trigger Zone
+participant A as ASC
+participant G as Gameplay Ability
+P-&amp;gt;&amp;gt;T: Enter Zone
+T-&amp;gt;&amp;gt;A: Add Tag(Character.BlockJump)
+A-&amp;gt;&amp;gt;G: Check Activation Blocked Tags
+G--&amp;gt;&amp;gt;A: Ability Blocked
+P-&amp;gt;&amp;gt;P: Jump Input
+A--&amp;gt;&amp;gt;P: Jump Failed
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;配置能力阻塞：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在跳跃能力的&lt;code&gt;Activation Blocked Tags&lt;/code&gt;中添加&lt;code&gt;Character.BlockJump&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;当角色拥有该标签时，跳跃能力自动被禁用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="实战演练二机关关卡系统构建"&gt;&lt;a href="#%e5%ae%9e%e6%88%98%e6%bc%94%e7%bb%83%e4%ba%8c%e6%9c%ba%e5%85%b3%e5%85%b3%e5%8d%a1%e7%b3%bb%e7%bb%9f%e6%9e%84%e5%bb%ba" class="header-anchor"&gt;&lt;/a&gt;实战演练二：机关关卡系统构建
+&lt;/h2&gt;&lt;h3 id="项目架构设计"&gt;&lt;a href="#%e9%a1%b9%e7%9b%ae%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1" class="header-anchor"&gt;&lt;/a&gt;项目架构设计
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;类命名规范：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有自定义类使用&lt;code&gt;AB&lt;/code&gt;前缀（ArenaBattle）&lt;/li&gt;
+&lt;li&gt;基础角色类：&lt;code&gt;ABBaseCharacter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;玩家角色类：&lt;code&gt;ABPlayerCharacter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;NPC角色类：继承自&lt;code&gt;ABBaseCharacter&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;模块依赖配置：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// Build.cs文件中添加必要模块
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;PublicDependencyModuleNames&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddRange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s"&gt;&amp;#34;Core&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;CoreUObject&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Engine&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;InputCore&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s"&gt;&amp;#34;UMG&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;GameplayAbilities&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;GameplayTags&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;});&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="asc初始化策略"&gt;&lt;a href="#asc%e5%88%9d%e5%a7%8b%e5%8c%96%e7%ad%96%e7%95%a5" class="header-anchor"&gt;&lt;/a&gt;ASC初始化策略
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;玩家角色初始化：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;AABPlayerCharacter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;PossessedBy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AController&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;NewController&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Super&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;PossessedBy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NewController&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ASC初始化最佳时机
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;ASC&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;InitAbilityActorInfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;UI集成接口：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实现&lt;code&gt;UAbilitySystemInterface&lt;/code&gt;接口&lt;/li&gt;
+&lt;li&gt;重写&lt;code&gt;GetAbilitySystemComponent()&lt;/code&gt;返回ASC引用&lt;/li&gt;
+&lt;li&gt;便于UI系统访问角色状态信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="机关互动系统实现"&gt;&lt;a href="#%e6%9c%ba%e5%85%b3%e4%ba%92%e5%8a%a8%e7%b3%bb%e7%bb%9f%e5%ae%9e%e7%8e%b0" class="header-anchor"&gt;&lt;/a&gt;机关互动系统实现
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;机关箱子设计：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="mermaid"&gt;
+graph LR
+A[Gimmick Box] --&amp;gt; B[Trigger Volume]
+A --&amp;gt; C[Mesh Effect]
+A --&amp;gt; D[ASC]
+A --&amp;gt; E[Target Gimmick]
+B --&amp;gt; F[OnActorBeginOverlap]
+F --&amp;gt; G[Apply Gameplay Tag]
+G --&amp;gt; H[Notify Target]
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;箱子蓝图配置：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;根组件&lt;/strong&gt;：Trigger Volume（触发体积）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;视觉效果&lt;/strong&gt;：Mesh Effect组件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GAS支持&lt;/strong&gt;：Ability System Component&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标引用&lt;/strong&gt;：Target Gimmick变量（Actor引用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;标签事件系统：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 创建事件标签
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FGameplayTag&lt;/span&gt; &lt;span class="n"&gt;EventGimmickCleared&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FGameplayTag&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;RequestGameplayTag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Event.GimmickCleared&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FGameplayTag&lt;/span&gt; &lt;span class="n"&gt;EventGameCleared&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FGameplayTag&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;RequestGameplayTag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Event.GameCleared&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 根据箱子类型发送不同事件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FGameplayTag&lt;/span&gt; &lt;span class="n"&gt;Container&lt;/span&gt; &lt;span class="n"&gt;TagContainer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bGameClear&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TagContainer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddTag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EventGameCleared&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;TagContainer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddTag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EventGimmickCleared&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ASC&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;AddLooseGameplayTags&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TagContainer&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;机关区域响应：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 绑定标签变更事件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ASC&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;RegisterGameplayTagEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EventGimmickCleared&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddUObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;ABP_Gimmick&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;OnGimmickClearedBP&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 机关解谜成功处理
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;ABP_Gimmick&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;OnGimmickClearedBP&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 旋转门开启
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;PlusXGate&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;SetRelativeRotation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FRotator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;90&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="游戏通关系统"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e9%80%9a%e5%85%b3%e7%b3%bb%e7%bb%9f" class="header-anchor"&gt;&lt;/a&gt;游戏通关系统
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;通关检测逻辑：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第二个区域的机关箱子设置&lt;code&gt;Game Clear&lt;/code&gt;标志为true&lt;/li&gt;
+&lt;li&gt;玩家接触箱子时发送&lt;code&gt;Event.GameCleared&lt;/code&gt;标签&lt;/li&gt;
+&lt;li&gt;玩家角色监听该标签并触发通关事件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;视觉反馈系统：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 触发烟花特效
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;FireworkComponent&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Activate&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 显示庆祝UI
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;HUDWidget&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;SetGameCleared&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// UI组件内部实现
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;UHUDWidget&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;SetGameCleared&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;bCleared&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;CelebrationText&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;SetVisibility&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bCleared&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;ESlateVisibility&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="nl"&gt;Visible&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ESlateVisibility&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Hidden&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="调试与优化技巧"&gt;&lt;a href="#%e8%b0%83%e8%af%95%e4%b8%8e%e4%bc%98%e5%8c%96%e6%8a%80%e5%b7%a7" class="header-anchor"&gt;&lt;/a&gt;调试与优化技巧
+&lt;/h2&gt;&lt;h3 id="gas调试命令"&gt;&lt;a href="#gas%e8%b0%83%e8%af%95%e5%91%bd%e4%bb%a4" class="header-anchor"&gt;&lt;/a&gt;GAS调试命令
+&lt;/h3&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 显示GAS调试信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;showdebug abilitysystem
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 可在蓝图自动化执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Execute Console Command &lt;span class="s2"&gt;&amp;#34;showdebug abilitysystem&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="性能优化建议"&gt;&lt;a href="#%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96%e5%bb%ba%e8%ae%ae" class="header-anchor"&gt;&lt;/a&gt;性能优化建议
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;标签管理&lt;/strong&gt;：合理使用Tag Container避免单个标签过度复杂&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;能力实例化&lt;/strong&gt;：根据需求选择合适的实例化策略&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件监听&lt;/strong&gt;：及时注销不再需要的事件监听器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存管理&lt;/strong&gt;：合理管理SpecHandle的生命周期&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="核心要点总结"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e8%a6%81%e7%82%b9%e6%80%bb%e7%bb%93" class="header-anchor"&gt;&lt;/a&gt;核心要点总结
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ASC的核心地位&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有GAS Actor都通过ASC进行统一调度&lt;/li&gt;
+&lt;li&gt;初始化时自动存储Owner和Avatar引用到AbilityActorInfo&lt;/li&gt;
+&lt;li&gt;作为Actor间交互的中枢神经系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;能力管理流程&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;GiveAbility()&lt;/code&gt;函数授予能力并获取SpecHandle&lt;/li&gt;
+&lt;li&gt;通过SpecHandle进行精确的能力激活和取消控制&lt;/li&gt;
+&lt;li&gt;支持按需实例化，优化内存使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;标签系统的优势&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全局可用的轻量级状态管理方案&lt;/li&gt;
+&lt;li&gt;无需额外变量定义即可共享游戏状态&lt;/li&gt;
+&lt;li&gt;层级结构支持复杂的条件判断逻辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;架构设计思想&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免复杂的蓝图通信，采用基于事件的松耦合设计&lt;/li&gt;
+&lt;li&gt;利用标签系统实现灵活的状态驱动行为&lt;/li&gt;
+&lt;li&gt;模块化设计便于功能扩展和维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过本教程的学习，开发者可以掌握GAS的核心概念和实战技巧，构建出高效、灵活的游戏互动系统。GAS的强大之处在于其提供了一套完整的解决方案，让复杂的游戏机制实现变得简单而优雅。&lt;/p&gt;
+&lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/courses/QQv/unreal-engine-building-an-rpg-with-gameplay-ability-system/V1n5/unreal-engine-getting-started-with-gas" target="_blank" rel="noopener"
+&gt;Getting Started with GAS - Building an RPG with Gameplay Ability System&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>构建带有GAS的RPG - RPG及GAS构建入门</title><link>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</link><pubDate>Wed, 04 Feb 2026 12:51:11 +0800</pubDate><guid>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;根据虚幻引擎社区中的课程《Building an RPG with Gameplay Ability System》的介绍，整理一版相关文档。&lt;/p&gt;
 &lt;p&gt;GAS：游戏能力系统（Gameplay Ability System，GAS）是虚幻引擎中用于实现游戏能力系统的插件。它提供了一种灵活的方式来定义和管理游戏中的能力，例如攻击、移动、跳跃等。GAS允许开发人员以声明式的方式定义能力，而不是在代码中硬编码。这使得游戏能力系统更加可扩展和可维护。&lt;/p&gt;
 &lt;p&gt;RPG：角色扮演游戏（Role-Playing Game，RPG）是一种通过模拟角色互动来创建虚拟世界的游戏。它通常包括玩家扮演角色，与其他玩家或 NPC（非玩家角色）互动，完成任务和挑战。RPG通常注重角色发展、社会互动和个人成长。&lt;/p&gt;
