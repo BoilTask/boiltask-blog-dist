@@ -4555,11 +4555,7 @@ end
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>Hugo本地引入三方库</title><link>https://boiltask.com/knowledge/hugo-third-party/</link><pubDate>Sun, 01 Feb 2026 13:01:27 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-third-party/</guid><description>&lt;p&gt;在hugo的设计下，通常使用一些第三方网站托管的第三方库来实现一些效果。&lt;/p&gt;
-&lt;p&gt;不过有时由于网络环境的不同，可能希望把这些三方库下载到本地一同部署，以简化网络依赖。&lt;/p&gt;
-&lt;p&gt;可以借助npm来下载这些三方库，部署时拷贝到hugo输出的静态资源目录下即可。&lt;/p&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://github.com/BoilTask/web-third-party" target="_blank" rel="noopener"
-&gt;BoilTask/web-third-party&lt;/a&gt;&lt;/p&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏中地形大气和云的渲染(上)</title><link>https://boiltask.com/note/games104-game-engine-6/</link><pubDate>Thu, 29 Jan 2026 12:26:47 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-6/</guid><description>&lt;blockquote&gt;
+&lt;/div&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏中地形大气和云的渲染(上)</title><link>https://boiltask.com/note/games104-game-engine-6/</link><pubDate>Thu, 29 Jan 2026 12:26:47 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-6/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;存在不少东西没有看懂，后续需要再整理一遍。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="大地之神与天空之神"&gt;&lt;a href="#%e5%a4%a7%e5%9c%b0%e4%b9%8b%e7%a5%9e%e4%b8%8e%e5%a4%a9%e7%a9%ba%e4%b9%8b%e7%a5%9e" class="header-anchor"&gt;&lt;/a&gt;大地之神与天空之神

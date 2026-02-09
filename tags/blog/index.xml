@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on BoilTask's Blog</title><link>https://boiltask.com/tags/blog/</link><description>Recent content in 博客 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 01 Feb 2026 13:01:27 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on BoilTask's Blog</title><link>https://boiltask.com/tags/blog/</link><description>Recent content in 博客 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 16 Jan 2026 13:08:03 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -83,11 +83,7 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hugo本地引入三方库</title><link>https://boiltask.com/knowledge/hugo-third-party/</link><pubDate>Sun, 01 Feb 2026 13:01:27 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-third-party/</guid><description>&lt;p&gt;在hugo的设计下，通常使用一些第三方网站托管的第三方库来实现一些效果。&lt;/p&gt;
-&lt;p&gt;不过有时由于网络环境的不同，可能希望把这些三方库下载到本地一同部署，以简化网络依赖。&lt;/p&gt;
-&lt;p&gt;可以借助npm来下载这些三方库，部署时拷贝到hugo输出的静态资源目录下即可。&lt;/p&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://github.com/BoilTask/web-third-party" target="_blank" rel="noopener"
-&gt;BoilTask/web-third-party&lt;/a&gt;&lt;/p&gt;</description></item><item><title>终于按自己的理解创建了一个Hugo主题</title><link>https://boiltask.com/record/hugo-boiltask-blog/</link><pubDate>Fri, 16 Jan 2026 13:08:03 +0800</pubDate><guid>https://boiltask.com/record/hugo-boiltask-blog/</guid><description>&lt;p&gt;得益于大模型的发展，借助&lt;a class="link" href="https://www.trae.cn/" target="_blank" rel="noopener"
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>终于按自己的理解创建了一个Hugo主题</title><link>https://boiltask.com/record/hugo-boiltask-blog/</link><pubDate>Fri, 16 Jan 2026 13:08:03 +0800</pubDate><guid>https://boiltask.com/record/hugo-boiltask-blog/</guid><description>&lt;p&gt;得益于大模型的发展，借助&lt;a class="link" href="https://www.trae.cn/" target="_blank" rel="noopener"
 &gt;Trae&lt;/a&gt;的帮助，终于能按照自己的设计完成一个符合自己预期的主题了。&lt;/p&gt;
 &lt;p&gt;整体设计上参考了原先使用的&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
 &gt;hugo-theme-stack&lt;/a&gt;主题，不过根据我自己的需求，做了很多调整。&lt;/p&gt;
