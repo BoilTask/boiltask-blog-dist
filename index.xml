@@ -1998,15 +1998,14 @@ end note
 &lt;/h2&gt;&lt;h3 id="addcomponent实现原理"&gt;&lt;a href="#addcomponent%e5%ae%9e%e7%8e%b0%e5%8e%9f%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;AddComponent实现原理
 &lt;/h3&gt;&lt;pre class="mermaid"&gt;
 sequenceDiagram
-participant Actor as 目标Actor
 participant GFCM as GameFrameworkComponentManager
 participant GF as GameFeature
-Actor-&amp;gt;&amp;gt;GFCM: AddReceiver(this)
+目标Actor-&amp;gt;&amp;gt;GFCM: AddReceiver(this)
 GFCM-&amp;gt;&amp;gt;GFCM: 添加到Receiver列表
 GF-&amp;gt;&amp;gt;GFCM: AddComponentRequest(ActorClass, ComponentClass)
 GFCM-&amp;gt;&amp;gt;GFCM: RequestTrackingMap[Key]++ (引用计数)
 alt Actor已初始化
-GFCM-&amp;gt;&amp;gt;Actor: CreateComponentOnInstance()
+GFCM-&amp;gt;&amp;gt;目标Actor: CreateComponentOnInstance()
 GFCM-&amp;gt;&amp;gt;GFCM: ComponentClassToComponentInstanceMap[ComponentClass].Add(Instance)
 else Actor未生成
 GFCM-&amp;gt;&amp;gt;GFCM: 等待Actor生成时再创建
@@ -2015,7 +2014,7 @@ GF-&amp;gt;&amp;gt;GFCM: RemoveComponentRequest() (Deactivate时)
 GFCM-&amp;gt;&amp;gt;GFCM: RequestTrackingMap[Key]--
 alt 引用计数==0
 GFCM-&amp;gt;&amp;gt;GFCM: 查找ComponentClassToComponentInstanceMap
-GFCM-&amp;gt;&amp;gt;Actor: 销毁该Component的所有Instance
+GFCM-&amp;gt;&amp;gt;目标Actor: 销毁该Component的所有Instance
 end
 &lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;引用计数机制&lt;/strong&gt;：多个GameFeature可向同一ActorClass请求添加相同ComponentClass，通过引用计数管理生命周期。&lt;/p&gt;
