@@ -201,7 +201,8 @@ loading="lazy"
 alt="站点样式"
 &gt;&lt;/p&gt;
 &lt;p&gt;体验下来基本符合我现阶段的审美了，也许后面会继续优化一下。&lt;/p&gt;
-&lt;p&gt;不过还是之前说的，一个博客的意义更多的肯定还是内容，对于主题的改造更多地是作者的情怀和个人的情绪价值吧。&lt;/p&gt;</description></item><item><title>最近几天优化了一下DidaOJ的部署</title><link>https://boiltask.com/record/optimize-didaoj-deployment/</link><pubDate>Wed, 29 Oct 2025 12:57:16 +0800</pubDate><guid>https://boiltask.com/record/optimize-didaoj-deployment/</guid><description>&lt;p&gt;最近DidaOJ的用户量开始上来了，想寻找一种尽可能正式并且成本能接受的部署方式。&lt;/p&gt;
+&lt;p&gt;不过还是之前说的，一个博客的意义更多的肯定还是内容，对于主题的改造更多地是作者的情怀和个人的情绪价值吧。&lt;/p&gt;
+&lt;p&gt;能力所限，无法提供长期稳定的支持，因此暂时不准备开源。如果有相关咨询或意见建议，欢迎在下方留言讨论。&lt;/p&gt;</description></item><item><title>最近几天优化了一下DidaOJ的部署</title><link>https://boiltask.com/record/optimize-didaoj-deployment/</link><pubDate>Wed, 29 Oct 2025 12:57:16 +0800</pubDate><guid>https://boiltask.com/record/optimize-didaoj-deployment/</guid><description>&lt;p&gt;最近DidaOJ的用户量开始上来了，想寻找一种尽可能正式并且成本能接受的部署方式。&lt;/p&gt;
 &lt;h2 id="分析"&gt;&lt;a href="#%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;分析
 &lt;/h2&gt;&lt;p&gt;核心可能需要处理下面几个部分：&lt;/p&gt;
 &lt;ul&gt;

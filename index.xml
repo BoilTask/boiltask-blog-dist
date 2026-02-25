@@ -6036,7 +6036,8 @@ loading="lazy"
 alt="站点样式"
 &gt;&lt;/p&gt;
 &lt;p&gt;体验下来基本符合我现阶段的审美了，也许后面会继续优化一下。&lt;/p&gt;
-&lt;p&gt;不过还是之前说的，一个博客的意义更多的肯定还是内容，对于主题的改造更多地是作者的情怀和个人的情绪价值吧。&lt;/p&gt;</description></item><item><title>UE5资源异步加载流程分析</title><link>https://boiltask.com/knowledge/ue/asset-async-load/</link><pubDate>Wed, 07 Jan 2026 23:33:49 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/asset-async-load/</guid><description>&lt;h2 id="概述"&gt;&lt;a href="#%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;概述
+&lt;p&gt;不过还是之前说的，一个博客的意义更多的肯定还是内容，对于主题的改造更多地是作者的情怀和个人的情绪价值吧。&lt;/p&gt;
+&lt;p&gt;能力所限，无法提供长期稳定的支持，因此暂时不准备开源。如果有相关咨询或意见建议，欢迎在下方留言讨论。&lt;/p&gt;</description></item><item><title>UE5资源异步加载流程分析</title><link>https://boiltask.com/knowledge/ue/asset-async-load/</link><pubDate>Wed, 07 Jan 2026 23:33:49 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/asset-async-load/</guid><description>&lt;h2 id="概述"&gt;&lt;a href="#%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;概述
 &lt;/h2&gt;&lt;p&gt;本文档详细分析 UE5 中 &lt;code&gt;FStreamableManager&lt;/code&gt; 的资源异步加载流程，从 &lt;code&gt;RequestAsyncLoad&lt;/code&gt; 开始到回调执行结束的完整过程。通过深入分析源码，我们将理解主线程与加载线程的交互机制，以及资源依赖的处理方式。&lt;/p&gt;
 &lt;h2 id="核心概念"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;核心概念
 &lt;/h2&gt;&lt;h3 id="关键类和结构"&gt;&lt;a href="#%e5%85%b3%e9%94%ae%e7%b1%bb%e5%92%8c%e7%bb%93%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;关键类和结构
