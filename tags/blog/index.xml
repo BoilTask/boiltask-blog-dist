@@ -104,7 +104,8 @@ alt="站点样式"
 &gt;&lt;/p&gt;
 &lt;p&gt;体验下来基本符合我现阶段的审美了，也许后面会继续优化一下。&lt;/p&gt;
 &lt;p&gt;不过还是之前说的，一个博客的意义更多的肯定还是内容，对于主题的改造更多地是作者的情怀和个人的情绪价值吧。&lt;/p&gt;
-&lt;p&gt;能力所限，无法提供长期稳定的支持，因此暂时不准备开源。如果有相关咨询或意见建议，欢迎在下方留言讨论。&lt;/p&gt;</description></item><item><title>历时数月终于把CSDN迁移完了</title><link>https://boiltask.com/record/oj-problem-migrate/</link><pubDate>Fri, 30 May 2025 23:53:23 +0800</pubDate><guid>https://boiltask.com/record/oj-problem-migrate/</guid><description>&lt;p&gt;大学时候在CSDN上传了一大批OJ题目的题解（虽然很多都是水题），之前数次迁移都因为量级太大而且性价比不高，这些题目都没有跟随着迁移出去。&lt;/p&gt;
+&lt;p&gt;能力所限，无法提供长期稳定的支持，而且灵感随时产生，可能有一些破坏性地更新，也难以保证一定符合所有人的口味，因此暂时不准备开源。&lt;/p&gt;
+&lt;p&gt;如果有相关咨询或意见建议，欢迎在下方留言讨论。&lt;/p&gt;</description></item><item><title>历时数月终于把CSDN迁移完了</title><link>https://boiltask.com/record/oj-problem-migrate/</link><pubDate>Fri, 30 May 2025 23:53:23 +0800</pubDate><guid>https://boiltask.com/record/oj-problem-migrate/</guid><description>&lt;p&gt;大学时候在CSDN上传了一大批OJ题目的题解（虽然很多都是水题），之前数次迁移都因为量级太大而且性价比不高，这些题目都没有跟随着迁移出去。&lt;/p&gt;
 &lt;p&gt;4月初某一次突然灵感乍现，想把这些文章都迁移到hugo，使用markdown管理也更自由一些。想想当年写的时候，其实就想留一份md文件的备份，结果因为太麻烦而没有实践。这次趁着这波机会，也算是又整理出来了这些文章。&lt;/p&gt;
 &lt;p&gt;过程中，为了这些醋包了好多饺子，比如展示题目的各种shortcode，比如写了一个备份静态题目的&lt;a class="link" href="https://oj.boiltask.com" target="_blank" rel="noopener"
 &gt;爬虫站点&lt;/a&gt;，比如重新从零开始搭建了新的&lt;a class="link" href="https://oj.didapipa.com" target="_blank" rel="noopener"
