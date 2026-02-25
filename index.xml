@@ -165,6 +165,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 $$
 dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3]
 $$&lt;p&gt;也即爬到第$i$层楼梯的方案数等于爬到第$i-1$层楼梯的方案数加上爬到第$i-2$层楼梯的方案数加上爬到第$i-3$层楼梯的方案数。&lt;/p&gt;
+&lt;p&gt;需要注意的是样例中指出&lt;code&gt;n = 1&lt;/code&gt;的情况下需要输出&lt;code&gt;0&lt;/code&gt;，但是在递推的时候很显然到第一层也需要视为一种方案，所以$dp[1]$需要初始化为$1$，在输出时需要特判。&lt;/p&gt;
 &lt;h2 id="ac代码"&gt;&lt;a href="#ac%e4%bb%a3%e7%a0%81" class="header-anchor"&gt;&lt;/a&gt;AC代码
 &lt;/h2&gt;
 &lt;div class="highlight-wrapper"&gt;
