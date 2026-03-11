@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 25 Feb 2026 12:33:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 11 Mar 2026 12:29:35 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -83,7 +83,12 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[1134]感恩节KK专场——爬楼梯</title><link>https://boiltask.com/oj/didaoj-1134/</link><pubDate>Wed, 25 Feb 2026 12:33:18 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-1134/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎（UE5）下PuerTS的模板工程</title><link>https://boiltask.com/knowledge/ue/ue-puerts-template/</link><pubDate>Wed, 11 Mar 2026 12:29:35 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-puerts-template/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;/h2&gt;&lt;p&gt;在&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-best-practice/" &gt;虚幻引擎（UE5）下PuerTS的最佳实践&lt;/a&gt;中，总结了个人实际运用&lt;code&gt;PuerTS&lt;/code&gt;时的一些最佳实践。&lt;/p&gt;
+&lt;p&gt;基于最佳实现，整理了一个模板工程，方便快速开始&lt;code&gt;PuerTS&lt;/code&gt;的开发。&lt;/p&gt;
+&lt;h2 id="模板工程"&gt;&lt;a href="#%e6%a8%a1%e6%9d%bf%e5%b7%a5%e7%a8%8b" class="header-anchor"&gt;&lt;/a&gt;模板工程
+&lt;/h2&gt;&lt;p&gt;项目地址：&lt;a class="link" href="https://github.com/BoilTask/puerts-ue-template" target="_blank" rel="noopener"
+&gt;https://github.com/BoilTask/puerts-ue-template&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[1134]感恩节KK专场——爬楼梯</title><link>https://boiltask.com/oj/didaoj-1134/</link><pubDate>Wed, 25 Feb 2026 12:33:18 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-1134/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
