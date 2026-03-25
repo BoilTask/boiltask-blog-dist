@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>待办 on BoilTask's Blog</title><link>https://boiltask.com/tags/todo/</link><description>Recent content in 待办 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 29 Jan 2026 12:26:47 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/todo/index.xml" rel="self" type="application/rss+xml"/><item><title>GAMES104现代游戏引擎 - 游戏中地形大气和云的渲染(上)</title><link>https://boiltask.com/note/games104-game-engine-6/</link><pubDate>Thu, 29 Jan 2026 12:26:47 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-6/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>待办 on BoilTask's Blog</title><link>https://boiltask.com/tags/todo/</link><description>Recent content in 待办 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 24 Mar 2026 13:15:48 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/todo/index.xml" rel="self" type="application/rss+xml"/><item><title>虚幻引擎（UE5）中Gameplay Cameras相关机制</title><link>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</link><pubDate>Tue, 24 Mar 2026 13:15:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;/h2&gt;&lt;p&gt;相机是游戏中的重要元素，虚幻引擎在UE5.5推出了一套更完善的相机控制框架：Gameplay Cameras(GPC)。&lt;/p&gt;
+&lt;p&gt;由于目前仍处于&lt;code&gt;Experimental&lt;/code&gt;的时期，而且还没有正式的官方文档，因此写个文章记录一下所研究的内容。&lt;/p&gt;
+&lt;p&gt;其中一个重要参考是插件作者的博客：&lt;a class="link" href="https://ludovic.chabant.com/blog/category/programming/game-development/unreal-engine/" target="_blank" rel="noopener"
+&gt;developer diary for the Unreal Engine camera system&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="基础概念"&gt;&lt;a href="#%e5%9f%ba%e7%a1%80%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;基础概念
+&lt;/h2&gt;&lt;p&gt;有一个&lt;code&gt;Camera Director&lt;/code&gt;，负责决定运行哪些&lt;code&gt;Camera Rig(s)&lt;/code&gt;。&lt;code&gt;Camera Rig&lt;/code&gt;实现所需的相机行为，例如“跟随角色，稍微偏移，带有一点延迟”。这是通过&lt;code&gt;Camera Nodes&lt;/code&gt;实现的，其中每个所需相机行为的元素可能是一个&lt;code&gt;Node&lt;/code&gt;，比如跟随&lt;code&gt;Node&lt;/code&gt;、偏移&lt;code&gt;Node&lt;/code&gt;和延迟&lt;code&gt;Node&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Camera Nodes&lt;/code&gt;就像一种“管道”，相机数据会通过每一个节点，而每个节点都会对其进行一项操作。但这里值得注意的是，相机数据并不仅仅是一个&lt;code&gt;Transform&lt;/code&gt; 和一个&lt;code&gt;Field Of View&lt;/code&gt;，还包括镜头数据、后处理设置、变量表等。&lt;/p&gt;
+&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/01/13/ue5-gameplay-cameras-developer-diary/" target="_blank" rel="noopener"
+&gt;UE5 Gameplay Cameras: Developer Diary - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/03/04/ue-gameplay-cameras-a-modernization-of-camera-systems/" target="_blank" rel="noopener"
+&gt;UE Gameplay Cameras: A Modernization of Camera Systems - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/05/05/ue-gameplay-cameras-the-basic-design/" target="_blank" rel="noopener"
+&gt;UE5 Gameplay Cameras: The Basic Design - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/02/24/ue5-gameplay-cameras-node-evaluators/" target="_blank" rel="noopener"
+&gt;UE5 Gameplay Cameras: Node Evaluators - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏中地形大气和云的渲染(上)</title><link>https://boiltask.com/note/games104-game-engine-6/</link><pubDate>Thu, 29 Jan 2026 12:26:47 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-6/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;存在不少东西没有看懂，后续需要再整理一遍。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="大地之神与天空之神"&gt;&lt;a href="#%e5%a4%a7%e5%9c%b0%e4%b9%8b%e7%a5%9e%e4%b8%8e%e5%a4%a9%e7%a9%ba%e4%b9%8b%e7%a5%9e" class="header-anchor"&gt;&lt;/a&gt;大地之神与天空之神
