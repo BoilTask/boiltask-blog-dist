@@ -459,7 +459,7 @@ loading="lazy"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id="结合引擎"&gt;&lt;a href="#%e7%bb%93%e5%90%88%e5%bc%95%e6%93%8e" class="header-anchor"&gt;&lt;/a&gt;结合引擎
-&lt;/h2&gt;&lt;p&gt;&lt;code&gt;UnrealEngine&lt;/code&gt;提供了内置的版本控制工具，可以快捷的实现一些&lt;code&gt;SVN&lt;/code&gt;操作，可参考&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" &gt;引擎内置版本控制工具&lt;/a&gt;进行配置。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;UnrealEngine&lt;/code&gt;提供了内置的版本控制工具，可以快捷的实现一些&lt;code&gt;SVN&lt;/code&gt;操作，可参考&lt;a class="link" href="https://boiltask.com/knowledge/ue/source-control-tool/" &gt;引擎内置版本控制工具&lt;/a&gt;进行配置。&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor"&gt;&lt;/a&gt;注意事项
 &lt;/h2&gt;&lt;p&gt;由于锁定之后会干扰其他同事操作，因此锁定前需要确认操作的必要性。如果遇见有人询问相关问题，应积极处理。&lt;/p&gt;
 &lt;p&gt;未避免误操作，应不定期查看&lt;code&gt;Release Lock&lt;/code&gt;列表，看看是否有误锁文件。&lt;/p&gt;</description></item><item><title>引擎内置版本控制工具</title><link>https://boiltask.com/knowledge/ue/source-control-tool/</link><pubDate>Mon, 13 Mar 2023 19:33:24 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/source-control-tool/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
@@ -573,7 +573,7 @@ loading="lazy"
 &lt;p&gt;连接&lt;code&gt;SVN&lt;/code&gt;后，一些操作会自动对&lt;code&gt;SVN&lt;/code&gt;做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p&gt;</description></item><item><title>虚幻引擎蓝图对比工具</title><link>https://boiltask.com/knowledge/ue/blueprint-diff/</link><pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-diff/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
 &lt;/h2&gt;&lt;p&gt;蓝图因为是二进制文件，所以没办法使用&lt;code&gt;svn&lt;/code&gt;自带的版本对比工具来比较变更。&lt;/p&gt;
 &lt;p&gt;为了解决蓝图对比的问题，&lt;code&gt;UE4&lt;/code&gt;提供了一个工具用以展示两个蓝图的区别。&lt;/p&gt;
-&lt;p&gt;可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" &gt;引擎内置版本控制工具&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/knowledge/ue/source-control-tool/" &gt;引擎内置版本控制工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本文描述的是如何从外部调用引擎的对比工具。&lt;/p&gt;
 &lt;h2 id="工具使用"&gt;&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;工具使用
 &lt;/h2&gt;&lt;p&gt;直接使用可以在&lt;code&gt;cmd&lt;/code&gt;命令提示符窗口输入如下命令：&lt;/p&gt;
