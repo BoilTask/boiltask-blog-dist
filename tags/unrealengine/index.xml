@@ -4994,34 +4994,16 @@ alt="image.png"
 &lt;h2 id="工具使用"&gt;&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;工具使用
 &lt;/h2&gt;&lt;h3 id="配置连接"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e8%bf%9e%e6%8e%a5" class="header-anchor"&gt;&lt;/a&gt;配置连接
 &lt;/h3&gt;&lt;p&gt;在引擎的工具栏处有一个&lt;code&gt;Source Control&lt;/code&gt;的选项，选择&lt;code&gt;Connect to Source Control&lt;/code&gt;弹出确认框。
-&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-1.png"
-width="433"
-height="290"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-1_hu_659c2515ebc983c2.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-1_hu_9d3a2b16af29635a.png 1024w"
+&lt;img src="https://r2.boiltask.com/2026/03/1cab34e497e80446e79de42b839a1f6d.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="149"
-data-flex-basis="358px"
 &gt;&lt;/p&gt;
 &lt;p&gt;选择&lt;code&gt;Subversion&lt;/code&gt;也即&lt;code&gt;SVN&lt;/code&gt;，展示信息输入框。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-2.png"
-width="720"
-height="267"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-2_hu_9754ad9e00a66662.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-2_hu_dd0f8f1f78e37ab9.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/4deaaf831b10a0aeb003de48c6a14c91.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="269"
-data-flex-basis="647px"
 &gt;&lt;/p&gt;
 &lt;p&gt;按照所需信息输入然后点击&lt;code&gt;Accept Settings&lt;/code&gt;即可。
-&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-3.png"
-width="720"
-height="274"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-3_hu_8ec25f0d5b9329b7.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-3_hu_f26a437f3f280de3.png 1024w"
+&lt;img src="https://r2.boiltask.com/2026/03/cd105f852dc4b3b413389af99a1417b2.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="262"
-data-flex-basis="630px"
 &gt;&lt;/p&gt;
 &lt;p&gt;其中几项含义分别如下：&lt;/p&gt;
 &lt;table&gt;
@@ -5063,37 +5045,19 @@ data-flex-basis="630px"
 &lt;h3 id="资产保存"&gt;&lt;a href="#%e8%b5%84%e4%ba%a7%e4%bf%9d%e5%ad%98" class="header-anchor"&gt;&lt;/a&gt;资产保存
 &lt;/h3&gt;&lt;p&gt;链接版本管理后，对资产做保存等操作时会弹出确认框，询问是否要&lt;code&gt;CheckOut&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;此操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" &gt;SVN锁定操作&lt;/a&gt;，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-4.png"
-width="760"
-height="434"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-4_hu_f7e606972681bed8.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-4_hu_42d00d3703a0fb60.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/8da442077a436cd5453d6d67ae22658e.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="175"
-data-flex-basis="420px"
 &gt;&lt;/p&gt;
 &lt;p&gt;如果该资产已经被其他人锁定了，那么点&lt;code&gt;CheckOut&lt;/code&gt;时会有如下提示。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-5.png"
-width="760"
-height="434"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-5_hu_d53dca868f529f6c.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-5_hu_d643f3eb653b449f.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/64d9a7252dd2c23cc383cebf96a712ab.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="175"
-data-flex-basis="420px"
 &gt;&lt;/p&gt;
 &lt;p&gt;如果大家都遵循此操作，则可以大大减少蓝图冲突的可能性。&lt;/p&gt;
 &lt;p&gt;如果不需要锁定蓝图，那么可以点击&lt;code&gt;Make Writable&lt;/code&gt;在不锁定的情况下保存。&lt;/p&gt;
 &lt;h3 id="资产操作"&gt;&lt;a href="#%e8%b5%84%e4%ba%a7%e6%93%8d%e4%bd%9c" class="header-anchor"&gt;&lt;/a&gt;资产操作
 &lt;/h3&gt;&lt;p&gt;链接版本管理后，在资产上右键可以展开版本管理的操作。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-6.png"
-width="477"
-height="748"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-6_hu_c6a850311c439a5.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-6_hu_49ccffa1959dbb36.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/fafdf49048a2e55d150e2e73608223c9.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="63"
-data-flex-basis="153px"
 &gt;&lt;/p&gt;
 &lt;p&gt;其中几项含义分别如下：&lt;/p&gt;
 &lt;table&gt;
@@ -5123,24 +5087,12 @@ data-flex-basis="153px"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;其中最常用的是&lt;code&gt;History&lt;/code&gt;打开资产版本历史。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-7.png"
-width="1010"
-height="434"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-7_hu_5879d72908a0864f.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-7_hu_4af00f751de5eac5.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/9915f595a3ed5ce4eee232fbb198aa3e.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="232"
-data-flex-basis="558px"
 &gt;&lt;/p&gt;
 &lt;p&gt;可以在版本历史里右键选择对比前一版本或对比本地文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-8.png"
-width="1010"
-height="834"
-srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-8_hu_cb7f3899d8383ea.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-8_hu_1b9d98a12a6a0f1a.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/9a33673d0fa64509db5a2e4724ca6153.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="121"
-data-flex-basis="290px"
 &gt;&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor"&gt;&lt;/a&gt;注意事项
 &lt;/h2&gt;&lt;p&gt;在资产管理中&lt;code&gt;CheckOut&lt;/code&gt;操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;code&gt;Lock&lt;/code&gt;操作，会锁定资产防止别人提交，因此会干扰其他同事操作。&lt;/p&gt;
@@ -5188,10 +5140,10 @@ data-flex-basis="290px"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-1-1.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/bf12316fe8d477769b5025b3ce040f91.png"
 loading="lazy"
 &gt;&lt;/th&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-1-2.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/6e90e0b2af93a8c0e85beee19b03d375.png"
 loading="lazy"
 &gt;&lt;/th&gt;
 &lt;/tr&gt;
@@ -5207,10 +5159,10 @@ loading="lazy"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-2-1.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/513370c4b241dd475285f5d422b0a700.png"
 loading="lazy"
 &gt;&lt;/th&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-2-2.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/f8b6856f1cf5f272d12f6e607f6c48da.png"
 loading="lazy"
 &gt;&lt;/th&gt;
 &lt;/tr&gt;
@@ -5226,10 +5178,10 @@ loading="lazy"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-3-1.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/761096706fcefea7acbbae6d23662e9c.png"
 loading="lazy"
 &gt;&lt;/th&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-3-2.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/c26d644dc9755b847e15710a3656b7a1.png"
 loading="lazy"
 &gt;&lt;/th&gt;
 &lt;/tr&gt;
@@ -5245,10 +5197,10 @@ loading="lazy"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-4-1.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/7284af57ccafb3ba9deb7a9edd0cab96.png"
 loading="lazy"
 &gt;&lt;/th&gt;
-&lt;th&gt;&lt;img src="https://boiltask.com/image-4-2.png"
+&lt;th&gt;&lt;img src="https://r2.boiltask.com/2026/03/26e7d38507563d766f6c447c36744e34.png"
 loading="lazy"
 &gt;&lt;/th&gt;
 &lt;/tr&gt;
@@ -5278,7 +5230,7 @@ loading="lazy"
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中&lt;code&gt;D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code&gt;为引擎可执行文件，&lt;code&gt;D:\Meta\Meta.uproject&lt;/code&gt;为项目文件，&lt;code&gt;%base&lt;/code&gt;会被转义为&lt;code&gt;svn&lt;/code&gt;文件，&lt;code&gt;%mine&lt;/code&gt;会被转义为当前文件。&lt;/p&gt;
 &lt;h2 id="对比效果"&gt;&lt;a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor"&gt;&lt;/a&gt;对比效果
-&lt;/h2&gt;&lt;p&gt;&lt;img src="https://boiltask.com/image-5.png"
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/1292736c34cb8e0a0a1ea35a2109329e.png"
 loading="lazy"
 &gt;&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor"&gt;&lt;/a&gt;注意事项

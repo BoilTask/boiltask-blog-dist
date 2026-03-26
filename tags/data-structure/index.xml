@@ -159,14 +159,8 @@
 &lt;p&gt;V3————&amp;gt;V5&lt;/p&gt;
 &lt;p&gt;V8————&amp;gt;V9&lt;/p&gt;
 &lt;p&gt;只需要一个链即可完成 大大的节省了内存 ;详情如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://boiltask.com/knowledge/adjacency-list/image-1.png"
-width="570"
-height="431"
-srcset="https://boiltask.com/knowledge/adjacency-list/image-1_hu_39e4467f9162162c.png 480w, https://boiltask.com/knowledge/adjacency-list/image-1_hu_c50e5f33a32609f4.png 1024w"
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/2da74c7c3bd774c9b8c93e10b36a2c8a.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="317px"
 &gt;&lt;/p&gt;
 &lt;p&gt;下边附上构建邻接表的通用模板：&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
