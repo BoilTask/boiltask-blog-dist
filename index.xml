@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 24 Mar 2026 13:15:48 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 31 Mar 2026 12:59:41 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -83,7 +83,11 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎（UE5）中Gameplay Cameras相关机制</title><link>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</link><pubDate>Tue, 24 Mar 2026 13:15:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎（UE5）中Gameplay Cameras相关机制</title><link>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</link><pubDate>Tue, 24 Mar 2026 13:15:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;2026-03-31 作者说他&lt;a class="link" href="https://ludovic.chabant.com/blog/2026/03/30/ue5-gameplay-cameras-coda/" target="_blank" rel="noopener"
+&gt;被裁了&lt;/a&gt;，插件更新暂时停滞……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;相机是游戏中的重要元素，虚幻引擎在UE5.5推出了一套更完善的相机控制框架：Gameplay Cameras(GPC)。&lt;/p&gt;
 &lt;p&gt;由于目前仍处于&lt;code&gt;Experimental&lt;/code&gt;的时期，而且还没有正式的官方文档，因此写个文章记录一下所研究的内容。&lt;/p&gt;
 &lt;p&gt;其中一个重要参考是插件作者的博客：&lt;a class="link" href="https://ludovic.chabant.com/blog/category/programming/game-development/unreal-engine/" target="_blank" rel="noopener"
