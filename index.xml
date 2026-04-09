@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 31 Mar 2026 12:59:41 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 09 Apr 2026 12:33:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -83,7 +83,29 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎（UE5）中Gameplay Cameras相关机制</title><link>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</link><pubDate>Tue, 24 Mar 2026 13:15:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</guid><description>&lt;blockquote&gt;
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Godot初探</title><link>https://boiltask.com/knowledge/godot/first-look/</link><pubDate>Thu, 09 Apr 2026 12:33:18 +0800</pubDate><guid>https://boiltask.com/knowledge/godot/first-look/</guid><description>&lt;p&gt;其实很早就关注Godot了，最早应该是《土豆兄弟》火的时候试了试，不过浅尝辄止。&lt;/p&gt;
+&lt;p&gt;随着近期Godot发展越来越好，准备再深入的研究一下。&lt;/p&gt;
+&lt;h2 id="下载安装"&gt;&lt;a href="#%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85" class="header-anchor"&gt;&lt;/a&gt;下载安装
+&lt;/h2&gt;&lt;p&gt;Godot作为一个开源引擎，各方面的文档和资源都比较好找，官方还提供了Steam版本的下载。&lt;/p&gt;
+&lt;p&gt;要是没有源码编译的需求，直接通过steam安装即可。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://store.steampowered.com/app/404790/Godot_Engine/" target="_blank" rel="noopener"
+&gt;Godot Engine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="官方文档"&gt;&lt;a href="#%e5%ae%98%e6%96%b9%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;官方文档
+&lt;/h2&gt;&lt;p&gt;基本上通读下来官方文档，就能对Godot有一个基本的理解。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://docs.godotengine.org/" target="_blank" rel="noopener"
+&gt;Godot Engine 文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="编程语言"&gt;&lt;a href="#%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80" class="header-anchor"&gt;&lt;/a&gt;编程语言
+&lt;/h2&gt;&lt;p&gt;Godot的虽然使用了一套新的编程语言&lt;code&gt;GDScript&lt;/code&gt;，但语法基本和&lt;code&gt;Python&lt;/code&gt;一致。虽然个人比较不喜欢用缩进来表示层级的设计，但倒是也还能适应（总比用蓝图来连复杂逻辑要方便多了）。&lt;/p&gt;
+&lt;p&gt;一个比较亮眼的体验是，官方提供了一个用自身引擎做得语言教学项目，打包出来了一个网页。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://gdquest.github.io/learn-gdscript/" target="_blank" rel="noopener"
+&gt;Learn to Code From Zero with Godot&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整体还挺有意思，甚至可以当作一个编程游戏来玩。&lt;/p&gt;</description></item><item><title>虚幻引擎（UE5）中Gameplay Cameras相关机制</title><link>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</link><pubDate>Tue, 24 Mar 2026 13:15:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;2026-03-31 作者说他&lt;a class="link" href="https://ludovic.chabant.com/blog/2026/03/30/ue5-gameplay-cameras-coda/" target="_blank" rel="noopener"
 &gt;被裁了&lt;/a&gt;，插件更新暂时停滞……&lt;/p&gt;
 &lt;/blockquote&gt;
