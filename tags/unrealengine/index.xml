@@ -5241,7 +5241,7 @@ loading="lazy"
 &lt;/h2&gt;&lt;p&gt;由于引擎问题，部分格式的蓝图可能不被支持。&lt;/p&gt;
 &lt;p&gt;打开对比工具的过程较为缓慢，请耐心等待。在此过程中不能关闭&lt;code&gt;svn&lt;/code&gt;版本历史窗口，以免目标临时文件被清除从而对比失败。&lt;/p&gt;
 &lt;p&gt;此工具不能自动合并蓝图，因此仍需要自己手动合并文件，请谨慎操作避免冲突。&lt;/p&gt;
-&lt;p&gt;期待&lt;code&gt;UnrealEngine&lt;/code&gt;能更为完善！&lt;/p&gt;</description></item><item><title>C++项目编程规范</title><link>https://boiltask.com/knowledge/cpp-style-guide/</link><pubDate>Mon, 12 Dec 2022 23:11:59 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-style-guide/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;期待&lt;code&gt;UnrealEngine&lt;/code&gt;能更为完善！&lt;/p&gt;</description></item><item><title>C++项目编程规范</title><link>https://boiltask.com/knowledge/cpp/style-guide/</link><pubDate>Mon, 12 Dec 2022 23:11:59 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/style-guide/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;根据作者多年的从业经验，结合C++项目的最佳实践，整理出以下编码规范&lt;/p&gt;
 &lt;p&gt;本文尽可能做到有理有据，后续可能还会不定期修订。&lt;/p&gt;
 &lt;p&gt;最新修订时间：2026-01-06&lt;/p&gt;

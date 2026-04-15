@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 09 Apr 2026 12:33:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 15 Apr 2026 13:17:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -83,7 +83,238 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Godot初探</title><link>https://boiltask.com/knowledge/godot/first-look/</link><pubDate>Thu, 09 Apr 2026 12:33:18 +0800</pubDate><guid>https://boiltask.com/knowledge/godot/first-look/</guid><description>&lt;p&gt;其实很早就关注Godot了，最早应该是《土豆兄弟》火的时候试了试，不过浅尝辄止。&lt;/p&gt;
+&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C++20中无宏定义日志的一种实现</title><link>https://boiltask.com/knowledge/cpp/log-without-macro/</link><pubDate>Wed, 15 Apr 2026 13:17:18 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/log-without-macro/</guid><description>&lt;p&gt;通常来说，在打印日志时为了获取调用处的相关信息，传统做法都需要定义一个宏来收集相关信息。&lt;/p&gt;
+&lt;p&gt;但是借由C++20的&lt;code&gt;std::source_location&lt;/code&gt;，我们可以实现一个无宏定义的日志打印函数。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;format&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;source_location&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;string_view&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;Logger&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;FormatWithLocation&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string_view&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;source_location&lt;/span&gt; &lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;FormatWithLocation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;source_location&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;source_location&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;Args&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FormatWithLocation&lt;/span&gt; &lt;span class="n"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Args&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;formattedMessage&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;vformat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;make_format_args&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;forward&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Args&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)...));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;[&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;file_name&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;:&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;] &amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;formattedMessage&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;// namespace Logger
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Logger&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;test {}&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;编译运行：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;g++ main.cc -Wall -o main &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; ./main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;预期输出：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;bash&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;main.cc:30&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nb"&gt;test&lt;/span&gt; &lt;span class="m"&gt;123&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>【DidaOJ】[73]魏好看的小红花</title><link>https://boiltask.com/oj/didaoj-73/</link><pubDate>Wed, 15 Apr 2026 12:11:59 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-73/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/h2&gt;&lt;script&gt;
+window.addEventListener('message', function (event) {
+if (!event.data) {
+return;
+}
+if (event.data.type === 'boiltask-oj-set-height') {
+const iframes = document.querySelectorAll('.boiltask-oj-didaoj-73 iframe');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+} else if (event.data.type === 'boiltask-oj-problem-info') {
+console.log(event.data);
+const leftElements = document.querySelectorAll('.boiltask-oj-didaoj-73 .dida-content-iframe-title-left');
+if (leftElements.length &gt; 0) {
+if (!leftElements[0].innerHTML) {
+leftElements[0].innerHTML = event.data.title;
+}
+}
+const rightElements = document.querySelectorAll('.boiltask-oj-didaoj-73 .dida-content-iframe-title-right-desc');
+if (rightElements.length &gt; 0) {
+if (!rightElements[0].innerHTML) {
+let text = ""
+if (event.data.time_limit){
+text += "&lt;b&gt;Time:&lt;/b&gt; " + event.data.time_limit
+}
+if (event.data.memory_limit){
+if (text.length &gt; 0){
+text += " | "
+}
+text += " &lt;b&gt;Memory:&lt;/b&gt; " + event.data.memory_limit
+}
+rightElements[0].innerHTML = text
+}
+}
+}
+});
+&lt;/script&gt;
+&lt;div class="dida-content-card boiltask-oj-didaoj-73"&gt;
+&lt;div class="dida-content-iframe-title" style="display: flex; align-items: center; justify-content: space-between;"&gt;
+&lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
+&lt;div class="dida-content-iframe-title-right" style="display: flex; align-items: center;"&gt;
+&lt;div style="margin-right: 15px;"&gt;
+&lt;span class="dida-content-iframe-title-right-desc"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style="display: flex; align-items: center;"&gt;
+&lt;button style="margin-left: 10px;" class="dida-boiltask-oj-button"
+onclick="refreshBoiltaskOj(this, 'didaoj-73')"&gt;&lt;svg t="1745157575278" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3152"
+width="200" height="200"&gt;
+&lt;path
+d="M934.4 206.933333c-17.066667-4.266667-34.133333 6.4-38.4 23.466667l-23.466667 87.466667C797.866667 183.466667 654.933333 96 497.066667 96 264.533333 96 74.666667 281.6 74.666667 512s189.866667 416 422.4 416c179.2 0 339.2-110.933333 398.933333-275.2 6.4-17.066667-2.133333-34.133333-19.2-40.533333-17.066667-6.4-34.133333 2.133333-40.533333 19.2-51.2 138.666667-187.733333 232.533333-339.2 232.533333C298.666667 864 138.666667 706.133333 138.666667 512S300.8 160 497.066667 160c145.066667 0 277.333333 87.466667 330.666666 217.6l-128-36.266667c-17.066667-4.266667-34.133333 6.4-38.4 23.466667-4.266667 17.066667 6.4 34.133333 23.466667 38.4l185.6 49.066667c2.133333 0 6.4 2.133333 8.533333 2.133333 6.4 0 10.666667-2.133333 17.066667-4.266667 6.4-4.266667 12.8-10.666667 14.933333-19.2l49.066667-185.6c0-17.066667-8.533333-34.133333-25.6-38.4z"
+fill="#666666" p-id="3153"&gt;&lt;/path&gt;
+&lt;/svg&gt;&lt;/button&gt;
+&lt;button class="dida-boiltask-oj-button" onclick="openUrl('https:\/\/oj.boiltask.com\/problem\/didaoj-73')"&gt;&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em"&gt;&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="position: relative; height: auto;"&gt;
+&lt;div class="boiltask-oj-loading" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5; z-index: 10;"&gt;
+&lt;div style="text-align: center;"&gt;
+&lt;div style="width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"&gt;&lt;/div&gt;
+&lt;div style="color: #666;"&gt;Loading...&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src='https://oj.boiltask.com/widget/didaoj-73?hidden_title=1&amp;amp;hidden_limit=1' width="100%" height='500px' frameborder="0" allow="clipboard-write" onload="this.previousElementSibling.style.display='none';"&gt;&lt;/iframe&gt;
+&lt;style&gt;
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.boiltask-oj-didaoj-73 { position: relative; }
+&lt;/style&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
+&lt;/h2&gt;&lt;p&gt;题意还是比较清晰好理解的，不过有一个思维陷阱。&lt;/p&gt;
+&lt;p&gt;题目问的是最多能获得的小红花数量，因此对于除法取整的时候需要向下取整而非默认的四舍五入。&lt;/p&gt;
+&lt;h2 id="ac代码"&gt;&lt;a href="#ac%e4%bb%a3%e7%a0%81" class="header-anchor"&gt;&lt;/a&gt;AC代码
+&lt;/h2&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cin&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cin&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;ans&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;ans&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/73" target="_blank" rel="noopener"
+&gt;魏好看的小红花 - 问题详情 - 题目 - DidaOJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Godot初探</title><link>https://boiltask.com/knowledge/godot/first-look/</link><pubDate>Thu, 09 Apr 2026 12:33:18 +0800</pubDate><guid>https://boiltask.com/knowledge/godot/first-look/</guid><description>&lt;p&gt;其实很早就关注Godot了，最早应该是《土豆兄弟》火的时候试了试，不过浅尝辄止。&lt;/p&gt;
 &lt;p&gt;随着近期Godot发展越来越好，准备再深入的研究一下。&lt;/p&gt;
 &lt;h2 id="下载安装"&gt;&lt;a href="#%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85" class="header-anchor"&gt;&lt;/a&gt;下载安装
 &lt;/h2&gt;&lt;p&gt;Godot作为一个开源引擎，各方面的文档和资源都比较好找，官方还提供了Steam版本的下载。&lt;/p&gt;
@@ -11909,7 +12140,7 @@ loading="lazy"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>C++项目编程规范</title><link>https://boiltask.com/knowledge/cpp-style-guide/</link><pubDate>Mon, 12 Dec 2022 23:11:59 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-style-guide/</guid><description>&lt;blockquote&gt;
+&lt;/div&gt;</description></item><item><title>C++项目编程规范</title><link>https://boiltask.com/knowledge/cpp/style-guide/</link><pubDate>Mon, 12 Dec 2022 23:11:59 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/style-guide/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;根据作者多年的从业经验，结合C++项目的最佳实践，整理出以下编码规范&lt;/p&gt;
 &lt;p&gt;本文尽可能做到有理有据，后续可能还会不定期修订。&lt;/p&gt;
 &lt;p&gt;最新修订时间：2026-01-06&lt;/p&gt;
@@ -14794,7 +15025,7 @@ target="_blank" rel="noopener"
 &lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine" target="_blank" rel="noopener"
 &gt;Epic的虚幻引擎 C++ 代码规范 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://github.com/Allar/ue5-style-guide" target="_blank" rel="noopener"
-&gt;Allar/ue5-style-guide: An attempt to make Unreal Engine 4 projects more consistent&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Windows下C++版本Protobuf使用方法</title><link>https://boiltask.com/knowledge/cpp-protobuf/</link><pubDate>Sat, 18 Jul 2020 17:39:54 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp-protobuf/</guid><description>&lt;p&gt;参考下文配置&lt;code&gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
+&gt;Allar/ue5-style-guide: An attempt to make Unreal Engine 4 projects more consistent&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Windows下C++版本Protobuf使用方法</title><link>https://boiltask.com/knowledge/cpp/protobuf/</link><pubDate>Sat, 18 Jul 2020 17:39:54 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp/protobuf/</guid><description>&lt;p&gt;参考下文配置&lt;code&gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows" target="_blank" rel="noopener"
 &gt;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation&amp;mdash;windows&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="所需环境"&gt;&lt;a href="#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83" class="header-anchor"&gt;&lt;/a&gt;所需环境
@@ -14832,7 +15063,7 @@ target="_blank" rel="noopener"
 &lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code&gt;C/C++&lt;/code&gt;，在&lt;code&gt;附加包含目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;头文件目录，如：&lt;code&gt;\protobuf\include&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id="配置静态链接"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5" class="header-anchor"&gt;&lt;/a&gt;配置静态链接
 &lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code&gt;链接器&lt;/code&gt;，在&lt;code&gt;附加库目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件目录，如：&lt;code&gt;\protobuf\lib&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;展开&lt;code&gt;链接器&lt;/code&gt;一栏，选择&lt;code&gt;输入&lt;/code&gt;，在&lt;code&gt;附加依赖项&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件名，如&lt;code&gt;libprotobuf.lib&lt;/code&gt;与&lt;code&gt;libprotobuf-lite.lib&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>C++中static关键字用法总结</title><link>https://boiltask.com/knowledge/cpp-static/</link><pubDate>Mon, 23 Mar 2020 05:30:15 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp-static/</guid><description>&lt;h2 id="修饰普通变量"&gt;&lt;a href="#%e4%bf%ae%e9%a5%b0%e6%99%ae%e9%80%9a%e5%8f%98%e9%87%8f" class="header-anchor"&gt;&lt;/a&gt;修饰普通变量
+&lt;p&gt;展开&lt;code&gt;链接器&lt;/code&gt;一栏，选择&lt;code&gt;输入&lt;/code&gt;，在&lt;code&gt;附加依赖项&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件名，如&lt;code&gt;libprotobuf.lib&lt;/code&gt;与&lt;code&gt;libprotobuf-lite.lib&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>C++中static关键字用法总结</title><link>https://boiltask.com/knowledge/cpp/static/</link><pubDate>Mon, 23 Mar 2020 05:30:15 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp/static/</guid><description>&lt;h2 id="修饰普通变量"&gt;&lt;a href="#%e4%bf%ae%e9%a5%b0%e6%99%ae%e9%80%9a%e5%8f%98%e9%87%8f" class="header-anchor"&gt;&lt;/a&gt;修饰普通变量
 &lt;/h2&gt;&lt;p&gt;修改变量的存储区域和生命周期，使变量存储在静态区，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。&lt;/p&gt;
 &lt;p&gt;普通变量，当程序执行到它的定义处时，为其在栈上分配空间，在函数执行结束时被释放掉。使用&lt;code&gt;static&lt;/code&gt;修饰变量，可以使得函数中的值保存至下一次调用。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;static&lt;/code&gt;修饰的静态局部变量只执行初始化一次，而且延长了局部变量的生命周期，直到程序运行结束以后才释放。&lt;/p&gt;
@@ -14882,7 +15113,7 @@ target="_blank" rel="noopener"
 &lt;/h2&gt;&lt;p&gt;修饰成员函数使得不需要生成对象就可以访问该函数，但是在&lt;code&gt;static&lt;/code&gt;函数内不能访问非静态成员。&lt;/p&gt;
 &lt;h2 id="static与const"&gt;&lt;a href="#static%e4%b8%8econst" class="header-anchor"&gt;&lt;/a&gt;static与const
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;static const&lt;/code&gt;等价于&lt;code&gt;const static&lt;/code&gt;，修饰成员变量把二者结合起来理解。&lt;/p&gt;
-&lt;p&gt;不可以同时用&lt;code&gt;const&lt;/code&gt;和&lt;code&gt;static&lt;/code&gt;修饰成员函数，二者的含义矛盾。&lt;/p&gt;</description></item><item><title>C++中const关键字用法总结</title><link>https://boiltask.com/knowledge/cpp-const/</link><pubDate>Mon, 23 Mar 2020 05:00:00 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp-const/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;不可以同时用&lt;code&gt;const&lt;/code&gt;和&lt;code&gt;static&lt;/code&gt;修饰成员函数，二者的含义矛盾。&lt;/p&gt;</description></item><item><title>C++中const关键字用法总结</title><link>https://boiltask.com/knowledge/cpp/const/</link><pubDate>Mon, 23 Mar 2020 05:00:00 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp/const/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;当用&lt;code&gt;const&lt;/code&gt;进行修饰时，根据&lt;code&gt;const&lt;/code&gt;位置的不同有三种不同效果。&lt;/p&gt;
 &lt;p&gt;判断的标准是：&lt;code&gt;const&lt;/code&gt;修饰谁，谁（在&lt;code&gt;const&lt;/code&gt;后面）的内容就是不可变的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -15821,7 +16052,7 @@ alt="主机信息"
 &lt;p&gt;想想经过这么些年，也差不多在6~7之间徘徊了。而下面的评论也说，这个过程又是一个程序员提升过程中的瓶颈。能有所突破，未来便能继续稳步提高。&lt;/p&gt;
 &lt;p&gt;想想人生和程序员有所关联，应该缘起于2006在小学生学习报上看到了跑跑卡丁车的广告。然后2007年在我姑父的带领下解除了泡泡堂，随后家里安装了电脑，又度过了一段难忘的游戏时光。随后，人生梦想就由画家转变成了游戏开发人员 （虽然画画也同样还很喜欢）。&lt;/p&gt;
 &lt;p&gt;如今，也算是梦想成真了一部分。&lt;/p&gt;
-&lt;p&gt;未来，还需要继续努力呀~&lt;/p&gt;</description></item><item><title>标签云</title><link>https://boiltask.com/tags/</link><pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate><guid>https://boiltask.com/tags/</guid><description/></item><item><title>分类</title><link>https://boiltask.com/categories/</link><pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate><guid>https://boiltask.com/categories/</guid><description/></item><item><title>文章归档</title><link>https://boiltask.com/archives/</link><pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate><guid>https://boiltask.com/archives/</guid><description/></item><item><title>C++用实现大数模板（string、int128）</title><link>https://boiltask.com/knowledge/cpp-big-int/</link><pubDate>Tue, 13 Nov 2018 00:16:30 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-big-int/</guid><description>&lt;h2 id="相加"&gt;&lt;a href="#%e7%9b%b8%e5%8a%a0" class="header-anchor"&gt;&lt;/a&gt;相加
+&lt;p&gt;未来，还需要继续努力呀~&lt;/p&gt;</description></item><item><title>标签云</title><link>https://boiltask.com/tags/</link><pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate><guid>https://boiltask.com/tags/</guid><description/></item><item><title>分类</title><link>https://boiltask.com/categories/</link><pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate><guid>https://boiltask.com/categories/</guid><description/></item><item><title>文章归档</title><link>https://boiltask.com/archives/</link><pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate><guid>https://boiltask.com/archives/</guid><description/></item><item><title>C++用实现大数模板（string、int128）</title><link>https://boiltask.com/knowledge/cpp/big-int/</link><pubDate>Tue, 13 Nov 2018 00:16:30 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/big-int/</guid><description>&lt;h2 id="相加"&gt;&lt;a href="#%e7%9b%b8%e5%8a%a0" class="header-anchor"&gt;&lt;/a&gt;相加
 &lt;/h2&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
@@ -71031,7 +71262,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/164" target="_blank" rel="noopener"
-&gt;题目详情 - 两点距离 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>while(m)m&amp;=m-1,s++;的解释</title><link>https://boiltask.com/knowledge/cpp-while-comma-bit/</link><pubDate>Sat, 30 Jan 2016 00:42:22 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-while-comma-bit/</guid><description>&lt;p&gt;此讨论是关于&lt;a class="link" href="https://boiltask.com/oj/nyoj/100" &gt;【NYOJ】[100]1的个数&lt;/a&gt;的补充说明&lt;br&gt;
+&gt;题目详情 - 两点距离 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>while(m)m&amp;=m-1,s++;的解释</title><link>https://boiltask.com/knowledge/cpp/while-comma-bit/</link><pubDate>Sat, 30 Jan 2016 00:42:22 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/while-comma-bit/</guid><description>&lt;p&gt;此讨论是关于&lt;a class="link" href="https://boiltask.com/oj/nyoj/100" &gt;【NYOJ】[100]1的个数&lt;/a&gt;的补充说明&lt;br&gt;
 对于这一题标程给的这一句代码 比较难理解&lt;/p&gt;
 &lt;h2 id="所以分开来解析"&gt;&lt;a href="#%e6%89%80%e4%bb%a5%e5%88%86%e5%bc%80%e6%9d%a5%e8%a7%a3%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;所以分开来解析
 &lt;/h2&gt;&lt;h3 id="逗号表达式"&gt;&lt;a href="#%e9%80%97%e5%8f%b7%e8%a1%a8%e8%be%be%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;逗号表达式
@@ -73200,7 +73431,7 @@ m!=1&lt;em&gt;2&lt;/em&gt;3*……(m-2)(m-1)&lt;em&gt;m&lt;br&gt;
 &gt;阶乘因式分解（一）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;参考文章:&lt;br&gt;
 &lt;a class="link" href="http://blog.csdn.net/seadplus/article/details/7401113" target="_blank" rel="noopener"
-&gt;阶乘因式分解 - sead+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>for,(do-)while的循环体执行</title><link>https://boiltask.com/knowledge/cpp-for-do-while/</link><pubDate>Mon, 25 Jan 2016 12:12:22 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp-for-do-while/</guid><description>&lt;p&gt;虽然最早就学过&lt;br&gt;
+&gt;阶乘因式分解 - sead+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>for,(do-)while的循环体执行</title><link>https://boiltask.com/knowledge/cpp/for-do-while/</link><pubDate>Mon, 25 Jan 2016 12:12:22 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/for-do-while/</guid><description>&lt;p&gt;虽然最早就学过&lt;br&gt;
 while与do-while区别&lt;br&gt;
 但因为do-while很少用&lt;br&gt;
 甚至做题时可以说从来没用过&lt;/p&gt;
