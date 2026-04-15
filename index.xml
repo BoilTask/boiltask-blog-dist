@@ -8643,7 +8643,7 @@ loading="lazy"
 alt="image.png"
 &gt;&lt;/p&gt;
 &lt;p&gt;下面详细分析&lt;code&gt;CommonLoadingScreen&lt;/code&gt;插件的相关逻辑：&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-loading-screen" &gt;UE5中的CommonLoadingScreen插件&lt;/a&gt;&lt;/p&gt;</description></item><item><title>客户端SVN安装</title><link>https://boiltask.com/knowledge/svn/client-install/</link><pubDate>Wed, 16 Jul 2025 22:49:11 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/client-install/</guid><description>&lt;h2 id="说明"&gt;&lt;a href="#%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;说明
+&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-loading-screen" &gt;UE5中的CommonLoadingScreen插件&lt;/a&gt;&lt;/p&gt;</description></item><item><title>SVN客户端安装</title><link>https://boiltask.com/knowledge/svn/client-install/</link><pubDate>Wed, 16 Jul 2025 22:49:11 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/client-install/</guid><description>&lt;h2 id="说明"&gt;&lt;a href="#%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;说明
 &lt;/h2&gt;&lt;p&gt;推荐使用&lt;code&gt;TortoiseSVN&lt;/code&gt;，项目的相关文档一般以此基础说明。&lt;/p&gt;
 &lt;p&gt;如果有自己熟悉的SVN工具，也可继续使用，但是应保证启用了SVN命令行。&lt;/p&gt;
 &lt;h2 id="步骤"&gt;&lt;a href="#%e6%ad%a5%e9%aa%a4" class="header-anchor"&gt;&lt;/a&gt;步骤
