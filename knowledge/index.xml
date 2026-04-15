@@ -10883,7 +10883,11 @@ target="_blank" rel="noopener"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>背包——误认为贪心的陷阱</title><link>https://boiltask.com/knowledge/knapsack-problem/</link><pubDate>Tue, 09 Aug 2016 18:14:29 +0800</pubDate><guid>https://boiltask.com/knowledge/knapsack-problem/</guid><description>&lt;blockquote&gt;
+&lt;/div&gt;&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/04/532ec5a4bf94f91e6a00d68ead067d59.png"
+loading="lazy"
+alt="image-20260415172221039"
+&gt;&lt;/p&gt;</description></item><item><title>背包——误认为贪心的陷阱</title><link>https://boiltask.com/knowledge/knapsack-problem/</link><pubDate>Tue, 09 Aug 2016 18:14:29 +0800</pubDate><guid>https://boiltask.com/knowledge/knapsack-problem/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;背包问题如果没有认真理解的话，第一种思路应该会往贪心的方面思考。&lt;/p&gt;
