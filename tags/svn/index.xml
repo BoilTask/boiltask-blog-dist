@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SVN on BoilTask's Blog</title><link>https://boiltask.com/tags/svn/</link><description>Recent content in SVN on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Jul 2025 22:49:11 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/svn/index.xml" rel="self" type="application/rss+xml"/><item><title>客户端SVN安装</title><link>https://boiltask.com/knowledge/svn-client-install/</link><pubDate>Wed, 16 Jul 2025 22:49:11 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-client-install/</guid><description>&lt;h2 id="说明"&gt;&lt;a href="#%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;说明
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SVN on BoilTask's Blog</title><link>https://boiltask.com/tags/svn/</link><description>Recent content in SVN on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Jul 2025 22:49:11 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/svn/index.xml" rel="self" type="application/rss+xml"/><item><title>客户端SVN安装</title><link>https://boiltask.com/knowledge/svn/client-install/</link><pubDate>Wed, 16 Jul 2025 22:49:11 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/client-install/</guid><description>&lt;h2 id="说明"&gt;&lt;a href="#%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;说明
 &lt;/h2&gt;&lt;p&gt;推荐使用&lt;code&gt;TortoiseSVN&lt;/code&gt;，项目的相关文档一般以此基础说明。&lt;/p&gt;
 &lt;p&gt;如果有自己熟悉的SVN工具，也可继续使用，但是应保证启用了SVN命令行。&lt;/p&gt;
 &lt;h2 id="步骤"&gt;&lt;a href="#%e6%ad%a5%e9%aa%a4" class="header-anchor"&gt;&lt;/a&gt;步骤
@@ -62,7 +62,7 @@ alt="image.png"
 &lt;/div&gt;&lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/01/6ff4805b67172a4e5b7cb85d3eb9d043.png"
 loading="lazy"
 alt="image.png"
-&gt;&lt;/p&gt;</description></item><item><title>SVN回退操作</title><link>https://boiltask.com/knowledge/svn-revert/</link><pubDate>Mon, 09 Oct 2023 10:41:32 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-revert/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
+&gt;&lt;/p&gt;</description></item><item><title>SVN回退操作</title><link>https://boiltask.com/knowledge/svn/revert/</link><pubDate>Mon, 09 Oct 2023 10:41:32 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/revert/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
 &lt;/h2&gt;&lt;p&gt;有时候需要还原错误提交，这个时候可以使用Revert命令。&lt;/p&gt;
 &lt;h2 id="操作说明"&gt;&lt;a href="#%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;操作说明
 &lt;/h2&gt;&lt;p&gt;在项目根目录上右键选择&lt;code&gt;TortoiseSVN-&amp;gt;Show log&lt;/code&gt;，打开日志窗口。&lt;/p&gt;
@@ -125,7 +125,7 @@ loading="lazy"
 &lt;h2 id="选项说明"&gt;&lt;a href="#%e9%80%89%e9%a1%b9%e8%af%b4%e6%98%8e" class="header-anchor"&gt;&lt;/a&gt;选项说明
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;Revert to this revision&lt;/code&gt;与&lt;code&gt;Revert changes from this revision&lt;/code&gt;的区别：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Revert to this revision&lt;/code&gt;指的是&lt;code&gt;复原到此版本&lt;/code&gt;，也即执行完之后，本地的状态应该是此版本提交后的状态。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Revert changes from this revision&lt;/code&gt;指的是复原此版本的修改，执行完之后应该是此版本提交前的状态。&lt;/p&gt;</description></item><item><title>SVN合并操作</title><link>https://boiltask.com/knowledge/svn-merge/</link><pubDate>Mon, 29 May 2023 21:44:15 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-merge/</guid><description>&lt;p&gt;以下以英文版为例，中文版同理选择对应位置选项即可。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Revert changes from this revision&lt;/code&gt;指的是复原此版本的修改，执行完之后应该是此版本提交前的状态。&lt;/p&gt;</description></item><item><title>SVN合并操作</title><link>https://boiltask.com/knowledge/svn/merge/</link><pubDate>Mon, 29 May 2023 21:44:15 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/merge/</guid><description>&lt;p&gt;以下以英文版为例，中文版同理选择对应位置选项即可。&lt;/p&gt;
 &lt;p&gt;合并是一个相对的概念，既可以从主干（trunk）合并到分支（branch），也可以从分支（branch）合并到主干（trunk），下文以从主干（trunk）合并到分支（branch）为例。&lt;/p&gt;
 &lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
 &lt;/h2&gt;&lt;p&gt;为了保证一个相对稳定的文件版本，开发过程中有时会新建一个分支（branch） ，这样可以可以直接从分支获取资产以提高稳定性。&lt;/p&gt;
@@ -232,7 +232,7 @@ loading="lazy"
 &lt;td&gt;中文版&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>SVN切分支</title><link>https://boiltask.com/knowledge/svn-switch-branch/</link><pubDate>Mon, 13 Mar 2023 23:14:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-switch-branch/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
+&lt;/table&gt;</description></item><item><title>SVN切分支</title><link>https://boiltask.com/knowledge/svn/switch-branch/</link><pubDate>Mon, 13 Mar 2023 23:14:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/switch-branch/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
 &lt;/h2&gt;&lt;p&gt;有时候需要为了避免开发中的机制造成主干不稳定，我们会拉出来一个新的分支。&lt;/p&gt;
 &lt;p&gt;可以使用&lt;code&gt;Switch&lt;/code&gt;命令将本地目录切换到目标分支。&lt;/p&gt;
 &lt;h2 id="切换分支"&gt;&lt;a href="#%e5%88%87%e6%8d%a2%e5%88%86%e6%94%af" class="header-anchor"&gt;&lt;/a&gt;切换分支
@@ -287,7 +287,7 @@ loading="lazy"
 &lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/c678051e7174d9a39385ffced78915db.png"
 loading="lazy"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注：如单独切换某个目录或文件到指定分支，修改完记得切回原分支&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>SVN锁定操作</title><link>https://boiltask.com/knowledge/svn-lock/</link><pubDate>Mon, 13 Mar 2023 19:35:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-lock/</guid><description>&lt;p&gt;以下主要以英文版为例，中文版同理选择对应位置选项即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：如单独切换某个目录或文件到指定分支，修改完记得切回原分支&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>SVN锁定操作</title><link>https://boiltask.com/knowledge/svn/lock/</link><pubDate>Mon, 13 Mar 2023 19:35:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn/lock/</guid><description>&lt;p&gt;以下主要以英文版为例，中文版同理选择对应位置选项即可。&lt;/p&gt;
 &lt;p&gt;多图警告，可通过左侧目录跳转所需章节。&lt;/p&gt;
 &lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
 &lt;/h2&gt;&lt;p&gt;因为修改某一文件往往需要一段时间，在此期间内如果有人上传了同一文件，如果无法合并就会导致自己提交时产生冲突。&lt;/p&gt;
