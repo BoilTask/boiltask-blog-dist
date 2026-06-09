@@ -51,8 +51,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="题目来源"&gt;&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;题目来源
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1002/description" target="_blank" rel="noopener"
-&gt;括号配对问题 - NYOJ&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1002/description" target="_blank" rel="noopener"&gt;括号配对问题 - NYOJ&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;用栈来检测是否对应&lt;/p&gt;
@@ -279,8 +278,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/283" target="_blank" rel="noopener"
-&gt;【DidaOJ】[283]Stack ？ Queue ？&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[612C]Replace To Make Regular Bracket Sequence</title><link>https://boiltask.com/oj/codeforces-612C/</link><pubDate>Fri, 04 Mar 2016 23:41:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-612C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/283" target="_blank" rel="noopener"&gt;【DidaOJ】[283]Stack ？ Queue ？&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[612C]Replace To Make Regular Bracket Sequence</title><link>https://boiltask.com/oj/codeforces-612C/</link><pubDate>Fri, 04 Mar 2016 23:41:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-612C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -454,8 +452,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/612/C" target="_blank" rel="noopener"
-&gt;【CodeForces】[612C]Replace To Make Regular Bracket Sequence&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[1363]Rails</title><link>https://boiltask.com/oj/poj-1363/</link><pubDate>Fri, 04 Mar 2016 23:07:45 +0800</pubDate><guid>https://boiltask.com/oj/poj-1363/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/612/C" target="_blank" rel="noopener"&gt;【CodeForces】[612C]Replace To Make Regular Bracket Sequence&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[1363]Rails</title><link>https://boiltask.com/oj/poj-1363/</link><pubDate>Fri, 04 Mar 2016 23:07:45 +0800</pubDate><guid>https://boiltask.com/oj/poj-1363/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -532,8 +529,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;思路和上面的那一题&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/u011493189/article/details/50805953" target="_blank" rel="noopener"
-&gt;【杭电】[1022]Train Problem I&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/u011493189/article/details/50805953" target="_blank" rel="noopener"&gt;【杭电】[1022]Train Problem I&lt;/a&gt;&lt;br&gt;
 差不多&lt;/p&gt;
 &lt;p&gt;这个只需要判断能否出栈&lt;br&gt;
 而不用输出过程&lt;br&gt;
@@ -612,8 +608,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1363" target="_blank" rel="noopener"
-&gt;【POJ】[1363]Rails&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1022]Train Problem I</title><link>https://boiltask.com/oj/hdu-1022/</link><pubDate>Fri, 04 Mar 2016 22:40:12 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1022/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1363" target="_blank" rel="noopener"&gt;【POJ】[1363]Rails&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1022]Train Problem I</title><link>https://boiltask.com/oj/hdu-1022/</link><pubDate>Fri, 04 Mar 2016 22:40:12 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1022/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -774,8 +769,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1022" target="_blank" rel="noopener"
-&gt;【杭电】[1022]Train Problem I&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1702]ACboy needs your help again!</title><link>https://boiltask.com/oj/hdu-1702/</link><pubDate>Mon, 29 Feb 2016 16:33:10 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1702/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1022" target="_blank" rel="noopener"&gt;【杭电】[1022]Train Problem I&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1702]ACboy needs your help again!</title><link>https://boiltask.com/oj/hdu-1702/</link><pubDate>Mon, 29 Feb 2016 16:33:10 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1702/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -983,5 +977,4 @@ FILO先进后出&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1702" target="_blank" rel="noopener"
-&gt;【杭电】[1702]ACboy needs your help again!&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1702" target="_blank" rel="noopener"&gt;【杭电】[1702]ACboy needs your help again!&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

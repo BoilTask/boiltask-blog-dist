@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>愿成其身 on BoilTask's Blog</title><link>https://boiltask.com/tags/iwbtg/</link><description>Recent content in 愿成其身 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Aug 2016 16:00:57 +0000</lastBuildDate><atom:link href="https://boiltask.com/tags/iwbtg/index.xml" rel="self" type="application/rss+xml"/><item><title>【愿成其身】[15]思维的优化 – 数学的魅力</title><link>https://boiltask.com/tutorial/iwbtg/15/</link><pubDate>Mon, 29 Aug 2016 16:00:57 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/15/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/143" target="_blank" rel="noopener"
-&gt;小学求和1到n&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>愿成其身 on BoilTask's Blog</title><link>https://boiltask.com/tags/iwbtg/</link><description>Recent content in 愿成其身 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Aug 2016 16:00:57 +0000</lastBuildDate><atom:link href="https://boiltask.com/tags/iwbtg/index.xml" rel="self" type="application/rss+xml"/><item><title>【愿成其身】[15]思维的优化 – 数学的魅力</title><link>https://boiltask.com/tutorial/iwbtg/15/</link><pubDate>Mon, 29 Aug 2016 16:00:57 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/15/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/143" target="_blank" rel="noopener"&gt;小学求和1到n&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;注意观察这道题与上一个求和的差别。&lt;/p&gt;
@@ -33,8 +32,7 @@
 &lt;p&gt;当然，还需要注意数据范围的问题。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;再次举这一题的例子也是想再次说明思维的重要性。&lt;/p&gt;
-&lt;p&gt;一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。&lt;/p&gt;</description></item><item><title>【愿成其身】[14]for循环 – 另一种表达方法</title><link>https://boiltask.com/tutorial/iwbtg/14/</link><pubDate>Sun, 28 Aug 2016 16:00:46 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/14/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/143" target="_blank" rel="noopener"
-&gt;大学求和1到n&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。&lt;/p&gt;</description></item><item><title>【愿成其身】[14]for循环 – 另一种表达方法</title><link>https://boiltask.com/tutorial/iwbtg/14/</link><pubDate>Sun, 28 Aug 2016 16:00:46 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/14/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/143" target="_blank" rel="noopener"&gt;大学求和1到n&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;依旧是一道小学题目。&lt;/p&gt;
@@ -170,8 +168,7 @@ B -- 否 --&amp;gt; E[循环结束]
 &lt;p&gt;加大括号！&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;剩下的就没有什么了，在掌握了循环之后，已经可以开始尝试一些入门级水题了。&lt;/p&gt;
-&lt;p&gt;这条路，长且艰……&lt;/p&gt;</description></item><item><title>【愿成其身】[13]循环结构 – 计算机的神奇</title><link>https://boiltask.com/tutorial/iwbtg/13/</link><pubDate>Sat, 27 Aug 2016 16:00:42 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/13/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="https://oj.didapipa.com/problem/142" target="_blank" rel="noopener"
-&gt;蜗牛爬树&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这条路，长且艰……&lt;/p&gt;</description></item><item><title>【愿成其身】[13]循环结构 – 计算机的神奇</title><link>https://boiltask.com/tutorial/iwbtg/13/</link><pubDate>Sat, 27 Aug 2016 16:00:42 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/13/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="https://oj.didapipa.com/problem/142" target="_blank" rel="noopener"&gt;蜗牛爬树&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;一道小学数学题，但对于计算机来说，却是直接模拟这一过程更为简洁。&lt;/p&gt;
@@ -303,8 +300,7 @@ L --&amp;gt; I
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;也就是判断循环条件是否成立之前，先执行一次循环体，这在解决一些问题的时候很方便。&lt;/p&gt;
-&lt;p&gt;也许你可以自己尝试画出它的流程图呀~&lt;/p&gt;</description></item><item><title>【愿成其身】[12]从交换输出谈起 – 黑盒的漏洞</title><link>https://boiltask.com/tutorial/iwbtg/12/</link><pubDate>Fri, 26 Aug 2016 16:00:45 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/12/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/141" target="_blank" rel="noopener"
-&gt;交换输出&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;也许你可以自己尝试画出它的流程图呀~&lt;/p&gt;</description></item><item><title>【愿成其身】[12]从交换输出谈起 – 黑盒的漏洞</title><link>https://boiltask.com/tutorial/iwbtg/12/</link><pubDate>Fri, 26 Aug 2016 16:00:45 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/12/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/141" target="_blank" rel="noopener"&gt;交换输出&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;这也是一道经典问题，今天就从它谈起。&lt;/p&gt;
@@ -427,8 +423,7 @@ L --&amp;gt; I
 &lt;/ol&gt;
 &lt;p&gt;当然，对于这一题来说，即使是最初的代码所用的时间与空间也是非常少的，所以优化对这一题来说也许没必要。&lt;/p&gt;
 &lt;p&gt;但是这种思想是我们应该学习的，正是在这种优化中，自身的编码能力及思考问题的能力会有显著的提高。&lt;/p&gt;
-&lt;p&gt;而实际比赛中，我们也可以根据题意，在符合要求的前提下，选取那个最容易想出且容易写成的方案来实现。&lt;/p&gt;</description></item><item><title>【愿成其身】[11]字符的本质 – ASCII的作用</title><link>https://boiltask.com/tutorial/iwbtg/11/</link><pubDate>Thu, 25 Aug 2016 16:00:15 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/11/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/140" target="_blank" rel="noopener"
-&gt;比较字符&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;而实际比赛中，我们也可以根据题意，在符合要求的前提下，选取那个最容易想出且容易写成的方案来实现。&lt;/p&gt;</description></item><item><title>【愿成其身】[11]字符的本质 – ASCII的作用</title><link>https://boiltask.com/tutorial/iwbtg/11/</link><pubDate>Thu, 25 Aug 2016 16:00:15 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/11/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/140" target="_blank" rel="noopener"&gt;比较字符&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;细想之下，计算机能储存字符是一件非常了不起的事情，毕竟它不同于数字。&lt;/p&gt;
@@ -535,9 +530,7 @@ L --&amp;gt; I
 &lt;/div&gt;&lt;p&gt;具体的如何运用，还是需要自己在实践中多多尝试。&lt;/p&gt;
 &lt;p&gt;如果能运用的非常自如，那么说明对程序的结构把握的很好，也有利于进一步的学(zhuang)习(bi)。&lt;/p&gt;
 &lt;p&gt;练习题：&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://oj.didapipa.com/problem/139" target="_blank" rel="noopener"
-&gt;三个数的最值&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[9]分支结构 – 程序的魅力</title><link>https://boiltask.com/tutorial/iwbtg/9/</link><pubDate>Tue, 23 Aug 2016 16:00:14 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/9/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/138" target="_blank" rel="noopener"
-&gt;两数的距离&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://oj.didapipa.com/problem/139" target="_blank" rel="noopener"&gt;三个数的最值&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[9]分支结构 – 程序的魅力</title><link>https://boiltask.com/tutorial/iwbtg/9/</link><pubDate>Tue, 23 Aug 2016 16:00:14 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/9/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/138" target="_blank" rel="noopener"&gt;两数的距离&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;由数学知识得，两点在数轴对应点的距离为$\left| x_{1}-x_{2}\right|$。&lt;/p&gt;
@@ -580,8 +573,7 @@ L --&amp;gt; I
 &lt;p&gt;&lt;span class="dida-font-red"&gt;若一个条件下有多条语句，则大括号不可省略(因为如果省略，编译器便把它当成只有一条语句在该条件下)。&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;所以这道题的代码就很好写了。&lt;/p&gt;
-&lt;p&gt;数据范围很小，用int型就足够了，然后就是进行判断求解。&lt;/p&gt;</description></item><item><title>【愿成其身】[8]实数的运用 – 整数化作的实数</title><link>https://boiltask.com/tutorial/iwbtg/8/</link><pubDate>Mon, 22 Aug 2016 16:00:47 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/8/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/137" target="_blank" rel="noopener"
-&gt;愿成其身A÷B&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;数据范围很小，用int型就足够了，然后就是进行判断求解。&lt;/p&gt;</description></item><item><title>【愿成其身】[8]实数的运用 – 整数化作的实数</title><link>https://boiltask.com/tutorial/iwbtg/8/</link><pubDate>Mon, 22 Aug 2016 16:00:47 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/8/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/137" target="_blank" rel="noopener"&gt;愿成其身A÷B&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;我们知道C语言中用&amp;quot;/&amp;ldquo;来表示相除，整数的除法是采用的舍尾的方式。&lt;/p&gt;
@@ -648,8 +640,7 @@ L --&amp;gt; I
 &lt;hr&gt;
 &lt;p&gt;还有一点需要注意：&lt;/p&gt;
 &lt;p&gt;此题的的输入数据描述，由两个整数变为了两个数。&lt;/p&gt;
-&lt;p&gt;所以输入数据有可能为小数，这个时候便不可以用整数来读取。&lt;/p&gt;</description></item><item><title>【愿成其身】[7]整数的魅力 – 数字的最后一位</title><link>https://boiltask.com/tutorial/iwbtg/7/</link><pubDate>Sun, 21 Aug 2016 16:00:32 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/7/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/136" target="_blank" rel="noopener"
-&gt;最后一位&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以输入数据有可能为小数，这个时候便不可以用整数来读取。&lt;/p&gt;</description></item><item><title>【愿成其身】[7]整数的魅力 – 数字的最后一位</title><link>https://boiltask.com/tutorial/iwbtg/7/</link><pubDate>Sun, 21 Aug 2016 16:00:32 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/7/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/136" target="_blank" rel="noopener"&gt;最后一位&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;在C语言中，除了加减乘除运算之外，还有一个较为常用的运算，取余&amp;quot;%&amp;quot;。&lt;/p&gt;
@@ -678,8 +669,7 @@ $$12345 \% 10 = 5$$&lt;p&gt;这一题便可使用这一种方法轻松得出答�
 &lt;hr&gt;
 &lt;p&gt;这种把$ \left( A\times B\right) \% 10 $ 转变为 $ \left[ \left( A\% 10 \right) \times \left( B\% 10 \right) \right] \% 10 $的思维，对于&lt;code&gt;ACM&lt;/code&gt;来说很重要，因为通过各种转化，我们可以突破题目的一些数据限制，从而得到正确答案。&lt;/p&gt;
 &lt;p&gt;思考，若题目的数据范围是$0 \leq a,b \leq 10^{18}$，那么我们便不能使用第一种方法，而使用后一种方法便可以轻松得到正确答案。&lt;/p&gt;
-&lt;p&gt;&lt;span class="dida-font-red"&gt;这才是这一题的意义！&lt;/span&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[6]A×B的学问 – 较大数的处理</title><link>https://boiltask.com/tutorial/iwbtg/6/</link><pubDate>Sat, 20 Aug 2016 16:00:01 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/6/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/135" target="_blank" rel="noopener"
-&gt;愿成其身A×B&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-font-red"&gt;这才是这一题的意义！&lt;/span&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[6]A×B的学问 – 较大数的处理</title><link>https://boiltask.com/tutorial/iwbtg/6/</link><pubDate>Sat, 20 Aug 2016 16:00:01 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/6/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/135" target="_blank" rel="noopener"&gt;愿成其身A×B&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;对于这一题，因为C语言中用&amp;quot;*&amp;ldquo;号来表示乘法，所以我们很容易写出以下代码。&lt;/p&gt;
@@ -795,10 +785,8 @@ $$12345 \% 10 = 5$$&lt;p&gt;这一题便可使用这一种方法轻松得出答�
 &lt;p&gt;后面还是以例题来从使用出发讲解各个常用的类型。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;参考文章：&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://www.cnblogs.com/onedime/archive/2012/11/21/2780149.html" target="_blank" rel="noopener"
-&gt;C语言基本数据类型简介 - onedime&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://blog.csdn.net/woods2001/article/details/6532761" target="_blank" rel="noopener"
-&gt;C语言基本数据类型详解 - woods2001的专栏&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[4]从A+B谈起 – 一切的开端</title><link>https://boiltask.com/tutorial/iwbtg/4/</link><pubDate>Thu, 18 Aug 2016 16:00:36 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/4/</guid><description>&lt;p&gt;有人说：“程序员总难免开始于&lt;span class="dida-font-red"&gt;A+B&lt;/span&gt;。”&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://www.cnblogs.com/onedime/archive/2012/11/21/2780149.html" target="_blank" rel="noopener"&gt;C语言基本数据类型简介 - onedime&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://blog.csdn.net/woods2001/article/details/6532761" target="_blank" rel="noopener"&gt;C语言基本数据类型详解 - woods2001的专栏&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[4]从A+B谈起 – 一切的开端</title><link>https://boiltask.com/tutorial/iwbtg/4/</link><pubDate>Thu, 18 Aug 2016 16:00:36 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/4/</guid><description>&lt;p&gt;有人说：“程序员总难免开始于&lt;span class="dida-font-red"&gt;A+B&lt;/span&gt;。”&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;说了这么多，我们还是停留在“定量”阶段。前面说过，黑盒测试应该是根据系统给的输入数据来进行输出数据的比较。那么，如何获取输入数据呢？&lt;/p&gt;
 &lt;p&gt;在stdio.h中，与格式化输出printf()相对的，有格式化输入scanf()。&lt;/p&gt;
@@ -870,12 +858,10 @@ $$12345 \% 10 = 5$$&lt;p&gt;这一题便可使用这一种方法轻松得出答�
 &lt;/div&gt;&lt;p&gt;PS：试一试从键盘输入1234567890987654321会出现什么结果，思考为什么。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;了解了如何读取数据，就可以尝试完成这道A+B问题了。&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://oj.didapipa.com/problem/134" target="_blank" rel="noopener"
-&gt;每个OJ都要有A+B&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://oj.didapipa.com/problem/134" target="_blank" rel="noopener"&gt;每个OJ都要有A+B&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;同样的，还是&lt;span class="dida-font-red"&gt;请先尝试之后再继续阅读&lt;/span&gt;。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;对于这一题……&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;没什么说的-.-科科&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[3]转义字符 – 格式化输出</title><link>https://boiltask.com/tutorial/iwbtg/3/</link><pubDate>Wed, 17 Aug 2016 16:00:52 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/3/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/133" target="_blank" rel="noopener"
-&gt;打印键盘&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;对于这一题……&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;没什么说的-.-科科&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class="dida-font-hidden"&gt;&lt;/span&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[3]转义字符 – 格式化输出</title><link>https://boiltask.com/tutorial/iwbtg/3/</link><pubDate>Wed, 17 Aug 2016 16:00:52 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/3/</guid><description>&lt;p&gt;本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/133" target="_blank" rel="noopener"&gt;打印键盘&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="dida-font-red"&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;题目要求按照顺序输出键盘上的字符。&lt;/p&gt;
@@ -984,14 +970,11 @@ loading="lazy"
 &lt;p&gt;之后便会进入运行状态页面，我们可以看到程序的评判结果。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;具体结果是什么意思-.-自己探索吧。&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://oj.didapipa.com/system/about" target="_blank" rel="noopener"
-&gt;系统帮助 &amp;amp; FAQ - 关于 - 系统 - DidaOJ&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://acm.hdu.edu.cn/faq.php?lang=chs" target="_blank" rel="noopener"
-&gt;杭州电子科技大学(hdoj)FAQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://oj.didapipa.com/system/about" target="_blank" rel="noopener"&gt;系统帮助 &amp;amp; FAQ - 关于 - 系统 - DidaOJ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://acm.hdu.edu.cn/faq.php?lang=chs" target="_blank" rel="noopener"&gt;杭州电子科技大学(hdoj)FAQ&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;剩下的就是自己动手，先完成这个简单的题目吧。&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://oj.didapipa.com/problem/132" target="_blank" rel="noopener"
-&gt;【愿成其身】I wanna be the guy&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[1]工欲善其事，必先利其器</title><link>https://boiltask.com/tutorial/iwbtg/1/</link><pubDate>Mon, 15 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="link" href="http://oj.didapipa.com/problem/132" target="_blank" rel="noopener"&gt;【愿成其身】I wanna be the guy&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】[1]工欲善其事，必先利其器</title><link>https://boiltask.com/tutorial/iwbtg/1/</link><pubDate>Mon, 15 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/1/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;子曰：“&lt;code&gt;工欲善其事，必先利其器&lt;/code&gt;。居是邦也，事其大夫之贤者，友其士之仁者。”&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src="https://r2.boiltask.com/2025/04/5b95325bd7118279ad0d5284963c3953.png"
@@ -1074,16 +1057,13 @@ alt="img_2.png"
 &lt;p&gt;-.-好，问题来了，怎么运行。&lt;/p&gt;
 &lt;p&gt;这一部分我不是很想详细说，毕竟我感觉讲太详细是件不负责任的事情，因为剥夺了自己探索的乐趣。&lt;/p&gt;
 &lt;p&gt;所以这里只提供一个下载链接，其余的……&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://www.xiazaiba.com/html/3836.html" target="_blank" rel="noopener"
-&gt;Dev-C++(C++开发工具)V5.11.0中文免费版(不可调试)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://www.cr173.com/soft/21025.html" target="_blank" rel="noopener"
-&gt;Dev C++ V5.9.2 绿色中文版(可调试)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://www.xiazaiba.com/html/3836.html" target="_blank" rel="noopener"&gt;Dev-C++(C++开发工具)V5.11.0中文免费版(不可调试)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://www.cr173.com/soft/21025.html" target="_blank" rel="noopener"&gt;Dev C++ V5.9.2 绿色中文版(可调试)&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;接下来，怎么知道自己的程序标不标准，怎么训练自己的编程能力。&lt;/p&gt;
 &lt;p&gt;这里涉及到ACM常用的一个训练工具，OnlineJudge。&lt;/p&gt;
 &lt;p&gt;下面是这一个程序的题目，在题解里会详细介绍OJ的用法：&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://oj.didapipa.com/problem/132" target="_blank" rel="noopener"
-&gt;【愿成其身】I wanna be the guy&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】I wanna be the guy</title><link>https://boiltask.com/tutorial/iwbtg/0/</link><pubDate>Sun, 14 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/0/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="link" href="http://oj.didapipa.com/problem/132" target="_blank" rel="noopener"&gt;【愿成其身】I wanna be the guy&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【愿成其身】I wanna be the guy</title><link>https://boiltask.com/tutorial/iwbtg/0/</link><pubDate>Sun, 14 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/0/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;I wanna be the guy - 愿成其身&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src="https://r2.boiltask.com/2025/04/3a6160eef68f123a0fe9f6bb52185470.png"
@@ -1103,7 +1083,7 @@ alt="ICPC"
 &lt;hr&gt;
 &lt;p&gt;这个系列的文章，我的定位是作为一个餐后读物，特别是在已经看了很多专业性书之后来看，也许会更有感觉一些。强调的是“共鸣”，而非教学，所以大可把它当做一篇“ACM——我刚开始就是这么想的”。&lt;/p&gt;
 &lt;p&gt;如果在看的时候偶然发现，“哎呀，我也是这么认为的。”，那么也算是我的荣幸了。&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/" &gt;点此查看本系列导读目录&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/"&gt;点此查看本系列导读目录&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PS：&lt;/p&gt;
 &lt;p&gt;因为文章内可能大量使用Katex渲染数学公式，所以请使用新版浏览器阅读。&lt;/p&gt;
 &lt;p&gt;这是公式f(x)=x+1 : $f \left( x \right) = x + 1$&lt;/p&gt;
@@ -1117,31 +1097,29 @@ loading="lazy"
 &lt;h2 id="入门导读"&gt;&lt;a href="#%e5%85%a5%e9%97%a8%e5%af%bc%e8%af%bb" class="header-anchor"&gt;&lt;/a&gt;====入门导读=====
 &lt;/h2&gt;&lt;p&gt;电子科技大学CDOJ：&lt;/p&gt;
 &lt;p&gt;【Step-By-Step】&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://acm.uestc.edu.cn/" target="_blank" rel="noopener"
-&gt;https://acm.uestc.edu.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://acm.uestc.edu.cn/" target="_blank" rel="noopener"&gt;https://acm.uestc.edu.cn/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;南阳理工学院NYOJ：&lt;/p&gt;
 &lt;p&gt;【进阶计划】&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/step.php" target="_blank" rel="noopener"
-&gt;http://acm.nyist.net/JudgeOnline/step.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/step.php" target="_blank" rel="noopener"&gt;http://acm.nyist.net/JudgeOnline/step.php&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="愿成其身"&gt;&lt;a href="#%e6%84%bf%e6%88%90%e5%85%b6%e8%ba%ab" class="header-anchor"&gt;&lt;/a&gt;====愿成其身=====
 &lt;/h2&gt;&lt;h3 id="前言"&gt;&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor"&gt;&lt;/a&gt;【前言】
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/0/" &gt;I wanna be the guy&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;[I wanna be the guy](/content/post/tutorial/iwbtg/0/【愿成其身】I wanna be the guy)&lt;/p&gt;
 &lt;h3 id="入门"&gt;&lt;a href="#%e5%85%a5%e9%97%a8" class="header-anchor"&gt;&lt;/a&gt;【入门】
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/1/" &gt;工欲善其事，必先利其器&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/2/" &gt;有趣的练习方式 – OnlineJudge&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/3/" &gt;转义字符 – 格式化输出&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/4/" &gt;从A+B谈起 – 一切的开端&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/5/" &gt;数据类型 – 装数据的盒子&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/6/" &gt;A×B的学问 – 较大数的处理&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/7/" &gt;整数的魅力 – 数字的最后一位&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/8/" &gt;实数的运用 – 整数化作的实数&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/9/" &gt;分支结构 – 程序的魅力&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/10/" &gt;问号表达式 – 酷炫的利器&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/11/" &gt;字符的本质 – ASCII的作用&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/12/" &gt;从交换输出谈起 – 黑盒的漏洞&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/13/" &gt;循环结构 – 计算机的神奇&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/14/" &gt;for循环 – 另一种表达方法&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/15/" &gt;思维的优化 – 数学的魅力&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/1/"&gt;工欲善其事，必先利其器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[有趣的练习方式 – OnlineJudge](/content/post/tutorial/iwbtg/2/【愿成其身】2-有趣的练习方式 – OnlineJudge)&lt;/p&gt;
+&lt;p&gt;[转义字符 – 格式化输出](/content/post/tutorial/iwbtg/3/【愿成其身】3-转义字符 – 格式化输出)&lt;/p&gt;
+&lt;p&gt;[从A+B谈起 – 一切的开端](/content/post/tutorial/iwbtg/4/【愿成其身】4-从A+B谈起 – 一切的开端)&lt;/p&gt;
+&lt;p&gt;[数据类型 – 装数据的盒子](/content/post/tutorial/iwbtg/5/【愿成其身】5-数据类型 – 装数据的盒子)&lt;/p&gt;
+&lt;p&gt;[A×B的学问 – 较大数的处理](/content/post/tutorial/iwbtg/6/【愿成其身】6-A×B的学问 – 较大数的处理)&lt;/p&gt;
+&lt;p&gt;[整数的魅力 – 数字的最后一位](/content/post/tutorial/iwbtg/7/【愿成其身】7-整数的魅力 – 数字的最后一位)&lt;/p&gt;
+&lt;p&gt;[实数的运用 – 整数化作的实数](/content/post/tutorial/iwbtg/8/【愿成其身】8-实数的运用 – 整数化作的实数)&lt;/p&gt;
+&lt;p&gt;[分支结构 – 程序的魅力](/content/post/tutorial/iwbtg/9/【愿成其身】9-分支结构 – 程序的魅力)&lt;/p&gt;
+&lt;p&gt;[问号表达式 – 酷炫的利器](/content/post/tutorial/iwbtg/10/【愿成其身】10-问号表达式 – 酷炫的利器)&lt;/p&gt;
+&lt;p&gt;[字符的本质 – ASCII的作用](/content/post/tutorial/iwbtg/11/【愿成其身】11-字符的本质 – ASCII的作用)&lt;/p&gt;
+&lt;p&gt;[从交换输出谈起 – 黑盒的漏洞](/content/post/tutorial/iwbtg/12/【愿成其身】12-从交换输出谈起 – 黑盒的漏洞)&lt;/p&gt;
+&lt;p&gt;[循环结构 – 计算机的神奇](/content/post/tutorial/iwbtg/13/【愿成其身】13-循环结构 – 计算机的神奇)&lt;/p&gt;
+&lt;p&gt;[for循环 – 另一种表达方法](/content/post/tutorial/iwbtg/14/【愿成其身】14-for循环 – 另一种表达方法)&lt;/p&gt;
+&lt;p&gt;[思维的优化 – 数学的魅力](/content/post/tutorial/iwbtg/15/【愿成其身】15-思维的优化 – 数学的魅力)&lt;/p&gt;
 &lt;p&gt;未完待续……&lt;/p&gt;
 &lt;h2 id="ps"&gt;&lt;a href="#ps" class="header-anchor"&gt;&lt;/a&gt;PS
 &lt;/h2&gt;&lt;p&gt;因为文章内可能大量使用&lt;code&gt;Katex&lt;/code&gt;渲染数学公式，所以请使用新版浏览器阅读。&lt;/p&gt;
@@ -1154,6 +1132,5 @@ loading="lazy"
 &lt;p&gt;很显然，大概有很大的意外……&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可使用&lt;code&gt;rss&lt;/code&gt;阅读器订阅&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="https://yilan.io/" target="_blank" rel="noopener"
-&gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;RSS已废弃，可查看标签：&lt;a class="link" href="https://boiltask.com/tags/iwbtg/" &gt;愿成其身&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;del&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下，推荐使用&lt;a class="link" href="https://yilan.io/" target="_blank" rel="noopener"&gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;RSS已废弃，可查看标签：&lt;a class="link" href="https://boiltask.com/tags/iwbtg/"&gt;愿成其身&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

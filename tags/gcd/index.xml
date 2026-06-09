@@ -154,8 +154,7 @@ $$\begin{cases} a=m-n \\ b=-L\\ x=t \\ y=k \end{cases}$$&lt;p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;推荐文章:&lt;a class="link" href="http://blog.csdn.net/w446506278/article/details/52029604" target="_blank" rel="noopener"
-&gt;POJ 1061 青蛙的约会 - w446506278的博客&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1143]小珂的苦恼</title><link>https://boiltask.com/oj/nyoj-1143/</link><pubDate>Fri, 22 Jul 2016 09:25:36 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1143/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;推荐文章:&lt;a class="link" href="http://blog.csdn.net/w446506278/article/details/52029604" target="_blank" rel="noopener"&gt;POJ 1061 青蛙的约会 - w446506278的博客&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1143]小珂的苦恼</title><link>https://boiltask.com/oj/nyoj-1143/</link><pubDate>Fri, 22 Jul 2016 09:25:36 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1143/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;
@@ -208,8 +207,7 @@ $$\begin{cases} a=m-n \\ b=-L\\ x=t \\ y=k \end{cases}$$&lt;p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;h3 id="题目来源"&gt;&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;题目来源
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1143/description" target="_blank" rel="noopener"
-&gt;小珂的苦恼 - NYOJ&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1143/description" target="_blank" rel="noopener"&gt;小珂的苦恼 - NYOJ&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;二元一次方程有整数解的条件为&lt;br&gt;
 $n\%gcd(a,b)==0$&lt;/p&gt;
@@ -903,8 +901,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;也许在接触扩展欧几里得之前都能做出来&lt;br&gt;
 结果学的越多想的越复杂了&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=5660" target="_blank" rel="noopener"
-&gt;【杭电】[5660]jrMz and angles&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1576]A/B</title><link>https://boiltask.com/oj/hdu-1576/</link><pubDate>Wed, 23 Mar 2016 12:44:58 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1576/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=5660" target="_blank" rel="noopener"&gt;【杭电】[5660]jrMz and angles&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1576]A/B</title><link>https://boiltask.com/oj/hdu-1576/</link><pubDate>Wed, 23 Mar 2016 12:44:58 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1576/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1054,8 +1051,7 @@ ax+by=gcd(a,b)求x y&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1576" target="_blank" rel="noopener"
-&gt;【杭电】[1576]A/B&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[492]【C语言训练】列出最简真分数序列</title><link>https://boiltask.com/oj/didaoj-492/</link><pubDate>Sun, 06 Mar 2016 14:41:39 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-492/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1576" target="_blank" rel="noopener"&gt;【杭电】[1576]A/B&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【DidaOJ】[492]【C语言训练】列出最简真分数序列</title><link>https://boiltask.com/oj/didaoj-492/</link><pubDate>Sun, 06 Mar 2016 14:41:39 +0800</pubDate><guid>https://boiltask.com/oj/didaoj-492/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1199,8 +1195,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/492" target="_blank" rel="noopener"
-&gt;【DidaOJ】[492]【C语言训练】列出最简真分数序列&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1040]公约数和公倍数</title><link>https://boiltask.com/oj/nyoj-1040/</link><pubDate>Wed, 20 Jan 2016 20:15:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1040/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://oj.didapipa.com/problem/492" target="_blank" rel="noopener"&gt;【DidaOJ】[492]【C语言训练】列出最简真分数序列&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1040]公约数和公倍数</title><link>https://boiltask.com/oj/nyoj-1040/</link><pubDate>Wed, 20 Jan 2016 20:15:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1040/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1398,5 +1393,4 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1040/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1040]公约数和公倍数&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1040/description" target="_blank" rel="noopener"&gt;【NYOJ】[1040]公约数和公倍数&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

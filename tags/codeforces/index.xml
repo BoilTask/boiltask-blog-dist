@@ -242,7 +242,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
-&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/codeforces-670D2" &gt;【Codeforces】[670D2]Magic Powder - 2&lt;/a&gt;类似&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/codeforces-670D2"&gt;【Codeforces】[670D2]Magic Powder - 2&lt;/a&gt;类似&lt;br&gt;
 同样是根据判断能不能做mid个&lt;br&gt;
 来进行二分查找&lt;/p&gt;
 &lt;p&gt;只不过这个每个汉堡所需的材料个数&lt;br&gt;
@@ -1816,7 +1816,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
-&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/hdu-2037" &gt;【杭电】[2037]今年暑假不AC&lt;/a&gt;相同思路&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/hdu-2037"&gt;【杭电】[2037]今年暑假不AC&lt;/a&gt;相同思路&lt;br&gt;
 简单的贪心问题&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
@@ -2647,7 +2647,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
-&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/zzuli-1799" &gt;【郑轻】[1799]wrz的压岁钱&lt;/a&gt;类似&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/zzuli-1799"&gt;【郑轻】[1799]wrz的压岁钱&lt;/a&gt;类似&lt;br&gt;
 需把情况考虑完整&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
@@ -2969,8 +2969,7 @@ a/k-(b+1)/k&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/597/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[597A]Divisibility&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[624A]Save Luke</title><link>https://boiltask.com/oj/codeforces-624A/</link><pubDate>Wed, 01 Jun 2016 02:34:59 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-624A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/597/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[597A]Divisibility&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[624A]Save Luke</title><link>https://boiltask.com/oj/codeforces-624A/</link><pubDate>Wed, 01 Jun 2016 02:34:59 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-624A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -3073,8 +3072,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/624/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[624A]Save Luke&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[300A]Array</title><link>https://boiltask.com/oj/codeforces-300A/</link><pubDate>Wed, 01 Jun 2016 02:21:30 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-300A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/624/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[624A]Save Luke&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[300A]Array</title><link>https://boiltask.com/oj/codeforces-300A/</link><pubDate>Wed, 01 Jun 2016 02:21:30 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-300A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -3261,8 +3259,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/300/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[300A]Array&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/300/A" target="_blank" rel="noopener"&gt;【CodeForces】[300A]Array&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[638A]Home Numbers</title><link>https://boiltask.com/oj/codeforces-638A/</link><pubDate>Wed, 01 Jun 2016 01:53:59 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-638A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -3366,8 +3363,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/638/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[638A]Home Numbers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[366A]Dima and Guards</title><link>https://boiltask.com/oj/codeforces-366A/</link><pubDate>Wed, 01 Jun 2016 01:44:50 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-366A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/638/A" target="_blank" rel="noopener"&gt;【CodeForces】[638A]Home Numbers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[366A]Dima and Guards</title><link>https://boiltask.com/oj/codeforces-366A/</link><pubDate>Wed, 01 Jun 2016 01:44:50 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-366A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -3496,8 +3492,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/366/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[366A]Dima and Guards&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[651C]Watchmen</title><link>https://boiltask.com/oj/codeforces-651C/</link><pubDate>Mon, 30 May 2016 04:10:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-651C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/366/A" target="_blank" rel="noopener"&gt;【CodeForces】[366A]Dima and Guards&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[651C]Watchmen</title><link>https://boiltask.com/oj/codeforces-651C/</link><pubDate>Mon, 30 May 2016 04:10:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-651C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -3733,8 +3728,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/651/problem/C" target="_blank" rel="noopener"
-&gt;【CodeForces】[651C]Watchmen&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[675B]Restoring Painting</title><link>https://boiltask.com/oj/codeforces-675B/</link><pubDate>Mon, 30 May 2016 03:22:16 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-675B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/651/problem/C" target="_blank" rel="noopener"&gt;【CodeForces】[651C]Watchmen&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[675B]Restoring Painting</title><link>https://boiltask.com/oj/codeforces-675B/</link><pubDate>Mon, 30 May 2016 03:22:16 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-675B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -3868,8 +3862,7 @@ x d x&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/675/problem/B" target="_blank" rel="noopener"
-&gt;【CodeForces】[675B]Restoring Painting&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[667A]Pouring Rain</title><link>https://boiltask.com/oj/codeforces-667A/</link><pubDate>Mon, 30 May 2016 02:47:13 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-667A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/675/problem/B" target="_blank" rel="noopener"&gt;【CodeForces】[675B]Restoring Painting&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[667A]Pouring Rain</title><link>https://boiltask.com/oj/codeforces-667A/</link><pubDate>Mon, 30 May 2016 02:47:13 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-667A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -3999,8 +3992,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/667/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[667A]Pouring Rain&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/667/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[667A]Pouring Rain&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[669A]Little Artem and Presents</title><link>https://boiltask.com/oj/codeforces-669A/</link><pubDate>Mon, 30 May 2016 02:36:23 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-669A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -4108,8 +4100,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/669/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[669A]Little Artem and Presents&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/669/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[669A]Little Artem and Presents&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[675A]Infinite Sequence</title><link>https://boiltask.com/oj/codeforces-675A/</link><pubDate>Mon, 30 May 2016 02:27:48 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-675A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -4223,8 +4214,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/675/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[675A]Infinite Sequence&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[673A]Bear and Game</title><link>https://boiltask.com/oj/codeforces-673A/</link><pubDate>Mon, 30 May 2016 01:57:24 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-673A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/675/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[675A]Infinite Sequence&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[673A]Bear and Game</title><link>https://boiltask.com/oj/codeforces-673A/</link><pubDate>Mon, 30 May 2016 01:57:24 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-673A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4367,8 +4357,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/673/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[673A]Bear and Game&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/673/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[673A]Bear and Game&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[651B]Beautiful Paintings</title><link>https://boiltask.com/oj/codeforces-651B/</link><pubDate>Mon, 30 May 2016 00:00:28 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-651B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -4519,8 +4508,7 @@ a[i+1]&amp;gt;a[i]变使cnt++&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://codeforces.com/contest/651/problem/B" target="_blank" rel="noopener"
-&gt;【CodeForces】[651B]Beautiful Paintings&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://codeforces.com/contest/651/problem/B" target="_blank" rel="noopener"&gt;【CodeForces】[651B]Beautiful Paintings&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[621B]Wet Shark and Bishops</title><link>https://boiltask.com/oj/codeforces-621B/</link><pubDate>Sun, 29 May 2016 23:19:25 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-621B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -4672,8 +4660,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/621/problem/B" target="_blank" rel="noopener"
-&gt;[621B]Wet Shark and Bishops&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/621/problem/B" target="_blank" rel="noopener"&gt;[621B]Wet Shark and Bishops&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[673B]Problems for Round</title><link>https://boiltask.com/oj/codeforces-673B/</link><pubDate>Fri, 27 May 2016 07:36:22 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-673B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -4827,8 +4814,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/673/problem/B" target="_blank" rel="noopener"
-&gt;【CodeForces】[673B]Problems for Round&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[621A]Wet Shark and Odd and Even</title><link>https://boiltask.com/oj/codeforces-621A/</link><pubDate>Wed, 25 May 2016 21:54:27 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-621A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/673/problem/B" target="_blank" rel="noopener"&gt;【CodeForces】[673B]Problems for Round&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[621A]Wet Shark and Odd and Even</title><link>https://boiltask.com/oj/codeforces-621A/</link><pubDate>Wed, 25 May 2016 21:54:27 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-621A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4954,8 +4940,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/621/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[621A]Wet Shark and Odd and Even&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/621/A" target="_blank" rel="noopener"&gt;【CodeForces】[621A]Wet Shark and Odd and Even&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[75A]Life Without Zeros</title><link>https://boiltask.com/oj/codeforces-75A/</link><pubDate>Wed, 18 May 2016 17:13:01 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-75A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -5191,8 +5176,7 @@ int有可能会溢出&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/75/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[75A]Life Without Zeros&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[66B]Petya and Countryside</title><link>https://boiltask.com/oj/codeforces-66B/</link><pubDate>Wed, 11 May 2016 22:10:07 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-66B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/75/A" target="_blank" rel="noopener"&gt;【CodeForces】[75A]Life Without Zeros&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[66B]Petya and Countryside</title><link>https://boiltask.com/oj/codeforces-66B/</link><pubDate>Wed, 11 May 2016 22:10:07 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-66B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -5325,8 +5309,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/66/problem/B" target="_blank" rel="noopener"
-&gt;【CodeForces】[66B]Petya and Countryside&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/66/problem/B" target="_blank" rel="noopener"&gt;【CodeForces】[66B]Petya and Countryside&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;题意:&lt;br&gt;
 在给出的数组中找出最长的一段满足&lt;br&gt;
 先不递减再不递增的区间&lt;br&gt;
@@ -5528,8 +5511,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/66/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[66A]Petya and Java&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/66/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[66A]Petya and Java&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;题意:&lt;br&gt;
 给出一个数字,要求输出它的数据类型&lt;/p&gt;
 &lt;ul&gt;
@@ -5674,8 +5656,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/617/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[617A]Elephant&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/617/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[617A]Elephant&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[546A]Soldier and Bananas</title><link>https://boiltask.com/oj/codeforces-546A/</link><pubDate>Tue, 12 Apr 2016 07:15:00 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-546A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -5797,8 +5778,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/546/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[546A]Soldier and Bananas&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[1B]Spreadsheet</title><link>https://boiltask.com/oj/codeforces-1B/</link><pubDate>Sun, 10 Apr 2016 00:07:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-1B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/546/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[546A]Soldier and Bananas&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[1B]Spreadsheet</title><link>https://boiltask.com/oj/codeforces-1B/</link><pubDate>Sun, 10 Apr 2016 00:07:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-1B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -6044,8 +6024,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/1/problem/B" target="_blank" rel="noopener"
-&gt;【CodeForces】[1B]Spreadsheet&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[1A]Theatre Square</title><link>https://boiltask.com/oj/codeforces-1A/</link><pubDate>Sat, 09 Apr 2016 22:47:52 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-1A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/1/problem/B" target="_blank" rel="noopener"&gt;【CodeForces】[1B]Spreadsheet&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[1A]Theatre Square</title><link>https://boiltask.com/oj/codeforces-1A/</link><pubDate>Sat, 09 Apr 2016 22:47:52 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-1A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -6164,8 +6143,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/1/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[1A]Theatre Square&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/1/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[1A]Theatre Square&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[652A]Gabriel and Caterpillar</title><link>https://boiltask.com/oj/codeforces-652A/</link><pubDate>Thu, 07 Apr 2016 22:43:00 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-652A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -6311,8 +6289,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/652/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[652A]Gabriel and Caterpillar&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/652/A" target="_blank" rel="noopener"&gt;【CodeForces】[652A]Gabriel and Caterpillar&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[653A]Bear and Three Balls</title><link>https://boiltask.com/oj/codeforces-653A/</link><pubDate>Thu, 07 Apr 2016 22:16:14 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-653A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -6470,8 +6447,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/653/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[653A]Bear and Three Balls&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[656A]Da Vinci Powers</title><link>https://boiltask.com/oj/codeforces-656A/</link><pubDate>Thu, 07 Apr 2016 21:55:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-656A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/653/A" target="_blank" rel="noopener"&gt;【CodeForces】[653A]Bear and Three Balls&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[656A]Da Vinci Powers</title><link>https://boiltask.com/oj/codeforces-656A/</link><pubDate>Thu, 07 Apr 2016 21:55:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-656A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -6585,8 +6561,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/656/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[656A]Da Vinci Powers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/656/A" target="_blank" rel="noopener"&gt;【CodeForces】[656A]Da Vinci Powers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[658A]Bear and Reverse Radewoosh</title><link>https://boiltask.com/oj/codeforces-658A/</link><pubDate>Thu, 07 Apr 2016 21:52:33 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-658A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -6743,8 +6718,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/658/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[658A]Bear and Reverse Radewoosh&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/658/A" target="_blank" rel="noopener"&gt;【CodeForces】[658A]Bear and Reverse Radewoosh&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[598A]Tricky Sum</title><link>https://boiltask.com/oj/codeforces-598A/</link><pubDate>Thu, 07 Apr 2016 13:33:47 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-598A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -6875,8 +6849,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/598/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[598A]Tricky Sum&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[610B]Vika and Squares</title><link>https://boiltask.com/oj/codeforces-610B/</link><pubDate>Thu, 07 Apr 2016 13:17:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-610B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/598/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[598A]Tricky Sum&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[610B]Vika and Squares</title><link>https://boiltask.com/oj/codeforces-610B/</link><pubDate>Thu, 07 Apr 2016 13:17:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-610B/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7050,8 +7023,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/610/B" target="_blank" rel="noopener"
-&gt;【CodeForces】[610B]Vika and Squares&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[614A]Link/Cut Tree</title><link>https://boiltask.com/oj/codeforces-614A/</link><pubDate>Thu, 07 Apr 2016 07:08:01 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-614A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/610/B" target="_blank" rel="noopener"&gt;【CodeForces】[610B]Vika and Squares&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[614A]Link/Cut Tree</title><link>https://boiltask.com/oj/codeforces-614A/</link><pubDate>Thu, 07 Apr 2016 07:08:01 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-614A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7199,8 +7171,7 @@ res&amp;gt;r (因为此时已经执行res=res*k)&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/614/problem/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[614A]Link/Cut Tree&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/contest/614/problem/A" target="_blank" rel="noopener"&gt;【CodeForces】[614A]Link/Cut Tree&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[659C]Tanya and Toys</title><link>https://boiltask.com/oj/codeforces-659C/</link><pubDate>Thu, 31 Mar 2016 07:42:01 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-659C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -7460,8 +7431,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/659/C" target="_blank" rel="noopener"
-&gt;【CodeForces】[659C]Tanya and Toys&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[659A]Round House</title><link>https://boiltask.com/oj/codeforces-659A/</link><pubDate>Thu, 31 Mar 2016 07:36:46 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-659A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/659/C" target="_blank" rel="noopener"&gt;【CodeForces】[659C]Tanya and Toys&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[659A]Round House</title><link>https://boiltask.com/oj/codeforces-659A/</link><pubDate>Thu, 31 Mar 2016 07:36:46 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-659A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7597,8 +7567,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/659/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[659A]Round House&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[651A]Joysticks</title><link>https://boiltask.com/oj/codeforces-651A/</link><pubDate>Sat, 19 Mar 2016 21:19:43 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-651A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/659/A" target="_blank" rel="noopener"&gt;【CodeForces】[659A]Round House&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[651A]Joysticks</title><link>https://boiltask.com/oj/codeforces-651A/</link><pubDate>Sat, 19 Mar 2016 21:19:43 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-651A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7780,8 +7749,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/651/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[651A]Joysticks&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[630C]Lucky Numbers</title><link>https://boiltask.com/oj/codeforces-630C/</link><pubDate>Fri, 18 Mar 2016 07:30:54 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-630C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/651/A" target="_blank" rel="noopener"&gt;【CodeForces】[651A]Joysticks&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[630C]Lucky Numbers</title><link>https://boiltask.com/oj/codeforces-630C/</link><pubDate>Fri, 18 Mar 2016 07:30:54 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-630C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7897,8 +7865,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/630/C" target="_blank" rel="noopener"
-&gt;【CodeForces】[630C]Lucky Numbers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/630/C" target="_blank" rel="noopener"&gt;【CodeForces】[630C]Lucky Numbers&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【CodeForces】[630A]Again Twenty Five!</title><link>https://boiltask.com/oj/codeforces-630A/</link><pubDate>Fri, 18 Mar 2016 07:26:56 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-630A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -8015,8 +7982,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/630/A" target="_blank" rel="noopener"
-&gt;【CodeForces】[630A]Again Twenty Five!&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[612C]Replace To Make Regular Bracket Sequence</title><link>https://boiltask.com/oj/codeforces-612C/</link><pubDate>Fri, 04 Mar 2016 23:41:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-612C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/630/A" target="_blank" rel="noopener"&gt;【CodeForces】[630A]Again Twenty Five!&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【CodeForces】[612C]Replace To Make Regular Bracket Sequence</title><link>https://boiltask.com/oj/codeforces-612C/</link><pubDate>Fri, 04 Mar 2016 23:41:03 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-612C/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -8190,8 +8156,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/612/C" target="_blank" rel="noopener"
-&gt;【CodeForces】[612C]Replace To Make Regular Bracket Sequence&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【Codeforces】[606A]Magic Spheres</title><link>https://boiltask.com/oj/codeforces-606A/</link><pubDate>Sat, 16 Jan 2016 01:56:25 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-606A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/612/C" target="_blank" rel="noopener"&gt;【CodeForces】[612C]Replace To Make Regular Bracket Sequence&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【Codeforces】[606A]Magic Spheres</title><link>https://boiltask.com/oj/codeforces-606A/</link><pubDate>Sat, 16 Jan 2016 01:56:25 +0800</pubDate><guid>https://boiltask.com/oj/codeforces-606A/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -8267,7 +8232,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
-&lt;/h2&gt;&lt;p&gt;初做题目的感想:&lt;a class="link" href="https://boiltask.com/record/201601131/" &gt;【算法】算法是一种思维&lt;/a&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;初做题目的感想:&lt;a class="link" href="https://boiltask.com/record/201601131/"&gt;【算法】算法是一种思维&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;英语理解问题&lt;br&gt;
 题目要求没读懂 以为是问上面的数据能否通过变换变成下面的数据&lt;br&gt;
 结果是只需要大于等于下面的就好了 -.-&lt;br&gt;
@@ -8341,5 +8306,4 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;所以决定恶补英语-.-&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/606/A" target="_blank" rel="noopener"
-&gt;【Codeforces】[606A]Magic Spheres&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;题目地址:&lt;a class="link" href="http://codeforces.com/problemset/problem/606/A" target="_blank" rel="noopener"&gt;【Codeforces】[606A]Magic Spheres&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

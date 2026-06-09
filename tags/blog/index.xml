@@ -82,20 +82,15 @@
 &lt;p&gt;加油加油！&lt;/p&gt;
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hugo本地引入三方库</title><link>https://boiltask.com/knowledge/hugo-third-party/</link><pubDate>Mon, 09 Feb 2026 13:01:27 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-third-party/</guid><description>&lt;p&gt;在hugo的设计下，通常使用一些第三方网站托管的第三方库来实现一些效果。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hugo本地引入三方库</title><link>https://boiltask.com/knowledge/hugo-third-party/</link><pubDate>Mon, 09 Feb 2026 13:01:27 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-third-party/</guid><description>&lt;p&gt;在hugo的设计下，通常使用一些第三方网站托管的第三方库来实现一些效果。&lt;/p&gt;
 &lt;p&gt;不过有时由于网络环境的不同，可能希望把这些三方库下载到本地一同部署，以简化网络依赖。&lt;/p&gt;
 &lt;p&gt;可以借助npm来下载这些三方库，部署时拷贝到hugo输出的静态资源目录下即可。&lt;/p&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://github.com/BoilTask/web-third-party" target="_blank" rel="noopener"
-&gt;BoilTask/web-third-party&lt;/a&gt;&lt;/p&gt;</description></item><item><title>终于按自己的理解创建了一个Hugo主题</title><link>https://boiltask.com/record/hugo-boiltask-blog/</link><pubDate>Fri, 16 Jan 2026 13:08:03 +0800</pubDate><guid>https://boiltask.com/record/hugo-boiltask-blog/</guid><description>&lt;p&gt;得益于大模型的发展，借助&lt;a class="link" href="https://www.trae.cn/" target="_blank" rel="noopener"
-&gt;Trae&lt;/a&gt;的帮助，终于能按照自己的设计完成一个符合自己预期的主题了。&lt;/p&gt;
-&lt;p&gt;整体设计上参考了原先使用的&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
-&gt;hugo-theme-stack&lt;/a&gt;主题，不过根据我自己的需求，做了很多调整。&lt;/p&gt;
+&lt;p&gt;可以参考：&lt;a class="link" href="https://github.com/BoilTask/web-third-party" target="_blank" rel="noopener"&gt;BoilTask/web-third-party&lt;/a&gt;&lt;/p&gt;</description></item><item><title>终于按自己的理解创建了一个Hugo主题</title><link>https://boiltask.com/record/hugo-boiltask-blog/</link><pubDate>Fri, 16 Jan 2026 13:08:03 +0800</pubDate><guid>https://boiltask.com/record/hugo-boiltask-blog/</guid><description>&lt;p&gt;得益于大模型的发展，借助&lt;a class="link" href="https://www.trae.cn/" target="_blank" rel="noopener"&gt;Trae&lt;/a&gt;的帮助，终于能按照自己的设计完成一个符合自己预期的主题了。&lt;/p&gt;
+&lt;p&gt;整体设计上参考了原先使用的&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"&gt;hugo-theme-stack&lt;/a&gt;主题，不过根据我自己的需求，做了很多调整。&lt;/p&gt;
 &lt;p&gt;首先整体的布局使用左中右三列，左边是导航栏，中间是内容区域，右边是侧边栏。&lt;/p&gt;
 &lt;p&gt;导航栏可以切换菜单和文章树，允许用户通过拖拽来调整宽度，在手机端的窄屏上会精简为一个按钮，用户可以点击展开。&lt;/p&gt;
-&lt;p&gt;文章树是参考notion、知识库等产品的目录结构，是一种很好的整理文章结构的方式，因此通过允许在文章中指定parent来确定父子级关系，从而生成一个文章的&lt;a class="link" href="https://boiltask.com/tree/index.json" &gt;树状结构配置&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;正文区域引入了&lt;a class="link" href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener"
-&gt;霞鹜文楷&lt;/a&gt;字体，这是一个开源的中文字体，在中文显示上有很好的效果。&lt;/p&gt;
+&lt;p&gt;文章树是参考notion、知识库等产品的目录结构，是一种很好的整理文章结构的方式，因此通过允许在文章中指定parent来确定父子级关系，从而生成一个文章的&lt;a class="link" href="https://boiltask.com/tree/index.json"&gt;树状结构配置&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;正文区域引入了&lt;a class="link" href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener"&gt;霞鹜文楷&lt;/a&gt;字体，这是一个开源的中文字体，在中文显示上有很好的效果。&lt;/p&gt;
 &lt;p&gt;右侧的目录会根据文章的目录结构自动生成，用户可以点击目录项来跳转到对应的位置，当屏幕宽度较少时会隐藏。&lt;/p&gt;
 &lt;p&gt;整体的色调使用了我入行以来一直喜欢的配色Solarized，整体营造一种纸张感，同时考虑的暗色模式。在这个设计下正文配色有种黑色墨水的感觉，而链接则是一种蓝色墨水的质感。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/02/7aaf95447876c62b9cdc0ae4263de6c6.png"
@@ -107,39 +102,30 @@ alt="站点样式"
 &lt;p&gt;能力所限，无法提供长期稳定的支持，而且灵感随时产生，可能有一些破坏性地更新，也难以保证一定符合所有人的口味，因此暂时不准备开源。&lt;/p&gt;
 &lt;p&gt;如果有相关咨询或意见建议，欢迎在下方留言讨论。&lt;/p&gt;</description></item><item><title>历时数月终于把CSDN迁移完了</title><link>https://boiltask.com/record/oj-problem-migrate/</link><pubDate>Fri, 30 May 2025 23:53:23 +0800</pubDate><guid>https://boiltask.com/record/oj-problem-migrate/</guid><description>&lt;p&gt;大学时候在CSDN上传了一大批OJ题目的题解（虽然很多都是水题），之前数次迁移都因为量级太大而且性价比不高，这些题目都没有跟随着迁移出去。&lt;/p&gt;
 &lt;p&gt;4月初某一次突然灵感乍现，想把这些文章都迁移到hugo，使用markdown管理也更自由一些。想想当年写的时候，其实就想留一份md文件的备份，结果因为太麻烦而没有实践。这次趁着这波机会，也算是又整理出来了这些文章。&lt;/p&gt;
-&lt;p&gt;过程中，为了这些醋包了好多饺子，比如展示题目的各种shortcode，比如写了一个备份静态题目的&lt;a class="link" href="https://oj.boiltask.com" target="_blank" rel="noopener"
-&gt;爬虫站点&lt;/a&gt;，比如重新从零开始搭建了新的&lt;a class="link" href="https://oj.didapipa.com" target="_blank" rel="noopener"
-&gt;DidaOJ&lt;/a&gt;系统。&lt;/p&gt;
+&lt;p&gt;过程中，为了这些醋包了好多饺子，比如展示题目的各种shortcode，比如写了一个备份静态题目的&lt;a class="link" href="https://oj.boiltask.com" target="_blank" rel="noopener"&gt;爬虫站点&lt;/a&gt;，比如重新从零开始搭建了新的&lt;a class="link" href="https://oj.didapipa.com" target="_blank" rel="noopener"&gt;DidaOJ&lt;/a&gt;系统。&lt;/p&gt;
 &lt;p&gt;总之，虽然过程比较体力活，但结果还挺令人满意的。&lt;/p&gt;
 &lt;p&gt;也留下了一些TODO，有的是因为原始站点短时或长时间无法访问，导致很多记录难以取回，有的是当年就留下了一些尾巴，遗留了这么多年也没收尾。&lt;/p&gt;
 &lt;p&gt;后面有机会慢慢地完善吧（希望这不是新坑的又一个flag）。&lt;/p&gt;
-&lt;p&gt;后面类似的这种题解都优先提交分类：&lt;a class="link" href="https://boiltask.com/oj/" &gt;OnlineJudge&lt;/a&gt;之中。&lt;/p&gt;</description></item><item><title>加入了一些博客组织</title><link>https://boiltask.com/record/join-blog-group/</link><pubDate>Mon, 21 Apr 2025 22:06:12 +0800</pubDate><guid>https://boiltask.com/record/join-blog-group/</guid><description>&lt;p&gt;通过在别的博客中关注到的信息，最近陆续申请加入了一些博客的互联组织。&lt;/p&gt;
+&lt;p&gt;后面类似的这种题解都优先提交分类：&lt;a class="link" href="https://boiltask.com/categories/oj/"&gt;OnlineJudge&lt;/a&gt;之中。&lt;/p&gt;</description></item><item><title>加入了一些博客组织</title><link>https://boiltask.com/record/join-blog-group/</link><pubDate>Mon, 21 Apr 2025 22:06:12 +0800</pubDate><guid>https://boiltask.com/record/join-blog-group/</guid><description>&lt;p&gt;通过在别的博客中关注到的信息，最近陆续申请加入了一些博客的互联组织。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://icp.gov.moe/?keyword=20250158" target="_blank" rel="noopener"
-&gt;萌ICP备&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener"
-&gt;十年之约 - 虫洞&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener"
-&gt;开往&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://icp.gov.moe/?keyword=20250158" target="_blank" rel="noopener"&gt;萌ICP备&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener"&gt;十年之约 - 虫洞&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener"&gt;开往&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;要是有小伙伴愿意互换友链，也欢迎在页面留言：&lt;a class="link" href="https://boiltask.com/links" &gt;友情链接 - BoilTask&amp;rsquo;s Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;要是有小伙伴愿意互换友链，也欢迎在页面留言：&lt;a class="link" href="https://boiltask.com/links"&gt;友情链接 - BoilTask&amp;rsquo;s Blog&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;整理文章的过程中，发现好多之前发布在CSDN的文章，都被爬虫爬到了各种各样的平台上。其中还不乏一些大的平台，也在靠着爬虫来填充自己的的内容。想想中文互联网的这种环境，也挺悲哀的。&lt;/p&gt;
 &lt;p&gt;自建博客至少还有个好处，难以写通用爬虫，某种程度上还能减少一些无脑搬运的概率。&lt;/p&gt;
 &lt;p&gt;怎么说呢，选择自己建站，更多的是满足自己的分享欲和成就感，若干年后回味起来也别有一番滋味，能坚持就继续坚持吧~&lt;/p&gt;
 &lt;p&gt;这里还是得再感谢赛博圣人Cloudflare，提供了很多强力好用还实惠的支持。&lt;/p&gt;</description></item><item><title>Cloudflare Page环境下百度站点验证308问题</title><link>https://boiltask.com/knowledge/cloudflare-page-baidu-308/</link><pubDate>Sat, 19 Apr 2025 19:46:23 +0800</pubDate><guid>https://boiltask.com/knowledge/cloudflare-page-baidu-308/</guid><description>&lt;p&gt;百度提供了一个站长服务，通过认证后，可以干预一些百度爬虫的行为，同时也可以检测链接对百度的可见性。&lt;/p&gt;
-&lt;p&gt;服务地址：&lt;a class="link" href="https://ziyuan.baidu.com/site/" target="_blank" rel="noopener"
-&gt;百度搜索资源平台&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务地址：&lt;a class="link" href="https://ziyuan.baidu.com/site/" target="_blank" rel="noopener"&gt;百度搜索资源平台&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在更新本站的验证信息的时候，发现无法通过文件验证，研究下来发现是链接与Cloudflare的机制有冲突。&lt;/p&gt;
-&lt;p&gt;验证的详细说明可以参考：&lt;a class="link" href="https://zy.baidu.com/academy/detail?id=1003" target="_blank" rel="noopener"
-&gt;站点验证图文详解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;验证的详细说明可以参考：&lt;a class="link" href="https://zy.baidu.com/academy/detail?id=1003" target="_blank" rel="noopener"&gt;站点验证图文详解&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Cloudflare会自动把test.html转换为test，因此百度按原url访问时会找不到。&lt;/p&gt;
 &lt;p&gt;这里选择在正常文件后再加一个.html，形成test.html.html的结构，这样经过转换后仍能有一个后缀。&lt;/p&gt;
-&lt;p&gt;参考文章：&lt;a class="link" href="https://blog.ovvv.top/posts/e7163e6b/" target="_blank" rel="noopener"
-&gt;百度收录 Cloudflare Page 显示 308 报错&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hugo文章加密的一种设想</title><link>https://boiltask.com/knowledge/hugo-encryption/</link><pubDate>Wed, 09 Apr 2025 12:43:51 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-encryption/</guid><description>&lt;p&gt;前端在生成index时加密内容，提供一个JS根据输入的密码解密内容，根据得到的解密内容中是否包含指定信息来判断是否解密成功。&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;a class="link" href="https://blog.ovvv.top/posts/e7163e6b/" target="_blank" rel="noopener"&gt;百度收录 Cloudflare Page 显示 308 报错&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hugo文章加密的一种设想</title><link>https://boiltask.com/knowledge/hugo-encryption/</link><pubDate>Wed, 09 Apr 2025 12:43:51 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-encryption/</guid><description>&lt;p&gt;前端在生成index时加密内容，提供一个JS根据输入的密码解密内容，根据得到的解密内容中是否包含指定信息来判断是否解密成功。&lt;/p&gt;
 &lt;p&gt;由于是前端加解密，需要考虑如何选择合适的加密解密算法，使得暴力破解的成本提高。&lt;/p&gt;
 &lt;p&gt;参考zip加密技术，当暴力破解的成本足够高的时候，可以认为内容是安全的。&lt;/p&gt;
-&lt;p&gt;参考主题：&lt;a class="link" href="https://fixit.lruihao.cn/zh-cn/documentation/content-management/encryption/" target="_blank" rel="noopener"
-&gt;Fixit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考主题：&lt;a class="link" href="https://fixit.lruihao.cn/zh-cn/documentation/content-management/encryption/" target="_blank" rel="noopener"&gt;Fixit&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;类似于个人简历联系信息的加密，可以实现一个基于&lt;code&gt;shortcode&lt;/code&gt;的通用版本。&lt;/p&gt;
 &lt;div class="dida-decryptor-container"&gt;
 &lt;form class="dida-decryptor-form" onsubmit="handleDecryptorSubmit(event)"&gt;&lt;label title=""&gt;
@@ -155,20 +141,16 @@ autocomplete="current-password" /&gt;
 &lt;div class="decryptor-content-verify" style="display: none;"&gt;Q0hFQ71abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc50t8cEI3cWRoblp6SEpTSGdxSg==&lt;/div&gt;
 &lt;div class="decryptor-content" style="display: none;"&gt;6L&amp;#43;Z571abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5q615paH5a2X6KKr5Yqg5a&amp;#43;G&lt;/div&gt;
 &lt;div class="decryptor-content-decryptor decryptor-hidden"&gt;&lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p&gt;突然想开个新坑，要不&lt;code&gt;fork&lt;/code&gt;一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
-&gt;hugo-theme-stack&lt;/a&gt;自己魔改一下？&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p&gt;突然想开个新坑，要不&lt;code&gt;fork&lt;/code&gt;一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"&gt;hugo-theme-stack&lt;/a&gt;自己魔改一下？&lt;/p&gt;
 &lt;p&gt;可能也就是说说……&lt;/p&gt;
 &lt;p&gt;不过Hugo的主题管理方案挺方便的，可能会逐步添加一些想要的功能，要是量级足够的话，开个新主题好像也不是不行……&lt;/p&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
-&gt;GitHub - CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="noopener"
-&gt;GitHub - hugo-fixit/FixIt: 🔧 A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"&gt;GitHub - CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="noopener"&gt;GitHub - hugo-fixit/FixIt: 🔧 A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;20251229 随着Vibe Codeing的发展，&lt;a class="link" href="https://oj.boiltask.com/" target="_blank" rel="noopener"
-&gt;BoilTask Online Judge Problem&lt;/a&gt;站点应用了新主题。&lt;/p&gt;
+&lt;p&gt;20251229 随着Vibe Codeing的发展，&lt;a class="link" href="https://oj.boiltask.com/" target="_blank" rel="noopener"&gt;BoilTask Online Judge Problem&lt;/a&gt;站点应用了新主题。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>尝试Obsidian与Hugo结合</title><link>https://boiltask.com/record/try-obsidian/</link><pubDate>Thu, 03 Apr 2025 21:40:08 +0800</pubDate><guid>https://boiltask.com/record/try-obsidian/</guid><description>&lt;p&gt;之前一直是Notion的拥趸，不过随着又有好久不用Notion，又重新起了笔记软件挑选的念头。&lt;/p&gt;
 &lt;p&gt;之前一直觉得Obsidian作为一个本地存档的笔记软件，功能也没有Notion强大，还需要自己处理同步等问题，应该是没什么优势。&lt;/p&gt;
 &lt;p&gt;不过上次折腾起来Hugo之后，越发感觉笔记这种东西，还是返璞归真比较适合我，要不太容易忙于折腾样式、排版什么的问题而分心。到最后发现，除了设计好的模板，其实真正的内容没有多少。&lt;/p&gt;
@@ -178,8 +160,7 @@ autocomplete="current-password" /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;20260210：最后还是发现又变成了之前说的，博客还是内容为主，可能记事本最好用（现在用VSCODE类的工具）。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>给Hugo博客引入pangu.js</title><link>https://boiltask.com/record/hugo-pangu/</link><pubDate>Thu, 03 Apr 2025 09:06:12 +0800</pubDate><guid>https://boiltask.com/record/hugo-pangu/</guid><description>&lt;p&gt;之前经常纠结中英文混排时的排版问题，因此引入了&lt;code&gt;pangu.js&lt;/code&gt;来优化排版效果。&lt;/p&gt;
-&lt;p&gt;官方仓库：&lt;a class="link" href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener"
-&gt;vinta/pangu.js: Paranoid text spacing in JavaScript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官方仓库：&lt;a class="link" href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener"&gt;vinta/pangu.js: Paranoid text spacing in JavaScript&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;调用&lt;code&gt;pangu.autoSpacingPage()&lt;/code&gt;即可将页面转换为美化之后的结果。&lt;/p&gt;
 &lt;p&gt;由于&lt;code&gt;JS&lt;/code&gt;的加载与处理需要时间，直接这么写的话，体验上是用户会先看到处理前的页面，然后短暂停留后刷新为新内容，这就导致体验上很奇怪。&lt;/p&gt;
 &lt;p&gt;解决思路的话，可以考虑先隐藏页面，等&lt;code&gt;DOM&lt;/code&gt;加载完，先进行&lt;code&gt;pangu.js&lt;/code&gt;的处理，完毕后再重新显示页面。&lt;/p&gt;
@@ -395,17 +376,14 @@ autocomplete="current-password" /&gt;
 &lt;p&gt;同时使用起来也更方便和灵活。&lt;/p&gt;
 &lt;h2 id="配置方式"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e6%96%b9%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;配置方式
 &lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;在&lt;code&gt;Github&lt;/code&gt;中安装&lt;a class="link" href="https://github.com/apps/giscus" target="_blank" rel="noopener"
-&gt;Giscus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;Github&lt;/code&gt;中安装&lt;a class="link" href="https://github.com/apps/giscus" target="_blank" rel="noopener"&gt;Giscus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;将仓库授权给应用
 &lt;ol&gt;
-&lt;li&gt;在&lt;a class="link" href="https://github.com/settings/installations" target="_blank" rel="noopener"
-&gt;Applications&lt;/a&gt;中找到&lt;code&gt;Giscus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;a class="link" href="https://github.com/settings/installations" target="_blank" rel="noopener"&gt;Applications&lt;/a&gt;中找到&lt;code&gt;Giscus&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;在&lt;code&gt;Repository access&lt;/code&gt;中选择所存放评论的仓库&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;前往&lt;a class="link" href="https://giscus.app/zh-CN" target="_blank" rel="noopener"
-&gt;Giscus&lt;/a&gt;的官网继续完成配置
+&lt;li&gt;前往&lt;a class="link" href="https://giscus.app/zh-CN" target="_blank" rel="noopener"&gt;Giscus&lt;/a&gt;的官网继续完成配置
 &lt;ol&gt;
 &lt;li&gt;选择一个&lt;code&gt;语言&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;在&lt;code&gt;仓库&lt;/code&gt;中输入所授权的仓库，如：&lt;code&gt;BoilTask/BoilTask.github.io&lt;/code&gt;&lt;/li&gt;
@@ -414,9 +392,7 @@ autocomplete="current-password" /&gt;
 &lt;/li&gt;
 &lt;li&gt;在&lt;code&gt;启用 giscus&lt;/code&gt;一项中查看所需要的配置&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;可以在需要的地方填写上生成的配置即可。&lt;/p&gt;</description></item><item><title>又双叒叕一次重新梳理了一下博客</title><link>https://boiltask.com/record/202411081/</link><pubDate>Fri, 08 Nov 2024 12:46:38 +0800</pubDate><guid>https://boiltask.com/record/202411081/</guid><description>&lt;p&gt;最近在整理之前写的事件系统：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/a3991470-a7b9-474d-8038-289dad0b0497" target="_blank" rel="noopener"
-&gt;DidaEvent&lt;/a&gt;，为此创建了一个&lt;a class="link" href="https://event.didapipa.com/" target="_blank" rel="noopener"
-&gt;文档&lt;/a&gt;网站。 使用了&lt;code&gt;Hugo&lt;/code&gt;来做了网站生成系统，体验还不错，因此决定把博客也从&lt;code&gt;WordPress&lt;/code&gt;迁移到&lt;code&gt;Hugo&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;可以在需要的地方填写上生成的配置即可。&lt;/p&gt;</description></item><item><title>又双叒叕一次重新梳理了一下博客</title><link>https://boiltask.com/record/202411081/</link><pubDate>Fri, 08 Nov 2024 12:46:38 +0800</pubDate><guid>https://boiltask.com/record/202411081/</guid><description>&lt;p&gt;最近在整理之前写的事件系统：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/a3991470-a7b9-474d-8038-289dad0b0497" target="_blank" rel="noopener"&gt;DidaEvent&lt;/a&gt;，为此创建了一个&lt;a class="link" href="https://event.didapipa.com/" target="_blank" rel="noopener"&gt;文档&lt;/a&gt;网站。 使用了&lt;code&gt;Hugo&lt;/code&gt;来做了网站生成系统，体验还不错，因此决定把博客也从&lt;code&gt;WordPress&lt;/code&gt;迁移到&lt;code&gt;Hugo&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="为什么要迁移"&gt;&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%bf%81%e7%a7%bb" class="header-anchor"&gt;&lt;/a&gt;为什么要迁移
 &lt;/h2&gt;&lt;p&gt;本身其实对静态建站方案是比较排斥的，一是和传统的直接在线编辑的方式比没有那么直观，二来有服务器的方案感觉也更加灵活。&lt;/p&gt;
 &lt;p&gt;但是自己维护服务器的成本相对还是比较高的，虽然使用了&lt;code&gt;WordPress&lt;/code&gt;，但本身我对&lt;code&gt;PHP&lt;/code&gt;的发展也不太看好，而且相对来说也过于重了。&lt;/p&gt;
@@ -429,25 +405,20 @@ autocomplete="current-password" /&gt;
 &lt;p&gt;&lt;code&gt;Jekyll&lt;/code&gt;具有Github的官方支持，可以直接在&lt;code&gt;Github&lt;/code&gt;上部署。但是尝试了一个&lt;code&gt;Jekyll&lt;/code&gt;的主题，感觉太复杂了。
 而且其实我是希望数据源与最后生成的文件分开的，这样也方便管理。&lt;/p&gt;
 &lt;p&gt;最后选择了&lt;code&gt;Hugo&lt;/code&gt;，一是有合适的主题，二来生成速度快，三来使用的&lt;code&gt;Golang&lt;/code&gt;语言也是我比较看好的一种语言。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;DidaEvent&lt;/code&gt;的文档使用的主题是&lt;a class="link" href="https://github.com/thuliteio/doks" target="_blank" rel="noopener"
-&gt;Doks&lt;/a&gt;，博客使用的主题是&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
-&gt;Stack&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DidaEvent&lt;/code&gt;的文档使用的主题是&lt;a class="link" href="https://github.com/thuliteio/doks" target="_blank" rel="noopener"&gt;Doks&lt;/a&gt;，博客使用的主题是&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"&gt;Stack&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="迁移过程"&gt;&lt;a href="#%e8%bf%81%e7%a7%bb%e8%bf%87%e7%a8%8b" class="header-anchor"&gt;&lt;/a&gt;迁移过程
 &lt;/h2&gt;&lt;p&gt;简单的部署好框架后，感觉整体还是比较满意的。&lt;/p&gt;
-&lt;p&gt;剩下的就是需要迁移原先&lt;code&gt;WordPress&lt;/code&gt;的文章了，本来都做好一点一点复制的准备了，不过好在发现了一款插件：&lt;a class="link" href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter" target="_blank" rel="noopener"
-&gt;wordpress-to-hugo-exporter&lt;/a&gt;。
+&lt;p&gt;剩下的就是需要迁移原先&lt;code&gt;WordPress&lt;/code&gt;的文章了，本来都做好一点一点复制的准备了，不过好在发现了一款插件：&lt;a class="link" href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter" target="_blank" rel="noopener"&gt;wordpress-to-hugo-exporter&lt;/a&gt;。
 经过插件的导出，得到了一个文章的压缩包，又根据我自己的需求简单调整了一下，一个大体的博客就算搭建完毕了。&lt;/p&gt;
 &lt;p&gt;不过有一些陈年老文章，还有一些图片需要再整理一下，就后续再慢慢翻新吧。&lt;/p&gt;
 &lt;h2 id="评论区配置"&gt;&lt;a href="#%e8%af%84%e8%ae%ba%e5%8c%ba%e9%85%8d%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;评论区配置
-&lt;/h2&gt;&lt;p&gt;评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class="link" href="https://boiltask.com/knowledge/hugo-giscus/" &gt;Hogo中Giscus配置&lt;/a&gt;&lt;/p&gt;</description></item><item><title>欢迎前往煮梦空间——www.BoilTask.com</title><link>https://boiltask.com/record/www-boiltask-com/</link><pubDate>Fri, 29 Jul 2016 08:58:40 +0800</pubDate><guid>https://boiltask.com/record/www-boiltask-com/</guid><description>&lt;blockquote&gt;
+&lt;/h2&gt;&lt;p&gt;评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class="link" href="https://boiltask.com/content/post/knowledge/hugo-giscus/index"&gt;Hogo中Giscus配置&lt;/a&gt;&lt;/p&gt;</description></item><item><title>欢迎前往煮梦空间——www.BoilTask.com</title><link>https://boiltask.com/record/www-boiltask-com/</link><pubDate>Fri, 29 Jul 2016 08:58:40 +0800</pubDate><guid>https://boiltask.com/record/www-boiltask-com/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;20250530：本文初始发表于CSDN&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;顶级域名：&lt;br&gt;
-&lt;a class="link" href="http://www.BoilTask.com" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://www.BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;br&gt;
 博客地址：&lt;br&gt;
-&lt;a class="link" href="http://www.boiltask.com/blog/" target="_blank" rel="noopener"
-&gt;煮梦空间——www.BoilTask.com/blog&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://www.boiltask.com/blog/" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com/blog&lt;/a&gt;&lt;br&gt;
 后面的文章就优先照顾网站了&lt;br&gt;
 直接同步过来显示效果可能不是特别好&lt;br&gt;
 所以推荐点击查看原文进入网站阅读&lt;br&gt;
@@ -460,11 +431,9 @@ autocomplete="current-password" /&gt;
 以此来说说吧~&lt;br&gt;
 哈哈哈哈&lt;br&gt;
 ===========2016.02.02-03:10===========&lt;/p&gt;</description></item><item><title>【吐槽】为什么用户名不能换啊！</title><link>https://boiltask.com/record/csdn-username/</link><pubDate>Mon, 28 Dec 2015 14:09:59 +0800</pubDate><guid>https://boiltask.com/record/csdn-username/</guid><description>&lt;p&gt;为什么网址要变成这个啊！！！！&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/u011493189" target="_blank" rel="noopener"
-&gt;http://blog.csdn.net/u011493189&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/u011493189" target="_blank" rel="noopener"&gt;http://blog.csdn.net/u011493189&lt;/a&gt;&lt;br&gt;
 在下想要&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/BoilTask" target="_blank" rel="noopener"
-&gt;http://blog.csdn.net/BoilTask&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/BoilTask" target="_blank" rel="noopener"&gt;http://blog.csdn.net/BoilTask&lt;/a&gt;&lt;br&gt;
 啊！！！！！！&lt;br&gt;
 这让一个排版都研究半天的人很难受啊！&lt;/p&gt;
 &lt;p&gt;算了……&lt;br&gt;

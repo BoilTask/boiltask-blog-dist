@@ -241,8 +241,7 @@
 &lt;/ol&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1au411y7Fq" target="_blank" rel="noopener"
-&gt;游戏中地形大气和云的渲染(上) | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1au411y7Fq" target="_blank" rel="noopener"&gt;游戏中地形大气和云的渲染(上) | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>GAMES104现代游戏引擎 - 渲染中光和材质的数学魔法</title><link>https://boiltask.com/note/games104-game-engine-5/</link><pubDate>Wed, 28 Jan 2026 13:19:37 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-5/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;存在不少东西没有看懂，后续需要再整理一遍。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -477,8 +476,7 @@ $$&lt;ul&gt;
 &lt;p&gt;&lt;strong&gt;核心启示&lt;/strong&gt;：游戏引擎开发不是追求数学上的完美，而是要在&lt;strong&gt;有限的算力&lt;/strong&gt;下，通过合理的&lt;strong&gt;假设、简化与预计算&lt;/strong&gt;，创造出&lt;strong&gt;可信且美观&lt;/strong&gt;的视觉效果。&lt;/p&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1J3411n7WT/" target="_blank" rel="noopener"
-&gt;渲染中光和材质的数学魔法 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1J3411n7WT/" target="_blank" rel="noopener"&gt;渲染中光和材质的数学魔法 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏引擎中的渲染实践</title><link>https://boiltask.com/note/games104-game-engine-4/</link><pubDate>Tue, 27 Jan 2026 23:11:25 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-4/</guid><description>&lt;h2 id="课程概述"&gt;&lt;a href="#%e8%af%be%e7%a8%8b%e6%a6%82%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;课程概述
 &lt;/h2&gt;&lt;p&gt;在现代游戏引擎中，渲染系统（Rendering System）占据着极其重要的地位。它不仅占据了引擎代码量的最大部分，也是技术难度和专业壁垒最高的领域之一。虽然很多人认为&amp;quot;游戏引擎只是一个画图引擎&amp;quot;，但实际上游戏引擎的渲染与教科书上的计算机图形学有着本质区别。&lt;/p&gt;
 &lt;h3 id="游戏渲染-vs-理论图形学"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e6%b8%b2%e6%9f%93-vs-%e7%90%86%e8%ae%ba%e5%9b%be%e5%bd%a2%e5%ad%a6" class="header-anchor"&gt;&lt;/a&gt;游戏渲染 vs 理论图形学
@@ -923,8 +921,7 @@ alt="image-20260128105845049"
 &lt;p&gt;游戏引擎的渲染系统是一个高度practical的工程事件——它不是追求理论最优，而是在硬件限制、开发效率、画面质量之间找到最佳平衡点。&lt;/p&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV14r4y1p7tt" target="_blank" rel="noopener"
-&gt;游戏引擎中的渲染实践 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV14r4y1p7tt" target="_blank" rel="noopener"&gt;游戏引擎中的渲染实践 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>GAMES104现代游戏引擎 - 如何构建游戏世界</title><link>https://boiltask.com/note/games104-game-engine-3/</link><pubDate>Tue, 27 Jan 2026 12:24:19 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-3/</guid><description>&lt;h2 id="游戏世界的构成"&gt;&lt;a href="#%e6%b8%b8%e6%88%8f%e4%b8%96%e7%95%8c%e7%9a%84%e6%9e%84%e6%88%90" class="header-anchor"&gt;&lt;/a&gt;游戏世界的构成
 &lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
@@ -1227,8 +1224,7 @@ alt="image-20260128105845049"
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;引擎=⑤工具④功能③资源②核心①平台，Tick驱动上下分层，越底越稳越顶越活。&lt;/p&gt;
-&lt;p&gt;视频地址：&lt;a class="link" href="https://www.bilibili.com/video/BV12Z4y1B7th" target="_blank" rel="noopener"
-&gt;引擎架构分层 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/p&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏引擎导论</title><link>https://boiltask.com/note/games104-game-engine-1/</link><pubDate>Mon, 26 Jan 2026 21:05:27 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;视频地址：&lt;a class="link" href="https://www.bilibili.com/video/BV12Z4y1B7th" target="_blank" rel="noopener"&gt;引擎架构分层 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/p&gt;</description></item><item><title>GAMES104现代游戏引擎 - 游戏引擎导论</title><link>https://boiltask.com/note/games104-game-engine-1/</link><pubDate>Mon, 26 Jan 2026 21:05:27 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-1/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;还是得静下心来系统的整理整理游戏引擎相关知识，随手记些东西。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="引擎简述"&gt;&lt;a href="#%e5%bc%95%e6%93%8e%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;引擎简述
@@ -1347,6 +1343,5 @@ alt="image-20260128105845049"
 &lt;/ul&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1oU4y1R7Km" target="_blank" rel="noopener"
-&gt;游戏引擎导论 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1oU4y1R7Km" target="_blank" rel="noopener"&gt;游戏引擎导论 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>

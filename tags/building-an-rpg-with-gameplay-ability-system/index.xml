@@ -429,8 +429,7 @@ G --&amp;gt; H[Notify Target]
 &lt;p&gt;通过本教程的学习，开发者可以掌握GAS的核心概念和实战技巧，构建出高效、灵活的游戏互动系统。GAS的强大之处在于其提供了一套完整的解决方案，让复杂的游戏机制实现变得简单而优雅。&lt;/p&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/courses/QQv/unreal-engine-building-an-rpg-with-gameplay-ability-system/V1n5/unreal-engine-getting-started-with-gas" target="_blank" rel="noopener"
-&gt;Getting Started with GAS - Building an RPG with Gameplay Ability System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/courses/QQv/unreal-engine-building-an-rpg-with-gameplay-ability-system/V1n5/unreal-engine-getting-started-with-gas" target="_blank" rel="noopener"&gt;Getting Started with GAS - Building an RPG with Gameplay Ability System&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>构建带有GAS的RPG - RPG及GAS构建入门</title><link>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</link><pubDate>Wed, 04 Feb 2026 12:51:11 +0800</pubDate><guid>https://boiltask.com/note/building-an-rpg-with-gameplay-ability-system-1/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;根据虚幻引擎社区中的课程《Building an RPG with Gameplay Ability System》的介绍，整理一版相关文档。&lt;/p&gt;
 &lt;p&gt;GAS：游戏能力系统（Gameplay Ability System，GAS）是虚幻引擎中用于实现游戏能力系统的插件。它提供了一种灵活的方式来定义和管理游戏中的能力，例如攻击、移动、跳跃等。GAS允许开发人员以声明式的方式定义能力，而不是在代码中硬编码。这使得游戏能力系统更加可扩展和可维护。&lt;/p&gt;
@@ -815,6 +814,5 @@ end
 &lt;/ul&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/courses/QQv/unreal-engine-building-an-rpg-with-gameplay-ability-system/zBvq/unreal-engine-introduction-to-building-an-rpg-with-gameplay-ability-system" target="_blank" rel="noopener"
-&gt;Introduction to Building an RPG with Gameplay Ability System - Building an RPG with Gameplay Ability System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/courses/QQv/unreal-engine-building-an-rpg-with-gameplay-ability-system/zBvq/unreal-engine-introduction-to-building-an-rpg-with-gameplay-ability-system" target="_blank" rel="noopener"&gt;Introduction to Building an RPG with Gameplay Ability System - Building an RPG with Gameplay Ability System&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>

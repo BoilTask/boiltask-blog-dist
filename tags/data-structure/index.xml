@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数据结构 on BoilTask's Blog</title><link>https://boiltask.com/tags/data-structure/</link><description>Recent content in 数据结构 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 Aug 2016 16:51:35 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/data-structure/index.xml" rel="self" type="application/rss+xml"/><item><title>邻接表的创建与使用</title><link>https://boiltask.com/knowledge/adjacency-list/</link><pubDate>Tue, 02 Aug 2016 16:51:35 +0800</pubDate><guid>https://boiltask.com/knowledge/adjacency-list/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;邻接表是图论中常用的一种数据结构。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"
-&gt;如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"&gt;如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;邻接表与邻接矩阵有相似的作用：用于储存一个图中所有的节点，但是邻接矩阵比较浪费内存，当数据较小时，邻接矩阵还可以计算&lt;/p&gt;
 &lt;p&gt;但是一旦数据较大，用邻接矩阵往往就会超时或者超内存，这时就要使用邻接表来存图了；为方便理解邻接矩阵与邻接表的储存方式。&lt;/p&gt;
 &lt;p&gt;我们先规定一组数据&lt;/p&gt;
@@ -255,5 +254,4 @@ loading="lazy"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;参考文章:&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"
-&gt;如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;参考文章:&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"&gt;如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

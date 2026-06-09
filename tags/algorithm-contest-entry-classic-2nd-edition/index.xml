@@ -76,8 +76,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;紫书的一题&lt;br&gt;
 先写个模板存档&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=838&amp;amp;page=show_problem&amp;amp;problem=146" target="_blank" rel="noopener"
-&gt;【UVa】[210]Concurrency Simulator&lt;/a&gt;&lt;/p&gt;</description></item><item><title>算法竞赛入门经典(8) – 关于for循环中定义变量的后续讨论</title><link>https://boiltask.com/note/competitive-programming-8/</link><pubDate>Tue, 12 Jan 2016 14:32:38 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-8/</guid><description>&lt;p&gt;想想除了看书时之外&lt;br&gt;
+&lt;p&gt;题目地址:&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=838&amp;amp;page=show_problem&amp;amp;problem=146" target="_blank" rel="noopener"&gt;【UVa】[210]Concurrency Simulator&lt;/a&gt;&lt;/p&gt;</description></item><item><title>算法竞赛入门经典(8) – 关于for循环中定义变量的后续讨论</title><link>https://boiltask.com/note/competitive-programming-8/</link><pubDate>Tue, 12 Jan 2016 14:32:38 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-8/</guid><description>&lt;p&gt;想想除了看书时之外&lt;br&gt;
 有时也会幸运地有点想法&lt;br&gt;
 所以再开一个类别来记录吧~&lt;br&gt;
 在下希望这个分类下的博文越多越好 -.-&lt;/p&gt;
@@ -91,7 +90,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 先立个flag&lt;/p&gt;
 &lt;h2 id="关于for循环中定义变量的后续讨论"&gt;&lt;a href="#%e5%85%b3%e4%ba%8efor%e5%be%aa%e7%8e%af%e4%b8%ad%e5%ae%9a%e4%b9%89%e5%8f%98%e9%87%8f%e7%9a%84%e5%90%8e%e7%bb%ad%e8%ae%a8%e8%ae%ba" class="header-anchor"&gt;&lt;/a&gt;【关于for循环中定义变量的后续讨论】
 &lt;/h2&gt;&lt;p&gt;上次在书中看到了关于for循环中定义的变量问题&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;
-&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/6" &gt;【看书】for循环中的定义变量&lt;/a&gt;&lt;/p&gt;
+[【看书】for循环中的定义变量](/content/post/note/competitive-programming/6/算法竞赛入门经典(6) – for循环中的定义变量)&lt;/p&gt;
 &lt;p&gt;结合最近的实际体验和一些测试
 在这里再补充说明一些地方&lt;/p&gt;
 &lt;h3 id="forint-i0--in--i的局限性"&gt;&lt;a href="#forint-i0--in--i%e7%9a%84%e5%b1%80%e9%99%90%e6%80%a7" class="header-anchor"&gt;&lt;/a&gt;&lt;code&gt;for(int i=0 ; i&amp;lt;n ; i++)&lt;/code&gt;的局限性
@@ -280,8 +279,7 @@ loading="lazy"
 &lt;p&gt;&lt;del&gt;所以顺带这一部分如果有的话也新开一篇文章吧-.-&lt;/del&gt;&lt;br&gt;
 这一篇写的有点长了哦&lt;/p&gt;
 &lt;p&gt;算了 还是直接写在这里吧&lt;/p&gt;
-&lt;p&gt;比赛链接:&lt;a class="link" href="https://vjudge.net/contest/103724" target="_blank" rel="noopener"
-&gt;HPU15级个人赛 - Virtual Judge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;比赛链接:&lt;a class="link" href="https://vjudge.net/contest/103724" target="_blank" rel="noopener"&gt;HPU15级个人赛 - Virtual Judge&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;呃……对于结果不想说话啦&lt;br&gt;
 在下只是还要坚定自己的想法&lt;br&gt;
 以及完善自己的想法&lt;br&gt;
@@ -290,12 +288,12 @@ loading="lazy"
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
-&lt;p&gt;上次的文章:&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/6" &gt;【看书】for循环中的定义变量&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上次的文章:[【看书】for循环中的定义变量](/content/post/note/competitive-programming/6/算法竞赛入门经典(6) – for循环中的定义变量)&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>算法竞赛入门经典(7) – 二维字符数组</title><link>https://boiltask.com/note/competitive-programming-7/</link><pubDate>Mon, 11 Jan 2016 20:00:01 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-7/</guid><description>&lt;p&gt;在做【UVa】[227]Puzzle&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;这一题的时候&lt;br&gt;
 对于 char map[5][5] ; 这种形式的变量又做了讨论&lt;br&gt;
-(文章地址:&lt;a class="link" href="https://boiltask.com/oj/uva/227" &gt;【UVa】[227]Puzzle&lt;/a&gt;)&lt;/p&gt;
+(文章地址:&lt;a class="link" href="https://boiltask.com/oj/uva/227"&gt;【UVa】[227]Puzzle&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;也就是对于map[5][5]的理解问题&lt;/p&gt;
 &lt;p&gt;s[5] 可以理解为字符串(字符数组)&lt;br&gt;
 那么 map[5][5]也可以理解为 多行字符串(二维字符数组)&lt;/p&gt;
@@ -394,8 +392,7 @@ C语言的魅力还远不止于此啊-.-&lt;br&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
-&lt;p&gt;&lt;a class="link" href="https://vjudge.net/problem/uva-227" target="_blank" rel="noopener"
-&gt;Puzzle - UVA 227 - Virtual Judge&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://vjudge.net/problem/uva-227" target="_blank" rel="noopener"&gt;Puzzle - UVA 227 - Virtual Judge&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>【UVa】[227]Puzzle</title><link>https://boiltask.com/oj/uva-227/</link><pubDate>Sun, 10 Jan 2016 21:42:53 +0800</pubDate><guid>https://boiltask.com/oj/uva-227/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
@@ -566,7 +563,7 @@ A:上 B:下 L:左 R:右 (A:把上方的字母移入空格)&lt;br&gt;
 map[0][1-5] 这里面&lt;br&gt;
 同理可用于 printf&lt;br&gt;
 不可以这么打印啊……&lt;br&gt;
-具体见:&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/7/" &gt;看书】二维字符数组&lt;/a&gt;&lt;/p&gt;
+具体见:[看书】二维字符数组](/content/post/note/competitive-programming/7/算法竞赛入门经典(7) – 二维字符数组)&lt;/p&gt;
 &lt;p&gt;所以输入网格的时候不一定要用getchar()&lt;br&gt;
 但这里因为涉及到网格中空格的判定&lt;br&gt;
 所以还是用 两重循环搭配 getchar() 比较好&lt;/p&gt;
@@ -775,8 +772,7 @@ map[0][1-5] 这里面&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://vjudge.net/problem/uva-227" target="_blank" rel="noopener"
-&gt;Puzzle - UVA 227 - Virtual Judge&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[455]Periodic Strings</title><link>https://boiltask.com/oj/uva-455/</link><pubDate>Sun, 10 Jan 2016 20:56:19 +0800</pubDate><guid>https://boiltask.com/oj/uva-455/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://vjudge.net/problem/uva-227" target="_blank" rel="noopener"&gt;Puzzle - UVA 227 - Virtual Judge&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[455]Periodic Strings</title><link>https://boiltask.com/oj/uva-455/</link><pubDate>Sun, 10 Jan 2016 20:56:19 +0800</pubDate><guid>https://boiltask.com/oj/uva-455/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -955,8 +951,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/uva-455" target="_blank" rel="noopener"
-&gt;【UVa】[455]Periodic Strings&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[1225]Digit Counting</title><link>https://boiltask.com/oj/uva-1225/</link><pubDate>Sat, 09 Jan 2016 20:24:27 +0800</pubDate><guid>https://boiltask.com/oj/uva-1225/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/uva-455" target="_blank" rel="noopener"&gt;【UVa】[455]Periodic Strings&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[1225]Digit Counting</title><link>https://boiltask.com/oj/uva-1225/</link><pubDate>Sat, 09 Jan 2016 20:24:27 +0800</pubDate><guid>https://boiltask.com/oj/uva-1225/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1205,8 +1200,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/uva-1225" target="_blank" rel="noopener"
-&gt;【UVa】[1225]Digit Counting&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/uva-1225" target="_blank" rel="noopener"&gt;【UVa】[1225]Digit Counting&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【UVa】[1586]Molar mass</title><link>https://boiltask.com/oj/uva-1586/</link><pubDate>Sat, 09 Jan 2016 20:19:45 +0800</pubDate><guid>https://boiltask.com/oj/uva-1586/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1386,8 +1380,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://vjudge.net/problem/uva-1586" target="_blank" rel="noopener"
-&gt;【UVa】[1586]Molar mass&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[1585]Score</title><link>https://boiltask.com/oj/uva-1585/</link><pubDate>Mon, 04 Jan 2016 21:59:59 +0800</pubDate><guid>https://boiltask.com/oj/uva-1585/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://vjudge.net/problem/uva-1586" target="_blank" rel="noopener"&gt;【UVa】[1586]Molar mass&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[1585]Score</title><link>https://boiltask.com/oj/uva-1585/</link><pubDate>Mon, 04 Jan 2016 21:59:59 +0800</pubDate><guid>https://boiltask.com/oj/uva-1585/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1569,8 +1562,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;话说第一次写的时候不知道为什么写不对&lt;/p&gt;
 &lt;p&gt;然后今天突然迷之直接写出来了&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/UVA-1585" target="_blank" rel="noopener"
-&gt;【UVa】[1585]Score&lt;/a&gt;&lt;/p&gt;</description></item><item><title>算法竞赛入门经典(6) – for循环中的定义变量</title><link>https://boiltask.com/note/competitive-programming-6/</link><pubDate>Mon, 04 Jan 2016 17:11:21 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-6/</guid><description>&lt;p&gt;想起了以前的一个知识点&lt;/p&gt;
+&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/UVA-1585" target="_blank" rel="noopener"&gt;【UVa】[1585]Score&lt;/a&gt;&lt;/p&gt;</description></item><item><title>算法竞赛入门经典(6) – for循环中的定义变量</title><link>https://boiltask.com/note/competitive-programming-6/</link><pubDate>Mon, 04 Jan 2016 17:11:21 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-6/</guid><description>&lt;p&gt;想起了以前的一个知识点&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
 &lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
@@ -1713,7 +1705,7 @@ alt="image.png"
 &lt;p&gt;以上发表于:&lt;br&gt;
 【看书】for循环中的定义变量（2016-01-04 17:11） 11 0&lt;/p&gt;
 &lt;p&gt;20160112 附:
-后续文章:&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/8/" &gt;【看书】关于for循环中定义变量的后续讨论&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[401]Palindromes</title><link>https://boiltask.com/oj/uva-401/</link><pubDate>Mon, 28 Dec 2015 21:44:09 +0800</pubDate><guid>https://boiltask.com/oj/uva-401/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+后续文章:[【看书】关于for循环中定义变量的后续讨论](/content/post/note/competitive-programming/8/算法竞赛入门经典(8) – 关于for循环中定义变量的后续讨论)&lt;/p&gt;</description></item><item><title>【UVa】[401]Palindromes</title><link>https://boiltask.com/oj/uva-401/</link><pubDate>Mon, 28 Dec 2015 21:44:09 +0800</pubDate><guid>https://boiltask.com/oj/uva-401/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1885,8 +1877,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;起初因为最后两个printf忘了写参数，结果总是莫名其妙的程序终止&lt;/p&gt;
 &lt;p&gt;还没收到警告&lt;/p&gt;
-&lt;p&gt;最后用&lt;a class="link" href="http://codepad.org/" target="_blank" rel="noopener"
-&gt;在线编译&lt;/a&gt;检查出来的……&lt;/p&gt;
+&lt;p&gt;最后用&lt;a class="link" href="http://codepad.org/" target="_blank" rel="noopener"&gt;在线编译&lt;/a&gt;检查出来的……&lt;/p&gt;
 &lt;p&gt;书中标准程序:&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
@@ -1956,13 +1947,10 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;与大神的差距就是那个 $m*2+p$ 因为没有使用这种巧妙的方法 为了好写 写了三个函数 有点繁琐了&lt;/p&gt;
 &lt;p&gt;不过思路还是很清晰的&lt;/p&gt;
 &lt;p&gt;几个if else 这点智商上的差距 不知道这辈子还能弥补上不……&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/UVA-401" target="_blank" rel="noopener"
-&gt;Palindromes - UVA 401 - Virtual Judge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;题目地址:&lt;a class="link" href="https://vjudge.net/problem/UVA-401" target="_blank" rel="noopener"&gt;Palindromes - UVA 401 - Virtual Judge&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PS:因为UVaOJ经常打不开……所以我看以后这些题尽量在UVa上传如果不行就找其他地址&lt;br&gt;
-&lt;del&gt;这个是华中科技大学的&lt;a class="link" href="http://acm.hust.edu.cn/vjudge/toIndex.action" target="_blank" rel="noopener"
-&gt;Virtual Judge&lt;/a&gt;&lt;/del&gt;&lt;br&gt;
-使用最新的vjudge系统：&lt;a class="link" href="https://vjudge.net" target="_blank" rel="noopener"
-&gt;Virtual Judge&lt;/a&gt;
+&lt;del&gt;这个是华中科技大学的&lt;a class="link" href="http://acm.hust.edu.cn/vjudge/toIndex.action" target="_blank" rel="noopener"&gt;Virtual Judge&lt;/a&gt;&lt;/del&gt;&lt;br&gt;
+使用最新的vjudge系统：&lt;a class="link" href="https://vjudge.net" target="_blank" rel="noopener"&gt;Virtual Judge&lt;/a&gt;
 ​&lt;/p&gt;</description></item><item><title>【UVa】[10082]WERTYU</title><link>https://boiltask.com/oj/uva-10082/</link><pubDate>Mon, 28 Dec 2015 19:15:25 +0800</pubDate><guid>https://boiltask.com/oj/uva-10082/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -2081,10 +2069,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;题目地址：&lt;br&gt;
-&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=829&amp;amp;page=show_problem&amp;amp;problem=1023" target="_blank" rel="noopener"
-&gt;【UVa】[10082]WERTYU&lt;/a&gt;
-&lt;a class="link" href="http://poj.org/problem?id=2538" target="_blank" rel="noopener"
-&gt;【POJ】[2538]WERTYU&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[272]TeX中的引号</title><link>https://boiltask.com/oj/uva-272/</link><pubDate>Mon, 28 Dec 2015 18:51:20 +0800</pubDate><guid>https://boiltask.com/oj/uva-272/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=829&amp;amp;page=show_problem&amp;amp;problem=1023" target="_blank" rel="noopener"&gt;【UVa】[10082]WERTYU&lt;/a&gt;
+&lt;a class="link" href="http://poj.org/problem?id=2538" target="_blank" rel="noopener"&gt;【POJ】[2538]WERTYU&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[272]TeX中的引号</title><link>https://boiltask.com/oj/uva-272/</link><pubDate>Mon, 28 Dec 2015 18:51:20 +0800</pubDate><guid>https://boiltask.com/oj/uva-272/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -2200,8 +2186,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=829&amp;amp;page=show_problem&amp;amp;problem=208" target="_blank" rel="noopener"
-&gt;【UVa】[272]TeX中的引号&lt;/a&gt;&lt;/p&gt;</description></item><item><title>算法竞赛入门经典(5) – 竖式问题</title><link>https://boiltask.com/note/competitive-programming-5/</link><pubDate>Mon, 28 Dec 2015 18:04:49 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-5/</guid><description>&lt;p&gt;问题描述：&lt;br&gt;
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=829&amp;amp;page=show_problem&amp;amp;problem=208" target="_blank" rel="noopener"&gt;【UVa】[272]TeX中的引号&lt;/a&gt;&lt;/p&gt;</description></item><item><title>算法竞赛入门经典(5) – 竖式问题</title><link>https://boiltask.com/note/competitive-programming-5/</link><pubDate>Mon, 28 Dec 2015 18:04:49 +0800</pubDate><guid>https://boiltask.com/note/competitive-programming-5/</guid><description>&lt;p&gt;问题描述：&lt;br&gt;
 找出所有形如abc*de（三位数乘以两位数）的算式，使得在完整的竖式中，所有数字都属于一个特定的数字集合。输入数字集合（相邻数字之间没有空格），输出所有竖式。每个竖式前应有编号，之后应有一个空行。最后输出解的总数。具体格式见样例输出（为了便于观察，竖式中的空格改用小数点显示，但你的程序应该输出空格，而非小数点）。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;

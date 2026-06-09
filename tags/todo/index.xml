@@ -241,8 +241,7 @@
 &lt;/ol&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1au411y7Fq" target="_blank" rel="noopener"
-&gt;游戏中地形大气和云的渲染(上) | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1au411y7Fq" target="_blank" rel="noopener"&gt;游戏中地形大气和云的渲染(上) | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>GAMES104现代游戏引擎 - 渲染中光和材质的数学魔法</title><link>https://boiltask.com/note/games104-game-engine-5/</link><pubDate>Wed, 28 Jan 2026 13:19:37 +0800</pubDate><guid>https://boiltask.com/note/games104-game-engine-5/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;存在不少东西没有看懂，后续需要再整理一遍。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -477,13 +476,11 @@ $$&lt;ul&gt;
 &lt;p&gt;&lt;strong&gt;核心启示&lt;/strong&gt;：游戏引擎开发不是追求数学上的完美，而是要在&lt;strong&gt;有限的算力&lt;/strong&gt;下，通过合理的&lt;strong&gt;假设、简化与预计算&lt;/strong&gt;，创造出&lt;strong&gt;可信且美观&lt;/strong&gt;的视觉效果。&lt;/p&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1J3411n7WT/" target="_blank" rel="noopener"
-&gt;渲染中光和材质的数学魔法 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.bilibili.com/video/BV1J3411n7WT/" target="_blank" rel="noopener"&gt;渲染中光和材质的数学魔法 | GAMES104-现代游戏引擎：从入门到实践&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中CommonUI插件</title><link>https://boiltask.com/knowledge/ue/plugin-common-ui/</link><pubDate>Sun, 07 Sep 2025 08:01:00 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/plugin-common-ui/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;CommonUI插件是UE5提供的一个方便丰富的、多层级的并且支持跨平台的用户界面的插件。&lt;/p&gt;
 &lt;h2 id="参考文档"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;参考文档
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine" target="_blank" rel="noopener"
-&gt;适用于虚幻引擎高级用户界面的Common UI插件 | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra设置页面相关设计</title><link>https://boiltask.com/knowledge/ue/lyra-setting-widget/</link><pubDate>Fri, 05 Sep 2025 12:59:55 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-setting-widget/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine" target="_blank" rel="noopener"&gt;适用于虚幻引擎高级用户界面的Common UI插件 | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra设置页面相关设计</title><link>https://boiltask.com/knowledge/ue/lyra-setting-widget/</link><pubDate>Fri, 05 Sep 2025 12:59:55 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-setting-widget/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在Lyra中，通过&lt;code&gt;ESC&lt;/code&gt;键选择&lt;code&gt;OPTIONS&lt;/code&gt;可以呼出设置页面&lt;code&gt;W_LyraSettingScreen&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="页面分析"&gt;&lt;a href="#%e9%a1%b5%e9%9d%a2%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;页面分析
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;W_LyraSettingScreen&lt;/code&gt;继承于C++类&lt;code&gt;ULyraSettingScreen&lt;/code&gt;，其基于&lt;code&gt;GameSettings&lt;/code&gt;插件提供的&lt;code&gt;UGameSettingScreen&lt;/code&gt;。&lt;/p&gt;
@@ -499,7 +496,7 @@ UCommonActivatableWidget &amp;lt;|-- UGameSettingScreen
 UGameSettingScreen &amp;lt;|-- ULyraSettingScreen
 ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/pre&gt;
-&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui" &gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui/"&gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="页头页签"&gt;&lt;a href="#%e9%a1%b5%e5%a4%b4%e9%a1%b5%e7%ad%be" class="header-anchor"&gt;&lt;/a&gt;页头页签
 &lt;/h3&gt;&lt;p&gt;标签控件使用一个&lt;code&gt;ULyraTabListWidgetBase&lt;/code&gt;制作，通过在C++中定义&lt;code&gt;BindWidget&lt;/code&gt;，可以创建一个在C++中可以访问的蓝图控件。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -520,8 +517,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个控件在蓝图中被设为一个&lt;code&gt;W_HorizontalTabList&lt;/code&gt;，可以方便调整具体样式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"
-&gt;结合蓝图与C++&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"&gt;结合蓝图与C++&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在页面的&lt;code&gt;Construct&lt;/code&gt;时，会调用&lt;code&gt;RegisterTopLevelTab&lt;/code&gt;来依次注册各个Tab。&lt;/p&gt;
 &lt;ul&gt;
@@ -566,8 +562,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/h2&gt;&lt;p&gt;在线子系统（Online Subsystem）及其接口提供一种可访问Steam、Xbox Live、Facebook等在线服务功能的常用方法。开发一款在多平台上发行或支持多在线服务的游戏时，在线子系统可确保开发者唯一需要做的变更就是对所有支持的服务进行配置调整。&lt;/p&gt;
 &lt;h2 id="参考文档"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;参考文档
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/online-subsystem-in-unreal-engine" target="_blank" rel="noopener"
-&gt;Online Subsystem in Unreal Engine | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/online-subsystem-in-unreal-engine" target="_blank" rel="noopener"&gt;Online Subsystem in Unreal Engine | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中打包Cook相关机制</title><link>https://boiltask.com/knowledge/ue/ue-why-to-cook/</link><pubDate>Wed, 13 Aug 2025 13:17:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-why-to-cook/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在&lt;code&gt;UE&lt;/code&gt;的打包中，可以看到一个用时较长的步骤是&lt;code&gt;Cook&lt;/code&gt;，下面具体分析一下这一步是做了哪些操作以及为什么。&lt;/p&gt;</description></item><item><title>UnrealEngine中的ShaderPipelineCache</title><link>https://boiltask.com/knowledge/ue/pso-cache/</link><pubDate>Fri, 01 Aug 2025 21:01:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/pso-cache/</guid><description>&lt;p&gt;虚幻引擎中通过ShaderPipelineCache管理PSO缓存。&lt;/p&gt;</description></item><item><title>记录一下TODO列表</title><link>https://boiltask.com/record/boiltask-todo/</link><pubDate>Thu, 05 Jun 2025 12:23:23 +0800</pubDate><guid>https://boiltask.com/record/boiltask-todo/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;本文用于记录一些TODO，不定期更新，过期内容有可能随时删除&lt;/p&gt;
@@ -671,7 +666,7 @@ move list which occurred after the timestamp of the move the server was adjustin
 &lt;h3 id="主控角色移动"&gt;&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor"&gt;&lt;/a&gt;主控角色移动
 &lt;/h3&gt;&lt;p&gt;在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/" &gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p&gt;
 &lt;p&gt;本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code&gt;TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code&gt;的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p&gt;
@@ -784,20 +779,14 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;
 &lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/114341957" target="_blank" rel="noopener"
-&gt;UE4移动的网络同步 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/664568047" target="_blank" rel="noopener"
-&gt;UE4/UE5 Character Movement Component移动组件网络同步详解 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/650314172" target="_blank" rel="noopener"
-&gt;「Grow by UE」图解角色移动组件 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"
-&gt;UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/114341957" target="_blank" rel="noopener"&gt;UE4移动的网络同步 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/664568047" target="_blank" rel="noopener"&gt;UE4/UE5 Character Movement Component移动组件网络同步详解 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/650314172" target="_blank" rel="noopener"&gt;「Grow by UE」图解角色移动组件 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"&gt;UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中编辑器下Python的使用</title><link>https://boiltask.com/knowledge/ue/editor-python/</link><pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/editor-python/</guid><description>&lt;h2 id="功能简介"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;功能简介
-&lt;/h2&gt;&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"
-&gt;使用Python脚本化运行虚幻编辑器&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介"&gt;&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;DataAsset简介
+&lt;/h2&gt;&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"&gt;使用Python脚本化运行虚幻编辑器&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介"&gt;&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;DataAsset简介
 &lt;/h2&gt;&lt;p&gt;一般用于表示一个数据块，功能与DataTable类似，某种程度上可以理解成一个仅有一行的DataTable。&lt;/p&gt;
-&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"
-&gt;数据资产&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1254]推箱子</title><link>https://boiltask.com/oj/hdu-1254/</link><pubDate>Tue, 26 Jul 2016 17:01:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1254/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"&gt;数据资产&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[1254]推箱子</title><link>https://boiltask.com/oj/hdu-1254/</link><pubDate>Tue, 26 Jul 2016 17:01:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu-1254/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1035,8 +1024,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;这一个要求最小生成树是不是唯一的&lt;br&gt;
 所以求次小生成树进行比较&lt;br&gt;
 如果相等就是不唯一的&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1679" target="_blank" rel="noopener"
-&gt;【POJ】[1679]The Unique MST&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[3026]Borg Maze</title><link>https://boiltask.com/oj/poj-3026/</link><pubDate>Sun, 21 Feb 2016 02:40:39 +0800</pubDate><guid>https://boiltask.com/oj/poj-3026/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1679" target="_blank" rel="noopener"&gt;【POJ】[1679]The Unique MST&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[3026]Borg Maze</title><link>https://boiltask.com/oj/poj-3026/</link><pubDate>Sun, 21 Feb 2016 02:40:39 +0800</pubDate><guid>https://boiltask.com/oj/poj-3026/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1116,8 +1104,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 bfs找寻各个点互相之间的距离，然后求最小生成树&lt;/p&gt;
 &lt;p&gt;然而BFS尝试之后感觉并不会写……&lt;br&gt;
 先占个位置吧&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=3026" target="_blank" rel="noopener"
-&gt;【POJ】[3026]Borg Maze&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[210]Concurrency Simulator</title><link>https://boiltask.com/oj/uva-210/</link><pubDate>Fri, 12 Feb 2016 23:39:57 +0800</pubDate><guid>https://boiltask.com/oj/uva-210/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=3026" target="_blank" rel="noopener"&gt;【POJ】[3026]Borg Maze&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【UVa】[210]Concurrency Simulator</title><link>https://boiltask.com/oj/uva-210/</link><pubDate>Fri, 12 Feb 2016 23:39:57 +0800</pubDate><guid>https://boiltask.com/oj/uva-210/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1195,8 +1182,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;紫书的一题&lt;br&gt;
 先写个模板存档&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=838&amp;amp;page=show_problem&amp;amp;problem=146" target="_blank" rel="noopener"
-&gt;【UVa】[210]Concurrency Simulator&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[1417]True Liars</title><link>https://boiltask.com/oj/poj-1417/</link><pubDate>Wed, 10 Feb 2016 00:29:02 +0800</pubDate><guid>https://boiltask.com/oj/poj-1417/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=838&amp;amp;page=show_problem&amp;amp;problem=146" target="_blank" rel="noopener"&gt;【UVa】[210]Concurrency Simulator&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【POJ】[1417]True Liars</title><link>https://boiltask.com/oj/poj-1417/</link><pubDate>Wed, 10 Feb 2016 00:29:02 +0800</pubDate><guid>https://boiltask.com/oj/poj-1417/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1301,5 +1287,4 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;所以也是在题目中没找到具体的这方面的描述，所以并没有想到具体这一题应该怎么写。&lt;/p&gt;
 &lt;p&gt;然后搜了一下题解，感觉就先把这一题放一放吧&lt;br&gt;
 过几天再来补，也是纪念一下大过年的做题经历吧&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1417" target="_blank" rel="noopener"
-&gt;【POJ】[1417]True Liars&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;题目地址:&lt;a class="link" href="http://poj.org/problem?id=1417" target="_blank" rel="noopener"&gt;【POJ】[1417]True Liars&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

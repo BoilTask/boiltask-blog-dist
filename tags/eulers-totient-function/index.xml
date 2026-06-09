@@ -134,8 +134,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1787" target="_blank" rel="noopener"
-&gt;【杭电】[1787]GCD Again&lt;/a&gt;&lt;/p&gt;</description></item><item><title>欧拉函数——小于n的数中与n互质数的数目</title><link>https://boiltask.com/knowledge/eulers-totient-function/</link><pubDate>Sat, 26 Mar 2016 08:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/eulers-totient-function/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1787" target="_blank" rel="noopener"&gt;【杭电】[1787]GCD Again&lt;/a&gt;&lt;/p&gt;</description></item><item><title>欧拉函数——小于n的数中与n互质数的数目</title><link>https://boiltask.com/knowledge/eulers-totient-function/</link><pubDate>Sat, 26 Mar 2016 08:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/eulers-totient-function/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;在数论，对正整数n，欧拉函数是小于n的数中与n互质的数的数目。此函数以其首名研究者欧拉命名(Ruler&amp;rsquo;so totient function)，它又称为Euler&amp;rsquo;s totient function、φ函数、欧拉商数等。 例如φ(8)=4，因为1,3,5,7均和8互质。 从欧拉函数引伸出来在环论方面的事实和拉格朗日定理构成了欧拉定理的证明。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -215,9 +214,6 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;参考资料:&lt;br&gt;
-&lt;a class="link" href="http://baike.baidu.com/link?url=Mxfd5P91VH6uydQ3pkR9XoTojeNGlLonX9YVfuEZUgvfBjrBf9f3qwAwb4zPVLYLjws2wWPcTrA1PIpjF4XR0q" target="_blank" rel="noopener"
-&gt;欧拉函数_百度百科&lt;/a&gt;&lt;br&gt;
-&lt;a class="link" href="http://www.tuicool.com/articles/Enmeyya" target="_blank" rel="noopener"
-&gt;欧拉函数线性筛法&lt;/a&gt;&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/once_hnu/article/details/6302868" target="_blank" rel="noopener"
-&gt;欧拉函数_Lur &amp;rsquo;s acm blog&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;a class="link" href="http://baike.baidu.com/link?url=Mxfd5P91VH6uydQ3pkR9XoTojeNGlLonX9YVfuEZUgvfBjrBf9f3qwAwb4zPVLYLjws2wWPcTrA1PIpjF4XR0q" target="_blank" rel="noopener"&gt;欧拉函数_百度百科&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://www.tuicool.com/articles/Enmeyya" target="_blank" rel="noopener"&gt;欧拉函数线性筛法&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/once_hnu/article/details/6302868" target="_blank" rel="noopener"&gt;欧拉函数_Lur &amp;rsquo;s acm blog&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

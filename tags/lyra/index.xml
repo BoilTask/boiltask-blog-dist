@@ -14,7 +14,7 @@ UCommonActivatableWidget &amp;lt;|-- UGameSettingScreen
 UGameSettingScreen &amp;lt;|-- ULyraSettingScreen
 ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/pre&gt;
-&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui" &gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui/"&gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="页头页签"&gt;&lt;a href="#%e9%a1%b5%e5%a4%b4%e9%a1%b5%e7%ad%be" class="header-anchor"&gt;&lt;/a&gt;页头页签
 &lt;/h3&gt;&lt;p&gt;标签控件使用一个&lt;code&gt;ULyraTabListWidgetBase&lt;/code&gt;制作，通过在C++中定义&lt;code&gt;BindWidget&lt;/code&gt;，可以创建一个在C++中可以访问的蓝图控件。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -35,8 +35,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个控件在蓝图中被设为一个&lt;code&gt;W_HorizontalTabList&lt;/code&gt;，可以方便调整具体样式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"
-&gt;结合蓝图与C++&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"&gt;结合蓝图与C++&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在页面的&lt;code&gt;Construct&lt;/code&gt;时，会调用&lt;code&gt;RegisterTopLevelTab&lt;/code&gt;来依次注册各个Tab。&lt;/p&gt;
 &lt;ul&gt;
@@ -70,9 +69,8 @@ loading="lazy"
 alt="image.png"
 &gt;&lt;/p&gt;
 &lt;p&gt;下面详细分析&lt;code&gt;CommonLoadingScreen&lt;/code&gt;插件的相关逻辑：&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-loading-screen" &gt;UE5中的CommonLoadingScreen插件&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/knowledge/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-start-map/</guid><description>&lt;p&gt;打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p&gt;</description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/knowledge/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-download/</guid><description>&lt;p&gt;最近想要细研究一下&lt;code&gt;UE5&lt;/code&gt;的官方示例项目&lt;code&gt;Lyra&lt;/code&gt;，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-loading-screen/"&gt;UE5中的CommonLoadingScreen插件&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/knowledge/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-start-map/</guid><description>&lt;p&gt;打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p&gt;</description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/knowledge/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-download/</guid><description>&lt;p&gt;最近想要细研究一下&lt;code&gt;UE5&lt;/code&gt;的官方示例项目&lt;code&gt;Lyra&lt;/code&gt;，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p&gt;
 &lt;p&gt;时间点开始于2024年11月，没有提到的话相关项目以此时间点的最新版本为准。&lt;/p&gt;
-&lt;p&gt;Lyra的项目目前可以在Fab中找到：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0" target="_blank" rel="noopener"
-&gt;https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lyra的项目目前可以在Fab中找到：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0" target="_blank" rel="noopener"&gt;https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在虚幻引擎启动器&lt;code&gt;Epic Games Launcher&lt;/code&gt;中，可以在库找到&lt;code&gt;Lyra&lt;/code&gt;项目，创建项目即可。&lt;/p&gt;
 &lt;p&gt;经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p&gt;</description></item></channel></rss>

@@ -51,8 +51,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;h3 id="题目来源"&gt;&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;题目来源
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1143/description" target="_blank" rel="noopener"
-&gt;小珂的苦恼 - NYOJ&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1143/description" target="_blank" rel="noopener"&gt;小珂的苦恼 - NYOJ&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;二元一次方程有整数解的条件为&lt;br&gt;
 $n\%gcd(a,b)==0$&lt;/p&gt;
@@ -398,8 +397,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="题目来源"&gt;&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;题目来源
-&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1002/description" target="_blank" rel="noopener"
-&gt;括号配对问题 - NYOJ&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1002/description" target="_blank" rel="noopener"&gt;括号配对问题 - NYOJ&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;用栈来检测是否对应&lt;/p&gt;
@@ -593,8 +591,7 @@ alt="image.png"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=833" target="_blank" rel="noopener"
-&gt;【NYOJ】[833]取石子（七）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1046]少乘法次数</title><link>https://boiltask.com/oj/nyoj-1046/</link><pubDate>Fri, 20 May 2016 21:04:49 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1046/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=833" target="_blank" rel="noopener"&gt;【NYOJ】[833]取石子（七）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1046]少乘法次数</title><link>https://boiltask.com/oj/nyoj-1046/</link><pubDate>Fri, 20 May 2016 21:04:49 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1046/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -732,8 +729,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1046/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1046]最少乘法次数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1023]
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1046/description" target="_blank" rel="noopener"&gt;【NYOJ】[1046]最少乘法次数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1023]
 取石子（一）</title><link>https://boiltask.com/oj/nyoj-1023/</link><pubDate>Fri, 20 May 2016 20:39:47 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1023/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -847,10 +843,8 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;博客推荐:&lt;a class="link" href="http://www.cnblogs.com/dongsheng/archive/2012/12/08/2809095.html" target="_blank" rel="noopener"
-&gt;NYOJ-23 取石子(一) - 可笑痴狂 - 博客园&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1023/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1023]取石子（一）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1265]字符串逆序输出</title><link>https://boiltask.com/oj/nyoj-1265/</link><pubDate>Sun, 17 Apr 2016 15:28:50 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1265/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;博客推荐:&lt;a class="link" href="http://www.cnblogs.com/dongsheng/archive/2012/12/08/2809095.html" target="_blank" rel="noopener"&gt;NYOJ-23 取石子(一) - 可笑痴狂 - 博客园&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1023/description" target="_blank" rel="noopener"&gt;【NYOJ】[1023]取石子（一）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1265]字符串逆序输出</title><link>https://boiltask.com/oj/nyoj-1265/</link><pubDate>Sun, 17 Apr 2016 15:28:50 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1265/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -973,8 +967,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1265/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1265]字符串逆序输出&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1923]
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1265/description" target="_blank" rel="noopener"&gt;【NYOJ】[1265]字符串逆序输出&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1923]
 关于521</title><link>https://boiltask.com/oj/nyoj-1923/</link><pubDate>Sat, 09 Apr 2016 11:25:24 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1923/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -1162,8 +1155,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1923/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1923]关于521&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[2028]数字分隔（二）</title><link>https://boiltask.com/oj/nyoj-2028/</link><pubDate>Sat, 09 Apr 2016 10:22:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-2028/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1923/description" target="_blank" rel="noopener"&gt;【NYOJ】[1923]关于521&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[2028]数字分隔（二）</title><link>https://boiltask.com/oj/nyoj-2028/</link><pubDate>Sat, 09 Apr 2016 10:22:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-2028/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1455,8 +1447,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/2028/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[2028]数字分隔（二）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1798]A+B Problem（V）</title><link>https://boiltask.com/oj/nyoj-1798/</link><pubDate>Sat, 09 Apr 2016 08:08:21 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1798/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/2028/description" target="_blank" rel="noopener"&gt;【NYOJ】[2028]数字分隔（二）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1798]A+B Problem（V）</title><link>https://boiltask.com/oj/nyoj-1798/</link><pubDate>Sat, 09 Apr 2016 08:08:21 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1798/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1583,8 +1574,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1798/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1798]A+B Problem（V）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-178]房间安排</title><link>https://boiltask.com/oj/nyoj-acm-178/</link><pubDate>Wed, 23 Mar 2016 22:11:48 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-178/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1798/description" target="_blank" rel="noopener"&gt;【NYOJ】[1798]A+B Problem（V）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-178]房间安排</title><link>https://boiltask.com/oj/nyoj-acm-178/</link><pubDate>Wed, 23 Mar 2016 22:11:48 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-178/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1663,8 +1653,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;据说是第三届河南省程序设计大赛的一题&lt;br&gt;
 上次寒假里面用排序的方法WA了&lt;br&gt;
 这次做了&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/u011493189/article/details/50966805" target="_blank" rel="noopener"
-&gt;【杭电】[4883]TIANKENG’s restaurant&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/u011493189/article/details/50966805" target="_blank" rel="noopener"&gt;【杭电】[4883]TIANKENG’s restaurant&lt;/a&gt;&lt;br&gt;
 感觉这一题可以用同样的思路来做&lt;/p&gt;
 &lt;p&gt;试了一下&lt;br&gt;
 就是用一个数组记录同时需要的房间数&lt;br&gt;
@@ -1732,8 +1721,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;&lt;p&gt;PS:在郑轻的判题上一直WA&lt;br&gt;
 不过NYOJ提供的标程也WA了&lt;br&gt;
 所以应该是郑轻判题数据的问题吧&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/178" target="_blank" rel="noopener"
-&gt;【NYOJ】[acm-178]房间安排&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>【NYOJ】[1267]荷兰国旗问题</title><link>https://boiltask.com/oj/nyoj-1267/</link><pubDate>Mon, 22 Feb 2016 03:38:20 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1267/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/178" target="_blank" rel="noopener"&gt;【NYOJ】[acm-178]房间安排&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>【NYOJ】[1267]荷兰国旗问题</title><link>https://boiltask.com/oj/nyoj-1267/</link><pubDate>Mon, 22 Feb 2016 03:38:20 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1267/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1925,8 +1913,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=268" target="_blank" rel="noopener"
-&gt;【NYOJ】[268]荷兰国旗问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[v1-799]兰州烧饼</title><link>https://boiltask.com/oj/nyoj-v1-799/</link><pubDate>Sun, 21 Feb 2016 04:31:06 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-v1-799/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=268" target="_blank" rel="noopener"&gt;【NYOJ】[268]荷兰国旗问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[v1-799]兰州烧饼</title><link>https://boiltask.com/oj/nyoj-v1-799/</link><pubDate>Sun, 21 Feb 2016 04:31:06 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-v1-799/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;
@@ -2028,8 +2015,7 @@ n*2/k有关&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=779" target="_blank" rel="noopener"
-&gt;【NYOJ】[799]兰州烧饼&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1254]C小加 之 随机数</title><link>https://boiltask.com/oj/nyoj-1254/</link><pubDate>Sun, 21 Feb 2016 04:05:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1254/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=779" target="_blank" rel="noopener"&gt;【NYOJ】[799]兰州烧饼&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1254]C小加 之 随机数</title><link>https://boiltask.com/oj/nyoj-1254/</link><pubDate>Sun, 21 Feb 2016 04:05:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1254/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -2401,8 +2387,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;哈哈哈&lt;br&gt;
 ?表达式还是很方便的&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1577/description" target="_blank" rel="noopener"
-&gt;奋斗的小蜗牛&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1463]A+B Problem III</title><link>https://boiltask.com/oj/nyoj-1463/</link><pubDate>Wed, 10 Feb 2016 01:27:14 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1463/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1577/description" target="_blank" rel="noopener"&gt;奋斗的小蜗牛&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1463]A+B Problem III</title><link>https://boiltask.com/oj/nyoj-1463/</link><pubDate>Wed, 10 Feb 2016 01:27:14 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1463/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -2544,8 +2529,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1463/description" target="_blank" rel="noopener"
-&gt;A+B Problem III&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1767]变态最大值</title><link>https://boiltask.com/oj/nyoj-1767/</link><pubDate>Wed, 10 Feb 2016 01:15:03 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1767/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1463/description" target="_blank" rel="noopener"&gt;A+B Problem III&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1767]变态最大值</title><link>https://boiltask.com/oj/nyoj-1767/</link><pubDate>Wed, 10 Feb 2016 01:15:03 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1767/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -2766,8 +2750,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1767/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1767]变态最大值&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1008]一种排序</title><link>https://boiltask.com/oj/nyoj-1008/</link><pubDate>Tue, 02 Feb 2016 03:08:40 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1008/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1767/description" target="_blank" rel="noopener"&gt;【NYOJ】[1767]变态最大值&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1008]一种排序</title><link>https://boiltask.com/oj/nyoj-1008/</link><pubDate>Tue, 02 Feb 2016 03:08:40 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1008/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4233,8 +4216,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1124/description" target="_blank" rel="noopener"
-&gt;盗梦空间&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1121]Triangular Sums</title><link>https://boiltask.com/oj/nyoj-1121/</link><pubDate>Sat, 30 Jan 2016 02:17:49 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1121/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1124/description" target="_blank" rel="noopener"&gt;盗梦空间&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1121]Triangular Sums</title><link>https://boiltask.com/oj/nyoj-1121/</link><pubDate>Sat, 30 Jan 2016 02:17:49 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1121/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4404,8 +4386,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目记录:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1121/description" target="_blank" rel="noopener"
-&gt;Triangular Sums&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1112]字符串替换</title><link>https://boiltask.com/oj/nyoj-1112/</link><pubDate>Sat, 30 Jan 2016 01:55:14 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1112/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目记录:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1121/description" target="_blank" rel="noopener"&gt;Triangular Sums&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1112]字符串替换</title><link>https://boiltask.com/oj/nyoj-1112/</link><pubDate>Sat, 30 Jan 2016 01:55:14 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1112/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4595,8 +4576,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1112/description" target="_blank" rel="noopener"
-&gt;字符串替换&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1110]分数加减法</title><link>https://boiltask.com/oj/nyoj-1110/</link><pubDate>Sat, 30 Jan 2016 01:40:33 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1110/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1112/description" target="_blank" rel="noopener"&gt;字符串替换&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1110]分数加减法</title><link>https://boiltask.com/oj/nyoj-1110/</link><pubDate>Sat, 30 Jan 2016 01:40:33 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1110/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4819,8 +4799,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1110/description" target="_blank" rel="noopener"
-&gt;分数加减法&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-164]两点距离</title><link>https://boiltask.com/oj/nyoj-acm-164/</link><pubDate>Sat, 30 Jan 2016 00:57:17 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-164/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1110/description" target="_blank" rel="noopener"&gt;分数加减法&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-164]两点距离</title><link>https://boiltask.com/oj/nyoj-acm-164/</link><pubDate>Sat, 30 Jan 2016 00:57:17 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-164/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -4989,8 +4968,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/164" target="_blank" rel="noopener"
-&gt;题目详情 - 两点距离 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1100]1的个数</title><link>https://boiltask.com/oj/nyoj-1100/</link><pubDate>Fri, 29 Jan 2016 00:16:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1100/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/164" target="_blank" rel="noopener"&gt;题目详情 - 两点距离 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1100]1的个数</title><link>https://boiltask.com/oj/nyoj-1100/</link><pubDate>Fri, 29 Jan 2016 00:16:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1100/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -5163,7 +5141,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 脑力有点不足了 明天再来补充吧&lt;br&gt;
 今天就到这了&lt;/p&gt;
 &lt;p&gt;后续第二天对于这种写法的补充:&lt;br&gt;
-&lt;a class="link" href="https://boiltask.com/knowledge/cpp-while-comma-bit/" &gt;【看书】while(m)m&amp;amp;=m-1,s++;的解释&lt;/a&gt;&lt;/p&gt;
+&lt;a class="link" href="https://boiltask.com/content/post/knowledge/cpp/while-comma-bit/while%28m%29m&amp;amp;=m-1,s&amp;#43;&amp;#43;%e7%9a%84%e8%a7%a3%e9%87%8a"&gt;【看书】while(m)m&amp;amp;=m-1,s++;的解释&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
 &lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
@@ -5198,8 +5176,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=100" target="_blank" rel="noopener"
-&gt;【NYOJ】[100]1的个数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1098]成绩转换</title><link>https://boiltask.com/oj/nyoj-1098/</link><pubDate>Thu, 28 Jan 2016 23:56:38 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1098/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=100" target="_blank" rel="noopener"&gt;【NYOJ】[100]1的个数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1098]成绩转换</title><link>https://boiltask.com/oj/nyoj-1098/</link><pubDate>Thu, 28 Jan 2016 23:56:38 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1098/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -5399,8 +5376,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1098/description" target="_blank" rel="noopener"
-&gt;成绩转换&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1098/description" target="_blank" rel="noopener"&gt;成绩转换&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1097]兄弟郊游问题</title><link>https://boiltask.com/oj/nyoj-1097/</link><pubDate>Thu, 28 Jan 2016 23:52:42 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1097/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -5557,8 +5533,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1097/description" target="_blank" rel="noopener"
-&gt;兄弟郊游问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-143]鸡兔同笼</title><link>https://boiltask.com/oj/nyoj-acm-143/</link><pubDate>Thu, 28 Jan 2016 21:18:11 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-143/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1097/description" target="_blank" rel="noopener"&gt;兄弟郊游问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-143]鸡兔同笼</title><link>https://boiltask.com/oj/nyoj-acm-143/</link><pubDate>Thu, 28 Jan 2016 21:18:11 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-143/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -5717,8 +5692,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/143" target="_blank" rel="noopener"
-&gt;题目详情 - 鸡兔同笼 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/143" target="_blank" rel="noopener"&gt;题目详情 - 鸡兔同笼 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1062]笨小熊</title><link>https://boiltask.com/oj/nyoj-1062/</link><pubDate>Thu, 28 Jan 2016 20:38:34 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1062/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -5984,8 +5958,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1062/description" target="_blank" rel="noopener"
-&gt;笨小熊&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1062/description" target="_blank" rel="noopener"&gt;笨小熊&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1060]谁获得了最高奖学金</title><link>https://boiltask.com/oj/nyoj-1060/</link><pubDate>Thu, 28 Jan 2016 19:45:16 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1060/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -6236,8 +6209,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1060/description" target="_blank" rel="noopener"
-&gt;谁获得了最高奖学金&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1057]6174问题</title><link>https://boiltask.com/oj/nyoj-1057/</link><pubDate>Tue, 26 Jan 2016 23:25:41 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1057/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1060/description" target="_blank" rel="noopener"&gt;谁获得了最高奖学金&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1057]6174问题</title><link>https://boiltask.com/oj/nyoj-1057/</link><pubDate>Tue, 26 Jan 2016 23:25:41 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1057/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -6317,8 +6289,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 编译器好像还出了点问题&lt;br&gt;
 所以用的在线编译器……&lt;br&gt;
 在这里也是分享一下:&lt;br&gt;
-&lt;a class="link" href="http://ideone.com/" target="_blank" rel="noopener"
-&gt;Ideone.com&lt;/a&gt;&lt;/p&gt;
+&lt;a class="link" href="http://ideone.com/" target="_blank" rel="noopener"&gt;Ideone.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这一题的思路是循环计数直到它和变化之后的数相同&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
@@ -6464,8 +6435,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1057/description" target="_blank" rel="noopener"
-&gt;6174问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1047]过河问题</title><link>https://boiltask.com/oj/nyoj-1047/</link><pubDate>Tue, 26 Jan 2016 22:01:30 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1047/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1057/description" target="_blank" rel="noopener"&gt;6174问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1047]过河问题</title><link>https://boiltask.com/oj/nyoj-1047/</link><pubDate>Tue, 26 Jan 2016 22:01:30 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1047/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;&lt;/div&gt;
@@ -6651,7 +6621,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;p&gt;如果不满足 则循环体一遍也会执行&lt;/p&gt;
 &lt;p&gt;注意 do-while是先循环一次再判断条件&lt;br&gt;
 探究:&lt;br&gt;
-&lt;a class="link" href="https://boiltask.com/knowledge/cpp-for-do-while" &gt;【看书】for,(do-)while的循环体执行&lt;/a&gt;&lt;/p&gt;
+&lt;a class="link" href="https://boiltask.com/knowledge/cpp/for-do-while/"&gt;【看书】for,(do-)while的循环体执行&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;所以这一题的思路就很简单了&lt;br&gt;
 n的阶乘为 1×2×3×4×……n&lt;/p&gt;
 &lt;p&gt;所以需要找其分解质因数&lt;br&gt;
@@ -6709,8 +6679,7 @@ n的阶乘为 1×2×3×4×……n&lt;/p&gt;
 还是涉及到了函数+表达式的形式&lt;br&gt;
 并且使用了另外一种思路&lt;br&gt;
 找到的一篇关于此的介绍文章&lt;br&gt;
-《&lt;a class="link" href="http://blog.csdn.net/seadplus/article/details/7401113" target="_blank" rel="noopener"
-&gt;阶乘因式分解 - sead+&lt;/a&gt;》&lt;/p&gt;
+《&lt;a class="link" href="http://blog.csdn.net/seadplus/article/details/7401113" target="_blank" rel="noopener"&gt;阶乘因式分解 - sead+&lt;/a&gt;》&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;给定两个数m,n&lt;br&gt;
 求m!分解质因数后因子n的个数。&lt;br&gt;
@@ -6790,11 +6759,9 @@ m!=1&lt;em&gt;2&lt;/em&gt;3*……(m-2)(m-1)&lt;em&gt;m&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1056/description" target="_blank" rel="noopener"
-&gt;阶乘因式分解（一）&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1056/description" target="_blank" rel="noopener"&gt;阶乘因式分解（一）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;参考文章:&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/seadplus/article/details/7401113" target="_blank" rel="noopener"
-&gt;阶乘因式分解 - sead+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-135]三个数从小到大排序</title><link>https://boiltask.com/oj/nyoj-acm-135/</link><pubDate>Wed, 20 Jan 2016 20:47:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-135/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;a class="link" href="http://blog.csdn.net/seadplus/article/details/7401113" target="_blank" rel="noopener"&gt;阶乘因式分解 - sead+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-135]三个数从小到大排序</title><link>https://boiltask.com/oj/nyoj-acm-135/</link><pubDate>Wed, 20 Jan 2016 20:47:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-135/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -6964,8 +6931,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/135" target="_blank" rel="noopener"
-&gt;#135. 三个数从小到大排序&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1040]公约数和公倍数</title><link>https://boiltask.com/oj/nyoj-1040/</link><pubDate>Wed, 20 Jan 2016 20:15:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1040/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/135" target="_blank" rel="noopener"&gt;#135. 三个数从小到大排序&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1040]公约数和公倍数</title><link>https://boiltask.com/oj/nyoj-1040/</link><pubDate>Wed, 20 Jan 2016 20:15:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1040/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7163,8 +7129,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1040/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1040]公约数和公倍数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-63]水仙花数</title><link>https://boiltask.com/oj/nyoj-acm-63/</link><pubDate>Wed, 20 Jan 2016 19:50:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-63/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1040/description" target="_blank" rel="noopener"&gt;【NYOJ】[1040]公约数和公倍数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-63]水仙花数</title><link>https://boiltask.com/oj/nyoj-acm-63/</link><pubDate>Wed, 20 Jan 2016 19:50:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-63/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -7350,8 +7315,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=39" target="_blank" rel="noopener"
-&gt;【NYOJ】[v1-39]水仙花数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[v1-33]蛇形填数</title><link>https://boiltask.com/oj/nyoj-v1-33/</link><pubDate>Tue, 19 Jan 2016 22:18:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-v1-33/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=39" target="_blank" rel="noopener"&gt;【NYOJ】[v1-39]水仙花数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[v1-33]蛇形填数</title><link>https://boiltask.com/oj/nyoj-v1-33/</link><pubDate>Tue, 19 Jan 2016 22:18:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-v1-33/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;div class="dida-content-card dida-content-card-article"&gt;
 &lt;div class="dida-content-iframe-title"&gt;
 &lt;div class="dida-content-iframe-title-left"&gt;
@@ -7579,8 +7543,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=33" target="_blank" rel="noopener"
-&gt;【NYOJ】[v1-33]蛇形填数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=33" target="_blank" rel="noopener"&gt;【NYOJ】[v1-33]蛇形填数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1025]A Famous Music Composer</title><link>https://boiltask.com/oj/nyoj-1025/</link><pubDate>Tue, 19 Jan 2016 22:11:25 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1025/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -7818,8 +7781,7 @@ EOF 应为!=NULL&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1025/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1025]A Famous Music Composer&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1024]素数距离问题</title><link>https://boiltask.com/oj/nyoj-1024/</link><pubDate>Tue, 19 Jan 2016 21:52:32 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1024/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1025/description" target="_blank" rel="noopener"&gt;【NYOJ】[1025]A Famous Music Composer&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1024]素数距离问题</title><link>https://boiltask.com/oj/nyoj-1024/</link><pubDate>Tue, 19 Jan 2016 21:52:32 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1024/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -8060,8 +8022,7 @@ C++现在还不是很懂&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1024/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[1024]素数距离问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1024/description" target="_blank" rel="noopener"&gt;【NYOJ】[1024]素数距离问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1022]素数求和问题</title><link>https://boiltask.com/oj/nyoj-1022/</link><pubDate>Tue, 19 Jan 2016 21:48:16 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1022/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -8269,8 +8230,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1022/description" target="_blank" rel="noopener"
-&gt;【NYOJ】[22]素数求和问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1022/description" target="_blank" rel="noopener"&gt;【NYOJ】[22]素数求和问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1096]n-1位数</title><link>https://boiltask.com/oj/nyoj-1096/</link><pubDate>Mon, 18 Jan 2016 23:36:43 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1096/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -8447,8 +8407,7 @@ C语言还是要好好学啊~&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1096/description" target="_blank" rel="noopener"
-&gt;n-1位数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1094]cigarettes</title><link>https://boiltask.com/oj/nyoj-1094/</link><pubDate>Mon, 18 Jan 2016 23:19:20 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1094/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1096/description" target="_blank" rel="noopener"&gt;n-1位数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1094]cigarettes</title><link>https://boiltask.com/oj/nyoj-1094/</link><pubDate>Mon, 18 Jan 2016 23:19:20 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1094/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -8637,8 +8596,7 @@ Tom现有n根烟 每k个烟蒂能卷一个新烟&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1094/description" target="_blank" rel="noopener"
-&gt;cigarettes&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1077]开灯问题</title><link>https://boiltask.com/oj/nyoj-1077/</link><pubDate>Mon, 18 Jan 2016 22:50:53 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1077/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1094/description" target="_blank" rel="noopener"&gt;cigarettes&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[1077]开灯问题</title><link>https://boiltask.com/oj/nyoj-1077/</link><pubDate>Mon, 18 Jan 2016 22:50:53 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1077/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -8839,8 +8797,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1077/description" target="_blank" rel="noopener"
-&gt;开灯问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1077/description" target="_blank" rel="noopener"&gt;开灯问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1075]日期计算</title><link>https://boiltask.com/oj/nyoj-1075/</link><pubDate>Mon, 18 Jan 2016 22:21:57 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1075/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -9053,8 +9010,7 @@ switch运行到底的特性&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1075/description" target="_blank" rel="noopener"
-&gt;日期计算&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1075/description" target="_blank" rel="noopener"&gt;日期计算&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1074]小学生算术</title><link>https://boiltask.com/oj/nyoj-1074/</link><pubDate>Mon, 18 Jan 2016 22:06:46 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1074/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -9275,8 +9231,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1074/description" target="_blank" rel="noopener"
-&gt;小学生算术&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1074/description" target="_blank" rel="noopener"&gt;小学生算术&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1072]Financial Management</title><link>https://boiltask.com/oj/nyoj-1072/</link><pubDate>Mon, 18 Jan 2016 21:55:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1072/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -9432,8 +9387,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1072/description" target="_blank" rel="noopener"
-&gt;Financial Management&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1072/description" target="_blank" rel="noopener"&gt;Financial Management&lt;/a&gt;&lt;/p&gt;</description></item><item><title>
 【NYOJ】[1065]另一种阶乘问题</title><link>https://boiltask.com/oj/nyoj-1065/</link><pubDate>Mon, 18 Jan 2016 21:44:07 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-1065/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
@@ -9666,8 +9620,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1065/description" target="_blank" rel="noopener"
-&gt;另一种阶乘问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-62]韩信点兵</title><link>https://boiltask.com/oj/nyoj-acm-62/</link><pubDate>Sun, 27 Dec 2015 12:51:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-62/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1065/description" target="_blank" rel="noopener"&gt;另一种阶乘问题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-62]韩信点兵</title><link>https://boiltask.com/oj/nyoj-acm-62/</link><pubDate>Sun, 27 Dec 2015 12:51:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-62/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -9796,5 +9749,4 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 不过这两天好像好多了&lt;br&gt;
 是不是前段时间维护的原因呢~&lt;br&gt;
 总之可以愉快地嗨啦&lt;/p&gt;
-&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=34" target="_blank" rel="noopener"
-&gt;【NYOJ】[34]韩信点兵&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=34" target="_blank" rel="noopener"&gt;【NYOJ】[34]韩信点兵&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

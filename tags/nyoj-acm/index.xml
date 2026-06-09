@@ -77,8 +77,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;据说是第三届河南省程序设计大赛的一题&lt;br&gt;
 上次寒假里面用排序的方法WA了&lt;br&gt;
 这次做了&lt;br&gt;
-&lt;a class="link" href="http://blog.csdn.net/u011493189/article/details/50966805" target="_blank" rel="noopener"
-&gt;【杭电】[4883]TIANKENG’s restaurant&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://blog.csdn.net/u011493189/article/details/50966805" target="_blank" rel="noopener"&gt;【杭电】[4883]TIANKENG’s restaurant&lt;/a&gt;&lt;br&gt;
 感觉这一题可以用同样的思路来做&lt;/p&gt;
 &lt;p&gt;试了一下&lt;br&gt;
 就是用一个数组记录同时需要的房间数&lt;br&gt;
@@ -146,8 +145,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;&lt;p&gt;PS:在郑轻的判题上一直WA&lt;br&gt;
 不过NYOJ提供的标程也WA了&lt;br&gt;
 所以应该是郑轻判题数据的问题吧&lt;/p&gt;
-&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/178" target="_blank" rel="noopener"
-&gt;【NYOJ】[acm-178]房间安排&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-186]字母统计</title><link>https://boiltask.com/oj/nyoj-acm-186/</link><pubDate>Sun, 31 Jan 2016 23:52:25 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-186/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/178" target="_blank" rel="noopener"&gt;【NYOJ】[acm-178]房间安排&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-186]字母统计</title><link>https://boiltask.com/oj/nyoj-acm-186/</link><pubDate>Sun, 31 Jan 2016 23:52:25 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-186/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -934,8 +932,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/164" target="_blank" rel="noopener"
-&gt;题目详情 - 两点距离 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-143]鸡兔同笼</title><link>https://boiltask.com/oj/nyoj-acm-143/</link><pubDate>Thu, 28 Jan 2016 21:18:11 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-143/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/164" target="_blank" rel="noopener"&gt;题目详情 - 两点距离 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-143]鸡兔同笼</title><link>https://boiltask.com/oj/nyoj-acm-143/</link><pubDate>Thu, 28 Jan 2016 21:18:11 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-143/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1094,8 +1091,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/143" target="_blank" rel="noopener"
-&gt;题目详情 - 鸡兔同笼 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-135]三个数从小到大排序</title><link>https://boiltask.com/oj/nyoj-acm-135/</link><pubDate>Wed, 20 Jan 2016 20:47:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-135/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/143" target="_blank" rel="noopener"&gt;题目详情 - 鸡兔同笼 - 南阳理工学院OJ&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-135]三个数从小到大排序</title><link>https://boiltask.com/oj/nyoj-acm-135/</link><pubDate>Wed, 20 Jan 2016 20:47:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-135/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1265,8 +1261,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/135" target="_blank" rel="noopener"
-&gt;#135. 三个数从小到大排序&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-63]水仙花数</title><link>https://boiltask.com/oj/nyoj-acm-63/</link><pubDate>Wed, 20 Jan 2016 19:50:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-63/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="https://acm.nyist.edu.cn/p/135" target="_blank" rel="noopener"&gt;#135. 三个数从小到大排序&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-63]水仙花数</title><link>https://boiltask.com/oj/nyoj-acm-63/</link><pubDate>Wed, 20 Jan 2016 19:50:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-63/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1452,8 +1447,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=39" target="_blank" rel="noopener"
-&gt;【NYOJ】[v1-39]水仙花数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-62]韩信点兵</title><link>https://boiltask.com/oj/nyoj-acm-62/</link><pubDate>Sun, 27 Dec 2015 12:51:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-62/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=39" target="_blank" rel="noopener"&gt;【NYOJ】[v1-39]水仙花数&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【NYOJ】[acm-62]韩信点兵</title><link>https://boiltask.com/oj/nyoj-acm-62/</link><pubDate>Sun, 27 Dec 2015 12:51:01 +0800</pubDate><guid>https://boiltask.com/oj/nyoj-acm-62/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1582,5 +1576,4 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 不过这两天好像好多了&lt;br&gt;
 是不是前段时间维护的原因呢~&lt;br&gt;
 总之可以愉快地嗨啦&lt;/p&gt;
-&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=34" target="_blank" rel="noopener"
-&gt;【NYOJ】[34]韩信点兵&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;题目地址：&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=34" target="_blank" rel="noopener"&gt;【NYOJ】[34]韩信点兵&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

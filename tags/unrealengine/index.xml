@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UnrealEngine on BoilTask's Blog</title><link>https://boiltask.com/tags/unrealengine/</link><description>Recent content in UnrealEngine on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 31 Mar 2026 12:59:41 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/unrealengine/index.xml" rel="self" type="application/rss+xml"/><item><title>虚幻引擎（UE5）中Gameplay Cameras相关机制</title><link>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</link><pubDate>Tue, 24 Mar 2026 13:15:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-gameplay-camera/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;2026-03-31 作者说他&lt;a class="link" href="https://ludovic.chabant.com/blog/2026/03/30/ue5-gameplay-cameras-coda/" target="_blank" rel="noopener"
-&gt;被裁了&lt;/a&gt;，插件更新暂时停滞……&lt;/p&gt;
+&lt;p&gt;2026-03-31 作者说他&lt;a class="link" href="https://ludovic.chabant.com/blog/2026/03/30/ue5-gameplay-cameras-coda/" target="_blank" rel="noopener"&gt;被裁了&lt;/a&gt;，插件更新暂时停滞……&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;相机是游戏中的重要元素，虚幻引擎在UE5.5推出了一套更完善的相机控制框架：Gameplay Cameras(GPC)。&lt;/p&gt;
 &lt;p&gt;由于目前仍处于&lt;code&gt;Experimental&lt;/code&gt;的时期，而且还没有正式的官方文档，因此写个文章记录一下所研究的内容。&lt;/p&gt;
-&lt;p&gt;其中一个重要参考是插件作者的博客：&lt;a class="link" href="https://ludovic.chabant.com/blog/category/programming/game-development/unreal-engine/" target="_blank" rel="noopener"
-&gt;developer diary for the Unreal Engine camera system&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中一个重要参考是插件作者的博客：&lt;a class="link" href="https://ludovic.chabant.com/blog/category/programming/game-development/unreal-engine/" target="_blank" rel="noopener"&gt;developer diary for the Unreal Engine camera system&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="基础概念"&gt;&lt;a href="#%e5%9f%ba%e7%a1%80%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;基础概念
 &lt;/h2&gt;&lt;p&gt;有一个&lt;code&gt;Camera Director&lt;/code&gt;，负责决定运行哪些&lt;code&gt;Camera Rig(s)&lt;/code&gt;。&lt;code&gt;Camera Rig&lt;/code&gt;实现所需的相机行为，例如“跟随角色，稍微偏移，带有一点延迟”。这是通过&lt;code&gt;Camera Nodes&lt;/code&gt;实现的，其中每个所需相机行为的元素可能是一个&lt;code&gt;Node&lt;/code&gt;，比如跟随&lt;code&gt;Node&lt;/code&gt;、偏移&lt;code&gt;Node&lt;/code&gt;和延迟&lt;code&gt;Node&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Camera Nodes&lt;/code&gt;就像一种“管道”，相机数据会通过每一个节点，而每个节点都会对其进行一项操作。但这里值得注意的是，相机数据并不仅仅是一个&lt;code&gt;Transform&lt;/code&gt; 和一个&lt;code&gt;Field Of View&lt;/code&gt;，还包括镜头数据、后处理设置、变量表等。&lt;/p&gt;
 &lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/01/13/ue5-gameplay-cameras-developer-diary/" target="_blank" rel="noopener"
-&gt;UE5 Gameplay Cameras: Developer Diary - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/03/04/ue-gameplay-cameras-a-modernization-of-camera-systems/" target="_blank" rel="noopener"
-&gt;UE Gameplay Cameras: A Modernization of Camera Systems - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/05/05/ue-gameplay-cameras-the-basic-design/" target="_blank" rel="noopener"
-&gt;UE5 Gameplay Cameras: The Basic Design - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/02/24/ue5-gameplay-cameras-node-evaluators/" target="_blank" rel="noopener"
-&gt;UE5 Gameplay Cameras: Node Evaluators - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/01/13/ue5-gameplay-cameras-developer-diary/" target="_blank" rel="noopener"&gt;UE5 Gameplay Cameras: Developer Diary - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/03/04/ue-gameplay-cameras-a-modernization-of-camera-systems/" target="_blank" rel="noopener"&gt;UE Gameplay Cameras: A Modernization of Camera Systems - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/05/05/ue-gameplay-cameras-the-basic-design/" target="_blank" rel="noopener"&gt;UE5 Gameplay Cameras: The Basic Design - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ludovic.chabant.com/blog/2025/02/24/ue5-gameplay-cameras-node-evaluators/" target="_blank" rel="noopener"&gt;UE5 Gameplay Cameras: Node Evaluators - The Stochastic Game&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎（UE5）下PuerTS的模板工程</title><link>https://boiltask.com/knowledge/ue/ue-puerts-template/</link><pubDate>Wed, 11 Mar 2026 12:29:35 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-puerts-template/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
-&lt;/h2&gt;&lt;p&gt;在&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-best-practice/" &gt;虚幻引擎（UE5）下PuerTS的最佳实践&lt;/a&gt;中，总结了个人实际运用&lt;code&gt;PuerTS&lt;/code&gt;时的一些最佳实践。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;在&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-best-practice/"&gt;虚幻引擎（UE5）下PuerTS的最佳实践&lt;/a&gt;中，总结了个人实际运用&lt;code&gt;PuerTS&lt;/code&gt;时的一些最佳实践。&lt;/p&gt;
 &lt;p&gt;基于最佳实现，整理了一个模板工程，方便快速开始&lt;code&gt;PuerTS&lt;/code&gt;的开发。&lt;/p&gt;
 &lt;h2 id="模板工程"&gt;&lt;a href="#%e6%a8%a1%e6%9d%bf%e5%b7%a5%e7%a8%8b" class="header-anchor"&gt;&lt;/a&gt;模板工程
-&lt;/h2&gt;&lt;p&gt;项目地址：&lt;a class="link" href="https://github.com/BoilTask/puerts-ue-template" target="_blank" rel="noopener"
-&gt;https://github.com/BoilTask/puerts-ue-template&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中的GameplayTags</title><link>https://boiltask.com/knowledge/ue/gameplay-tags/</link><pubDate>Mon, 09 Feb 2026 22:37:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/gameplay-tags/</guid><description>&lt;p&gt;为了标记游戏中物体的标签，虚幻引擎引入了GameplayTags系统。GameplayTags是一种基于字符串的标签系统，用于在游戏中对物体进行分类和标识。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;项目地址：&lt;a class="link" href="https://github.com/BoilTask/puerts-ue-template" target="_blank" rel="noopener"&gt;https://github.com/BoilTask/puerts-ue-template&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中的GameplayTags</title><link>https://boiltask.com/knowledge/ue/gameplay-tags/</link><pubDate>Mon, 09 Feb 2026 22:37:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/gameplay-tags/</guid><description>&lt;p&gt;为了标记游戏中物体的标签，虚幻引擎引入了GameplayTags系统。GameplayTags是一种基于字符串的标签系统，用于在游戏中对物体进行分类和标识。&lt;/p&gt;
 &lt;p&gt;使用以&lt;code&gt;.&lt;/code&gt;分隔的字符串来标记父子结构，通过类似于&lt;code&gt;Character.Enemy.Zombie&lt;/code&gt;的标签，可以方标地把一个物体标记为&lt;code&gt;Character&lt;/code&gt;、&lt;code&gt;Character&lt;/code&gt;下的&lt;code&gt;Enemy&lt;/code&gt;和&lt;code&gt;Enemy&lt;/code&gt;下的&lt;code&gt;Zombie&lt;/code&gt;三种类型。通过&lt;code&gt;FGameplayTagContainer&lt;/code&gt;的容器可以快速进行树状结构下的标签查询和操作。&lt;/p&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/using-gameplay-tags-in-unreal-engine" target="_blank" rel="noopener"
-&gt;Using Gameplay Tags in Unreal Engine | Unreal Engine 5.7 Documentation | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/gameplay-tags?application_version=4.27" target="_blank" rel="noopener"
-&gt;Gameplay标签 | 虚幻引擎 4.27 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/using-gameplay-tags-in-unreal-engine" target="_blank" rel="noopener"&gt;Using Gameplay Tags in Unreal Engine | Unreal Engine 5.7 Documentation | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/gameplay-tags?application_version=4.27" target="_blank" rel="noopener"&gt;Gameplay标签 | 虚幻引擎 4.27 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中的模块化Gameplay插件（Modular Gameplay plugin）</title><link>https://boiltask.com/knowledge/ue/modular-gameplay-plugin/</link><pubDate>Fri, 06 Feb 2026 13:04:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/modular-gameplay-plugin/</guid><description>&lt;h2 id="插件简介"&gt;&lt;a href="#%e6%8f%92%e4%bb%b6%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;插件简介
 &lt;/h2&gt;&lt;p&gt;模块化Gameplay插件是虚幻引擎中用于实现Gameplay的一个框架，核心是提供一套可扩展的游戏玩法框架，同时方便处理初始化状态。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可结合&lt;a class="link" href="https://boiltask.com/knowledge/ue/game-features-plugin" &gt;虚幻引擎中的GameFeatures插件&lt;/a&gt;来理解本插件。&lt;/p&gt;
+&lt;p&gt;可结合&lt;a class="link" href="https://boiltask.com/knowledge/ue/game-features-plugin/"&gt;虚幻引擎中的GameFeatures插件&lt;/a&gt;来理解本插件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="核心定位与架构"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e5%ae%9a%e4%bd%8d%e4%b8%8e%e6%9e%b6%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;核心定位与架构
 &lt;/h2&gt;&lt;p&gt;游戏框架组件管理器是&lt;strong&gt;模块化Gameplay插件（Modular Gameplay plugin）&lt;strong&gt;中的一个&lt;/strong&gt;游戏实例子系统（Game Instance Subsystem）&lt;/strong&gt;。它专为与**游戏功能插件（Game Feature Plugins）**协同工作而设计，提供可扩展的Gameplay基础设施。&lt;/p&gt;
@@ -1466,8 +1457,7 @@ style Game fill:#1a472a,stroke:#4ade80,color:#fff
 &lt;/table&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/game-framework-component-manager-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎中的游戏框架组件管理器 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/game-framework-component-manager-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎中的游戏框架组件管理器 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中的GameFeatures插件</title><link>https://boiltask.com/knowledge/ue/game-features-plugin/</link><pubDate>Fri, 06 Feb 2026 12:21:37 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/game-features-plugin/</guid><description>&lt;h2 id="核心概念与发展由来"&gt;&lt;a href="#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5%e4%b8%8e%e5%8f%91%e5%b1%95%e7%94%b1%e6%9d%a5" class="header-anchor"&gt;&lt;/a&gt;核心概念与发展由来
 &lt;/h2&gt;&lt;p&gt;GameFeature是UE5推出的&lt;strong&gt;支持动态装载游戏玩法的框架&lt;/strong&gt;，采用插件化架构实现&amp;quot;即插即用&amp;quot;的模块化游戏功能。Epic开发这套框架的初衷是为了解决现代游戏（特别是服务型游戏）面临的以下挑战：&lt;/p&gt;
 &lt;ul&gt;
@@ -1476,7 +1466,7 @@ style Game fill:#1a472a,stroke:#4ade80,color:#fff
 &lt;li&gt;&lt;strong&gt;热插拔能力&lt;/strong&gt;：运行时动态开关功能，无需重新打包整个游戏&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可结合&lt;a class="link" href="https://boiltask.com/knowledge/ue/modular-gameplay-plugin" &gt;虚幻引擎中的模块化Gameplay插件&lt;/a&gt;来理解本插件。&lt;/p&gt;
+&lt;p&gt;可结合&lt;a class="link" href="https://boiltask.com/knowledge/ue/modular-gameplay-plugin/"&gt;虚幻引擎中的模块化Gameplay插件&lt;/a&gt;来理解本插件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="系统架构与核心组件"&gt;&lt;a href="#%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84%e4%b8%8e%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6" class="header-anchor"&gt;&lt;/a&gt;系统架构与核心组件
 &lt;/h2&gt;&lt;pre class="mermaid"&gt;
@@ -2294,13 +2284,11 @@ end
 &lt;p&gt;通过GameFeature框架，可以实现真正的模块化、服务化游戏开发，让&amp;quot;游戏即服务&amp;quot;(GaaS)的技术落地变得切实可行。&lt;/p&gt;
 &lt;h2 id="参考信息"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e4%bf%a1%e6%81%af" class="header-anchor"&gt;&lt;/a&gt;参考信息
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/467236675" target="_blank" rel="noopener"
-&gt;《InsideUE5》GameFeatures架构（一）发展由来 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/467236675" target="_blank" rel="noopener"&gt;《InsideUE5》GameFeatures架构（一）发展由来 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎（UE5）下PuerTS的最佳实践</title><link>https://boiltask.com/knowledge/ue/ue-puerts-best-practice/</link><pubDate>Tue, 03 Feb 2026 22:17:22 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-puerts-best-practice/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
-&lt;/h2&gt;&lt;p&gt;由于&lt;a class="link" href="https://github.com/Tencent/puerts/" target="_blank" rel="noopener"
-&gt;PuerTS&lt;/a&gt;官方更倾向于各个项目组自行处理独有机制，官方也没有给更为通用的最佳实践。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;由于&lt;a class="link" href="https://github.com/Tencent/puerts/" target="_blank" rel="noopener"&gt;PuerTS&lt;/a&gt;官方更倾向于各个项目组自行处理独有机制，官方也没有给更为通用的最佳实践。&lt;/p&gt;
 &lt;p&gt;不过在项目中落地时，总还是需要一些具体的方案来实现相关需求，因此这里总结了个人实际运用&lt;code&gt;PuerTS&lt;/code&gt;时的一些最佳实践。&lt;/p&gt;
-&lt;p&gt;还可以参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-template/" &gt;虚幻引擎（UE5）下PuerTS的模板工程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;还可以参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-template/"&gt;虚幻引擎（UE5）下PuerTS的模板工程&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="虚拟机环境"&gt;&lt;a href="#%e8%99%9a%e6%8b%9f%e6%9c%ba%e7%8e%af%e5%a2%83" class="header-anchor"&gt;&lt;/a&gt;虚拟机环境
 &lt;/h2&gt;&lt;p&gt;官方提供了继承引擎类功能，这个需要在&lt;code&gt;Project Settings&lt;/code&gt;-&lt;code&gt;Plugins&lt;/code&gt;-&lt;code&gt;Puerts Settings&lt;/code&gt;中设置&lt;code&gt;Enable&lt;/code&gt;来开启。这样当引擎运行后，&lt;code&gt;Puerts&lt;/code&gt;会自动启动一个&lt;code&gt;JavaScript&lt;/code&gt;虚拟机环境。插件会监听&lt;code&gt;TypeScript&lt;/code&gt;文件的变更，如果存在符合要求的&lt;code&gt;TypeScript&lt;/code&gt;类，就会自动生成对应的蓝图文件，在运行时调用这个蓝图时能调用到对应的&lt;code&gt;JavaScript&lt;/code&gt;类中的逻辑。&lt;/p&gt;
 &lt;p&gt;然而官方目前更推荐自己管理虚拟机环境，也就是通过&lt;code&gt;MakeShared&amp;lt;puerts::FJsEnv&amp;gt;&lt;/code&gt;在合适的时机创建一个&lt;code&gt;JavaScript&lt;/code&gt;虚拟机环境。通过自己创建虚拟机环境，可以指定一个&lt;code&gt;ModuleName&lt;/code&gt;，在虚拟机启动之后会运行这个&lt;code&gt;ModuleName&lt;/code&gt;对应的&lt;code&gt;JavaScript&lt;/code&gt;文件。这种方式下，也需要自己处理蓝图与&lt;code&gt;JavaScript&lt;/code&gt;类之间的绑定。&lt;/p&gt;
@@ -2311,8 +2299,7 @@ end
 &lt;li&gt;Mixin&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;官方更推荐手动调用Mixin的方式，避免继承引擎类滥用导致的蓝图与JavaScript类之间的大量跨语言交互。&lt;/p&gt;
-&lt;p&gt;然而对于项目的具体应用来说，让每个开发者都手动调用蓝图的Mixin函数，可能不太现实。就笔者的项目而言，更希望类似于Unlua那种的方式，指定蓝图和TS类之间的关系，因此编写了一个自动绑定JavaScript类的插件：&lt;a class="link" href="https://github.com/BoilTask/PuertsAutoMixin" target="_blank" rel="noopener"
-&gt;BoilTask/PuertsAutoMixin&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;然而对于项目的具体应用来说，让每个开发者都手动调用蓝图的Mixin函数，可能不太现实。就笔者的项目而言，更希望类似于Unlua那种的方式，指定蓝图和TS类之间的关系，因此编写了一个自动绑定JavaScript类的插件：&lt;a class="link" href="https://github.com/BoilTask/PuertsAutoMixin" target="_blank" rel="noopener"&gt;BoilTask/PuertsAutoMixin&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;这个插件实现了在蓝图中继承&lt;code&gt;PuertsInterface&lt;/code&gt;之后，通过重写&lt;code&gt;GetJavaScriptModule&lt;/code&gt;函数，来指定关联的&lt;code&gt;JavaScript&lt;/code&gt;类。对于大部分时候，使用插件自动生成的路径即可符合需求，如果有指定类的需求也可以手动修改。&lt;/p&gt;
 &lt;p&gt;通过在虚拟机启动后调用&lt;code&gt;BindMixin&lt;/code&gt;函数，来关联&lt;code&gt;JavaScript&lt;/code&gt;类。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -2408,10 +2395,9 @@ end
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="使用vite来管理构建流程"&gt;&lt;a href="#%e4%bd%bf%e7%94%a8vite%e6%9d%a5%e7%ae%a1%e7%90%86%e6%9e%84%e5%bb%ba%e6%b5%81%e7%a8%8b" class="header-anchor"&gt;&lt;/a&gt;使用Vite来管理构建流程
-&lt;/h3&gt;&lt;p&gt;可参考&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-template/" &gt;虚幻引擎（UE5）下PuerTS的模板工程&lt;/a&gt;中的&lt;code&gt;vite.config.ts&lt;/code&gt;文件。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;可参考&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-template/"&gt;虚幻引擎（UE5）下PuerTS的模板工程&lt;/a&gt;中的&lt;code&gt;vite.config.ts&lt;/code&gt;文件。&lt;/p&gt;
 &lt;h2 id="热重载hotreload"&gt;&lt;a href="#%e7%83%ad%e9%87%8d%e8%bd%bdhotreload" class="header-anchor"&gt;&lt;/a&gt;热重载HotReload
-&lt;/h2&gt;&lt;p&gt;参考&lt;a class="link" href="https://github.com/Tencent/puerts/issues/140" target="_blank" rel="noopener"
-&gt;需要代码&amp;quot;热重载&amp;quot;功能&lt;/a&gt;中提到的方案，可以实现代码变更之后，自动重新加载JavaScript类。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;参考&lt;a class="link" href="https://github.com/Tencent/puerts/issues/140" target="_blank" rel="noopener"&gt;需要代码&amp;quot;热重载&amp;quot;功能&lt;/a&gt;中提到的方案，可以实现代码变更之后，自动重新加载JavaScript类。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
 &lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
@@ -3545,15 +3531,14 @@ M --&amp;gt;|否| O[继续等待]
 &lt;p&gt;通过合理使用 &lt;code&gt;FStreamableManager&lt;/code&gt;，开发者可以实现高效的资源管理，提升游戏的加载速度和运行性能。&lt;/p&gt;
 &lt;h2 id="参考资料"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-anchor"&gt;&lt;/a&gt;参考资料
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/asynchronous-asset-loading-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎资产异步加载 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/asynchronous-asset-loading-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎资产异步加载 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;UE5 源码：&lt;code&gt;Engine/Source/Runtime/Engine/Private/StreamableManager.cpp&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;UE5 源码：&lt;code&gt;Engine/Source/Runtime/CoreUObject/Private/UObject/AsyncLoad.cpp&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;本文档基于 UE5.5 源码分析，不同版本可能存在细微差异。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>UE5常用控制台指令</title><link>https://boiltask.com/knowledge/ue/common-console-command/</link><pubDate>Wed, 31 Dec 2025 13:26:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-console-command/</guid><description>&lt;p&gt;在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;UE4和UE5有的控制台指令有一些差异，可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-console-command-ue4/" &gt;UE4常用控制台指令&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;UE4和UE5有的控制台指令有一些差异，可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-console-command-ue4/"&gt;UE4常用控制台指令&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;下面列出一些常用的控制台指令：&lt;/p&gt;
 &lt;p&gt;show collision 显示碰撞体&lt;/p&gt;</description></item><item><title>虚幻引擎中输入与增强输入相关逻辑</title><link>https://boiltask.com/knowledge/ue/ue-input/</link><pubDate>Wed, 17 Dec 2025 12:44:18 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-input/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
@@ -3595,10 +3580,8 @@ alt="image-20260127154936319"
 &gt;&lt;/p&gt;
 &lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/input-overview-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎输入概述 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/enhanced-input-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎中的增强输入 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/input-overview-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎输入概述 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/enhanced-input-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎中的增强输入 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中重定向的相关知识</title><link>https://boiltask.com/knowledge/ue/ue-redirect/</link><pubDate>Tue, 04 Nov 2025 13:21:54 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-redirect/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在虚幻引擎中，随着项目的发展有可能需要对资产或者逻辑进行重命名。&lt;/p&gt;
 &lt;p&gt;为了避免修改之后老的资产不可用，虚幻引擎有一套较为完善的重定向系统。&lt;/p&gt;
@@ -3609,26 +3592,22 @@ alt="image-20260127154936319"
 &lt;/h2&gt;&lt;p&gt;在修改变量名、函数名的时候，我们希望蓝图不会因为此次修改立刻报错。&lt;/p&gt;
 &lt;p&gt;此时可以添加一个&lt;code&gt;Core Redirects&lt;/code&gt;配置。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;推荐使用&lt;a class="link" href="https://www.jetbrains.com/rider/" target="_blank" rel="noopener"
-&gt;Rider&lt;/a&gt;，最新版本可以在重构时自动生成此配置。&lt;/p&gt;
+&lt;p&gt;推荐使用&lt;a class="link" href="https://www.jetbrains.com/rider/" target="_blank" rel="noopener"&gt;Rider&lt;/a&gt;，最新版本可以在重构时自动生成此配置。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/core-redirects-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎中的资产重定向器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/core-redirects-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎中的Core Redirects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/tutorials/qpZ3/unreal-engine-ca0ed0#%E9%87%8D%E5%AE%9A%E5%90%91%E5%99%A8%E6%8E%A2%E7%A9%B6" target="_blank" rel="noopener"
-&gt;关于虚幻引擎“最佳做法”的真相&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/core-redirects-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎中的资产重定向器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/core-redirects-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎中的Core Redirects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/community/learning/tutorials/qpZ3/unreal-engine-ca0ed0#%E9%87%8D%E5%AE%9A%E5%90%91%E5%99%A8%E6%8E%A2%E7%A9%B6" target="_blank" rel="noopener"&gt;关于虚幻引擎“最佳做法”的真相&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中各种类型的废弃（Deprecate）标记语法</title><link>https://boiltask.com/knowledge/ue/ue-deprecate/</link><pubDate>Tue, 04 Nov 2025 13:20:22 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-deprecate/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;随着项目的发展，可能会发现需要重构一些逻辑。对于C++相对还是比较容易的，目前主流的IDE都提供了一定的重构能力，可以比较方便地进行重命名、查找引用等操作。&lt;/p&gt;
 &lt;p&gt;然后对于蓝图来说，可能就不太好直接一键操作了，直接改变老的逻辑有可能产生很多问题。尤其是对于已经有了大量引用地逻辑，如果直接改动可能产生预期之外的工作量。这个时候一个选择是做一个新版的实现，然后逐步废弃老的实现。为了优雅地实现这一目的，虚幻引擎提供了一些用于标记废弃的语法。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果项目中应用了额外的脚本语言，需要参考对应实现来选择一个重构方式。&lt;/p&gt;
-&lt;p&gt;推荐使用Puerts作为一个类型安全的脚本语言，也许可以参考这篇文章：&lt;a class="link" href="https://boiltask.com/knowledge/ue/unlua-to-puerts/" &gt;虚幻引擎适用于Unlua转到PuerTS的一些知识&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;推荐使用Puerts作为一个类型安全的脚本语言，也许可以参考这篇文章：&lt;a class="link" href="https://boiltask.com/knowledge/ue/unlua-to-puerts/"&gt;虚幻引擎适用于Unlua转到PuerTS的一些知识&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="重定向"&gt;&lt;a href="#%e9%87%8d%e5%ae%9a%e5%90%91" class="header-anchor"&gt;&lt;/a&gt;重定向
-&lt;/h2&gt;&lt;p&gt;如果是需要重命名，可以优先考虑使用UE的重定向系统：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-redirect/" &gt;虚幻引擎中重定向的相关知识&lt;/a&gt;。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;如果是需要重命名，可以优先考虑使用UE的重定向系统：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-redirect/"&gt;虚幻引擎中重定向的相关知识&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="废弃标记"&gt;&lt;a href="#%e5%ba%9f%e5%bc%83%e6%a0%87%e8%ae%b0" class="header-anchor"&gt;&lt;/a&gt;废弃标记
 &lt;/h2&gt;&lt;h3 id="uproperty"&gt;&lt;a href="#uproperty" class="header-anchor"&gt;&lt;/a&gt;UP­ROP­ER­TY
 &lt;/h3&gt;&lt;p&gt;对于一个属性来说，只需要将变量重命名为&lt;code&gt;_DEPRECATED&lt;/code&gt;版本，并且附加上废弃标识即可。&lt;/p&gt;
@@ -3754,7 +3733,7 @@ alt="image-20260127154936319"
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="uenum--ustruct"&gt;&lt;a href="#uenum--ustruct" class="header-anchor"&gt;&lt;/a&gt;UENUM &amp;amp; USTRUCT
 &lt;/h3&gt;&lt;p&gt;似乎并不支持上述&lt;code&gt;DEPRECATED_&lt;/code&gt;的语法来影响蓝图编译，不过对于C++似乎引擎存在标记&lt;code&gt;UE_DEPRECATED&lt;/code&gt;的语法。&lt;/p&gt;
-&lt;p&gt;更推荐改个已废弃的名，然后使用重定向系统来处理：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-redirect/" &gt;虚幻引擎中重定向的相关知识&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;更推荐改个已废弃的名，然后使用重定向系统来处理：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-redirect/"&gt;虚幻引擎中重定向的相关知识&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id="ue_deprecated"&gt;&lt;a href="#ue_deprecated" class="header-anchor"&gt;&lt;/a&gt;UE_DEPRECATED
 &lt;/h3&gt;&lt;p&gt;可能是最为常见的一个废弃标记，通常用于标记函数或者变量在某个引擎版本后已被废弃了。&lt;/p&gt;
 &lt;p&gt;语法为&lt;code&gt;UE_DEPRECATED(引擎版本号, 提示消息)&lt;/code&gt;，当在被废弃的版本之后的C++中，使用被废弃的变量或函数时，编译器和IDE会给出提示。&lt;/p&gt;
@@ -3782,21 +3761,18 @@ alt="image-20260127154936319"
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://squareys.de/blog/ue4-deprecating-symbols/" target="_blank" rel="noopener"
-&gt;UE4: Deprecating Symbols&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://squareys.de/blog/ue4-deprecating-symbols/" target="_blank" rel="noopener"&gt;UE4: Deprecating Symbols&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中的一些基础概念</title><link>https://boiltask.com/knowledge/ue/ue-knowledge-base/</link><pubDate>Mon, 08 Sep 2025 22:34:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-knowledge-base/</guid><description>&lt;p&gt;PureC++-反射&lt;/p&gt;
 &lt;p&gt;Core-Editor-PIE-Runtime之间的关系。&lt;/p&gt;
 &lt;p&gt;进程级的全局变量-GameInstance-Subsystem&lt;/p&gt;
 &lt;p&gt;Framework-GameMode-GameState-Controller-Character&lt;/p&gt;
 &lt;h4 id="网络同步时对端异步加载资源"&gt;&lt;a href="#%e7%bd%91%e7%bb%9c%e5%90%8c%e6%ad%a5%e6%97%b6%e5%af%b9%e7%ab%af%e5%bc%82%e6%ad%a5%e5%8a%a0%e8%bd%bd%e8%b5%84%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;网络同步时，对端异步加载资源
-&lt;/h4&gt;&lt;p&gt;设置&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/unreal-engine-console-variables-reference" target="_blank" rel="noopener"
-&gt;net.AllowAsyncLoading&lt;/a&gt;
+&lt;/h4&gt;&lt;p&gt;设置&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/unreal-engine-console-variables-reference" target="_blank" rel="noopener"&gt;net.AllowAsyncLoading&lt;/a&gt;
 为1，允许异步加载数据包中引用的未加载资产。&lt;/p&gt;
 &lt;p&gt;如果为false，客户端将卡顿并立即加载资产，如果为true，数据包将在资产异步加载时延迟。可启用net.DelayUnmappedRPCs以延迟依赖于异步加载资产的RPC。&lt;/p&gt;</description></item><item><title>虚幻引擎中CommonUI插件</title><link>https://boiltask.com/knowledge/ue/plugin-common-ui/</link><pubDate>Sun, 07 Sep 2025 08:01:00 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/plugin-common-ui/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;CommonUI插件是UE5提供的一个方便丰富的、多层级的并且支持跨平台的用户界面的插件。&lt;/p&gt;
 &lt;h2 id="参考文档"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;参考文档
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine" target="_blank" rel="noopener"
-&gt;适用于虚幻引擎高级用户界面的Common UI插件 | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra设置页面相关设计</title><link>https://boiltask.com/knowledge/ue/lyra-setting-widget/</link><pubDate>Fri, 05 Sep 2025 12:59:55 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-setting-widget/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine" target="_blank" rel="noopener"&gt;适用于虚幻引擎高级用户界面的Common UI插件 | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra设置页面相关设计</title><link>https://boiltask.com/knowledge/ue/lyra-setting-widget/</link><pubDate>Fri, 05 Sep 2025 12:59:55 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-setting-widget/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在Lyra中，通过&lt;code&gt;ESC&lt;/code&gt;键选择&lt;code&gt;OPTIONS&lt;/code&gt;可以呼出设置页面&lt;code&gt;W_LyraSettingScreen&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="页面分析"&gt;&lt;a href="#%e9%a1%b5%e9%9d%a2%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;页面分析
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;W_LyraSettingScreen&lt;/code&gt;继承于C++类&lt;code&gt;ULyraSettingScreen&lt;/code&gt;，其基于&lt;code&gt;GameSettings&lt;/code&gt;插件提供的&lt;code&gt;UGameSettingScreen&lt;/code&gt;。&lt;/p&gt;
@@ -3812,7 +3788,7 @@ UCommonActivatableWidget &amp;lt;|-- UGameSettingScreen
 UGameSettingScreen &amp;lt;|-- ULyraSettingScreen
 ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/pre&gt;
-&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui" &gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中，&lt;code&gt;GameSettings&lt;/code&gt;插件基于&lt;code&gt;CommonUI&lt;/code&gt;插件，详细说明参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/plugin-common-ui/"&gt;虚幻引擎中CommonUI插件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="页头页签"&gt;&lt;a href="#%e9%a1%b5%e5%a4%b4%e9%a1%b5%e7%ad%be" class="header-anchor"&gt;&lt;/a&gt;页头页签
 &lt;/h3&gt;&lt;p&gt;标签控件使用一个&lt;code&gt;ULyraTabListWidgetBase&lt;/code&gt;制作，通过在C++中定义&lt;code&gt;BindWidget&lt;/code&gt;，可以创建一个在C++中可以访问的蓝图控件。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -3833,8 +3809,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个控件在蓝图中被设为一个&lt;code&gt;W_HorizontalTabList&lt;/code&gt;，可以方便调整具体样式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"
-&gt;结合蓝图与C++&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以参考：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus?application_version=5.5#combining-blueprint-and-c" target="_blank" rel="noopener"&gt;结合蓝图与C++&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在页面的&lt;code&gt;Construct&lt;/code&gt;时，会调用&lt;code&gt;RegisterTopLevelTab&lt;/code&gt;来依次注册各个Tab。&lt;/p&gt;
 &lt;ul&gt;
@@ -3879,31 +3854,26 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/h2&gt;&lt;p&gt;在线子系统（Online Subsystem）及其接口提供一种可访问Steam、Xbox Live、Facebook等在线服务功能的常用方法。开发一款在多平台上发行或支持多在线服务的游戏时，在线子系统可确保开发者唯一需要做的变更就是对所有支持的服务进行配置调整。&lt;/p&gt;
 &lt;h2 id="参考文档"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;参考文档
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/online-subsystem-in-unreal-engine" target="_blank" rel="noopener"
-&gt;Online Subsystem in Unreal Engine | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/online-subsystem-in-unreal-engine" target="_blank" rel="noopener"&gt;Online Subsystem in Unreal Engine | 虚幻引擎 5.6 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎适用于Unlua转到PuerTS的一些知识</title><link>https://boiltask.com/knowledge/ue/unlua-to-puerts/</link><pubDate>Tue, 19 Aug 2025 21:53:47 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/unlua-to-puerts/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;随着项目规模的扩大，越来越感觉&lt;code&gt;Lua&lt;/code&gt;脚本不受控制，因此尝试选择&lt;code&gt;TypeScript&lt;/code&gt;的脚本方案。&lt;/p&gt;
 &lt;p&gt;因此，研究了一下&lt;code&gt;PuerTS&lt;/code&gt;的相关机制。&lt;/p&gt;
 &lt;p&gt;体验下来，&lt;code&gt;PuerTS&lt;/code&gt;的方案确实上手难度比&lt;code&gt;UnLua&lt;/code&gt;高了很大一层，一方面是&lt;code&gt;TypeScript&lt;/code&gt;生态本就比&lt;code&gt;Lua&lt;/code&gt;复杂，另外&lt;code&gt;PuerTS&lt;/code&gt;也提供了足够的灵活性，选择一多在实际应用时反倒不太明确应该如何进展了。&lt;/p&gt;
 &lt;h2 id="qa"&gt;&lt;a href="#qa" class="header-anchor"&gt;&lt;/a&gt;Q&amp;amp;A
 &lt;/h2&gt;&lt;h3 id="有没有最佳实践"&gt;&lt;a href="#%e6%9c%89%e6%b2%a1%e6%9c%89%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" class="header-anchor"&gt;&lt;/a&gt;有没有最佳实践
-&lt;/h3&gt;&lt;p&gt;官方不提供更详细的例子，目前主要可以参考&lt;a class="link" href="https://github.com/chexiongsheng/puerts_unreal_demo" target="_blank" rel="noopener"
-&gt;puerts_unreal_demo&lt;/a&gt;项目来了解到作者的一些设计。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;官方不提供更详细的例子，目前主要可以参考&lt;a class="link" href="https://github.com/chexiongsheng/puerts_unreal_demo" target="_blank" rel="noopener"&gt;puerts_unreal_demo&lt;/a&gt;项目来了解到作者的一些设计。&lt;/p&gt;
 &lt;p&gt;从各个论坛、文章分享中可以知道，官方不太希望更偏向&lt;code&gt;UnLua&lt;/code&gt;思路的&lt;code&gt;继承引擎类&lt;/code&gt;的功能。&lt;/p&gt;
 &lt;p&gt;替代的，官方推荐自行启动虚拟机，并根据项目需要实现一套&lt;code&gt;TypeScript&lt;/code&gt;为主的&lt;code&gt;Gameplay&lt;/code&gt;框架。&lt;/p&gt;
 &lt;p&gt;因此，对于习惯了&lt;code&gt;UnLua&lt;/code&gt;在蓝图声明一个模块来绑定脚本的开发者来说，切换到&lt;code&gt;PuerTS&lt;/code&gt;可能会不太适应，需要根据项目需求调整思路，&lt;/p&gt;
-&lt;p&gt;参考Github Discussions&lt;a class="link" href="https://github.com/Tencent/puerts/discussions/1214" target="_blank" rel="noopener"
-&gt;1214&lt;/a&gt;的思路，其实也能实现一套类似于&lt;code&gt;UnLua&lt;/code&gt;的自动绑定，不过确实就失去了一些&lt;code&gt;TypeScript&lt;/code&gt;类型检查的功能，可能还是需要搭配自动生成等机制来更好地维护。&lt;/p&gt;
-&lt;p&gt;个人结合实际运用时遇见的一些问题，总结了一版最佳实践：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-best-practice/" &gt;虚幻引擎（UE5）下PuerTS的最佳实践&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考Github Discussions&lt;a class="link" href="https://github.com/Tencent/puerts/discussions/1214" target="_blank" rel="noopener"&gt;1214&lt;/a&gt;的思路，其实也能实现一套类似于&lt;code&gt;UnLua&lt;/code&gt;的自动绑定，不过确实就失去了一些&lt;code&gt;TypeScript&lt;/code&gt;类型检查的功能，可能还是需要搭配自动生成等机制来更好地维护。&lt;/p&gt;
+&lt;p&gt;个人结合实际运用时遇见的一些问题，总结了一版最佳实践：&lt;a class="link" href="https://boiltask.com/knowledge/ue/ue-puerts-best-practice/"&gt;虚幻引擎（UE5）下PuerTS的最佳实践&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="mixin之后是否支持调用被覆写的函数"&gt;&lt;a href="#mixin%e4%b9%8b%e5%90%8e%e6%98%af%e5%90%a6%e6%94%af%e6%8c%81%e8%b0%83%e7%94%a8%e8%a2%ab%e8%a6%86%e5%86%99%e7%9a%84%e5%87%bd%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;mixin之后是否支持调用被覆写的函数
 &lt;/h3&gt;&lt;p&gt;不支持。&lt;/p&gt;
-&lt;p&gt;参考作者回复：&lt;a class="link" href="https://github.com/Tencent/puerts/issues/1778" target="_blank" rel="noopener"
-&gt;https://github.com/Tencent/puerts/issues/1778&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考作者回复：&lt;a class="link" href="https://github.com/Tencent/puerts/issues/1778" target="_blank" rel="noopener"&gt;https://github.com/Tencent/puerts/issues/1778&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;而对于继承引擎类的模式，生成的蓝图不建议修改（有可能被覆盖），因此也不适用于这种情况。&lt;/p&gt;
 &lt;h2 id="扩展插件"&gt;&lt;a href="#%e6%89%a9%e5%b1%95%e6%8f%92%e4%bb%b6" class="header-anchor"&gt;&lt;/a&gt;扩展插件
 &lt;/h2&gt;&lt;p&gt;根据UnLua的思路，编写了一个自动绑定JavaScript类的插件。&lt;/p&gt;
-&lt;p&gt;可以参考：&lt;a class="link" href="https://github.com/BoilTask/PuertsAutoMixin" target="_blank" rel="noopener"
-&gt;BoilTask/PuertsAutoMixin&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中打包Cook相关机制</title><link>https://boiltask.com/knowledge/ue/ue-why-to-cook/</link><pubDate>Wed, 13 Aug 2025 13:17:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-why-to-cook/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
+&lt;p&gt;可以参考：&lt;a class="link" href="https://github.com/BoilTask/PuertsAutoMixin" target="_blank" rel="noopener"&gt;BoilTask/PuertsAutoMixin&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中打包Cook相关机制</title><link>https://boiltask.com/knowledge/ue/ue-why-to-cook/</link><pubDate>Wed, 13 Aug 2025 13:17:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-why-to-cook/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在&lt;code&gt;UE&lt;/code&gt;的打包中，可以看到一个用时较长的步骤是&lt;code&gt;Cook&lt;/code&gt;，下面具体分析一下这一步是做了哪些操作以及为什么。&lt;/p&gt;</description></item><item><title>UnrealEngine中的ShaderPipelineCache</title><link>https://boiltask.com/knowledge/ue/pso-cache/</link><pubDate>Fri, 01 Aug 2025 21:01:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/pso-cache/</guid><description>&lt;p&gt;虚幻引擎中通过ShaderPipelineCache管理PSO缓存。&lt;/p&gt;</description></item><item><title>UnrealEngine中的ThreadHeartBeat机制</title><link>https://boiltask.com/knowledge/ue/thread-heart-beat/</link><pubDate>Fri, 01 Aug 2025 20:10:54 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/thread-heart-beat/</guid><description>&lt;h2 id="问题背景"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e8%83%8c%e6%99%af" class="header-anchor"&gt;&lt;/a&gt;问题背景
 &lt;/h2&gt;&lt;p&gt;有的时候会突然发现游戏进入了卡死状态，或者某个线程的任务一直没有处理完成，这个时候就需要考虑是不是线程出现了卡死，比如资源竞争、死循环等。通常情况下，我们可以提出一个监听线程来用心跳机制判断某个线程是否仍然存活，如果某个线程一段时间内都没有上报心跳，那么就可以认为它卡死了，这个时候可以打出堆栈或者直接让程序触发&lt;code&gt;assert&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id="机制简介"&gt;&lt;a href="#%e6%9c%ba%e5%88%b6%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;机制简介
@@ -3957,8 +3927,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;p&gt;他的原理就是在构造函数的时候，调用&lt;code&gt;FThreadHeartBeat::SuspendHeartBeat&lt;/code&gt;标记&lt;code&gt;SuspendedCount++&lt;/code&gt;，析构的时候调用&lt;code&gt;FThreadHeartBeat::ResumeHeartBeat&lt;/code&gt;标记&lt;code&gt;--SuspendedCount&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在检测的时候，只会处理&lt;code&gt;SuspendedCount == 0&lt;/code&gt;的线程。&lt;/p&gt;
 &lt;h2 id="参考文档"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;参考文档
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/648030201" target="_blank" rel="noopener"
-&gt;Unreal心跳机制调研 - 知乎&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE5中的CommonLoadingScreen插件</title><link>https://boiltask.com/knowledge/ue/common-loading-screen/</link><pubDate>Mon, 28 Jul 2025 13:10:54 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-loading-screen/</guid><description>&lt;blockquote&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/648030201" target="_blank" rel="noopener"&gt;Unreal心跳机制调研 - 知乎&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE5中的CommonLoadingScreen插件</title><link>https://boiltask.com/knowledge/ue/common-loading-screen/</link><pubDate>Mon, 28 Jul 2025 13:10:54 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-loading-screen/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;本文基于&lt;code&gt;UE5.6&lt;/code&gt;版本的&lt;code&gt;Lyra&lt;/code&gt;中的&lt;code&gt;CommonLoadingScreen&lt;/code&gt;编写。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="基本概念"&gt;&lt;a href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="header-anchor"&gt;&lt;/a&gt;基本概念
@@ -4021,7 +3990,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;h3 id="调整渲染设置"&gt;&lt;a href="#%e8%b0%83%e6%95%b4%e6%b8%b2%e6%9f%93%e8%ae%be%e7%bd%ae" class="header-anchor"&gt;&lt;/a&gt;调整渲染设置
 &lt;/h3&gt;&lt;p&gt;为了节约性能，在&lt;code&gt;Loading&lt;/code&gt;的时候会调整一些渲染的设置。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/pso-cache" &gt;ShaderPipelineCache::SetBatchMode&lt;/a&gt;设置为Fast，关闭时还原回Background&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/pso-cache/"&gt;ShaderPipelineCache::SetBatchMode&lt;/a&gt;设置为Fast，关闭时还原回Background&lt;/li&gt;
 &lt;li&gt;设置bDisableWorldRendering禁用世界渲染&lt;/li&gt;
 &lt;li&gt;设置处于HighPriorityLoading高优先级加载模式&lt;/li&gt;
 &lt;li&gt;调整线程心跳延迟系数&lt;/li&gt;
@@ -4047,7 +4016,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="调整线程心跳"&gt;&lt;a href="#%e8%b0%83%e6%95%b4%e7%ba%bf%e7%a8%8b%e5%bf%83%e8%b7%b3" class="header-anchor"&gt;&lt;/a&gt;调整线程心跳
 &lt;/h3&gt;&lt;p&gt;在&lt;code&gt;Loading&lt;/code&gt;的控制流程里，通过调用&lt;code&gt;FThreadHeartBeat&lt;/code&gt;上的接口来控制线程心跳。&lt;/p&gt;
-&lt;p&gt;详情可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/thread-heart-beat/" &gt;UnrealEngine 中的 ThreadHeartBeat 机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详情可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/thread-heart-beat/"&gt;UnrealEngine 中的 ThreadHeartBeat 机制&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="界面刷新"&gt;&lt;a href="#%e7%95%8c%e9%9d%a2%e5%88%b7%e6%96%b0" class="header-anchor"&gt;&lt;/a&gt;界面刷新
 &lt;/h3&gt;&lt;p&gt;通过调用一次&lt;code&gt;SlateApplication&lt;/code&gt;的Tick函数，来确保&lt;code&gt;Loading&lt;/code&gt;界面立刻刷新。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -4098,7 +4067,7 @@ loading="lazy"
 alt="image.png"
 &gt;&lt;/p&gt;
 &lt;p&gt;下面详细分析&lt;code&gt;CommonLoadingScreen&lt;/code&gt;插件的相关逻辑：&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-loading-screen" &gt;UE5中的CommonLoadingScreen插件&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</guid><description>&lt;p&gt;之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-loading-screen/"&gt;UE5中的CommonLoadingScreen插件&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/fab-ue-plugin-publish/</guid><description>&lt;p&gt;之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p&gt;
 &lt;p&gt;Fab平台对于插件有一些更为严格的要求，除了按照标准进行一些规范性的修改以外，还需要注意编译环境的区别。&lt;/p&gt;
 &lt;p&gt;通常我们会认为引入项目后插件编译成功就算成功，但是处于通用性的考虑，Fab要求比如是能成功打包的插件。&lt;/p&gt;
 &lt;p&gt;首先保证能正常编译通过，然后可以打开编辑器插件页面，选择&lt;code&gt;Package&lt;/code&gt;。&lt;/p&gt;
@@ -4109,8 +4078,7 @@ alt="image.png"
 &lt;p&gt;如果这个时候能编译通过，那么提交之后一般没有编译错误的问题。&lt;/p&gt;</description></item><item><title>虚幻引擎中ASan相关机制</title><link>https://boiltask.com/knowledge/ue/ue-asan/</link><pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-asan/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。&lt;/p&gt;
 &lt;p&gt;比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。&lt;/p&gt;
-&lt;p&gt;性能指标参考：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerPerformanceNumbers" target="_blank" rel="noopener"
-&gt;AddressSanitizerPerformanceNumbers · google/sanitizers Wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;性能指标参考：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerPerformanceNumbers" target="_blank" rel="noopener"&gt;AddressSanitizerPerformanceNumbers · google/sanitizers Wiki&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="linux下ds使用"&gt;&lt;a href="#linux%e4%b8%8bds%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;Linux下DS使用
 &lt;/h2&gt;&lt;h3 id="基本流程"&gt;&lt;a href="#%e5%9f%ba%e6%9c%ac%e6%b5%81%e7%a8%8b" class="header-anchor"&gt;&lt;/a&gt;基本流程
 &lt;/h3&gt;&lt;p&gt;考虑开启 &lt;code&gt;ASan&lt;/code&gt; 对流程和性能的影响，一般需要单独部署一些炮灰环境。&lt;/p&gt;
@@ -4123,8 +4091,7 @@ alt="image.png"
 &lt;/ol&gt;
 &lt;h3 id="堆栈获取"&gt;&lt;a href="#%e5%a0%86%e6%a0%88%e8%8e%b7%e5%8f%96" class="header-anchor"&gt;&lt;/a&gt;堆栈获取
 &lt;/h3&gt;&lt;p&gt;通过指定&lt;code&gt;ASAN_SYMBOLIZER_PATH&lt;/code&gt;可以使得输出的信息里自带堆栈，使用了llvm- symbolizer ，性能比起addr2line可以有较高的提升。&lt;/p&gt;
-&lt;p&gt;详见：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerCallStack" target="_blank" rel="noopener"
-&gt;AddressSanitizerCallStack · google/sanitizers Wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详见：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerCallStack" target="_blank" rel="noopener"&gt;AddressSanitizerCallStack · google/sanitizers Wiki&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;会使得输出日志稍微慢几秒，目测可以接受。&lt;/p&gt;
 &lt;p&gt;可以使用格式文本设定&lt;code&gt;stack_trace_format&lt;/code&gt;：&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -4196,8 +4163,7 @@ alt="image.png"
 &lt;/div&gt;&lt;h2 id="问题记录"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e8%ae%b0%e5%bd%95" class="header-anchor"&gt;&lt;/a&gt;问题记录
 &lt;/h2&gt;&lt;h3 id="开启asan之后加载过慢"&gt;&lt;a href="#%e5%bc%80%e5%90%afasan%e4%b9%8b%e5%90%8e%e5%8a%a0%e8%bd%bd%e8%bf%87%e6%85%a2" class="header-anchor"&gt;&lt;/a&gt;开启ASan之后加载过慢
 &lt;/h3&gt;&lt;p&gt;需要检查&lt;code&gt;fast_unwind_on_malloc&lt;/code&gt;是否被设置为0，如果&lt;code&gt;fast_unwind_on_malloc&lt;/code&gt;被关闭，则会极大地影响性能。&lt;/p&gt;
-&lt;p&gt;详见：&lt;a class="link" href="https://developer.android.google.cn/ndk/guides/asan?hl=zh-cn#stack-traces" target="_blank" rel="noopener"
-&gt;Address Sanitizer  |  Android NDK  |  Android Developers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详见：&lt;a class="link" href="https://developer.android.google.cn/ndk/guides/asan?hl=zh-cn#stack-traces" target="_blank" rel="noopener"&gt;Address Sanitizer  |  Android NDK  |  Android Developers&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="堆栈还原"&gt;&lt;a href="#%e5%a0%86%e6%a0%88%e8%bf%98%e5%8e%9f" class="header-anchor"&gt;&lt;/a&gt;堆栈还原
 &lt;/h2&gt;&lt;p&gt;写了一个&lt;code&gt;golang&lt;/code&gt;的脚本用于快速的分析堆栈：&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
@@ -4424,12 +4390,9 @@ alt="image.png"
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/using-clang-sanitizers-in-unreal-engine-projects" target="_blank" rel="noopener"
-&gt;在虚幻引擎项目中使用Clang检测工具 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://github.com/google/sanitizers" target="_blank" rel="noopener"
-&gt;google/sanitizers: AddressSanitizer, ThreadSanitizer, MemorySanitizer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://forums.unrealengine.com/t/addresssanitizer-can-output-stacktrace-on-android-debug-buildconfiguration-but-not-development/690919" target="_blank" rel="noopener"
-&gt;AddressSanitizer can output Stacktrace on android debug buildconfiguration but not development? - International - Epic Developer Community Forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/using-clang-sanitizers-in-unreal-engine-projects" target="_blank" rel="noopener"&gt;在虚幻引擎项目中使用Clang检测工具 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/google/sanitizers" target="_blank" rel="noopener"&gt;google/sanitizers: AddressSanitizer, ThreadSanitizer, MemorySanitizer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://forums.unrealengine.com/t/addresssanitizer-can-output-stacktrace-on-android-debug-buildconfiguration-but-not-development/690919" target="_blank" rel="noopener"&gt;AddressSanitizer can output Stacktrace on android debug buildconfiguration but not development? - International - Epic Developer Community Forums&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中网络角色Role相关概念</title><link>https://boiltask.com/knowledge/ue/network-role/</link><pubDate>Wed, 02 Apr 2025 13:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/network-role/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;在Actor的复制过程中，需要关心两个属性，Role与RemoteRole。&lt;/p&gt;
 &lt;p&gt;通过这两个属性，可以明确地知道：&lt;/p&gt;
@@ -4498,8 +4461,7 @@ alt="image.png"
 &lt;p&gt;ROLE_AutonomousProxy通常会考虑客户端自身的输入，通过这部分输入来补足信息，而非只通过服务器的信息推算。&lt;/p&gt;
 &lt;h2 id="参考文档"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor"&gt;&lt;/a&gt;参考文档
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/actor-role-and-remote-role-in-unreal-engine" target="_blank" rel="noopener"
-&gt;虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/actor-role-and-remote-role-in-unreal-engine" target="_blank" rel="noopener"&gt;虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中角色移动相关机制</title><link>https://boiltask.com/knowledge/ue/character-movement/</link><pubDate>Wed, 02 Apr 2025 12:54:31 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/character-movement/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;本文主要用于整理虚幻引擎中移动相关的机制。&lt;/p&gt;
 &lt;p&gt;内容可能摘录自各个文章、论坛、文档等，仅用作记录。&lt;/p&gt;
@@ -4587,7 +4549,7 @@ move list which occurred after the timestamp of the move the server was adjustin
 &lt;h3 id="主控角色移动"&gt;&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor"&gt;&lt;/a&gt;主控角色移动
 &lt;/h3&gt;&lt;p&gt;在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/" &gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p&gt;
 &lt;p&gt;本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code&gt;TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code&gt;的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p&gt;
@@ -4700,14 +4662,10 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/ul&gt;
 &lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/114341957" target="_blank" rel="noopener"
-&gt;UE4移动的网络同步 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/664568047" target="_blank" rel="noopener"
-&gt;UE4/UE5 Character Movement Component移动组件网络同步详解 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/650314172" target="_blank" rel="noopener"
-&gt;「Grow by UE」图解角色移动组件 - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"
-&gt;UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/114341957" target="_blank" rel="noopener"&gt;UE4移动的网络同步 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/664568047" target="_blank" rel="noopener"&gt;UE4/UE5 Character Movement Component移动组件网络同步详解 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/650314172" target="_blank" rel="noopener"&gt;「Grow by UE」图解角色移动组件 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"&gt;UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>UnrealEngine虚幻引擎编译选项</title><link>https://boiltask.com/knowledge/ue/build-configuration/</link><pubDate>Wed, 05 Mar 2025 12:42:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/build-configuration/</guid><description>&lt;h2 id="配置参数"&gt;&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;配置参数
 &lt;/h2&gt;&lt;h3 id="window指定编译sdk"&gt;&lt;a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor"&gt;&lt;/a&gt;Window指定编译SDK
 &lt;/h3&gt;&lt;p&gt;修改&lt;code&gt;Engine/Saved/UnrealBuildTool/BuildConfiguration.xml&lt;/code&gt;中的配置，添加&lt;code&gt;MSVC&lt;/code&gt;版本号、&lt;code&gt;SDK&lt;/code&gt;的版本号。&lt;/p&gt;
@@ -4758,10 +4716,9 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="参考文章"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"&gt;&lt;/a&gt;参考文章
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine" target="_blank" rel="noopener"
-&gt;Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE4常用控制台指令</title><link>https://boiltask.com/knowledge/ue/common-console-command-ue4/</link><pubDate>Wed, 26 Feb 2025 11:44:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-console-command-ue4/</guid><description>&lt;p&gt;在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine" target="_blank" rel="noopener"&gt;Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community&lt;/a&gt;&lt;/p&gt;</description></item><item><title>UE4常用控制台指令</title><link>https://boiltask.com/knowledge/ue/common-console-command-ue4/</link><pubDate>Wed, 26 Feb 2025 11:44:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-console-command-ue4/</guid><description>&lt;p&gt;在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;UE4和UE5有的控制台指令有一些差异，可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-console-command/" &gt;UE5常用控制台指令&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;UE4和UE5有的控制台指令有一些差异，可参考：&lt;a class="link" href="https://boiltask.com/knowledge/ue/common-console-command/"&gt;UE5常用控制台指令&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;下面列出一些常用的控制台指令：&lt;/p&gt;
 &lt;p&gt;stat fps 显示帧率&lt;/p&gt;
@@ -4769,8 +4726,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;p&gt;slomo 0.1 游戏运行下的速度0.1表示运行速度变为正常的十分之一&lt;/p&gt;
 &lt;p&gt;r.showcollision 显示碰撞体&lt;/p&gt;
 &lt;p&gt;t.maxfps 60 设置最大帧率&lt;/p&gt;
-&lt;p&gt;更多控制台指令可以在下面这个网站查询： &lt;a class="link" href="https://digilander.libero.it/ZioYuri78/" target="_blank" rel="noopener"
-&gt;https://digilander.libero.it/ZioYuri78/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/knowledge/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-merge/</guid><description>&lt;p&gt;UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p&gt;
+&lt;p&gt;更多控制台指令可以在下面这个网站查询： &lt;a class="link" href="https://digilander.libero.it/ZioYuri78/" target="_blank" rel="noopener"&gt;https://digilander.libero.it/ZioYuri78/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/knowledge/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-merge/</guid><description>&lt;p&gt;UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
 &lt;span class="highlight-language"&gt;C&amp;#43;&amp;#43;&lt;/span&gt;
@@ -4789,14 +4745,11 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 loading="lazy"
 alt="image.png"
 &gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中Actor复制流程</title><link>https://boiltask.com/knowledge/ue/actor-replication/</link><pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/actor-replication/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/detailed-actor-replication-flow-in-unreal-engine" target="_blank" rel="noopener"
-&gt;Detailed Actor Replication Flow&lt;/a&gt;暂时没有官方翻译，尝试理解顺便翻译一下。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/detailed-actor-replication-flow-in-unreal-engine" target="_blank" rel="noopener"&gt;Detailed Actor Replication Flow&lt;/a&gt;暂时没有官方翻译，尝试理解顺便翻译一下。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Actor复制&lt;/strong&gt;是一个详细的多步骤过程，其中&lt;strong&gt;网络驱动程序&lt;/strong&gt;（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。&lt;/p&gt;
-&lt;p&gt;大多数Actor的复制是在&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UNetDriver/ServerReplicateActors" target="_blank" rel="noopener"
-&gt;&lt;code&gt;UNetDriver::ServerReplicateActors&lt;/code&gt;&lt;/a&gt;函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UActorChannel/ReplicateActor" target="_blank" rel="noopener"
-&gt;&lt;code&gt;UActorChannel::ReplicateActor&lt;/code&gt;&lt;/a&gt; 函数负责处理将特定Actor复制到某一通道的详细操作。&lt;/p&gt;
+&lt;p&gt;大多数Actor的复制是在&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UNetDriver/ServerReplicateActors" target="_blank" rel="noopener"&gt;&lt;code&gt;UNetDriver::ServerReplicateActors&lt;/code&gt;&lt;/a&gt;函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UActorChannel/ReplicateActor" target="_blank" rel="noopener"&gt;&lt;code&gt;UActorChannel::ReplicateActor&lt;/code&gt;&lt;/a&gt; 函数负责处理将特定Actor复制到某一通道的详细操作。&lt;/p&gt;
 &lt;h2 id="重要属性"&gt;&lt;a href="#%e9%87%8d%e8%a6%81%e5%b1%9e%e6%80%a7" class="header-anchor"&gt;&lt;/a&gt;重要属性
 &lt;/h2&gt;&lt;p&gt;对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：&lt;/p&gt;
 &lt;table&gt;
@@ -4979,17 +4932,14 @@ alt="image.png"
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中网络相关机制</title><link>https://boiltask.com/knowledge/ue/network-start/</link><pubDate>Mon, 02 Dec 2024 13:13:25 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/network-start/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;想到哪里写到哪里吧，后续有可能再补充。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://boiltask.com/ue/actor-replication/" &gt;虚幻引擎中Actor复制流程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://boiltask.com/ue/network-role/" &gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://boiltask.com/ue/actor-replication/"&gt;虚幻引擎中Actor复制流程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://boiltask.com/ue/network-role/"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>虚幻引擎中编辑器下Python的使用</title><link>https://boiltask.com/knowledge/ue/editor-python/</link><pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/editor-python/</guid><description>&lt;h2 id="功能简介"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;功能简介
-&lt;/h2&gt;&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"
-&gt;使用Python脚本化运行虚幻编辑器&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介"&gt;&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;DataAsset简介
+&lt;/h2&gt;&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"&gt;使用Python脚本化运行虚幻编辑器&lt;/a&gt;&lt;/p&gt;</description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介"&gt;&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;DataAsset简介
 &lt;/h2&gt;&lt;p&gt;一般用于表示一个数据块，功能与DataTable类似，某种程度上可以理解成一个仅有一行的DataTable。&lt;/p&gt;
-&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"
-&gt;数据资产&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/knowledge/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-start-map/</guid><description>&lt;p&gt;打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p&gt;</description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/knowledge/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-download/</guid><description>&lt;p&gt;最近想要细研究一下&lt;code&gt;UE5&lt;/code&gt;的官方示例项目&lt;code&gt;Lyra&lt;/code&gt;，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p&gt;
+&lt;p&gt;参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"&gt;数据资产&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/knowledge/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-start-map/</guid><description>&lt;p&gt;打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p&gt;</description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/knowledge/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-download/</guid><description>&lt;p&gt;最近想要细研究一下&lt;code&gt;UE5&lt;/code&gt;的官方示例项目&lt;code&gt;Lyra&lt;/code&gt;，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p&gt;
 &lt;p&gt;时间点开始于2024年11月，没有提到的话相关项目以此时间点的最新版本为准。&lt;/p&gt;
-&lt;p&gt;Lyra的项目目前可以在Fab中找到：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0" target="_blank" rel="noopener"
-&gt;https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lyra的项目目前可以在Fab中找到：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0" target="_blank" rel="noopener"&gt;https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在虚幻引擎启动器&lt;code&gt;Epic Games Launcher&lt;/code&gt;中，可以在库找到&lt;code&gt;Lyra&lt;/code&gt;项目，创建项目即可。&lt;/p&gt;
 &lt;p&gt;经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p&gt;</description></item><item><title>查找Module被谁引入</title><link>https://boiltask.com/knowledge/ue/find-module-reference/</link><pubDate>Wed, 02 Aug 2023 12:13:26 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/find-module-reference/</guid><description>&lt;p&gt;想知道一个Module被谁引入的，可以通过让其报错来查看堆栈。&lt;/p&gt;
 &lt;p&gt;在模块的&lt;code&gt;Build.cs&lt;/code&gt;中第一行加入：&lt;code&gt;throw new Exception()&lt;/code&gt;。&lt;/p&gt;
@@ -5048,7 +4998,7 @@ loading="lazy"
 &lt;/table&gt;
 &lt;h3 id="资产保存"&gt;&lt;a href="#%e8%b5%84%e4%ba%a7%e4%bf%9d%e5%ad%98" class="header-anchor"&gt;&lt;/a&gt;资产保存
 &lt;/h3&gt;&lt;p&gt;链接版本管理后，对资产做保存等操作时会弹出确认框，询问是否要&lt;code&gt;CheckOut&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;此操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" &gt;SVN锁定操作&lt;/a&gt;，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p&gt;
+&lt;p&gt;此操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;a class="link" href="https://boiltask.com/knowledge/svn/lock/"&gt;SVN锁定操作&lt;/a&gt;，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://r2.boiltask.com/2026/03/8da442077a436cd5453d6d67ae22658e.png"
 loading="lazy"
 &gt;&lt;/p&gt;
@@ -5100,11 +5050,11 @@ loading="lazy"
 &gt;&lt;/p&gt;
 &lt;h2 id="注意事项"&gt;&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor"&gt;&lt;/a&gt;注意事项
 &lt;/h2&gt;&lt;p&gt;在资产管理中&lt;code&gt;CheckOut&lt;/code&gt;操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;code&gt;Lock&lt;/code&gt;操作，会锁定资产防止别人提交，因此会干扰其他同事操作。&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" &gt;SVN锁定操作&lt;/a&gt;前需要确认操作的必要性，如果遇见有人询问相关问题，应积极处理。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://boiltask.com/knowledge/svn/lock/"&gt;SVN锁定操作&lt;/a&gt;前需要确认操作的必要性，如果遇见有人询问相关问题，应积极处理。&lt;/p&gt;
 &lt;p&gt;连接&lt;code&gt;SVN&lt;/code&gt;后，一些操作会自动对&lt;code&gt;SVN&lt;/code&gt;做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p&gt;</description></item><item><title>虚幻引擎蓝图对比工具</title><link>https://boiltask.com/knowledge/ue/blueprint-diff/</link><pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-diff/</guid><description>&lt;h2 id="功能简述"&gt;&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;功能简述
 &lt;/h2&gt;&lt;p&gt;蓝图因为是二进制文件，所以没办法使用&lt;code&gt;svn&lt;/code&gt;自带的版本对比工具来比较变更。&lt;/p&gt;
 &lt;p&gt;为了解决蓝图对比的问题，&lt;code&gt;UE4&lt;/code&gt;提供了一个工具用以展示两个蓝图的区别。&lt;/p&gt;
-&lt;p&gt;可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/knowledge/ue/source-control-tool/" &gt;引擎内置版本控制工具&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/knowledge/ue/source-control-tool/"&gt;引擎内置版本控制工具&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本文描述的是如何从外部调用引擎的对比工具。&lt;/p&gt;
 &lt;h2 id="工具使用"&gt;&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor"&gt;&lt;/a&gt;工具使用
 &lt;/h2&gt;&lt;p&gt;直接使用可以在&lt;code&gt;cmd&lt;/code&gt;命令提示符窗口输入如下命令：&lt;/p&gt;
@@ -5250,7 +5200,7 @@ loading="lazy"
 &lt;p&gt;本文将尽可能列出编程中所遇见的各种情况，以及采用本编码规范所解决的问题。旨在让不同的编程人员面对同一需求时，能获得唯一的编码格式。如果文本未明确提及某种行为，那么可视为未定义行为，可结合自身实践来判断是否符合规范。&lt;/p&gt;
 &lt;p&gt;本文可能会使用以下标签说明规范执行的严格程度：&lt;span class="dida-tag dida-tag-info"&gt;说明&lt;/span&gt;&lt;span class="dida-tag dida-tag-success"&gt;提议&lt;/span&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;原生C++可参考：&lt;a class="link" href="https://boiltask.com/knowledge/cpp-style-guide/" &gt;C++项目编程规范&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原生C++可参考：&lt;a class="link" href="https://boiltask.com/knowledge/cpp/style-guide/"&gt;C++项目编程规范&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="编程思路"&gt;&lt;a href="#%e7%bc%96%e7%a8%8b%e6%80%9d%e8%b7%af" class="header-anchor"&gt;&lt;/a&gt;编程思路
 &lt;/h2&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;相同的接口如果框架提供了，除非要求严格保持一致，否则应优先使用框架提供的接口。&lt;/p&gt;
@@ -5903,8 +5853,7 @@ loading="lazy"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;但并不是所有的成员变量都需要初始化，比如&lt;code&gt;TArray&lt;/code&gt;、&lt;code&gt;TMap&lt;/code&gt;等容器类，它们会在构造函数中初始化。对于有些结构直接靠赋值来初始化反倒有可能有问题，可参考：&lt;a class="link" href="https://blog.ch-wind.com/note-tweakobjectptr-compile/" target="_blank" rel="noopener"
-&gt;记录TWeakObjectPtr的一个比较坑的编译报错&lt;/a&gt;。此时如果需要初始化，可以再构造函数内进行，以避免与预期不符。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;但并不是所有的成员变量都需要初始化，比如&lt;code&gt;TArray&lt;/code&gt;、&lt;code&gt;TMap&lt;/code&gt;等容器类，它们会在构造函数中初始化。对于有些结构直接靠赋值来初始化反倒有可能有问题，可参考：&lt;a class="link" href="https://blog.ch-wind.com/note-tweakobjectptr-compile/" target="_blank" rel="noopener"&gt;记录TWeakObjectPtr的一个比较坑的编译报错&lt;/a&gt;。此时如果需要初始化，可以再构造函数内进行，以避免与预期不符。&lt;/p&gt;
 &lt;h2 id="枚举"&gt;&lt;a href="#%e6%9e%9a%e4%b8%be" class="header-anchor"&gt;&lt;/a&gt;枚举
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class="dida-tag dida-tag-danger"&gt;强制&lt;/span&gt;如果枚举值需要暴露给蓝图，那么他需要在&lt;code&gt;uint8&lt;/code&gt;范围内，否则在一些时候会有超出预期的问题。
@@ -6363,8 +6312,7 @@ loading="lazy"
 &lt;/ul&gt;
 &lt;h2 id="标准库"&gt;&lt;a href="#%e6%a0%87%e5%87%86%e5%ba%93" class="header-anchor"&gt;&lt;/a&gt;标准库
 &lt;/h2&gt;&lt;p&gt;&lt;span class="dida-tag dida-tag-warning"&gt;推荐&lt;/span&gt;UE有自己的一套模板库，大部分情况下应该使用UE提供的版本。&lt;/p&gt;
-&lt;p&gt;但有一些例外，可以参考官方文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine#%E6%A0%87%E5%87%86%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener"
-&gt;标准库的使用&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但有一些例外，可以参考官方文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine#%E6%A0%87%E5%87%86%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener"&gt;标准库的使用&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="排版与格式"&gt;&lt;a href="#%e6%8e%92%e7%89%88%e4%b8%8e%e6%a0%bc%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;排版与格式
 &lt;/h2&gt;&lt;h3 id="命名相关"&gt;&lt;a href="#%e5%91%bd%e5%90%8d%e7%9b%b8%e5%85%b3" class="header-anchor"&gt;&lt;/a&gt;命名相关
 &lt;/h3&gt;&lt;ul&gt;
@@ -7832,7 +7780,7 @@ loading="lazy"
 &lt;/ul&gt;
 &lt;h2 id="lua"&gt;&lt;a href="#lua" class="header-anchor"&gt;&lt;/a&gt;Lua
 &lt;/h2&gt;&lt;p&gt;首先遵循UnLua实现的一些规定，然后参考Lua开发习惯与规范。&lt;/p&gt;
-&lt;p&gt;作者更为推荐放弃Lua，改为类型安全的编程语言，比如&lt;a class="link" href="https://boiltask.com/knowledge/ue/unlua-to-puerts/" &gt;PuerTs&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;作者更为推荐放弃Lua，改为类型安全的编程语言，比如&lt;a class="link" href="https://boiltask.com/knowledge/ue/unlua-to-puerts/"&gt;PuerTs&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id="checklist"&gt;&lt;a href="#checklist" class="header-anchor"&gt;&lt;/a&gt;CheckList
 &lt;/h2&gt;&lt;p&gt;需要排查项目中是否存在以下问题：&lt;/p&gt;
 &lt;ul&gt;
@@ -7967,11 +7915,7 @@ loading="lazy"
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="参考文献"&gt;&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae" class="header-anchor"&gt;&lt;/a&gt;参考文献
-&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/" target="_blank" rel="noopener"
-&gt;Google 开源项目风格指南&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://www.zhihu.com/question/26901409/answer/1858690571" target="_blank" rel="noopener"
-&gt;有哪些C++大坑？ - 知乎&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine" target="_blank" rel="noopener"
-&gt;Epic的虚幻引擎 C++ 代码规范 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://github.com/Allar/ue5-style-guide" target="_blank" rel="noopener"
-&gt;Allar/ue5-style-guide: An attempt to make Unreal Engine 4 projects more consistent&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/" target="_blank" rel="noopener"&gt;Google 开源项目风格指南&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.zhihu.com/question/26901409/answer/1858690571" target="_blank" rel="noopener"&gt;有哪些C++大坑？ - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine" target="_blank" rel="noopener"&gt;Epic的虚幻引擎 C++ 代码规范 | 虚幻引擎 5.7 文档 | Epic Developer Community&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/Allar/ue5-style-guide" target="_blank" rel="noopener"&gt;Allar/ue5-style-guide: An attempt to make Unreal Engine 4 projects more consistent&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

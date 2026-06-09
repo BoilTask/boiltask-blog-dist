@@ -62,8 +62,7 @@
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
 &lt;/h2&gt;&lt;p&gt;矩阵乘法：&lt;br&gt;
 结果矩阵第m行与第n列交叉位置的那个值，等于第一个矩阵第m行与第二个矩阵第n列，对应位置的每个值的乘积之和。&lt;br&gt;
-&lt;a class="link" href="http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html" target="_blank" rel="noopener"
-&gt;理解矩阵乘法 - 阮一峰的网络日志&lt;/a&gt;&lt;br&gt;
+&lt;a class="link" href="http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html" target="_blank" rel="noopener"&gt;理解矩阵乘法 - 阮一峰的网络日志&lt;/a&gt;&lt;br&gt;
 如果用数组硬算也可以&lt;br&gt;
 但是这里写的高级一点&lt;br&gt;
 用结构体重载运算符&lt;br&gt;
@@ -119,5 +118,4 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1127" target="_blank" rel="noopener"
-&gt;【郑轻】[1127]矩阵乘积&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1127" target="_blank" rel="noopener"&gt;【郑轻】[1127]矩阵乘积&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

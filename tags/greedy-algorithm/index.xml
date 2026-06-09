@@ -128,8 +128,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址: &lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1896" target="_blank" rel="noopener"
-&gt;【郑轻】[1896]985的买饮料难题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【LightOJ】[1198]Karate Competition</title><link>https://boiltask.com/oj/lightoj-1198/</link><pubDate>Tue, 02 Aug 2016 09:23:40 +0800</pubDate><guid>https://boiltask.com/oj/lightoj-1198/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址: &lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1896" target="_blank" rel="noopener"&gt;【郑轻】[1896]985的买饮料难题&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【LightOJ】[1198]Karate Competition</title><link>https://boiltask.com/oj/lightoj-1198/</link><pubDate>Tue, 02 Aug 2016 09:23:40 +0800</pubDate><guid>https://boiltask.com/oj/lightoj-1198/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -208,7 +207,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/h2&gt;&lt;p&gt;与田忌赛马的贪心策略类似&lt;br&gt;
 不过因为输了不扣分平局加一分&lt;br&gt;
 所以对平局的优先级需要提升一些&lt;br&gt;
-&lt;a class="link" href="https://boiltask.com/oj/hdu-1052" &gt;【杭电】[1052]Tian Ji — The Horse Racing&lt;/a&gt;&lt;/p&gt;
+&lt;a class="link" href="https://boiltask.com/oj/hdu-1052"&gt;【杭电】[1052]Tian Ji — The Horse Racing&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
 &lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
@@ -1512,7 +1511,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="问题分析"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor"&gt;&lt;/a&gt;问题分析
-&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/hdu-2037" &gt;【杭电】[2037]今年暑假不AC&lt;/a&gt;相同思路&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;与&lt;a class="link" href="https://boiltask.com/oj/hdu-2037"&gt;【杭电】[2037]今年暑假不AC&lt;/a&gt;相同思路&lt;br&gt;
 简单的贪心问题&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
@@ -1753,8 +1752,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1070" target="_blank" rel="noopener"
-&gt;【杭电】[1070]Milk&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2111]Saving HDU</title><link>https://boiltask.com/oj/hdu-2111/</link><pubDate>Wed, 23 Mar 2016 21:39:24 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2111/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=1070" target="_blank" rel="noopener"&gt;【杭电】[1070]Milk&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2111]Saving HDU</title><link>https://boiltask.com/oj/hdu-2111/</link><pubDate>Wed, 23 Mar 2016 21:39:24 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2111/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -1914,8 +1912,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=2111" target="_blank" rel="noopener"
-&gt;【杭电】[2111]Saving HDU&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2037]今年暑假不AC</title><link>https://boiltask.com/oj/hdu-2037/</link><pubDate>Mon, 21 Dec 2015 19:10:29 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2037/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;/div&gt;&lt;p&gt;题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=2111" target="_blank" rel="noopener"&gt;【杭电】[2111]Saving HDU&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2037]今年暑假不AC</title><link>https://boiltask.com/oj/hdu-2037/</link><pubDate>Mon, 21 Dec 2015 19:10:29 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2037/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
@@ -2179,8 +2176,7 @@ fill="#666666" p-id="3153"&gt;&lt;/path&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;值得做的一题&lt;/p&gt;
 &lt;p&gt;在附一个优秀的讲解博文：&lt;br&gt;
-&lt;a class="link" href="http://blog.sina.com.cn/s/blog_6827ac4a0100nyjn.html" target="_blank" rel="noopener"
-&gt;HDU2037 今年暑假不AC 贪心算法&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2187]悼念512汶川大地震遇难同胞——老人是真饿了</title><link>https://boiltask.com/oj/hdu-2187/</link><pubDate>Sun, 20 Dec 2015 22:06:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2187/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
+&lt;a class="link" href="http://blog.sina.com.cn/s/blog_6827ac4a0100nyjn.html" target="_blank" rel="noopener"&gt;HDU2037 今年暑假不AC 贪心算法&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【杭电】[2187]悼念512汶川大地震遇难同胞——老人是真饿了</title><link>https://boiltask.com/oj/hdu-2187/</link><pubDate>Sun, 20 Dec 2015 22:06:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu-2187/</guid><description>&lt;h2 id="问题描述"&gt;&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor"&gt;&lt;/a&gt;问题描述
 &lt;/h2&gt;&lt;script&gt;
 window.addEventListener('message', function (event) {
 if (!event.data) {
