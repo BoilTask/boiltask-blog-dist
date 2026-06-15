@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 20 Apr 2026 19:41:17 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Jun 2026 12:26:44 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -82,7 +82,25 @@
 &lt;p&gt;加油加油！&lt;/p&gt;
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>生个娃，创造吧我们的北辰</title><link>https://boiltask.com/record/child-bei-chen/</link><pubDate>Mon, 20 Apr 2026 19:41:17 +0800</pubDate><guid>https://boiltask.com/record/child-bei-chen/</guid><description>&lt;p&gt;总算又忙完了一个大工程，今天生娃出院成功了~&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>AI大模型202605使用体验总结</title><link>https://boiltask.com/record/ai-usage-experience-202605/</link><pubDate>Fri, 12 Jun 2026 12:26:44 +0800</pubDate><guid>https://boiltask.com/record/ai-usage-experience-202605/</guid><description>&lt;p&gt;经过一个月相对高强度试用各家模型（主要是GLM5.1、DeepSeekV4Pro&amp;amp;Flash、MiMo2.5Pro、MiniMax-M3），期间主要进行：需求迭代、逻辑优化、BUG修复、代码分析、文档总结&amp;amp;生成等，总结一下各家套餐和模型的消耗与表现。&lt;/p&gt;
+&lt;h2 id="付费方案"&gt;&lt;a href="#%e4%bb%98%e8%b4%b9%e6%96%b9%e6%a1%88" class="header-anchor"&gt;&lt;/a&gt;付费方案
+&lt;/h2&gt;&lt;p&gt;涉及：阿里云Token Plan、MiMo Token Plan、OpenCode Go、GitHub Copilot、DeepSeek按量付费。&lt;/p&gt;
+&lt;p&gt;此外之前用的TraeCN虽然免费，但由于排队越发严重（一次对话1小时左右），并且相同模型下Agent质量明显不如Claude Code等，所以这个月用的少。&lt;/p&gt;
+&lt;h2 id="效果方面"&gt;&lt;a href="#%e6%95%88%e6%9e%9c%e6%96%b9%e9%9d%a2" class="header-anchor"&gt;&lt;/a&gt;效果方面
+&lt;/h2&gt;&lt;p&gt;Claude Opus理论上是效果最好的，不过上述方案只在GitHub Copilot中提供，10分钟基本上就跑完一个月额度了，所以基本不可用，测试不足。&lt;/p&gt;
+&lt;p&gt;国模里GLM5.1效果最好，基本不会因为模型问题而导致无法完成。&lt;/p&gt;
+&lt;p&gt;其次是DeepSeek V4 Pro，大部分时候可以用较短的提示词来实现需求，不过遇见复杂逻辑，尤其设计Lua与蓝图&amp;amp;C++交互时，效果会比较差，需要自己完成一些相关调用或明确在提示词里指挥怎么做。&lt;/p&gt;
+&lt;p&gt;再然后MiMo2.5Pro&amp;amp;MiniMax-M3虽然媒体评测尚可，但个人体验在编码方面体验一般，生成的产物很多都不可用。&lt;/p&gt;
+&lt;p&gt;DeepSeekV4Flash没有作为主力模型，但是胜在非常便宜，OpenCode中甚至限免，所以也值得一试。&lt;/p&gt;
+&lt;h2 id="效率方面"&gt;&lt;a href="#%e6%95%88%e7%8e%87%e6%96%b9%e9%9d%a2" class="header-anchor"&gt;&lt;/a&gt;效率方面：
+&lt;/h2&gt;&lt;p&gt;由于贵的模型速度慢，便宜的模型质量差，所以花在重试和迭代提示词的时间会特别严重，尤其对于一些简单修改，可能效率仍不如人工，整体来看花在编程本身的用时很多地方没有质变。但是确实可以解放很多心智负担，而且可见的随着模型和工具的迭代体验能更好。&lt;/p&gt;
+&lt;h2 id="价格方面"&gt;&lt;a href="#%e4%bb%b7%e6%a0%bc%e6%96%b9%e9%9d%a2" class="header-anchor"&gt;&lt;/a&gt;价格方面
+&lt;/h2&gt;&lt;p&gt;GitHub Copilot（129/月） 在改版之后性价比最低，几乎不可用。&lt;/p&gt;
+&lt;p&gt;阿里云Token Plan （198/月）主要在用GLM5.1，由于不限制小时额度和周额度，体感是3天高强度就可以用满整个月的额度。&lt;/p&gt;
+&lt;p&gt;MiMo Token Plan Lite（39/月） 主要使用MiMo2.5Pro，消耗速度适中，但模型效果不太好。&lt;/p&gt;
+&lt;p&gt;OpenCode Go（10美元/月） 主要使用GLM5.1，体感消耗比阿里云Token Plan要耐用，不过由于有5小时和周限制，日常开发时没法每天都全力用，可能1小时就能用满5小时的额度，而每次都用满的话可能也就能支持5天用满月额度，还需要分2周来避免周限制。&lt;/p&gt;
+&lt;p&gt;所以最终体验下来可能还是DeepSeekV4Pro能满足日常使用，质量和价格都还算能接受，从这个月按量付费的用量来看一天5~20块，平均10块/天，所以后续可能还是会以这个为主。&lt;/p&gt;
+&lt;p&gt;后续据说GLM5.2要出了，可能得观察观察表现，而且随着对大模型的要求也越来越高了， 可能结论每个月还需要更新。&lt;/p&gt;</description></item><item><title>生个娃，创造吧我们的北辰</title><link>https://boiltask.com/record/child-bei-chen/</link><pubDate>Mon, 20 Apr 2026 19:41:17 +0800</pubDate><guid>https://boiltask.com/record/child-bei-chen/</guid><description>&lt;p&gt;总算又忙完了一个大工程，今天生娃出院成功了~&lt;/p&gt;
 &lt;p&gt;还说给娃写点什么呢，忙活着忙活着也不一时没有灵感，不强求了，总有想表达的时候。&lt;/p&gt;
 &lt;p&gt;医院还只让一个家属陪护不让探视，甚至不让换人，所以还挺折腾的。不过，确实也是难得的体验，从手足无措到游刃有余过渡地还挺顺利。&lt;/p&gt;
 &lt;p&gt;4月17日&lt;br&gt;
@@ -10810,7 +10828,7 @@ move list which occurred after the timestamp of the move the server was adjustin
 &lt;h3 id="主控角色移动"&gt;&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor"&gt;&lt;/a&gt;主控角色移动
 &lt;/h3&gt;&lt;p&gt;在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详见：&lt;a class="link" href="content/post/knowledge/ue/network-role/%e8%99%9a%e5%b9%bb%e5%bc%95%e6%93%8e%e4%b8%ad%e7%bd%91%e7%bb%9c%e8%a7%92%e8%89%b2Role%e7%9b%b8%e5%85%b3%e6%a6%82%e5%bf%b5"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p&gt;
 &lt;p&gt;本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code&gt;TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code&gt;的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p&gt;

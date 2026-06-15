@@ -4549,7 +4549,7 @@ move list which occurred after the timestamp of the move the server was adjustin
 &lt;h3 id="主控角色移动"&gt;&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor"&gt;&lt;/a&gt;主控角色移动
 &lt;/h3&gt;&lt;p&gt;在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;详见：&lt;a class="link" href="content/post/knowledge/ue/network-role/%e8%99%9a%e5%b9%bb%e5%bc%95%e6%93%8e%e4%b8%ad%e7%bd%91%e7%bb%9c%e8%a7%92%e8%89%b2Role%e7%9b%b8%e5%85%b3%e6%a6%82%e5%bf%b5"&gt;虚幻引擎中网络角色Role相关概念&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p&gt;
 &lt;p&gt;本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code&gt;TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code&gt;的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p&gt;
