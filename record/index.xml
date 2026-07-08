@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Jun 2026 12:26:44 +0800</lastBuildDate><atom:link href="https://boiltask.com/record/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 08 Jul 2026 20:10:37 +0800</lastBuildDate><atom:link href="https://boiltask.com/record/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -435,7 +435,11 @@ alt="image.png"
 &lt;p&gt;导出DPF最早使用的是html2pdf库，它的原理是先用html2canvas生成一个图片然后转为pdf。这个方式会丢失html中的链接、文本等信息，最终得到的是一个有图片的pdf，不太优雅。因此最后我使用的是浏览器的打印功能，通过调用&lt;code&gt;window.print&lt;/code&gt;，如果浏览器支持则会调出打印对话框，用户可以选择保存为pdf。&lt;/p&gt;
 &lt;p&gt;不过由于打印默认是对整个页面进行打印的，因此为了维护方便，最后把简历页单独提出了一个&lt;a class="link" href="https://boiltask.com/me"&gt;个人简历&lt;/a&gt;的HTML，然后通过&lt;code&gt;iframe&lt;/code&gt;嵌入到了主页面中，这样调用打印的时候就可以只关注简历本身。而且还可以再提出一个打开新窗口的按钮，让用户可以直接关注简历页本身。&lt;/p&gt;
 &lt;p&gt;此外，还可以在css中使用&lt;code&gt;@media print&lt;/code&gt;媒体查询，来使得只有打印的时候触发某些样式，这样可以调整最终pdf的效果。&lt;/p&gt;
-&lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;</description></item><item><title>关于鸿蒙（Harmony）系统发展的一些看法</title><link>https://boiltask.com/record/why-to-harmony/</link><pubDate>Tue, 12 Aug 2025 22:19:42 +0800</pubDate><guid>https://boiltask.com/record/why-to-harmony/</guid><description>&lt;p&gt;感觉黑了好多年的华为和鸿蒙了，一直没有机会系统的聊聊自己的看法。最近有机会做了一下项目对于鸿蒙系统的适配，也是深入了解了一下相关的设计，感觉可以写点什么来系统的总结总结。&lt;/p&gt;
+&lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>关于鸿蒙（Harmony）系统发展的一些看法</title><link>https://boiltask.com/record/why-to-harmony/</link><pubDate>Tue, 12 Aug 2025 22:19:42 +0800</pubDate><guid>https://boiltask.com/record/why-to-harmony/</guid><description>&lt;p&gt;感觉黑了好多年的华为和鸿蒙了，一直没有机会系统的聊聊自己的看法。最近有机会做了一下项目对于鸿蒙系统的适配，也是深入了解了一下相关的设计，感觉可以写点什么来系统的总结总结。&lt;/p&gt;
 &lt;p&gt;虽然通信和各种TOC的产品显然发展得也很广泛，但大众的认识应该还是多来源于手机业务。我对于华为本来也是没什么什么特殊的情感的，最早还是通过手机圈知道的世界上还有个华为品牌。作为小米2发布时入坑的初代米粉，也是从对计算机没什么了解，逐步发展到现在以此为生。&lt;/p&gt;
 &lt;p&gt;现在回想起来，从高中时期初识智能手机到大学毕业时华为适逢跨国业务危机，这段时间我应该对华为还是不吹不黑的。心目中，这是一个卖得贵些但质量尚可的品牌。&lt;/p&gt;
 &lt;p&gt;真开始从内心有了敌意，还要数鸿蒙系统的发布。&lt;/p&gt;

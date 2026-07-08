@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目 on BoilTask's Blog</title><link>https://boiltask.com/tags/project/</link><description>Recent content in 项目 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 20 Apr 2026 19:41:17 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>生个娃，创造吧我们的北辰</title><link>https://boiltask.com/record/child-bei-chen/</link><pubDate>Mon, 20 Apr 2026 19:41:17 +0800</pubDate><guid>https://boiltask.com/record/child-bei-chen/</guid><description>&lt;p&gt;总算又忙完了一个大工程，今天生娃出院成功了~&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目 on BoilTask's Blog</title><link>https://boiltask.com/tags/project/</link><description>Recent content in 项目 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 08 Jul 2026 20:10:37 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>生个娃，创造吧我们的北辰</title><link>https://boiltask.com/record/child-bei-chen/</link><pubDate>Mon, 20 Apr 2026 19:41:17 +0800</pubDate><guid>https://boiltask.com/record/child-bei-chen/</guid><description>&lt;p&gt;总算又忙完了一个大工程，今天生娃出院成功了~&lt;/p&gt;
 &lt;p&gt;还说给娃写点什么呢，忙活着忙活着也不一时没有灵感，不强求了，总有想表达的时候。&lt;/p&gt;
 &lt;p&gt;医院还只让一个家属陪护不让探视，甚至不让换人，所以还挺折腾的。不过，确实也是难得的体验，从手足无措到游刃有余过渡地还挺顺利。&lt;/p&gt;
 &lt;p&gt;4月17日&lt;br&gt;
@@ -216,7 +216,11 @@ alt="image.png"
 &lt;p&gt;导出DPF最早使用的是html2pdf库，它的原理是先用html2canvas生成一个图片然后转为pdf。这个方式会丢失html中的链接、文本等信息，最终得到的是一个有图片的pdf，不太优雅。因此最后我使用的是浏览器的打印功能，通过调用&lt;code&gt;window.print&lt;/code&gt;，如果浏览器支持则会调出打印对话框，用户可以选择保存为pdf。&lt;/p&gt;
 &lt;p&gt;不过由于打印默认是对整个页面进行打印的，因此为了维护方便，最后把简历页单独提出了一个&lt;a class="link" href="https://boiltask.com/me"&gt;个人简历&lt;/a&gt;的HTML，然后通过&lt;code&gt;iframe&lt;/code&gt;嵌入到了主页面中，这样调用打印的时候就可以只关注简历本身。而且还可以再提出一个打开新窗口的按钮，让用户可以直接关注简历页本身。&lt;/p&gt;
 &lt;p&gt;此外，还可以在css中使用&lt;code&gt;@media print&lt;/code&gt;媒体查询，来使得只有打印的时候触发某些样式，这样可以调整最终pdf的效果。&lt;/p&gt;
-&lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;</description></item><item><title>脑子一抽写了一个自己刷自己R2存储计费的逻辑</title><link>https://boiltask.com/record/status-too-many-r2-operation/</link><pubDate>Tue, 10 Jun 2025 13:07:50 +0800</pubDate><guid>https://boiltask.com/record/status-too-many-r2-operation/</guid><description>&lt;p&gt;突然收了一个Cloudflare的9美元的账单，虽然价格不算很高，但是一时没想到是哪一个计费项。&lt;/p&gt;
+&lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>脑子一抽写了一个自己刷自己R2存储计费的逻辑</title><link>https://boiltask.com/record/status-too-many-r2-operation/</link><pubDate>Tue, 10 Jun 2025 13:07:50 +0800</pubDate><guid>https://boiltask.com/record/status-too-many-r2-operation/</guid><description>&lt;p&gt;突然收了一个Cloudflare的9美元的账单，虽然价格不算很高，但是一时没想到是哪一个计费项。&lt;/p&gt;
 &lt;p&gt;查看账单详情，发现来源于R2存储。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
