@@ -446,7 +446,7 @@ alt="image.png"
 &lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/record/update-about-page-202607/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>关于鸿蒙（Harmony）系统发展的一些看法</title><link>https://boiltask.com/record/why-to-harmony/</link><pubDate>Tue, 12 Aug 2025 22:19:42 +0800</pubDate><guid>https://boiltask.com/record/why-to-harmony/</guid><description>&lt;p&gt;感觉黑了好多年的华为和鸿蒙了，一直没有机会系统的聊聊自己的看法。最近有机会做了一下项目对于鸿蒙系统的适配，也是深入了解了一下相关的设计，感觉可以写点什么来系统的总结总结。&lt;/p&gt;
 &lt;p&gt;虽然通信和各种TOC的产品显然发展得也很广泛，但大众的认识应该还是多来源于手机业务。我对于华为本来也是没什么什么特殊的情感的，最早还是通过手机圈知道的世界上还有个华为品牌。作为小米2发布时入坑的初代米粉，也是从对计算机没什么了解，逐步发展到现在以此为生。&lt;/p&gt;
 &lt;p&gt;现在回想起来，从高中时期初识智能手机到大学毕业时华为适逢跨国业务危机，这段时间我应该对华为还是不吹不黑的。心目中，这是一个卖得贵些但质量尚可的品牌。&lt;/p&gt;

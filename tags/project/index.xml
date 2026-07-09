@@ -227,7 +227,7 @@ alt="image.png"
 &lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/record/update-about-page-202607/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>脑子一抽写了一个自己刷自己R2存储计费的逻辑</title><link>https://boiltask.com/record/status-too-many-r2-operation/</link><pubDate>Tue, 10 Jun 2025 13:07:50 +0800</pubDate><guid>https://boiltask.com/record/status-too-many-r2-operation/</guid><description>&lt;p&gt;突然收了一个Cloudflare的9美元的账单，虽然价格不算很高，但是一时没想到是哪一个计费项。&lt;/p&gt;
 &lt;p&gt;查看账单详情，发现来源于R2存储。&lt;/p&gt;
 &lt;table&gt;

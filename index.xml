@@ -8489,7 +8489,7 @@ ULyraSettingScreen &amp;lt;|-- W_LyraSettingScreen
 &lt;p&gt;其实有段时间想做个游戏项目打一个web包放到站点里的，毕竟职业生涯目前还是以游戏业为主，不过还没酝酿好灵感，只好暂时搁置了。以后日子长着呢，也许哪天又有灵感还有波大改呢。&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;修订（2026-07-08）&lt;/strong&gt;：本文是最初的设计记录。后来 about 简历页又重构了一版，把独立的简历页与 about 合并成了单页，详见&lt;a class="link" href="https://boiltask.com/record/update-about-page-202607/"&gt;这篇后续更新&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>关于</title><link>https://boiltask.com/about/</link><pubDate>Sat, 30 Aug 2025 15:10:54 +0800</pubDate><guid>https://boiltask.com/about/</guid><description/></item><item><title>虚幻引擎适用于Unlua转到PuerTS的一些知识</title><link>https://boiltask.com/knowledge/ue/unlua-to-puerts/</link><pubDate>Tue, 19 Aug 2025 21:53:47 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/unlua-to-puerts/</guid><description>&lt;h2 id="简介"&gt;&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor"&gt;&lt;/a&gt;简介
 &lt;/h2&gt;&lt;p&gt;随着项目规模的扩大，越来越感觉&lt;code&gt;Lua&lt;/code&gt;脚本不受控制，因此尝试选择&lt;code&gt;TypeScript&lt;/code&gt;的脚本方案。&lt;/p&gt;
 &lt;p&gt;因此，研究了一下&lt;code&gt;PuerTS&lt;/code&gt;的相关机制。&lt;/p&gt;
