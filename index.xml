@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 08 Jul 2026 20:10:37 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BoilTask's Blog</title><link>https://boiltask.com/</link><description>Recent content on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Jul 2026 13:01:55 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml"/><item><title>📌第一篇正式文章 随便聊聊吧</title><link>https://boiltask.com/record/first-blog/</link><pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate><guid>https://boiltask.com/record/first-blog/</guid><description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
 &lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
 &lt;p style="text-align:center"&gt;
 想法和目标
@@ -82,7 +82,71 @@
 &lt;p&gt;加油加油！&lt;/p&gt;
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>更新一下About个人简历页面</title><link>https://boiltask.com/record/update-about-page-202607/</link><pubDate>Wed, 08 Jul 2026 20:00:11 +0800</pubDate><guid>https://boiltask.com/record/update-about-page-202607/</guid><description>&lt;p&gt;感觉简历页面还有优化空间，找时间又更新了一下。上一版的设计记在&lt;a class="link" href="https://boiltask.com/record/add-about-page/"&gt;《新增了一个About个人简历页面》&lt;/a&gt;里，当时把简历单独提了个 HTML 页再用 &lt;code&gt;iframe&lt;/code&gt; 嵌进 about，这版索性合并成单页重做了一遍。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>关于OKR的一些思考</title><link>https://boiltask.com/record/about-okr/</link><pubDate>Fri, 10 Jul 2026 13:01:55 +0800</pubDate><guid>https://boiltask.com/record/about-okr/</guid><description>&lt;p&gt;刚才写了一个&lt;a class="link" href="https://boiltask.com/record/okr-2026-h2/"&gt;2026下半年目标&lt;/a&gt;，尝试使用OKR来拆分了目标，由此也谈谈我对OKR这件事情的思考。&lt;/p&gt;
+&lt;p&gt;最早听说OKR这件事情还是2021年左右在飞书上，作为字节主推的管理工具，我是对他抱着一定地好感的。彼时KPI作为通常与之对应的管理工具，风评一度很糟糕，因此就越发对OKR的理念产生了兴趣。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;p&gt;OKR（Objective &amp;amp; Key Results），中文名称是“目标与关键结果”，是一个目标管理工具。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;​Objectives 是目标（O），回答的是“我和我的团队想要完成什么”&lt;/li&gt;
+&lt;li&gt;​Key Results 是一系列可衡量的关键结果（KR），回答的是“我如何知道自己是否达成了目标”&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;&lt;span class="cite"&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;飞书, &lt;/span&gt;&lt;a href="https://www.okr.com/" target="_blank"&gt;&lt;cite&gt;OKR.com&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;p&gt;简单来说，KPI 是“自上而下分解的考核指标”——你被分配一个数字，达成与否直接和绩效、奖金挂钩。这套机制的副作用也很出名：人会本能地把目标定低一点确保能完成、只盯着指标本身而忘了它背后的目的、短期数字好看但长期没积累。KPI 风评差，很多时候不是 KPI 本身的错，而是“考核”这个属性把人逼成了博弈。&lt;/p&gt;
+&lt;p&gt;OKR 想补的就是这个。它和 KPI 最核心的两个区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目标要敢定高&lt;/strong&gt;。OKR 的 O 鼓励定得偏激进，做到 70% 就算成功，100% 达成反而说明定低了。这和 KPI“必须完成否则扣钱”的逻辑正好相反。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标和考核解耦&lt;/strong&gt;。O/KR 本身不直接等于绩效，目的是让人敢于挑战，而不是为了稳而保守。（当然解耦不是绝对的，字节内部 OKR 也会影响绩效，只是不机械画等号。）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="但-okr-真正的价值在企业里其实是对齐"&gt;&lt;a href="#%e4%bd%86-okr-%e7%9c%9f%e6%ad%a3%e7%9a%84%e4%bb%b7%e5%80%bc%e5%9c%a8%e4%bc%81%e4%b8%9a%e9%87%8c%e5%85%b6%e5%ae%9e%e6%98%af%e5%af%b9%e9%bd%90" class="header-anchor"&gt;&lt;/a&gt;但 OKR 真正的价值，在企业里其实是“对齐”
+&lt;/h2&gt;&lt;p&gt;仔细想，OKR 在公司里最大的作用不是“帮个人拆目标”，而是“让一群人朝一个方向使劲”——上层 O 往下拆，下层 KR 往上对齐，跨部门能互相看到在做什么、有没有冲突。这个价值到了个人身上是天然缺失的：一个人用 OKR，谈不上对齐。&lt;/p&gt;
+&lt;p&gt;所以个人用 OKR，其实只借到了它的两个副产品：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;把模糊的目标逼成可衡量的&lt;/strong&gt;。“我想学 UE 渲染”没法验收；“产出一篇笔记 + 能截帧讲清各 Pass”才能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;逼自己定有挑战的目标&lt;/strong&gt;，而不是定个稳稳能完成的、年底自我感觉良好。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="个人-okr-最大的坑没有外部约束容易自欺"&gt;&lt;a href="#%e4%b8%aa%e4%ba%ba-okr-%e6%9c%80%e5%a4%a7%e7%9a%84%e5%9d%91%e6%b2%a1%e6%9c%89%e5%a4%96%e9%83%a8%e7%ba%a6%e6%9d%9f%e5%ae%b9%e6%98%93%e8%87%aa%e6%ac%ba" class="header-anchor"&gt;&lt;/a&gt;个人 OKR 最大的坑：没有外部约束，容易自欺
+&lt;/h2&gt;&lt;p&gt;公司里 OKR 有同事、leader、周会盯着，KR 写虚了会被人 challenge。个人 OKR 只对自己负责，最容易出的问题是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KR 凑数&lt;/strong&gt;：为了凑够三条，硬塞几条好完成的、和 O 关系不大的条目。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;验收时放过自己&lt;/strong&gt;：到期了明明只做到一半，找个理由就算“基本完成”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;指标反噬目标&lt;/strong&gt;：古德哈特定律——当一个指标本身变成目标，它就不再是好指标。为了凑产出写水文，笔记是写了，东西没真学到。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;能想到的对抗办法就一条：给自己定&lt;strong&gt;硬验收标准&lt;/strong&gt;——每个 O 至少有一条 KR 是“能证伪”的，比如“跟一遍源码”“配一个场景跑通”“截一帧讲清楚”，而不是“看过了”“写了笔记”这种没法证伪的。这也是我在那篇&lt;a class="link" href="https://boiltask.com/record/okr-2026-h2/"&gt;2026下半年目标&lt;/a&gt;里，每个目标最后都留一条实操 KR 的原因。&lt;/p&gt;
+&lt;h2 id="小结"&gt;&lt;a href="#%e5%b0%8f%e7%bb%93" class="header-anchor"&gt;&lt;/a&gt;小结
+&lt;/h2&gt;&lt;p&gt;OKR 不是银弹。团队里它的核心是“对齐 + 挑战 + 解耦考核”；到了个人，基本只剩“可衡量 + 敢挑战”两条。而个人用 OKR 最大的风险是自欺——没有外部约束，KR 写虚了没人戳破。所以与其迷信 OKR 这个形式，不如盯死一件事：&lt;strong&gt;每个目标都得有一条能证伪的验收标准&lt;/strong&gt;。形式可以简化，这条不能省。&lt;/p&gt;</description></item><item><title>2026下半年目标</title><link>https://boiltask.com/record/okr-2026-h2/</link><pubDate>Fri, 10 Jul 2026 12:49:42 +0800</pubDate><guid>https://boiltask.com/record/okr-2026-h2/</guid><description>&lt;p&gt;总结了一下当前遇见的问题以及自身的不足，感觉还是得选个方向继续学习。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说起来随着大模型的发展，现在的日常工作生活仿佛带了一个外脑，不过弊端确实自己深度思考的机会变少了很多，感觉还是得分清楚哪些是大模型的能力，哪些是自己的能力。&lt;/p&gt;
+&lt;p&gt;我感觉一个大方向是，自己需要对大模型生成的内容再三审核，至少保证生成内容全部是自己掌握的，也就是自己本来能独自完成但是为了效率而使用大模型生成的内容。&lt;/p&gt;
+&lt;p&gt;备注：本段话也由大模型辅助生成，说起来也是挺搞笑的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单定一下 2026 下半年（H2）的方向，继续啃 UE 引擎/渲染这块。挑了三个一直想系统搞懂、但之前零散看一直没串起来的点，用 OKR 的形式逼自己出产出——每个目标都得落到「写了结构化笔记 + 能实操验证」，而不是停留在「看过了感觉懂了」。&lt;/p&gt;
+&lt;h2 id="o1吃透-slate-渲染机制理清它和-umg-的关系"&gt;&lt;a href="#o1%e5%90%83%e9%80%8f-slate-%e6%b8%b2%e6%9f%93%e6%9c%ba%e5%88%b6%e7%90%86%e6%b8%85%e5%ae%83%e5%92%8c-umg-%e7%9a%84%e5%85%b3%e7%b3%bb" class="header-anchor"&gt;&lt;/a&gt;O1：吃透 Slate 渲染机制，理清它和 UMG 的关系
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KR1&lt;/strong&gt;：梳理出 Slate 一帧的渲染路径（&lt;code&gt;SWidget::Paint → OnPaint → FSlateDrawElement → 批处理 → 提交渲染线程&lt;/code&gt;），产出结构化笔记&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KR2&lt;/strong&gt;：厘清 UMG ↔ Slate 的桥接（&lt;code&gt;UWidget&lt;/code&gt; 与 &lt;code&gt;SWidget&lt;/code&gt; 的对应、属性 / Tick / Paint 的同步机制），产出笔记&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KR3&lt;/strong&gt;：能在源码层面定位某个具体 UMG 控件的渲染调用链（实操验证，比如跟一个 Image 从 UMG 画到屏幕）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="o2梳理通-ue-场景渲染管线能讲清一帧画面怎么来的"&gt;&lt;a href="#o2%e6%a2%b3%e7%90%86%e9%80%9a-ue-%e5%9c%ba%e6%99%af%e6%b8%b2%e6%9f%93%e7%ae%a1%e7%ba%bf%e8%83%bd%e8%ae%b2%e6%b8%85%e4%b8%80%e5%b8%a7%e7%94%bb%e9%9d%a2%e6%80%8e%e4%b9%88%e6%9d%a5%e7%9a%84" class="header-anchor"&gt;&lt;/a&gt;O2：梳理通 UE 场景渲染管线，能讲清一帧画面怎么来的
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KR1&lt;/strong&gt;：梳理完整 Pass 流程（&lt;code&gt;InitViews(可见性/剔除/阴影) → depth prepass → basepass/GBuffer → 光照 → 半透明 → 后处理&lt;/code&gt;），产出结构化笔记&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KR2&lt;/strong&gt;：用 RenderDoc / 截帧工具分析一帧，标注各 Pass 的作用与开销&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KR3&lt;/strong&gt;：至少讲清一个 UE5 关键特性（Nanite / Lumen / VSM / TSR 任选其一）在管线中的位置与作用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="o3搞懂世界分区world-partition与子关卡--流式加载机制"&gt;&lt;a href="#o3%e6%90%9e%e6%87%82%e4%b8%96%e7%95%8c%e5%88%86%e5%8c%baworld-partition%e4%b8%8e%e5%ad%90%e5%85%b3%e5%8d%a1--%e6%b5%81%e5%bc%8f%e5%8a%a0%e8%bd%bd%e6%9c%ba%e5%88%b6" class="header-anchor"&gt;&lt;/a&gt;O3：搞懂世界分区（World Partition）与子关卡 / 流式加载机制
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KR1&lt;/strong&gt;：梳理 WP 的数据组织与运行时流式加载机制，产出笔记&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KR2&lt;/strong&gt;：厘清 WP 与传统子关卡 / Level Streaming 的关系与取舍&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KR3&lt;/strong&gt;：独立配置一个 WP 场景，能解释它的运行时加载行为（实操）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="排期"&gt;&lt;a href="#%e6%8e%92%e6%9c%9f" class="header-anchor"&gt;&lt;/a&gt;排期
+&lt;/h2&gt;&lt;p&gt;三个目标难度差不少，大致按 H2 的两个季度分一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Q3（7–9 月）&lt;/strong&gt;：O3（最快出成果）+ O1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Q4（10–12 月）&lt;/strong&gt;：O2（最重，单独留一个季度给它）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;O2 单独占 Q4，是因为渲染管线体量最大，硬塞进 Q3 大概率写浅。&lt;/p&gt;
+&lt;h2 id="验收"&gt;&lt;a href="#%e9%aa%8c%e6%94%b6" class="header-anchor"&gt;&lt;/a&gt;验收
+&lt;/h2&gt;&lt;p&gt;OKR 的意义在于到期知道自己到底完成了没。所以每个目标的最后一条 KR 都是「实操验证」——能跟一遍源码、截一帧讲清楚、配一个场景跑通，才算真完成。季度末自己过一遍，没达成的滚到下个季度或调整目标。&lt;/p&gt;
+&lt;p&gt;其实还有GAS和StateTree想要深入研究，不过感觉就紧迫性来说，渲染相关的是0-1的质变，而日常工作就能解除到GAS和StateTree，所以优先级没设那么高。&lt;/p&gt;</description></item><item><title>更新一下About个人简历页面</title><link>https://boiltask.com/record/update-about-page-202607/</link><pubDate>Wed, 08 Jul 2026 20:00:11 +0800</pubDate><guid>https://boiltask.com/record/update-about-page-202607/</guid><description>&lt;p&gt;感觉简历页面还有优化空间，找时间又更新了一下。上一版的设计记在&lt;a class="link" href="https://boiltask.com/record/add-about-page/"&gt;《新增了一个About个人简历页面》&lt;/a&gt;里，当时把简历单独提了个 HTML 页再用 &lt;code&gt;iframe&lt;/code&gt; 嵌进 about，这版索性合并成单页重做了一遍。&lt;/p&gt;
 &lt;p&gt;最大的改动是把简历锁定在了 A4 的固定画布上。之前随容器整体等比缩放，屏幕一窄字号就跟着缩，看着费劲；现在主体直接固定 210mm 宽，容器够宽就居中，窄了横向滚动，版式不再随屏幕重排换行。好处是屏幕上看到什么样、导出来就是什么样，所见即所得。&lt;/p&gt;
 &lt;p&gt;打印这块也顺手重做了。&lt;code&gt;@page margin:0&lt;/code&gt; 去掉浏览器自带的页眉页脚，再用 &lt;code&gt;box-decoration-break:clone&lt;/code&gt; 把 padding 克隆到每个分页片段上，多页打印时每页留白一致，内容不会被硬件边缘裁切；最终内容宽 178mm，屏幕查看和导出的 PDF 逐字一致。导出 PDF 仍走 &lt;code&gt;window.print&lt;/code&gt; 由浏览器完成，保留了链接和文本，比 html2pdf 那种&amp;quot;图片套 PDF&amp;quot;优雅。&lt;/p&gt;
 &lt;p&gt;顺带清理了一些历史遗留：业余项目和荣誉奖项的 div 嵌套理顺了；条目头部从 float 改成 flex（时间段靠 &lt;code&gt;margin-left:auto&lt;/code&gt; 右对齐，长文本不再错位）；联系方式换成 grid 布局。&lt;/p&gt;
