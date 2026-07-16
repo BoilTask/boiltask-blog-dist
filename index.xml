@@ -202,8 +202,8 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;virtual&lt;/code&gt; 继承确保共同祖先只有一份，放在对象内存末尾，通过 vbptr 间接寻址访问。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id="q1-请详细解释-c-虚函数表的实现原理"&gt;&lt;a href="#q1-%e8%af%b7%e8%af%a6%e7%bb%86%e8%a7%a3%e9%87%8a-c-%e8%99%9a%e5%87%bd%e6%95%b0%e8%a1%a8%e7%9a%84%e5%ae%9e%e7%8e%b0%e5%8e%9f%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;Q1: 请详细解释 C++ 虚函数表的实现原理
+&lt;h2 id="qa"&gt;&lt;a href="#qa" class="header-anchor"&gt;&lt;/a&gt;Q&amp;amp;A
+&lt;/h2&gt;&lt;h3 id="q1-请详细解释-c-虚函数表的实现原理"&gt;&lt;a href="#q1-%e8%af%b7%e8%af%a6%e7%bb%86%e8%a7%a3%e9%87%8a-c-%e8%99%9a%e5%87%bd%e6%95%b0%e8%a1%a8%e7%9a%84%e5%ae%9e%e7%8e%b0%e5%8e%9f%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;Q1: 请详细解释 C++ 虚函数表的实现原理
 &lt;/h3&gt;&lt;p&gt;包含虚函数的类在编译时生成虚函数表（vtable），每个实例有一个虚函数指针（vptr）指向它。运行时通过 vptr 查到虚函数信息，从而用基类指针也能调到子类重写的版本。&lt;/p&gt;
 &lt;h3 id="q2-多重继承下的虚表布局是怎样的"&gt;&lt;a href="#q2-%e5%a4%9a%e9%87%8d%e7%bb%a7%e6%89%bf%e4%b8%8b%e7%9a%84%e8%99%9a%e8%a1%a8%e5%b8%83%e5%b1%80%e6%98%af%e6%80%8e%e6%a0%b7%e7%9a%84" class="header-anchor"&gt;&lt;/a&gt;Q2: 多重继承下的虚表布局是怎样的？
 &lt;/h3&gt;&lt;p&gt;多重继承会为每一个基类各存一个 vptr，放在对应基类数据段的前面：&lt;/p&gt;
