@@ -1,4 +1,148 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C/C++ on BoilTask's Blog</title><link>https://boiltask.com/tags/cpp/</link><description>Recent content in C/C++ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 15 Apr 2026 13:17:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/cpp/index.xml" rel="self" type="application/rss+xml"/><item><title>C++20中无宏定义日志的一种实现</title><link>https://boiltask.com/knowledge/cpp/log-without-macro/</link><pubDate>Wed, 15 Apr 2026 13:17:18 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/log-without-macro/</guid><description>&lt;p&gt;通常来说，在打印日志时为了获取调用处的相关信息，传统做法都需要定义一个宏来收集相关信息。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C/C++ on BoilTask's Blog</title><link>https://boiltask.com/tags/cpp/</link><description>Recent content in C/C++ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 16 Jul 2026 12:49:18 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/cpp/index.xml" rel="self" type="application/rss+xml"/><item><title>C++中virtual关键字用法总结</title><link>https://boiltask.com/knowledge/cpp/virtual-keyword/</link><pubDate>Thu, 16 Jul 2026 12:49:18 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/virtual-keyword/</guid><description>&lt;p&gt;&lt;code&gt;virtual&lt;/code&gt; 是 C++ 实现运行时多态的核心机制。默认情况下，通过基类指针调用的函数由&lt;strong&gt;静态类型&lt;/strong&gt;决定（编译期绑定）；声明为 &lt;code&gt;virtual&lt;/code&gt; 后，调用由&lt;strong&gt;动态类型&lt;/strong&gt;决定（运行时绑定）。&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Animal&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;speak&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;// 非虚 —— 静态绑定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;move&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;// 虚函数 —— 动态绑定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Animal&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;ptr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ptr&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;speak&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// 永远调 Animal::speak()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ptr&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// 调 Dog::move()，由实际对象类型决定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="虚函数表vtable与虚函数指针vptr"&gt;&lt;a href="#%e8%99%9a%e5%87%bd%e6%95%b0%e8%a1%a8vtable%e4%b8%8e%e8%99%9a%e5%87%bd%e6%95%b0%e6%8c%87%e9%92%88vptr" class="header-anchor"&gt;&lt;/a&gt;虚函数表（vtable）与虚函数指针（vptr）
+&lt;/h2&gt;&lt;p&gt;编译器为每个含虚函数的类生成一张虚函数表，存储虚函数地址。每个实例有一个隐藏的 vptr 指向该表：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;对象内存布局:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;┌───────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ vptr │ ──→ vtable: [ &amp;amp;Base::f, &amp;amp;Base::g, &amp;amp;Base::h ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├───────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ 成员变量 │
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└───────────┘&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;派生类覆写虚函数时，其 vtable 中对应槽位替换为派生类版本。调用路径：&lt;strong&gt;对象 → vptr → vtable → 函数地址&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id="虚析构函数"&gt;&lt;a href="#%e8%99%9a%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0" class="header-anchor"&gt;&lt;/a&gt;虚析构函数
+&lt;/h2&gt;&lt;p&gt;基类析构函数必须声明为 &lt;code&gt;virtual&lt;/code&gt;，否则通过基类指针 &lt;code&gt;delete&lt;/code&gt; 派生类对象时，派生类的析构函数不会被调用，造成资源泄漏：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Base&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; &lt;span class="p"&gt;};&lt;/span&gt; &lt;span class="c1"&gt;// 正确做法
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;经验法则：只要类中有虚函数（说明它被设计为基类），析构函数就应该是虚的。&lt;/p&gt;
+&lt;h2 id="纯虚函数与抽象类"&gt;&lt;a href="#%e7%ba%af%e8%99%9a%e5%87%bd%e6%95%b0%e4%b8%8e%e6%8a%bd%e8%b1%a1%e7%b1%bb" class="header-anchor"&gt;&lt;/a&gt;纯虚函数与抽象类
+&lt;/h2&gt;&lt;p&gt;纯虚函数只声明不实现，语法 &lt;code&gt;= 0&lt;/code&gt;。包含纯虚函数的类是抽象类，不能实例化，派生类必须实现所有纯虚函数：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;cpp&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Shape&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 纯虚函数 = 接口契约
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="n"&gt;Shape&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="菱形继承与虚继承"&gt;&lt;a href="#%e8%8f%b1%e5%bd%a2%e7%bb%a7%e6%89%bf%e4%b8%8e%e8%99%9a%e7%bb%a7%e6%89%bf" class="header-anchor"&gt;&lt;/a&gt;菱形继承与虚继承
+&lt;/h2&gt;&lt;p&gt;菱形继承（D → B,C → A）会让 D 包含两份 A 的数据，访问时歧义报错：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; A
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; / \
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; B C
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; \ /
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; D // D 中有两份 A！&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;virtual&lt;/code&gt; 继承确保共同祖先只有一份，放在对象内存末尾，通过 vbptr 间接寻址访问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="q1-请详细解释-c-虚函数表的实现原理"&gt;&lt;a href="#q1-%e8%af%b7%e8%af%a6%e7%bb%86%e8%a7%a3%e9%87%8a-c-%e8%99%9a%e5%87%bd%e6%95%b0%e8%a1%a8%e7%9a%84%e5%ae%9e%e7%8e%b0%e5%8e%9f%e7%90%86" class="header-anchor"&gt;&lt;/a&gt;Q1: 请详细解释 C++ 虚函数表的实现原理
+&lt;/h3&gt;&lt;p&gt;包含虚函数的类在编译时生成虚函数表（vtable），每个实例有一个虚函数指针（vptr）指向它。运行时通过 vptr 查到虚函数信息，从而用基类指针也能调到子类重写的版本。&lt;/p&gt;
+&lt;h3 id="q2-多重继承下的虚表布局是怎样的"&gt;&lt;a href="#q2-%e5%a4%9a%e9%87%8d%e7%bb%a7%e6%89%bf%e4%b8%8b%e7%9a%84%e8%99%9a%e8%a1%a8%e5%b8%83%e5%b1%80%e6%98%af%e6%80%8e%e6%a0%b7%e7%9a%84" class="header-anchor"&gt;&lt;/a&gt;Q2: 多重继承下的虚表布局是怎样的？
+&lt;/h3&gt;&lt;p&gt;多重继承会为每一个基类各存一个 vptr，放在对应基类数据段的前面：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vptr1 | base1 | vptr2 | base2 | child&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="q3-虚继承又引入了什么额外开销"&gt;&lt;a href="#q3-%e8%99%9a%e7%bb%a7%e6%89%bf%e5%8f%88%e5%bc%95%e5%85%a5%e4%ba%86%e4%bb%80%e4%b9%88%e9%a2%9d%e5%a4%96%e5%bc%80%e9%94%80" class="header-anchor"&gt;&lt;/a&gt;Q3: 虚继承又引入了什么额外开销？
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;解决的问题：&lt;/strong&gt; 菱形继承会导致最终类包含两份共同祖先的数据，访问时编译器因歧义报错。虚继承把共同祖先放在内存最后，子类存一个指针（vbptr）指向到基类的偏移，通过间接寻址访问。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代价：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内存增长（多了 vbptr 和虚基类表）&lt;/li&gt;
+&lt;li&gt;性能变差（多一次间接寻址）&lt;/li&gt;
+&lt;li&gt;代码更复杂（最终派生类需手动调用祖先构造函数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;实践建议：&lt;/strong&gt; 优先组合替代继承；需要多重继承时，至少一方应为纯虚接口类。&lt;/p&gt;</description></item><item><title>C++20中无宏定义日志的一种实现</title><link>https://boiltask.com/knowledge/cpp/log-without-macro/</link><pubDate>Wed, 15 Apr 2026 13:17:18 +0800</pubDate><guid>https://boiltask.com/knowledge/cpp/log-without-macro/</guid><description>&lt;p&gt;通常来说，在打印日志时为了获取调用处的相关信息，传统做法都需要定义一个宏来收集相关信息。&lt;/p&gt;
 &lt;p&gt;但是借由C++20的&lt;code&gt;std::source_location&lt;/code&gt;，我们可以实现一个无宏定义的日志打印函数。&lt;/p&gt;
 &lt;div class="highlight-wrapper"&gt;
 &lt;div class="highlight-header"&gt;
