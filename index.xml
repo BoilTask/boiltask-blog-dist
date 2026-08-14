@@ -83,8 +83,8 @@
 &lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://BoilTask.com" target="_blank" rel="noopener"&gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>做了一个UnrealEngineMCP的虚幻引擎插件</title><link>https://boiltask.com/record/unrealengine-mcp/</link><pubDate>Fri, 14 Aug 2026 13:17:53 +0800</pubDate><guid>https://boiltask.com/record/unrealengine-mcp/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;UE5.8 已经带了官方的 MCP 支持，这个插件是参考它的设计思想自己实现的一版，主要用于暂时无法升级引擎的情况。
-如果用的是 UE5.8 及以上的版本，直接用官方插件就好，下面这些内容就当是记录一下实现思路。&lt;/p&gt;
+&lt;p&gt;UE5.8 已经带了官方的 MCP 支持，这个插件是参考它的设计思想自己实现的一版，主要用于暂时无法升级引擎的情况。&lt;/p&gt;
+&lt;p&gt;如果用的是 UE5.8 及以上的版本，直接用官方插件就好，下面这些内容就当是记录一下实现思路。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;最近给项目里的 AI 编程助手接了个新能力，让它在编辑器里直接操作 UE 工程。动机挺简单：现在大模型改代码已经很顺手了，可游戏开发里大量活儿不在代码上，而在编辑器里——蓝图、资产、UMG 控件、关卡 Actor 这些可视化资产，AI 光靠改 &lt;code&gt;.cpp&lt;/code&gt; / &lt;code&gt;.h&lt;/code&gt; 是碰不到的。所以做了个 &lt;code&gt;UnrealEngineMCP&lt;/code&gt; 插件，用 MCP（Model Context Protocol）把这些编辑器能力暴露给 AI 助手（opencode、Claude Code 这类）。&lt;/p&gt;
 &lt;h2 id="架构"&gt;&lt;a href="#%e6%9e%b6%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;架构
