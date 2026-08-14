@@ -1,4 +1,164 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目 on BoilTask's Blog</title><link>https://boiltask.com/tags/project/</link><description>Recent content in 项目 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 08 Jul 2026 20:10:37 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>更新一下About个人简历页面</title><link>https://boiltask.com/record/update-about-page-202607/</link><pubDate>Wed, 08 Jul 2026 20:00:11 +0800</pubDate><guid>https://boiltask.com/record/update-about-page-202607/</guid><description>&lt;p&gt;感觉简历页面还有优化空间，找时间又更新了一下。上一版的设计记在&lt;a class="link" href="https://boiltask.com/record/add-about-page/"&gt;《新增了一个About个人简历页面》&lt;/a&gt;里，当时把简历单独提了个 HTML 页再用 &lt;code&gt;iframe&lt;/code&gt; 嵌进 about，这版索性合并成单页重做了一遍。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目 on BoilTask's Blog</title><link>https://boiltask.com/tags/project/</link><description>Recent content in 项目 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 14 Aug 2026 13:17:53 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>做了一个UnrealEngineMCP的虚幻引擎插件</title><link>https://boiltask.com/record/unrealenginemcp/</link><pubDate>Fri, 14 Aug 2026 13:17:53 +0800</pubDate><guid>https://boiltask.com/record/unrealenginemcp/</guid><description>&lt;p&gt;最近给项目里的 AI 编程助手接了个新能力，让它在编辑器里直接操作 UE 工程。动机挺简单：现在大模型改代码已经很顺手了，可游戏开发里大量活儿不在代码上，而在编辑器里——蓝图、资产、UMG 控件、关卡 Actor 这些可视化资产，AI 光靠改 &lt;code&gt;.cpp&lt;/code&gt; / &lt;code&gt;.h&lt;/code&gt; 是碰不到的。所以做了个 &lt;code&gt;UnrealEngineMCP&lt;/code&gt; 插件，用 MCP（Model Context Protocol）把这些编辑器能力暴露给 AI 助手（opencode、Claude Code 这类）。&lt;/p&gt;
+&lt;h2 id="架构"&gt;&lt;a href="#%e6%9e%b6%e6%9e%84" class="header-anchor"&gt;&lt;/a&gt;架构
+&lt;/h2&gt;&lt;p&gt;一共三层：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;AI&lt;/span&gt; &lt;span class="err"&gt;助手&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;opencode&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;Claude&lt;/span&gt; &lt;span class="n"&gt;Code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="n"&gt;MCP&lt;/span&gt; &lt;span class="n"&gt;stdio&lt;/span&gt;&lt;span class="err"&gt;（始终在线）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;▼&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;unreal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mcp&lt;/span&gt; &lt;span class="n"&gt;wrapper&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ne"&gt;Node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Tools&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mcp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;wrapper&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="err"&gt;•&lt;/span&gt; &lt;span class="err"&gt;编辑器未启动时自动拉起&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="err"&gt;•&lt;/span&gt; &lt;span class="err"&gt;发现多个编辑器实例，可指定操作目标&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="err"&gt;•&lt;/span&gt; &lt;span class="err"&gt;把&lt;/span&gt; &lt;span class="n"&gt;MCP&lt;/span&gt; &lt;span class="err"&gt;调用翻译成极简&lt;/span&gt; &lt;span class="n"&gt;HTTP&lt;/span&gt; &lt;span class="n"&gt;JSON&lt;/span&gt; &lt;span class="err"&gt;后端&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;▼&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;UnrealEngineMCP&lt;/span&gt; &lt;span class="err"&gt;插件&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="err"&gt;，运行在编辑器内&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="n"&gt;GET&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;health&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="n"&gt;GET&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;│&lt;/span&gt; &lt;span class="n"&gt;POST&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;▼&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="err"&gt;引擎&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="err"&gt;蓝图&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="err"&gt;资产&lt;/span&gt; &lt;span class="n"&gt;API&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;做的时候把「协议」和「工具」拆开了：插件只当工具后端，MCP 协议那一套交给 Node wrapper。原因也简单，UE 5.7 的 &lt;code&gt;HTTPServer&lt;/code&gt; 模块不支持 SSE 流式，而 MCP 又依赖流式，与其在插件里硬啃协议，不如把协议解析放到 wrapper（Node + &lt;code&gt;@modelcontextprotocol/sdk&lt;/code&gt;），插件端只留几个纯 JSON 的 HTTP 端点，收「工具名 + 参数」回结果。本机走 HTTP 开销是微秒级，工具本身耗时远大于网络，还能直接 &lt;code&gt;curl&lt;/code&gt; 调试，Node 那边也零依赖。&lt;/p&gt;
+&lt;h2 id="run_python-万能入口"&gt;&lt;a href="#run_python-%e4%b8%87%e8%83%bd%e5%85%a5%e5%8f%a3" class="header-anchor"&gt;&lt;/a&gt;run_python 万能入口
+&lt;/h2&gt;&lt;p&gt;插件里最关键的其实是 &lt;code&gt;run_python&lt;/code&gt;：在编辑器里跑引擎 Python，&lt;code&gt;import unreal&lt;/code&gt; 之后基本什么都能碰。拿它当万能入口，覆盖掉大多数编辑器操作，再补几个便捷读取工具就够了。给 AI 的用法大概这样：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;
+&lt;div class="highlight-header"&gt;
+&lt;span class="highlight-language"&gt;python&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="highlight-body"&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;unreal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 加载并查看蓝图&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;bp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unreal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load_asset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/Game/UI/WBP_TipsTileView&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 列出某目录下的资产&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;unreal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EditorAssetLibrary&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list_assets&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/Game/UI&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 查询关卡 Actor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;actors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unreal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EditorLevelLibrary&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_all_level_actors&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_actor_label&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;actors&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="智能启动与多实例"&gt;&lt;a href="#%e6%99%ba%e8%83%bd%e5%90%af%e5%8a%a8%e4%b8%8e%e5%a4%9a%e5%ae%9e%e4%be%8b" class="header-anchor"&gt;&lt;/a&gt;智能启动与多实例
+&lt;/h2&gt;&lt;p&gt;第一版做完，真用起来发现三个问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;忘开编辑器&lt;/strong&gt;——AI 调工具的时候编辑器没起，直接连不上；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多实例打架&lt;/strong&gt;——有时候会开俩编辑器（多半是同一工程开两个），插件写死 8000 端口，第二个绑不上，还可能俩实例读写不同内存状态，改的东西互相踩；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node 兜底&lt;/strong&gt;——wrapper 依赖 Node.js，没装的话得给个明白提示，不能静默挂掉。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;后来重构了一版（设计文档在 &lt;code&gt;docs/&lt;/code&gt; 里），前两个问题交给 wrapper：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;客户端连 &lt;code&gt;unreal-mcp&lt;/code&gt; 时如果没编辑器在跑，wrapper 从工程的 &lt;code&gt;EngineAssociation&lt;/code&gt; 注册表键解析出引擎路径，自己把编辑器拉起来，轮询等它就绪再处理调用（第一次可能要等 1–3 分钟）；&lt;/li&gt;
+&lt;li&gt;多个编辑器时，wrapper 读 &lt;code&gt;Saved/MCP/instances.json&lt;/code&gt; 发现实例，默认选第一个健康的，也能用 &lt;code&gt;list_instances&lt;/code&gt; / &lt;code&gt;select_instance&lt;/code&gt; 切目标，写操作都走同一个实例；&lt;/li&gt;
+&lt;li&gt;插件端端口冲突自动顺延（从 8000 往上找空的），实际端口写回注册文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="工具一览"&gt;&lt;a href="#%e5%b7%a5%e5%85%b7%e4%b8%80%e8%a7%88" class="header-anchor"&gt;&lt;/a&gt;工具一览
+&lt;/h2&gt;&lt;p&gt;除了 &lt;code&gt;run_python&lt;/code&gt;，还内置了一些便捷工具：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;list_blueprints&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;列出工程蓝图资产（可按子串过滤）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;get_blueprint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;读取蓝图结构：父类、变量、函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;list_widget_tree&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;读取 UMG WidgetBlueprint 控件树&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;get_widget_properties&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;读取 UMG 控件实例属性值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;create_widget_blueprint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;创建 UMG WidgetBlueprint&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;add_widget_to_tree&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;向控件树添加控件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;set_widget_properties&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;按类型反射写入控件属性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;remove_widget_from_tree&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;从控件树移除控件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;exec_command&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;在编辑器机器执行 shell 命令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;list_assets&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;列出路径下资产&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;list_actors&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;列出当前关卡 Actor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;还有 wrapper 提供的 &lt;code&gt;list_instances&lt;/code&gt; / &lt;code&gt;select_instance&lt;/code&gt; 两个实例管理工具。&lt;/p&gt;
+&lt;h2 id="使用方式"&gt;&lt;a href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" class="header-anchor"&gt;&lt;/a&gt;使用方式
+&lt;/h2&gt;&lt;p&gt;接入不麻烦：把插件目录拷进工程 &lt;code&gt;Plugins/&lt;/code&gt; 并在 &lt;code&gt;.uproject&lt;/code&gt; 里启用，&lt;code&gt;npm install&lt;/code&gt; 装一下 wrapper 依赖，编译编辑器目标，最后在 &lt;code&gt;.mcp.json&lt;/code&gt; 里把 MCP 客户端指到 wrapper 的 &lt;code&gt;index.js&lt;/code&gt; 就行。&lt;/p&gt;
+&lt;p&gt;日常用起来基本无感：直接调工具，编辑器没开它会自己拉起来；开多个实例就先用 &lt;code&gt;list_instances&lt;/code&gt; 看眼再 &lt;code&gt;select_instance&lt;/code&gt; 锁定。要手动控制的话，编辑器控制台输 &lt;code&gt;UnrealEngineMCP.StartServer 8000&lt;/code&gt; / &lt;code&gt;UnrealEngineMCP.StopServer&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id="开源"&gt;&lt;a href="#%e5%bc%80%e6%ba%90" class="header-anchor"&gt;&lt;/a&gt;开源
+&lt;/h2&gt;&lt;p&gt;插件已经开源在 GitHub：&lt;a class="link" href="https://github.com/BoilTask/UnrealEngineMCP" target="_blank" rel="noopener"&gt;UnrealEngineMCP&lt;/a&gt;，有兴趣可以看看。&lt;/p&gt;
+&lt;h2 id="补充"&gt;&lt;a href="#%e8%a1%a5%e5%85%85" class="header-anchor"&gt;&lt;/a&gt;补充
+&lt;/h2&gt;&lt;p&gt;几个实现上的小点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新增工具不折腾 wrapper：它靠 &lt;code&gt;GET /api/tools&lt;/code&gt; 自动发现工具，JSON Schema → zod 全自动转，新工具只要在 C++ 里实现个 &lt;code&gt;IMCPTool&lt;/code&gt; 类并注册，wrapper 一行不用改；&lt;/li&gt;
+&lt;li&gt;插件是 &lt;code&gt;Editor&lt;/code&gt; 模块，Editor-only，不影响打包出来的游戏版本；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run_python&lt;/code&gt; 能跑任意代码，所以默认只监听本机（&lt;code&gt;bListenOnLocalhostOnly&lt;/code&gt;），也只该跑自己信得过的代码——发给 LLM 的数据就是工程内容本身。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>更新一下About个人简历页面</title><link>https://boiltask.com/record/update-about-page-202607/</link><pubDate>Wed, 08 Jul 2026 20:00:11 +0800</pubDate><guid>https://boiltask.com/record/update-about-page-202607/</guid><description>&lt;p&gt;感觉简历页面还有优化空间，找时间又更新了一下。上一版的设计记在&lt;a class="link" href="https://boiltask.com/record/add-about-page/"&gt;《新增了一个About个人简历页面》&lt;/a&gt;里，当时把简历单独提了个 HTML 页再用 &lt;code&gt;iframe&lt;/code&gt; 嵌进 about，这版索性合并成单页重做了一遍。&lt;/p&gt;
 &lt;p&gt;最大的改动是把简历锁定在了 A4 的固定画布上。之前随容器整体等比缩放，屏幕一窄字号就跟着缩，看着费劲；现在主体直接固定 210mm 宽，容器够宽就居中，窄了横向滚动，版式不再随屏幕重排换行。好处是屏幕上看到什么样、导出来就是什么样，所见即所得。&lt;/p&gt;
 &lt;p&gt;打印这块也顺手重做了。&lt;code&gt;@page margin:0&lt;/code&gt; 去掉浏览器自带的页眉页脚，再用 &lt;code&gt;box-decoration-break:clone&lt;/code&gt; 把 padding 克隆到每个分页片段上，多页打印时每页留白一致，内容不会被硬件边缘裁切；最终内容宽 178mm，屏幕查看和导出的 PDF 逐字一致。导出 PDF 仍走 &lt;code&gt;window.print&lt;/code&gt; 由浏览器完成，保留了链接和文本，比 html2pdf 那种&amp;quot;图片套 PDF&amp;quot;优雅。&lt;/p&gt;
 &lt;p&gt;顺带清理了一些历史遗留：业余项目和荣誉奖项的 div 嵌套理顺了；条目头部从 float 改成 flex（时间段靠 &lt;code&gt;margin-left:auto&lt;/code&gt; 右对齐，长文本不再错位）；联系方式换成 grid 布局。&lt;/p&gt;
